@@ -1,0 +1,7 @@
+_site/
+.jekyll-metadata
+.DS_Store/
+serve.sh
+Gemfile.lock
+.DS_Store/
+.DS_Store
