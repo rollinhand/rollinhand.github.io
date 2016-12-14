@@ -4,7 +4,6 @@ title: "Nicht unterbuttern lassen..."
 creator: rollinhand
 date: 2016-03-08
 category: Development
-icon: java.png
 ---
 Das JSF-Framework ButterFaces ist neu am Markt und will einiges anders machen als die bereits etablierten.
 <!--more-->

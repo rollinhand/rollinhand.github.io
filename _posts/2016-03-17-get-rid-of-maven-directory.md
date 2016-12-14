@@ -4,7 +4,6 @@ title: "Get rid of Maven directory in your WAR"
 creator: rollinhand
 date: 2016-03-17
 category: Development
-icon: java.png
 ---
 While you are packaging your web application with Maven you might have encountered, 
 that your pom.xml and other Maven related files are also packed into your archive. 

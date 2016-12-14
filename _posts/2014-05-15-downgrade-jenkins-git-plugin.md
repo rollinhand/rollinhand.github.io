@@ -4,7 +4,6 @@ title: "Downgrade Jenkins Git Plugin"
 creator: rollinhand
 date: 2014-05-15
 category: DevOps
-icon: jenkins.png
 ---
 If you also encounter problems with Jenkins' Git plugin I tell you in this post how you 
 can manually downgrade the plugin to a prior version.&nbsp;

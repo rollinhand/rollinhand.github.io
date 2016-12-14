@@ -4,7 +4,6 @@ title: "Wix Toolset plugin 1.5 for Jenkins released"
 creator: rollinhand
 date: 2014-06-25
 category: General
-icon: jenkins.png
 ---
 A new version of Wix Toolset plugin was released today. The new version will be automatically available via Jenkins update manager in a few hours. This announcement describes the latest changes.
 <!--more-->

@@ -4,7 +4,6 @@ title: "Deploying GitBlit on JBoss/Wildfly"
 creator: rollinhand
 date: 2014-03-20
 category: DevOps
-icon: java.png
 ---
 If you want to use GitBlit on a JBoss/Wildfly-based Java EE application server, 
 deployment is a little bit tricky. This guide describes how you can deploy GitBlit 
