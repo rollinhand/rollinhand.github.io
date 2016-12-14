@@ -543,6 +543,7 @@ ul.infoList {
 
 .detail {
 	color: #999;
+	margin-bottom: 17px;
 }
 
 ul.infoList li {
@@ -589,7 +590,7 @@ ul.infoList li + li {
 }
 
 .entryBox {
-	margin-bottom:50px;
+	margin-bottom:15px;
 }
 
 /* Einzelnes Posting

@@ -38,20 +38,9 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-8">
-						<div class="row">
-							<div class="col-lg-1">
-								{% if page.icon %}
-									<img src="/images/icons/{{ page.icon }}" />
-								{% else %}
-									<img src="/images/icons/placeholder.png" />
-								{% endif %}	
-							</div>
-							<div class="col-lg-11">
-								<h2>{{ page.title }}</h2>
-								<div class="entryInfo detail">
-									{% include infolist.html %}
-								</div>
-							</div>
+						<h2>{{ page.title }}</h2>
+						<div class="entryInfo detail">
+							{% include infolist.html %}
 						</div>
 						<!-- Excerpt -->
 						{{ excerpt }}
