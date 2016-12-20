@@ -15,7 +15,7 @@
 				<ul class="nav navbar-nav" id="mainNav">
 					{% for node in site.pages %}
 						<!-- Do not list pages with no title or front matter 'navigation: none' -->
-						{% if node.title or node.navigation != 'none' %}
+						{% if node.title and node.navigation != 'none' %}
 							{% if page.url == node.url %}
 								<li class="active"><a class="active" href="{{ node.url }}">{{ node.title }}</a></li>
 							{% else %}
