@@ -2,7 +2,11 @@
 name: Kivio - A practical blog for DevOps
 markdown: kramdown
 permalink: /entry/:year/:month/:day/:title
-gems: [jekyll-paginate]
+gems: 
+  - jekyll-paginate
+  - jekyll-avatar
+  - jekyll-mentions
+  - jekyll-sitemap
 
 paginate: 10
 paginate_path: "/blog/page:num/"

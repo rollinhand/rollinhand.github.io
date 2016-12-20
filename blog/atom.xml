@@ -2,11 +2,11 @@
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<title>Kivio: a practical blog for DevOps</title>
-	<link href="http://rollinhand.github.io/blog/atom.xml" rel="self"/>
-	<link href="http://rollinhand.github.io/blog"/>
+	<title>{{ site.name }}</title>
+	<link href="http://kivio.org/blog/atom.xml" rel="self"/>
+	<link href="http://kivio.org"/>
 	<updated>{{ site.time | date_to_xmlschema }}</updated>
-	<id>http://rollinhand.github.io/blog</id>
+	<id>http://kivio.org</id>
 	<author>
 		<name>Björn Berg</name>
 		<email>rollin.hand@gmx.de</email>
@@ -15,9 +15,9 @@
 	{% for post in site.posts %}
 		<entry>
 			<title>{{ post.title }}</title>
-			<link href="http://rollinhand.github.io{{ post.url }}"/>
+			<link href="http://kivio.org{{ post.url }}"/>
 			<updated>{{ post.date | date_to_xmlschema }}</updated>
-			<id>http://rollinhand.github.io{{ post.id }}</id>
+			<id>http://kivio.org{{ post.id }}</id>
 			<content type="html">{{ post.excerpt | xml_escape }}</content>
 		</entry>
 	{% endfor %}
