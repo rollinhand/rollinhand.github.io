@@ -8,6 +8,7 @@ category: Technology
 Virtuelle Maschinen in VirtuialBox auf einen externen Datenträger zu verlagern ist einfach. 
 Dieses Post zeigt, welche Schritte zu beachten sind, um die Maschinen auf unterschiedlichen 
 Systemen verwenden zu können.
+
 <!--more-->
 
 Sollen Virtual Machine Images in VirtualBox auf unterschiedlichen Hostsystemen genutzt 

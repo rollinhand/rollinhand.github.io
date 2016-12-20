@@ -7,7 +7,9 @@ category: General
 ---
 A new version of Wix Toolset plugin was released on December 19th. The new version is 
 automatically available via Jenkins update manager. This announcement describes the latest changes.
+
 <!--more-->
+
 ### Changes
 * Automatic addition of environment variables as parameters to candle and light is now globally configurable.
 * Administrators can decide which environment variables should not be taken into account as parameter.

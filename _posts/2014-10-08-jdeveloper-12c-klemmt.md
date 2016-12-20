@@ -8,6 +8,7 @@ category: Development
 Oracles JDeveloper ist kein Performance-Wunder. Neben Performanceengpässen hilft manchmal 
 nur das "Abschießen" aller zum JDeveloper gehörigen Prozesse, um weiterarbeiten zu können. 
 Abhilfe ist da...
+
 <!--more-->
 
 ### Beim Debugging einer ADF-Anwendung

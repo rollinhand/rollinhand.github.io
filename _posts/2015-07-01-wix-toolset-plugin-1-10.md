@@ -7,7 +7,9 @@ category: General
 ---
 A new version of Wix Toolset plugin was released on June 1st. The new version is automatically 
 available via Jenkins update manager. This announcement describes the latest changes.
+
 <!--more-->
+
 ### Changes
 * Minimum required version of Jenkins is now 1.579
 * Installation path can be left empty. Wix Toolset plugin is then expecting that the Wix Tools are added to the system environment variable *PATH* on Windows master or slave.
