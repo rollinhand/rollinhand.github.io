@@ -1,0 +1,30 @@
+---
+navigation: none
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>{{ site.name }}</title>
+    <url>http://kivio.org</url>
+    <description>{{ site.name }}</description>
+    <language>de-de</language>
+    <copyright>Björn Berg</copyright>
+    <pubDate>{{ site.time | date_to_xmlschema }}</pubDate>
+    <image>
+      <url>http://kivio.org/images/kivio-white.png</url>
+      <title>{{ site.name }}</title>
+      <link>http://kivio.org</link>
+    </image>
+    {% for post in site.posts %}
+      <item>
+        <title>{{ post.title }}</title>
+        <description>{{ post.excerpt | xml_escape }}</description>
+        <link>http://kivio.org{{ post.url }}</link>
+        <author>Björn Berg</author>
+        <guid>http://kivio.org{{ post.id }}</guid>
+        <pubDate>{{ post.time | date_to_xmlschema }}</pubDate>
+      </item>  
+    {% endfor %}
+  </channel>
+</rss>
