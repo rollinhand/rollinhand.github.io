@@ -9,7 +9,7 @@ navigation: none
     <description>{{ site.name }}</description>
     <language>de-de</language>
     <copyright>Björn Berg</copyright>
-    <pubDate>{{ site.time | date: %a, %d %b %Y %H:%M:%S %:z }}</pubDate>
+    <pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %:z" }}</pubDate>
     <image>
       <url>http://kivio.org/images/kivio-white.png</url>
       <title>{{ site.name }}</title>
@@ -22,7 +22,7 @@ navigation: none
         <link>http://kivio.org{{ post.url }}</link>
         <author>rollin.hand@gmx.de</author>
         <guid>http://kivio.org{{ post.id }}</guid>
-        <pubDate>{{ post.date | date: %a, %d %b %Y %H:%M:%S %:z }}</pubDate>
+        <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %:z" }}</pubDate>
       </item>  
     {% endfor %}
   </channel>
