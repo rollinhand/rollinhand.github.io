@@ -1,6 +1,5 @@
 ---
 navigation: none
-layout: nil
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
@@ -23,7 +22,7 @@ layout: nil
         <link>http://kivio.org{{ post.url }}</link>
         <author>Björn Berg</author>
         <guid>http://kivio.org{{ post.id }}</guid>
-        <pubDate>{{ post.time | date_to_xmlschema }}</pubDate>
+        <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
       </item>  
     {% endfor %}
   </channel>
