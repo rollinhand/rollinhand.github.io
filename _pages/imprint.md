@@ -2,6 +2,7 @@
 layout: imprint
 title: Impressum / Disclaimer
 navigation: none
+permalink: /imprint/
 ---
 ## Impressum
 Björn Berg  
