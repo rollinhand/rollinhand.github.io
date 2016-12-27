@@ -467,27 +467,6 @@ a.read_more:hover {
 	list-style-type: none;
 }
 
-/* Calendar
----------------------------------*/
-.hCalendarMonthYearRow {
-	padding-bottom: 10px;
-}
-
-.hCalendarTable > tbody > tr > th, 
-.hCalendarTable > tbody > tr > td {
-	padding: 5px;
-}
-
-.hCalendarDayCurrent {
-	background-color: #005490;
-    border-radius: 50%;
-    color: #EEEEEE;
-}
-
-.hCalendarTable td.hCalendarDayCurrent > a {
-	color: #EEEEEE;
-}
-
 /* Tag Cloud
 ---------------------------------*/
 #tagcloud {
@@ -686,50 +665,15 @@ ul.infoList li + li {
 
 /* Github extension
 ---------------------------------*/
-.github-box {
-	display: block;
-	clear: both;
-	margin: 5px 5px;
-	padding-top: 10px;
-}
-
-.github-box .gh-repository-list {
-	border: 1px solid #999;
-	display: block;
-}
-
 .github-box .gh-realname {
 	font-size: 1.0em;
 	padding: 1px 1px;
-}
-
-.github-box h3 {
-	font-size: 1.15em;
-	margin-top:20px;
-	padding-top:20px;
 }
 
 .github-box .gh-text {
 	font-size: 0.8em;
 	margin: 0px 5px;
 	padding: 5px 5px;
-}
-
-.github-box .gh-repository-name {
-	font-weight:bold;
-}
-
-.gh-odd {
-	background-color:#EEE;
-}
-
-.gh-version {
-	font-size: 9px;
-	font-style: italic;
-}
-
-.gh-profile {
-	display: block;
 }
 
 .gh-text {
@@ -759,6 +703,37 @@ ul.infoList li + li {
 .gh-avatar .gh-avatarImg {
 	height: 48px;
 	width: 48px;
+}
+
+/* Sidebar
+---------------------------------*/
+.sidebar-content {
+	display: block;
+	clear: both;
+	margin: 5px 5px;
+	width: 100%;
+	font-size: 1.0em;
+	color:#666;
+}
+
+.sidebar-content ul {
+	padding: 0px;
+	margin: 0px;
+}
+
+.sidebar-content ul > li {
+	list-style-type: none;
+	padding:5px 0px;
+}
+
+.sidebar-content table {
+	width: 100%; 
+}
+
+.sidebar-content td {
+	padding: 5px 0px;
+	font-size: 0.8em;
+	color:#666;
 }
 
 /* Media Queries

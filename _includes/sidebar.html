@@ -1,12 +1,21 @@
-<div class="github-box">
-	<div class="gh-profile">
+<div class="sidebar-content">
 	<div class="gh-avatar">{% avatar rollinhand %}</div>
-		<span class="gh-realname gh-text">Björn Berg</span>
-		<span class="gh-username gh-text">rollinhand</span>
-	</div>
-	
+	<p><span class="gh-realname">Björn Berg (rollinhand)</span></p>
 	<div class="about">
 		<p>Talking about the hottest topics for DevOps, including Java EE applications and 
 		automatic machine provisioning.</p>
 	</div>
+</div>
+
+<div class="sidebar-content">
+  <table>
+  {% assign category_list = site.categories | sort %}
+  {% for category in category_list %}
+    {% assign name = category | first %}
+    <tr>
+      <td>{{ name }}</td>
+      <td><span class="label label-primary">{{ site.categories[name] | size }}</span></td>
+    </tr>     
+  {% endfor %}      
+  </table>
 </div>

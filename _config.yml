@@ -5,7 +5,6 @@ permalink: /entry/:year/:month/:day/:title
 gems: 
   - jekyll-paginate
   - jekyll-avatar
-  - jekyll-mentions
   - jekyll-sitemap
 
 paginate: 10

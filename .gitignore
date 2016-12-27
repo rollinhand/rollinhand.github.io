@@ -5,3 +5,4 @@ serve.sh
 Gemfile.lock
 .DS_Store/
 .DS_Store
+build.sh

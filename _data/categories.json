@@ -1,0 +1,12 @@
+---
+layout: null;
+---
+{
+  {% for category in site.categories | sort %}
+    "category": 
+      {
+        "name": {{ category | last }}
+        "size": {{ category | last | size }}	
+      }
+  {% endfor %}
+}
