@@ -3,7 +3,7 @@ layout: post
 title: "Wenn der JDeveloper 12c richtig klemmt..."
 creator: rollinhand
 date: 2014-10-08
-category: Development
+category: Entwicklung
 ---
 Oracles JDeveloper ist kein Performance-Wunder. Neben Performanceengpässen hilft manchmal 
 nur das "Abschießen" aller zum JDeveloper gehörigen Prozesse, um weiterarbeiten zu können. 

@@ -3,7 +3,7 @@ layout: post
 title: "Blog zu GitHub pages umgezogen"
 date: 2016-12-23
 creator: rollinhand
-category: General
+category: Allgemein
 ---
 Meinen Blog [Kivio](http://kivio.org) habe ich zum Ende des Jahres zu [GitHub pages](http://github.com) 
 umgezogen. Die Gründe finden sich in diesem Post.

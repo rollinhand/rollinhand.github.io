@@ -3,7 +3,7 @@ layout: post
 title: "Fehlerbehebung im Glassfish-Server" 
 creator: rollinhand
 date: 2016-03-31 
-category: Development  
+category: Entwicklung  
 --- 
 Kryptische Fehlermeldungen bei der Entwicklung von Webanwendungen auf dem Glassfish-Server
 sind nicht immer einfach zu entschlüsseln und deren Ursache zu beheben. Dieser

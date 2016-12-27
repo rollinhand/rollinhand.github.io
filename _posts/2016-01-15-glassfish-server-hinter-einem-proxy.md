@@ -3,7 +3,7 @@ layout: post
 title: "Glassfish-Server hinter einem Proxy betreiben"
 creator: rollinhand
 date: 2016-01-15
-category: Technology
+category: Technologie
 ---
 Wie nutzt man den NGINX effizient als Proxy für einen Glassfish und wie bekommt man den 
 Port 8080 dauerhaft aus Links seiner Web-Anwendung entfernt? Die Antworten liefert dieser Beitrag.

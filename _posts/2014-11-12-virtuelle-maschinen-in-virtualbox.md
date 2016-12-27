@@ -3,7 +3,7 @@ layout: post
 title: "Virtuelle Maschinen in VirtualBox umziehen"
 creator: rollinhand
 date: 2014-11-12
-category: Technology
+category: Technologie
 ---
 Virtuelle Maschinen in VirtuialBox auf einen externen Datenträger zu verlagern ist einfach. 
 Dieses Post zeigt, welche Schritte zu beachten sind, um die Maschinen auf unterschiedlichen 

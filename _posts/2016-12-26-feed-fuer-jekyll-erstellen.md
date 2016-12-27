@@ -3,7 +3,7 @@ layout: post
 date: 2016-12-26
 title: "Feed für Jekyll-basierten Blog erstellen"
 creator: rollinhand
-category: Development
+category: Entwicklung
 ---
 Ein Blog mit redaktionellen Inhalten benötigt einen Feed. Leser können so bequem die
 Inhalte über einen Feed-/News-Reader abonnieren. Wie es mit Jekyll funktioniert, verrät

@@ -3,7 +3,7 @@ layout: post
 title: "JNI - Exception-Handling unter Windows"
 creator: rollinhand
 date: 2010-07-13
-category: Development
+category: Entwicklung
 ---
 Um Exceptions aus einem JNI-Interface abzufangen und strukturiert behandeln zu können, 
 sind ein paar zusätzliche Handgriffe notwendig. Dieses Post gibt einen kurzen Einblick 
