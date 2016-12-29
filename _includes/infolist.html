@@ -1,6 +1,12 @@
 <ul class="infoList">
 	<li><i class="fa fa-clock-o"></i> {{ post.date | date: "%d.%m.%Y" }}</li>
-	<li><i class="fa fa-user"></i> {{ post.creator }}</li>
+	<li><i class="fa fa-user"></i> 
+		{% if post.creator %} 
+		  {{ post.creator }} 
+		{% else %} 
+		  {{ site.owner }} 
+		{% endif %}
+	</li>
 	<li><i class="fa fa-star"></i> {{ post.categories }}</li>
 	{% if post.tags != empty %}
 		<li><i class="fa fa-tags"></i> {{ post.tags }}</li>
