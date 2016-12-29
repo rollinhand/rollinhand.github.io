@@ -1,8 +1,8 @@
 <ul class="infoList">
-	<li><i class="fa fa-clock-o"></i> {{ page.date | date: "%d.%m.%Y" }}</li>
-	<li><i class="fa fa-user"></i> {{ page.creator }}</li>
-	<li><i class="fa fa-star"></i> {{ page.categories }}</li>
-	{% if page.tags != empty %}
-		<li><i class="fa fa-tags"></i> {{ page.tags }}</li>
+	<li><i class="fa fa-clock-o"></i> {{ post.date | date: "%d.%m.%Y" }}</li>
+	<li><i class="fa fa-user"></i> {{ post.creator }}</li>
+	<li><i class="fa fa-star"></i> {{ post.categories }}</li>
+	{% if post.tags != empty %}
+		<li><i class="fa fa-tags"></i> {{ post.tags }}</li>
 	{% endif %}								
 </ul>

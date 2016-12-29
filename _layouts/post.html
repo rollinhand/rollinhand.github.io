@@ -27,7 +27,8 @@
 	<script src="/js/html5element.js"></script>
 	<![endif]-->
 	
-	<title>{{ page.title }} - {{ site.name }}</title>
+	{% assign post = page %}
+	<title>{{ post.title }} - {{ site.name }}</title>
 </head>
 <body>
 	<!-- HTML 5 HEADER -->
@@ -41,7 +42,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-8">
-						<h2>{{ page.title }}</h2>
+						<h2>{{ post.title }}</h2>
 						<div class="entryInfo detail">
 							{% include infolist.html %}
 						</div>

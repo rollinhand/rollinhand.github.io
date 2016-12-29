@@ -1,5 +1,6 @@
 ---
 name: Kivio - A practical blog for DevOps
+owner: rollinhand
 markdown: kramdown
 permalink: /entry/:year/:month/:day/:title
 gems: 
