@@ -52,6 +52,22 @@
 						{{ content }}
 						
 						<!-- TODO: Pager einbauen -->
+						<ul class="pager">
+							<li class="previous">
+							{% if post.previous.url %}
+								<a href="{{ post.previous.url }}">&laquo; {{ post.previous.title }}</a>
+							{% else %}
+								<span>Previous</span>
+							{% endif %}
+							<li>
+							<li class="next">
+							{% if post.next.url %}
+								<a href="{{ post.next.url }}">{{ post.next.title }} &raquo;</a>
+							{% else %}
+								<span>Next</span>
+							{% endif %}
+							</li>
+						</ul>		
 					</div>
 					<div class="col-lg-4">
 						{% include sidebar.html %}
