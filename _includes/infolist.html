@@ -9,6 +9,6 @@
 	</li>
 	<li><i class="fa fa-star"></i> {{ post.categories }}</li>
 	{% if post.tags != empty %}
-		<li><i class="fa fa-tags"></i> {{ post.tags }}</li>
+		<li><i class="fa fa-tags"></i> {{ post.tags | join: ', '}}</li>
 	{% endif %}								
 </ul>

@@ -72,6 +72,12 @@ body {
 	color: #428bca;
 }
 
+/* Bildunterschrift */
+img + em {
+	font-size: 0.8em;
+	color:#555;
+}
+
 /* Header Styles
 ---------------------------------*/
 #header_wrapper {
@@ -484,7 +490,7 @@ a.read_more:hover {
 ---------------------------------*/
 #posts {
 	padding: 30px 0px;
-	color:#666;
+	color:#111;
 }
 
 .entryContent {

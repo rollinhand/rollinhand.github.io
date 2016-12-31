@@ -43,13 +43,15 @@
 				<div class="row">
 					<div class="col-lg-8">
 						<h2>{{ post.title }}</h2>
-						<div class="entryInfo detail">
+						<div class="entryInfo">
 							{% include infolist.html %}
 						</div>
+						<div class="content">
 						<!-- Excerpt -->
 						{{ excerpt }}
 						<!-- Der Inhalt des Postings -->
 						{{ content }}
+						</div>
 						
 						<!-- TODO: Pager einbauen -->
 						<ul class="pager">
