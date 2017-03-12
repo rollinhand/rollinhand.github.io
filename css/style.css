@@ -78,6 +78,24 @@ img + em {
 	color:#555;
 }
 
+.publikationen {
+	border:0;
+	width:100%;
+}
+
+.publikationen tr {
+	margin:5px 0px;
+	border-bottom:1px solid #DDD;
+}
+
+.publikationen td {
+	padding:10px 10px;
+}
+
+h4 {
+	color: #000;
+}
+
 /* Header Styles
 ---------------------------------*/
 #header_wrapper {
@@ -609,6 +627,10 @@ ul.infoList li + li {
 	text-align: left;
 	list-style-type: none;
 	padding: 5px 0 5px 0;
+}
+
+.share {
+	margin:30px 0px;
 }
 
 /* Footer

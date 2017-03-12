@@ -41,7 +41,7 @@
 		<div class="posts_wrapper">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-8">
+					<div class="col-lg-9">
 						<h2>{{ post.title }}</h2>
 						<div class="entryInfo">
 							{% include infolist.html %}
@@ -51,6 +51,18 @@
 						{{ excerpt }}
 						<!-- Der Inhalt des Postings -->
 						{{ content }}
+						</div>
+						
+						<div class="share">
+							<div data-type="xing/share" data-lang="de"></div>
+							<script>
+							  ;(function (d, s) {
+								var x = d.createElement(s),
+								  s = d.getElementsByTagName(s)[0];
+								  x.src = "https://www.xing-share.com/plugins/share.js";
+								  s.parentNode.insertBefore(x, s);
+							  })(document, "script");
+							</script>
 						</div>
 						
 						<!-- TODO: Pager einbauen -->
@@ -71,7 +83,7 @@
 							</li>
 						</ul>		
 					</div>
-					<div class="col-lg-4">
+					<div class="col-lg-3">
 						{% include sidebar.html %}
 					</div>
 				</div> <!-- / row -->

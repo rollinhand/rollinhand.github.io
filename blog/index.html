@@ -1,0 +1,36 @@
+---
+layout: default
+title: Blog
+---
+<section id="posts">
+	<div class="posts_wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8">
+					<!-- Alle Blog-Einträge anzeigen -->
+					{% for post in paginator.posts %}
+					<div class="daybox">
+						<div class="entryBox">
+							<h2 class="entryTitle"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+							<!-- Author, Date and Comments -->
+							<div class="entryInfo">
+								{% include infolist.html %}
+							</div>
+							<!-- / Author, Date and Comments -->
+							<div class="entryContent">
+								<div class="content">
+								{{ post.excerpt }}
+								</div>
+							</div>
+						</div>    
+					</div>
+					{% endfor %}
+					{% include pagination.html %}
+				</div>
+				<div class="col-lg-4">
+					{% include sidebar.html %}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

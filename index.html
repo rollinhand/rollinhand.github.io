@@ -2,35 +2,94 @@
 layout: default
 navigation: none
 ---
-<section id="posts">
-	<div class="posts_wrapper">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-8">
-					<!-- Alle Blog-Einträge anzeigen -->
-					{% for post in paginator.posts %}
-					<div class="daybox">
-						<div class="entryBox">
-							<h2 class="entryTitle"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-							<!-- Author, Date and Comments -->
-							<div class="entryInfo">
-								{% include infolist.html %}
-							</div>
-							<!-- / Author, Date and Comments -->
-							<div class="entryContent">
-								<div class="content">
-								{{ post.excerpt }}
-								</div>
-							</div>
-						</div>    
-					</div>
-					{% endfor %}
-					{% include pagination.html %}
-				</div>
-				<div class="col-lg-4">
-					{% include sidebar.html %}
+<!-- MAIN CONTENT -->
+<section id="post_header">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-sm-7">
+				<div class="top_left_cont">
+					<h2>Hybride Softwareentwicklung</h2>
+					<p>Agile Softwareentwicklung erlebt gegenwärtig einen großen Hype. 
+					Neuerdings ist aber auch ein Gegentrend zu diesem Hype zurück zu den 
+					klassischen Vorgehensmodellen zu bemerken. Hybride Softwareentwicklung 
+					beschreibt einen Ansatz, der die Vorteile beider Welten in einem Modell 
+					vereint und stellt seine Praxistauglichkeit anhand von Case Studies 
+					unter Beweis. Zusammen mit den Co-Autoren erläutere ich die Vorteile 
+					der hybriden Softwareentwicklung und diskutiere praxisorientierte 
+					Lösungsansätze für IT-Manager und Projektleiter.</p>
+					<a href="https://www.amazon.de/Hybride-Softwareentwicklung-klassischen-Methoden-Xpert-press/dp/3642550630/ref=sr_1_1?s=books&ie=UTF8&qid=1489313790&sr=1-1&keywords=hybride+softwareentwicklung" class="read_more2">Kaufen bei amazon</a>  
 				</div>
 			</div>
+			<div>
+				<img src="/images/hybride-softwareentwicklung-cover.jpg" width="250" class="bannerImg2">
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- TODO: Publikationen einfügen -->
+<section id="projects" style="background:#FFF;">
+	<div class="posts_wrapper">
+		<div class="container">
+			<h2>Veröffentlichungen</h2>
+			<div class="row">
+				<div class="col-lg-6">
+					<table class="publikationen">
+					{% for pub in site.data.publikationen %}
+						<tr>
+							<td>
+							{% case pub.art %}
+							{% when 'Buch' %}
+								<span><i class="fa fa-book"></i></span>
+							{% else %}
+								<span><i class="fa fa-file-text-o"></i></span>
+							{% endcase %}
+							</td>
+							<td>{{ pub.jahr }}</td>
+							<td><h4>{{ pub.titel }}</h4>
+							    {{ pub.autoren }} <br/>
+							    <i>{{ pub.verlag }} ({{ pub.art }})</i><br/>
+							    {% if pub.link %}
+							    	<a href="{{ pub.link }}">Herunterladen</a>
+							    {% endif %}
+							</td>
+						</tr>
+					{% endfor %}
+					</table>
+				</div>
+				<div class="col-lg-6">
+					<img src="/images/publikation.png" height="320" class="bannerImg2">
+				</div>
+			</div> <!-- / row -->
+		</div>
+	</div>
+</section>
+
+<!-- Section Projekte -->
+<section id="projects" style="background:#EFEFEF;">
+	<div class="posts_wrapper">
+		<div class="container">
+			<h2>Blog-Artikel</h2>
+			<div class="row">
+				<div class="col-lg-4 borderRight">
+					<div class="project_block">
+						{% assign post = site.posts[0] %}
+						{% include blog-preview.html %}
+					</div>
+				</div>
+				<div class="col-lg-4 borderRight">
+					<div class="project_block">
+						{% assign post = site.posts[1] %}
+						{% include blog-preview.html %}
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="project_block">
+						{% assign post = site.posts[2] %}
+						{% include blog-preview.html %}
+					</div>
+				</div>
+			</div> <!-- / row -->
 		</div>
 	</div>
 </section>
