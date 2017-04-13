@@ -329,10 +329,7 @@ h2 {
 }
 
 .bannerImg2 {
-	padding-top: 5%;
-	margin-right: 30px;
-	margin-left: 25%;
-	position: absolute;
+    float: right;
 }
 
 a.read_more2 {
@@ -780,7 +777,7 @@ ul.infoList li + li {
 }
 
 @media (max-width: 768px) {
-.bannerImg{
+.bannerImg2{
 display:none;
 }
 p{
@@ -877,5 +874,9 @@ margin: 0px;
 	float: right;
 	width: 100%;
 	text-align:center;
-	} 
+	}
+
+    .bannerImg2 {
+        display: none;
+    }
 }
