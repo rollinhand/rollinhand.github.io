@@ -12,14 +12,15 @@
 	<link href="/css/style.css" rel="stylesheet" type="text/css">
 	<link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<link href="/css/animate.css" rel="stylesheet" type="text/css">
+	<link href="/css/syntax.css" rel="stylesheet" type="text/css">
 	
 	<!-- Feeds -->
 	<link rel="alternate" type="application/rss+xml" title="RSS" href="/blog/feed/rss.xml" />
 	<link rel="alternate" type="application/atom+xml" title="Atom" href="/blog/feed/atom.xml" />
 
 	<!-- Load Highlight.js -->
-	<script src="/js/highlight.pack.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
+	<!--<script src="/js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>-->
 
 	<!--[if lt IE 9]>
 	<script src="/js/respond-1.1.0.min.js"></script>
@@ -47,10 +48,8 @@
 							{% include infolist.html %}
 						</div>
 						<div class="content">
-						<!-- Excerpt -->
-						{{ excerpt }}
 						<!-- Der Inhalt des Postings -->
-						{{ content }}
+						{{ post.content }}
 						</div>
 						
 						<div class="share">
