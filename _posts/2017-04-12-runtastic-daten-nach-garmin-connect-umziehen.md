@@ -37,6 +37,7 @@ zwei Zeilen Code:
 
 {% highlight Shell%}
 for file in $( ls ); do sed -i '' 's/running/Running/g' $file; done
+for file in $( ls ); do sed -i '' 's/Swimming/Other/g' $file; done
 for file in $( ls ); do sed -i '' 's/cycling/Biking/g' $file; done
 {% endhighlight %}
 
