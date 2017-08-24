@@ -17,6 +17,10 @@ img {
     max-width: 100%;
 }
 
+div.content img {
+    max-width: 60%;
+}
+
 a, a:hover, a:active {
     outline: 0px !important;
 }
