@@ -1,0 +1,133 @@
+---
+---
+@charset "utf-8";
+@import "reset.scss";
+@import "color.scss";
+
+@import url(https://fonts.googleapis.com/css?family=Muli:300,400);
+
+$inner-width: 960px;
+
+@mixin rounded-corners($radius) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+}
+
+@mixin build-block() {
+    vertical-align: top;
+    display: inline-block;
+    max-width: 100%;
+    width: calc((480px - 100%) * 480);
+}
+
+@mixin post {
+    text-align: justify;
+    padding: 20px;
+}
+
+html {
+    margin:0;
+    padding:0;
+    height: 100%;
+}
+
+body {
+    margin:0;
+    height: 100%;
+    font-size: 12pt;
+    font-family: "Muli", Verdana, Geneva, Tahoma, sans-serif;
+    background-color: $white;
+}
+
+.label {
+    background-color: $blue;
+    color: $white;
+    padding: 2px;
+    @include rounded-corners(2px);
+}
+
+.indent {
+    margin: 0 5%;
+    background-color: $white;
+}
+
+.navbar > li {
+    float: left;
+    padding: 5px 10px;
+
+    > a {
+        font-size: 1.0em;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $white;
+        text-decoration: none;
+        &:hover {
+            color: $blue;
+        }
+    }
+
+    &.active {
+        background-color: $blue;
+        @include rounded-corners(5%);
+    }    
+}
+
+.heading {
+    padding: 0px;
+    min-height: 70px;
+    overflow: hidden;
+
+    .logo {
+        padding: 15px 10px;
+        float: left;
+    }
+
+    .navigation {
+       .main-navigation {
+           float: right;
+       }
+    }
+    &:after {
+        @include clear;
+    }
+}
+
+.main {
+    .content {
+        @include build-block();
+        text-align: justify;
+        min-width: 67%;
+        padding: 20px 30px 10px 0px;
+        vertical-align: top;
+        
+        .intro {
+            display: inline-block;
+
+            h2 {
+                > a {
+                    color: $blue;
+                    font-weight: bold;
+                    text-decoration: none;    
+                }
+            }
+            
+        }
+    }
+
+    .sidebar {
+        @include build-block();
+        min-width: 25%;
+        padding: 20px 0px 10px 30px;
+    }
+    &:after {
+        @include clear;
+        display: block;
+    }
+}
+
+.footer {
+    footer {
+        padding: 20px;
+    }
+}
