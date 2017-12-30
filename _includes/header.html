@@ -3,23 +3,13 @@
 	<header>
 			<div class="indent">
 					<div class="logo">
-							<img src="img/kivio-white.png" alt="Logo">
+							<a href="/"><img src="{{site.url}}/images/kivio-white.png" alt="Logo"></a>
 					</div>
 					<nav class="navigation">
 							<div class="main-navigation">
 								<ul class="navbar" id="mainNav">
-									<!-- Do not list pages with no title or front matter 'navigation: none' -->
-									{% for node in site.pages %}
-										{% if node.title and node.navigation != 'none' %}
-											{% unless node.url contains 'page' %}
-												{% if page.url contains node.url %}
-													<li class="active"><a class="active" href="{{ node.url }}">{{ node.title }}</a></li>
-												{% else %}
-													<li><a href="{{ node.url }}">{{ node.title }}</a></li>
-												{% endif %}	
-											{% endunless %}
-										{% endif %}
-									{% endfor %}
+									<li><i class="fa fa-feed subscribe"></i> <a href="/blog/feed/atom.xml">Atom</a></li>
+									<li><i class="fa fa-feed subscribe"></i> <a href="/blog/feed/rss.xml">RSS</a></li>
 								</ul><!-- /mainNav -->
 							</div>
 					</nav>

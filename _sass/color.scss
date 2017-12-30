@@ -1,8 +1,10 @@
 $blue: #005490;
 $white: #ffffff;
 $black: #000000;
-$grey: #666666;
+$grey: #222;
 $light-grey: #DDDDDD;
+$sidebar-grey: #999;
+$green: #0d4b4d;
 
 .light {
     background-color: $white;
@@ -26,5 +28,10 @@ $light-grey: #DDDDDD;
 
 .blue {
     background-color: $blue;
+    color: $white;
+}
+
+.green {
+    background-color: $green;
     color: $white;
 }

@@ -2,17 +2,17 @@
 <ul class="pager">
 	<li class="previous">
 	{% if paginator.previous_page %}
-		<a href="{{ paginator.previous_page_path }}">Previous</a>
+		<a href="{{ paginator.previous_page_path }}"><span><i class="fa fa-arrow-left"></i></span> Previous</a>
 	{% else %}
-		<span>Previous</span>
+		<span><span><i class="fa fa-arrow-left"></i></span> Previous</span>
 	{% endif %}
-	<li>
+	</li>
 	<li class="page_number"><span>Page: {{ paginator.page }} / {{ paginator.total_pages }}</span></li>
 	<li class="next">
 	{% if paginator.next_page %}
-		<a href="{{ paginator.next_page_path }}">Next</a>
+		<a href="{{ paginator.next_page_path }}">Next <span><i class="fa fa-arrow-right"></i></span></a>
 	{% else %}
-		<span>Next</span>
+		<span>Next <span><i class="fa fa-arrow-right"></i></span></span>
 	{% endif %}
 	</li>
 </ul>		

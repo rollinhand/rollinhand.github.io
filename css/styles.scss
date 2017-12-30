@@ -40,11 +40,35 @@ body {
     background-color: $white;
 }
 
+a {
+    text-decoration: none;
+    color: $blue;
+    font-weight: bold;
+}
+
 .label {
     background-color: $blue;
     color: $white;
-    padding: 2px;
+    padding: 2px 5px;
+    font-size: 0.8em;
+    font-weight: bold;
     @include rounded-corners(2px);
+}
+
+.button {
+    color: $white;
+    padding: 5px 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    width:20px;
+    text-align: center;
+    display: block;
+    @include rounded-corners(5px);
+}
+
+.left-align {
+    float:left;
+    margin-right:10px;
 }
 
 .indent {
@@ -65,12 +89,17 @@ body {
         &:hover {
             color: $blue;
         }
+        &.active {
+            &:hover {
+                color: $white;
+            }
+        }
     }
 
     &.active {
         background-color: $blue;
         @include rounded-corners(5%);
-    }    
+    }
 }
 
 .heading {
@@ -84,9 +113,9 @@ body {
     }
 
     .navigation {
-       .main-navigation {
-           float: right;
-       }
+        .main-navigation {
+            float: right;
+        }
     }
     &:after {
         @include clear;
@@ -100,7 +129,8 @@ body {
         min-width: 67%;
         padding: 20px 30px 10px 0px;
         vertical-align: top;
-        
+        border-right: 1px solid $light-grey;
+
         .intro {
             display: inline-block;
 
@@ -108,10 +138,14 @@ body {
                 > a {
                     color: $blue;
                     font-weight: bold;
-                    text-decoration: none;    
+                    text-decoration: none;
                 }
             }
-            
+
+        }
+
+        p {
+            line-height: 1.5em;
         }
     }
 
@@ -129,5 +163,173 @@ body {
 .footer {
     footer {
         padding: 20px;
+        display: inline-block;
+        color: $light-grey;
+        font-size: 0.8em;
+    }
+    &:after {
+        @include clear;
+    }
+}
+
+.entryBox {
+    margin: 0;
+    padding: 2px 0px;
+    h2 {
+        font-weight: bold;
+        a {
+            text-decoration: none;
+            color: $blue;
+        }
+    }
+    .excerpt {
+        @include clear;
+    }
+}
+
+ul.infoList {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    li {
+        font-size: 0.8em;
+        float: left;
+        padding: 0px 10px 0px 0px;
+    }
+    &:after {
+        @include clear;
+    }
+}
+
+ul.pager {
+    text-align: center;
+    margin: 20px 0px;
+    padding: 20px 20px;
+    display: block;
+    border-top: 1px solid $light-grey;
+
+    li {
+        display: inline;
+        padding: 5px 10px;
+        color: $white;
+        font-size: 0.8em;
+        &.page_number {
+            color: $black;
+        }
+    }
+    &:after {
+        @include clear;
+    }
+}
+
+.book {
+    background-color: $blue;
+    padding: 10px 0px;
+    > .summary {
+        @include build-block();
+        width: 67%;
+
+        p {
+            padding-bottom: 20px;
+        }
+    }
+    > .bannerImg {
+        display: inline-block;
+        padding-left: 10%;
+    }
+}
+
+a.buy {
+    border:1px solid $white;
+    color: $white;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 10px;
+    margin-top:20px;
+    @include rounded-corners(10px);
+    &:hover {
+        background-color: $white;
+        color: $blue;
+    }
+}
+
+img.banner {
+    padding-top: 20px;
+    width: 200px;
+}
+
+.gh-avatar {
+    > img {
+        display: block;
+        margin: 0 auto;
+        width: 80px;
+        height: 80px;
+        border: 2px solid $light-grey;
+        @include rounded-corners(50%);
+    }
+
+    > p {
+        text-align: center;
+        font-weight: bold;
+    }
+}
+
+.sidebar {
+    p {
+        font-size: 10pt;
+        color: $grey;
+        line-height: 1.5em;
+        font-family: "Muli", Verdana, Geneva, Tahoma, sans-serif;
+        background-color: $white;
+    }
+}
+
+.sidebar-content {
+    border-bottom: 1px solid $light-grey;
+    padding:10px 0px;
+    text-align: justify;
+    font-size: 0.8em;
+
+    h4 {
+        font-size:1.0em;
+        font-weight:bold;
+        color: $sidebar-grey;
+        margin:10px 0px;
+    }
+
+    table {
+        width:100%;
+    }
+
+    td {
+        font-size: 0.8em;
+        padding:2px 0px;
+    }
+
+    .social-media {
+        display: inline-block;
+    }
+
+    .publications {
+        td {
+            padding:2px 2px;
+        }
+
+        .distributor {
+            font-size:0.7em;
+            font-weight:bold;
+            color: $sidebar-grey;
+        }
+    }
+
+    &:after {
+        @include clear;
+    }
+}
+
+pre {
+    code {
+        font-size: 1.0em;
+        font-family: "Courier New";
     }
 }
