@@ -8,7 +8,7 @@ tags: Java Oracle NetBeans
 Java 9 ist seit geraumer Zeit in der finalen Version verfügbar. NetBeans 9 lässt allerdings nach wie vor noch auf sich
 warten. Der Umzug zu Apache ist aufwändiger als gedacht.
 
-<!-- more -->
+<!--more-->
 
 Bislang wurden neue Major-Version von Java und NetBeans fast zeitgleich veröffentlicht, sodass NetBeans immer die erste
 IDE war, die neue Sprachfeatures unterstützt hat. Geplant war die Veröffentlichung der Version 9.0 bereits für 
