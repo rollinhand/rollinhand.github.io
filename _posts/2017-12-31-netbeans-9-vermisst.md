@@ -2,7 +2,7 @@
 layout: post
 title: NetBeans 9 vermisst
 date: 2017-12-31
-category: category: Entwicklung
+category: Entwicklung
 tags: Java Oracle NetBeans
 ---
 Java 9 ist seit geraumer Zeit in der finalen Version verfügbar. NetBeans 9 lässt allerdings nach wie vor noch auf sich
