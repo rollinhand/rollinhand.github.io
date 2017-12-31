@@ -1,0 +1,10 @@
+/* Reset some default styles */
+
+@mixin clear {
+    clear: both;
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+}
