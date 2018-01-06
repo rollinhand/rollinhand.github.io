@@ -46,6 +46,11 @@ a {
     font-weight: bold;
 }
 
+ul {
+    list-style-type: square;
+    line-height: 1.5em;
+}
+
 .label {
     background-color: $blue;
     color: $white;
@@ -108,13 +113,14 @@ a {
     overflow: hidden;
 
     .logo {
-        padding: 15px 10px;
+        margin:1% 0;
         float: left;
     }
 
     .navigation {
         .main-navigation {
             float: right;
+            margin:1% 2%;
         }
     }
     &:after {
@@ -126,10 +132,8 @@ a {
     .content {
         @include build-block();
         text-align: justify;
-        min-width: 67%;
-        padding: 20px 30px 10px 0px;
-        vertical-align: top;
-        border-right: 1px solid $light-grey;
+        min-width:67%;
+        margin:2% 2% 0 0;
 
         .intro {
             display: inline-block;
@@ -151,8 +155,18 @@ a {
 
     .sidebar {
         @include build-block();
-        min-width: 25%;
-        padding: 20px 0px 10px 30px;
+        min-width: 26%;
+        margin:2% 0 0 2%;
+        overflow: auto;
+
+        p {
+            font-size: 1.0em;
+            color: $sidebar-grey;
+            line-height: 1.5em;
+            font-family: "Muli", Verdana, Geneva, Tahoma, sans-serif;
+            background-color: $white;
+        }
+
     }
     &:after {
         @include clear;
@@ -173,10 +187,12 @@ a {
 }
 
 .entryBox {
-    margin: 0;
-    padding: 2px 0px;
+    margin-bottom: 2%;
+    border-bottom: 1px solid $light-grey;
+
     h2 {
         font-weight: bold;
+        text-align: left;
         a {
             text-decoration: none;
             color: $blue;
@@ -206,7 +222,6 @@ ul.pager {
     margin: 20px 0px;
     padding: 20px 20px;
     display: block;
-    border-top: 1px solid $light-grey;
 
     li {
         display: inline;
@@ -274,14 +289,8 @@ img.banner {
     }
 }
 
-.sidebar {
-    p {
-        font-size: 10pt;
-        color: $grey;
-        line-height: 1.5em;
-        font-family: "Muli", Verdana, Geneva, Tahoma, sans-serif;
-        background-color: $white;
-    }
+.gh-realname {
+    color:$caption-grey;
 }
 
 .sidebar-content {
@@ -293,7 +302,7 @@ img.banner {
     h4 {
         font-size:1.0em;
         font-weight:bold;
-        color: $sidebar-grey;
+        color: $caption-grey;
         margin:10px 0px;
     }
 
@@ -304,6 +313,7 @@ img.banner {
     td {
         font-size: 0.8em;
         padding:2px 0px;
+        color: $sidebar-grey;
     }
 
     .social-media {
