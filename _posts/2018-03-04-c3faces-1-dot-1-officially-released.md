@@ -35,7 +35,7 @@ from Mon to Sun in the order of the array's elements.
 
 If you use categories programmatically there is a new class called _C3Category_
 which takes a list or an array of Strings as constructor parameter. **But note:** The
-returning value inside is always a set. Duplicates are not taken into account
+returning value inside is always a Set of strings. Duplicates are not taken into account
 because categories should be always unique. Additional details can be found in the 
 [official documentation of C3.js](http://c3js.org/reference.html#axis-x-categories).
 
