@@ -1,6 +1,6 @@
 ---
 layout: post
-title: C3Faces 1.1 officially released
+title: C3Faces 1.2 officially released
 date: 2018-03-04
 category: Entwicklung
 tags: Java C3Faces JSF 
@@ -12,7 +12,7 @@ coming with category-based axes and new elements in the taglib to manipulate axe
 
 <!--more-->
 
-## Version 1.1 now supports category-based axes. 
+## Version 1.2 now supports category-based axes. 
 Now you can choose between indexed and category-based axes. Therefore I introduced
 new elements in the taglib: axes, axisX and axisY.
 
@@ -42,13 +42,16 @@ because categories should be always unique. Additional details can be found in t
 In the above example Y-axis is not visible in the diagram.
 
 ## Showcase update
-If you want to see version 1.1 with axis configuration in action, please visit
+If you want to see version 1.2 with axis configuration in action, please visit
 the [official showcase](http://c3faces.kivio.org).
 
 ## Further information 
 Changelog about further changes between previous version and the present one
 can be found in the official [Changelog](https://github.com/rollinhand/c3faces/blob/master/CHANGELOG) 
 in the GitHub repository.
+
+This post was updated to version 1.2 because prior version contained a bug
+which lead to non working axis configuration.
 
 Have fun while playing around with C3Faces and if you find any issues or have
 suggestions for new features please [leave a comment](https://github.com/rollinhand/c3faces/issues).
