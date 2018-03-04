@@ -25,5 +25,5 @@ in the GitHub repository.
 A showcase presenting the yet implemented features can be found on 
 [http://c3faces.kivio.org](http://c3faces.kivio.org).
 
-Have fund while playing around with C3Faces and if you find any issues or have
+Have fun while playing around with C3Faces and if you find any issues or have
 suggestions for new features please [leave a comment](https://github.com/rollinhand/c3faces/issues).
