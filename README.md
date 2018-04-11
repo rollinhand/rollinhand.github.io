@@ -6,7 +6,7 @@ Blog uses a Gemfile and Rakefile for easier writing and viewing new
 articles.
 
 If `rake` fails with an undefined error, this means that the current Ruby installation
-is missing some libraries. This can be installed with Bundler:
+is missing some libraries. These can be installed with Bundler:
 
 ```
 sudo gem install bundler
