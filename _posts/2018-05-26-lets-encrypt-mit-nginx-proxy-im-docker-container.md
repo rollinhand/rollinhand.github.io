@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Let's encrypt mit Nginx proxy im Docker container
+title: Let's Encrypt mit Nginx Proxy im Docker Container
 date: 2018-05-26
 category: DevOps
 tags: [SSL, Nginx, Docker, Zertifikat]
