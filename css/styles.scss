@@ -352,3 +352,21 @@ pre {
         font-family: "Courier New";
     }
 }
+
+.cofinpro {
+    a {
+        color:#FF4500;
+    }
+}
+
+.disclaimer-bottom {
+    margin-top:15px;
+    margin-bottom:15px;
+    width:100%;
+    background-color:#EEE;
+    padding:5px 10px;
+    p {
+        color:$caption-grey;
+        font-size:0.8em;
+    }
+}
