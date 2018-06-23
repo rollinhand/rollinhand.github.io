@@ -1,11 +1,11 @@
 <ul class="infoList">
-	<li><i class="fa fa-clock-o"></i> {{ post.date | date: "%d.%m.%Y" }}</li>
+	<li><i class="far fa-clock"></i> {{ post.date | date: "%d.%m.%Y" }}</li>
 	<li><i class="fa fa-star"></i> {{ post.categories }}</li>
 	{% if post.tags != empty %}
 		<li><i class="fa fa-tags"></i> {{ post.tags | join: ', '}}</li>
 	{% endif %}								
     {% if !post.cofinpro and post.cofinpro != empty %}
-        <li><i class="fa fa-medium"></i> 
+        <li><i class="fab fa-medium"></i> 
             <span class="cofinpro">
                 <a href="{{ post.cofinpro }}">Cofinpro</a>
             </span>
