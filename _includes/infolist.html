@@ -4,7 +4,7 @@
 	{% if post.tags != empty %}
 		<li><i class="fa fa-tags"></i> {{ post.tags | join: ', '}}</li>
 	{% endif %}								
-    {% if !post.cofinpro and post.cofinpro != empty %}
+    {% if post.cofinpro %}
         <li><i class="fab fa-medium"></i> 
             <span class="cofinpro">
                 <a href="{{ post.cofinpro }}">Cofinpro</a>
