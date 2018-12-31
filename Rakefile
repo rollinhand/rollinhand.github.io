@@ -45,6 +45,7 @@ task :new, [:title] do | t, args |
     post.puts "title: #{title}"
     post.puts "date: #{Time.now.strftime('%Y-%m-%d')}"
     post.puts "category: "
+    post.puts "tags: [,]"
     post.puts "---"
   end  
 end
