@@ -1,0 +1,12 @@
+---
+layout: default
+navigation: none
+---
+<section> 
+    <h1>Einsortiert unter <i>{{ page.tag }}</i></h1>
+    {% for post in site.categories[page.tag] %}
+        <article class="post, summary">
+            {% include post_preview.html %}            
+        </article>
+    {% endfor %} 
+</section>

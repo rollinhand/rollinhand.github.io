@@ -1,45 +1,22 @@
 <html>
 <head>
 	<!-- Header information like meta information and script resources -->
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-	<meta name="viewport" content="width=device-width, maximum-scale=1">
-
-	<link rel="icon" href="/images/favicon.png" type="image/png">
-	<link rel="shortcut icon" href="/images/favicon.png" type="image/png">
-
-	<!-- Bootstrap Libraries -->
-	<link href="/css/styles.css" rel="stylesheet" type="text/css">
-	<link href="/css/github.css" rel="stylesheet" type="text/css">
-	
-	<!-- Feeds -->
-	<link rel="alternate" type="application/rss+xml" title="RSS" href="/blog/feed/rss.xml" />
-	<link rel="alternate" type="application/atom+xml" title="Atom" href="/blog/feed/atom.xml" />
-
-	<!-- Load Highlight.js -->
-	<script src="/js/highlight.pack.js"></script>
-
-	<!--[if lt IE 9]>
-	<script src="/js/respond-1.1.0.min.js"></script>
-	<script src="/js/html5shiv.js"></script>
-	<script src="/js/html5element.js"></script>
-	<![endif]-->
-	
+    {% include head.html %}
 	{% assign post = page %}
 	<title>{{ post.title }} - {{ site.name }}</title>
 </head>
 <body>
-<!-- HTML 5 HEADER -->
-{% include header.html %}
+    <!-- HTML 5 HEADER -->
+    {% include header.html %}
 
-<!-- MAIN CONTENT -->
-<div class="main indent light">
-	<section class="content light">
-		<h2>{{ post.title }}</h2>
-		<div class="entryInfo">
-			{% include infolist.html %}
-		</div>
+    <!-- HTML 5 NAVIGATION -->
+    {% include navigation.html %}
 
-		{{ post.summary }}
+    <!-- MAIN CONTENT -->
+    <main class="content light">
+        <h2>{{ post.title }}</h2>
+        {% include infolist.html %}
+        {{ post.summary }}
 
 		<!-- Der Inhalt des Postings -->
 		{{ post.content }}
@@ -52,63 +29,32 @@
         </div>
         {% endif %}    
 
-		<div class="share">
-			<div data-type="xing/share" data-lang="de"></div>
-			<script>
-                ;(function (d, s) {
-                    var x = d.createElement(s),
-                        s = d.getElementsByTagName(s)[0];
-                    x.src = "https://www.xing-share.com/plugins/share.js";
-                    s.parentNode.insertBefore(x, s);
-                })(document, "script");
-			</script>
-		</div>
+        <ul class="pager">
+            <li class="previous">
+                {% if post.previous.url %}
+                <a href="{{ post.previous.url }}"><span><i class="fa fa-arrow-left"></i></span> {{ post.previous.title | truncate: 40}}</a>
+                {% else %}
+                <span>Previous</span>
+                {% endif %}
+                <li>
+                    <li class="next">
+                        {% if post.next.url %}
+                        <a href="{{ post.next.url }}">{{ post.next.title | truncate: 40}} <span><i class="fa fa-arrow-right"></i></span></a>
+                        {% else %}
+                        <span>Next</span>
+                        {% endif %}
+                    </li>
+        </ul>
+    </main>
 
-		<ul class="pager">
-			<li class="previous">
-				{% if post.previous.url %}
-				<a href="{{ post.previous.url }}"><span><i class="fa fa-arrow-left"></i></span> {{ post.previous.title | truncate: 40}}</a>
-				{% else %}
-				<span>Previous</span>
-				{% endif %}
-			<li>
-			<li class="next">
-				{% if post.next.url %}
-			<a href="{{ post.next.url }}">{{ post.next.title | truncate: 40}} <span><i class="fa fa-arrow-right"></i></span></a>
-				{% else %}
-				<span>Next</span>
-				{% endif %}
-			</li>
-		</ul>
-	</section>
-	<section class="sidebar">
+    <aside>
 		{% include sidebar.html %}
-	</section>
-</div>
+	</aside>
 
-<!-- Werbung für das Buch einbinden -->
-<div class="book blue">
-	<section id="book" class="book indent">
-		<div class="summary">
-			<h2>Hybride Softwareentwicklung</h2>
-			<p>Agile Softwareentwicklung erlebt gegenwärtig einen großen Hype.
-				Neuerdings ist aber auch ein Gegentrend zu diesem Hype zurück zu den
-				klassischen Vorgehensmodellen zu bemerken. Hybride Softwareentwicklung
-				beschreibt einen Ansatz, der die Vorteile beider Welten in einem Modell
-				vereint und stellt seine Praxistauglichkeit anhand von Case Studies
-				unter Beweis. Zusammen mit den Co-Autoren erläutere ich die Vorteile
-				der hybriden Softwareentwicklung und diskutiere praxisorientierte
-				Lösungsansätze für IT-Manager und Projektleiter.</p>
-			<a href="https://www.amazon.de/Hybride-Softwareentwicklung-klassischen-Methoden-Xpert-press/dp/3642550630/ref=sr_1_1?s=books&ie=UTF8&qid=1489313790&sr=1-1&keywords=hybride+softwareentwicklung" class="buy">Kaufen bei amazon</a>
-		</div>
-		<div class="bannerImg">
-			<img src="/images/hybride-softwareentwicklung-cover.jpg" class="banner">
-		</div>
-	</section>
-</div>
 
-<!-- HTML5 FOOTER -->
-{% include footer.html %}
-<script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- HTML5 FOOTER -->
+    {% include footer.html %}
+    <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

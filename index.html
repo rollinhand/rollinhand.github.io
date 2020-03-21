@@ -4,18 +4,8 @@ navigation: none
 ---
 <!-- Alle Blog-Einträge anzeigen -->
 {% for post in paginator.posts %}
-<section id="post" class="post, summary">
-	<div class="entryBox">
-		<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-		<!-- Author, Date and Comments -->
-		<div class="entryInfo">
-			{% include infolist.html %}
-		</div>
-		<!-- / Author, Date and Comments -->
-		<div class="excerpt">
-			{{ post.excerpt }}
-		</div>
-	</div>
-</section>	
+<article class="post, summary">
+    {% include post_preview.html %}            
+</article>
 {% endfor %}
 {% include pagination.html %}

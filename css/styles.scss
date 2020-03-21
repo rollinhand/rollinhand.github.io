@@ -14,368 +14,292 @@ $inner-width: 960px;
     -moz-border-radius: $radius;
 }
 
-@mixin build-block() {
-    vertical-align: top;
-    display: inline-block;
-    max-width: 100%;
-    width: calc((480px - 100%) * 480);
-}
-
-@mixin post {
-    text-align: justify;
-    padding: 20px;
-}
-
 html {
     margin:0;
     padding:0;
     height: 100%;
+    background-color: $light-grey;
 }
 
 body {
-    margin:0;
-    height: 100%;
+    margin: 0 auto;
+    min-width: 20em;
+    max-width: 70em;
     font-size: 12pt;
     font-family: "Muli", Verdana, Geneva, Tahoma, sans-serif;
     background-color: $white;
 }
 
+header {
+    padding: 0.5em 0.5em 0.5em 1.0em;    
+}
+
+nav {
+    background-color: $black;
+    overflow: hidden;
+
+    > ul {
+        list-style-type: none;
+        background-color: $black;
+        margin: 0;
+        padding: 0.5em 0.5em;
+        overflow: hidden;
+
+        li {
+            float: left;
+            padding: 0.5em;
+
+            a {
+                display: block;
+                font-size: 1.0em;
+                font-weight: bold;
+                text-transform: uppercase;
+                color: $white;
+                &:hover {
+                    color: $blue;
+                }
+                &.active {
+                    &:hover {
+                        color: $white;
+                    }
+                }
+            }
+
+            &.active {
+                background-color: $blue;
+            }
+        }
+    }
+}
+
+nav > ul.social-media {
+    float: right;
+}
+
+nav > ul.categories {
+    float: left;
+}
+
+main { 
+    padding: 1.0em;
+
+    > section {
+        overflow: auto;
+
+        p {
+            line-height: 1.5em;
+        }
+
+        article {
+            overflow: auto;
+        }
+
+        article + article {
+            border-top: 0.5px solid $grey;
+            margin-top: 0.5em;
+        }
+    }
+
+    img {
+        width: 100%;
+        display: block;
+    }
+}
+
+footer {
+    background-color: $black;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    clear: both;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+
+        li {
+            float: left;
+            padding: 0.5em 1.0em;
+        }
+    }
+
+    p {
+        padding: 0.5em 1.0em;
+        font-size: 0.75em;
+    }
+}
+
+aside {
+    font-size: 0.8em;
+    color: #444;
+    margin: 0;
+    padding: 2.0em;
+
+    table, td, th {
+        color: #444;
+        padding: 0.2em;
+        font-size: 1.0em;
+    }
+
+    td:first-child {
+        width: 4em;
+        text-align: center;
+    }
+
+    h4 {
+        margin-top: 3.0em;
+    }
+}
+
+
+ul.info-list {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+
+    li {
+        float: left;
+        padding: 0.25em;
+        font-size: 0.75em;
+    }
+}
+
+ul.pager {
+    overflow: hidden;
+    padding: 0;
+    margin: 3em 0 2em 0;
+    display: block;
+    text-align: center;
+
+    li {
+        float: left;
+        font-size: 0.75em;
+        padding: 0.75em;
+        min-width: 30%;
+    }
+
+    .previous, .next {
+        > span {
+            visibility: hidden;
+        }
+    }
+}
+
 a {
     text-decoration: none;
     color: $blue;
+}
+
+h1, h2, h3, h4 {
     font-weight: bold;
 }
 
-ul {
-    list-style-type: square;
+h1 {
+    font-size: 2.0em;
+    color: $violet;
+}
+
+h2 {
+    font-size: 1.5em;
+
+    a {
+        color: $violet;
+    }
+}
+
+p {
+    text-align: justify;
     line-height: 1.5em;
+}
+
+.button {
+    text-align:center;
 }
 
 .label {
     background-color: $blue;
     color: $white;
-    padding: 2px 5px;
+    padding: 0.4em;
     font-size: 0.8em;
     font-weight: bold;
-    @include rounded-corners(2px);
-}
-
-.button {
-    color: $white;
-    padding: 5px 10px;
-    font-size: 1.2em;
-    font-weight: bold;
-    width:20px;
-    text-align: center;
     display: block;
-    @include rounded-corners(5px);
+    @include rounded-corners(0.1em);
 }
 
-.left-align {
-    float:left;
-    margin-right:10px;
-}
-
-.indent {
-    margin: 0 5%;
-    background-color: $white;
-}
-
-.navbar > li {
-    float: left;
-    padding: 5px 10px;
-
-    > a {
-        font-size: 1.0em;
-        font-weight: bold;
-        text-transform: uppercase;
-        color: $white;
-        text-decoration: none;
-        &:hover {
-            color: $blue;
-        }
-        &.active {
-            &:hover {
-                color: $white;
-            }
-        }
-    }
-
-    &.active {
-        background-color: $blue;
-        @include rounded-corners(5%);
-    }
-}
-
-.heading {
-    padding: 0px;
-    min-height: 70px;
-    overflow: hidden;
-
-    .logo {
-        margin:1% 0;
-        float: left;
-    }
-
-    .navigation {
-        .main-navigation {
-            float: right;
-            margin:1% 2%;
-        }
-    }
-    &:after {
-        @include clear;
-    }
-}
-
-.main {
-    .content {
-        @include build-block();
-        text-align: justify;
-        min-width:67%;
-        margin:2% 2% 0 0;
-
-        .intro {
-            display: inline-block;
-
-            h2 {
-                > a {
-                    color: $violet;
-                    font-weight: bold;
-                    text-decoration: none;
-                }
-            }
-
-        }
-
-        h2, h3, h4 {
-            color: #812577;
-            font-weight:bold;
-        }
-
-        p {
-            line-height: 1.5em;
-        }
-
-        img {
-            width:100%;
-        }
-    }
-
-    .sidebar {
-        @include build-block();
-        min-width: 26%;
-        margin:2% 0 0 2%;
-        overflow: auto;
-
-        p {
-            font-size: 1.0em;
-            color: $sidebar-grey;
-            line-height: 1.5em;
-            font-family: "Muli", Verdana, Geneva, Tahoma, sans-serif;
-            background-color: $white;
-        }
-
-    }
-    &:after {
-        @include clear;
-        display: block;
-    }
-}
-
-.footer {
-    footer {
-        padding: 20px;
-        display: inline-block;
-        color: $light-grey;
-        font-size: 0.8em;
-    }
-    &:after {
-        @include clear;
-    }
-}
-
-.entryBox {
-    margin-bottom: 2%;
-    border-bottom: 1px solid $light-grey;
-
-    h2 {
-        font-weight: bold;
-        text-align: left;
-        a {
-            text-decoration: none;
-            color: $violet;
-        }
-    }
-    .excerpt {
-        @include clear;
-    }
-}
-
-ul.infoList {
+.invisible {
+    visibility: hidden;
     margin: 0;
     padding: 0;
-    display: inline-block;
-    li {
-        font-size: 0.8em;
-        float: left;
-        padding: 0px 10px 0px 0px;
-    }
-    &:after {
-        @include clear;
-    }
+    font-size: 0;
 }
 
-ul.pager {
-    text-align: center;
-    margin: 20px 0px;
-    padding: 20px 20px;
-    display: block;
-
-    li {
-        display: inline;
-        padding: 5px 10px;
-        color: $white;
-        font-size: 0.8em;
-        &.page_number {
-            color: $black;
-        }
-    }
-    &:after {
-        @include clear;
+.cofinpro {
+    a {
+        color: #FF4500;
+        font-weight: bold;
     }
 }
 
 .book {
-    background-color: $blue;
-    padding: 10px 0px;
-    > .summary {
-        @include build-block();
-        width: 67%;
+    overflow: hidden;
+    padding: 1.0em;
+    line-height: 1.5em;
+    clear: both;
 
-        p {
-            padding-bottom: 20px;
+    img {
+        float: right;
+        width: 8.0em;
+        min-width: 60px;
+        margin: 0 2.0em;
+    }
+
+    a {
+        color: $white;
+        border: 2px solid $white;
+        font-weight: bold;
+        font-size: 1.2em;
+        padding: 0.5em;
+        margin-top: 2.0em;
+        text-align: center;
+        width: 10em;
+        display: block;
+        @include rounded-corners(1.0em);
+        &:hover {
+            background-color: $white;
+            color: $violet;
         }
     }
-    > .bannerImg {
-        display: inline-block;
-        padding-left: 10%;
-    }
-}
-
-a.buy {
-    border:1px solid $white;
-    color: $white;
-    font-weight: bold;
-    font-size: 1.2em;
-    padding: 10px;
-    margin-top:20px;
-    @include rounded-corners(10px);
-    &:hover {
-        background-color: $white;
-        color: $blue;
-    }
-}
-
-img.banner {
-    padding-top: 20px;
-    width: 200px;
 }
 
 .gh-avatar {
-    > img {
+    img {
         display: block;
         margin: 0 auto;
-        width: 80px;
-        height: 80px;
+        width: 3em;
+        height: 3em;
         border: 2px solid $light-grey;
         @include rounded-corners(50%);
     }
 
-    > p {
+    p {
         text-align: center;
         font-weight: bold;
     }
 }
 
-.gh-realname {
-    color:$caption-grey;
-}
-
-.sidebar-content {
-    border-bottom: 1px solid $light-grey;
-    padding:10px 0px;
-    text-align: justify;
-    font-size: 0.8em;
-
-    h4 {
-        font-size:1.0em;
-        font-weight:bold;
-        color: $caption-grey;
-        margin:10px 0px;
+@media (min-width: 40em) {
+    aside {
+        margin-left: 50em;
     }
 
-    table {
-        width:100%;
-    }
-
-    td {
-        font-size: 0.8em;
-        padding:2px 0px;
-        color: $sidebar-grey;
-    }
-
-    .social-media {
-        display: inline-block;
-    }
-
-    .publications {
-        td {
-            padding:2px 2px;
+    main {
+        float: left;
+        width: 47em;
+        margin-right: 2em;
+        &:after {
+            clear: both;
         }
-
-        .distributor {
-            font-size:0.7em;
-            font-weight:bold;
-            color: $sidebar-grey;
-        }
-    }
-
-    &:after {
-        @include clear;
-    }
-}
-
-pre {
-    code {
-        font-size: 1.0em;
-        font-family: "Courier New";
-    }
-}
-
-.cofinpro {
-    a {
-        color:#FF4500;
-    }
-}
-
-.disclaimer-bottom {
-    margin-top:15px;
-    margin-bottom:15px;
-    width:100%;
-    background-color:#EEE;
-    padding:5px 20px;
-    .medium-logo {
-        font-size:2.5em;
-        font-weight:bold;
-        float:left;
-        padding-top:12px;
-        padding-right:10px;
-    }
-    p {
-        color:$caption-grey;
-        font-size:0.8em;
-        padding-left:20px;
-        margin-left:5px;
     }
 }

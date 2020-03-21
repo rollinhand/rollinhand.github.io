@@ -1,61 +1,33 @@
 <html>
 <head>
-	<!-- Header information like meta information and script resources -->
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, maximum-scale=1">
-
-	<link rel="icon" href="/images/favicon.png" type="image/png">
-	<link rel="shortcut icon" href="/images/favicon.png" type="image/png">
-
-	<!-- Stylesheets -->
-	<link href="/css/styles.css" rel="stylesheet" type="text/css">
-	
-	<!-- Feeds -->
-	<link rel="alternate" type="application/rss+xml" title="RSS" href="/blog/feed/rss.xml" />
-	<link rel="alternate" type="application/atom+xml" title="Atom" href="/blog/feed/atom.xml" />
-
-	<!-- Load Highlight.js -->
-	<script src="/js/highlight.pack.js"></script>
-
+    <!-- HTML metadata and includes -->
+    {% include head.html %}
 	<title>{{ site.name }}</title>
 </head>
 <body>
 	<!-- HTML 5 HEADER -->
 	{% include header.html %}
-	
-	<!-- MAIN CONTENT -->
-	<div class="main light indent">
-		<section class="content light">
-			{{ content }}
-		</section>
-		<section class="sidebar">
-			{% include sidebar.html %}
-		</section>
-	</div>
 
-	<!-- Werbung für das Buch einbinden -->
-	<div class="book blue">
-		<section id="book" class="book indent">
-			<div class="summary">
-				<h2>Hybride Softwareentwicklung</h2>
-				<p>Agile Softwareentwicklung erlebt gegenwärtig einen großen Hype. 
-				Neuerdings ist aber auch ein Gegentrend zu diesem Hype zurück zu den 
-				klassischen Vorgehensmodellen zu bemerken. Hybride Softwareentwicklung 
-				beschreibt einen Ansatz, der die Vorteile beider Welten in einem Modell 
-				vereint und stellt seine Praxistauglichkeit anhand von Case Studies 
-				unter Beweis. Zusammen mit den Co-Autoren erläutere ich die Vorteile 
-				der hybriden Softwareentwicklung und diskutiere praxisorientierte 
-				Lösungsansätze für IT-Manager und Projektleiter.</p>
-				<a href="https://www.amazon.de/Hybride-Softwareentwicklung-klassischen-Methoden-Xpert-press/dp/3642550630/ref=sr_1_1?s=books&ie=UTF8&qid=1489313790&sr=1-1&keywords=hybride+softwareentwicklung" class="buy">Kaufen bei amazon</a>  
-			</div>
-			<div class="bannerImg">
-				<img src="/images/hybride-softwareentwicklung-cover.jpg" class="banner">
-			</div>
-		</section>
-	</div>
-	
-	<!-- HTML5 FOOTER -->
+    <!-- HTML 5 NAVIGATION -->
+    {% include navigation.html %}
+
+	<!-- MAIN CONTENT -->
+    <main class="light indent">
+        <section class="content light">
+            {{ content }}
+        </section>
+    </main>
+
+	<!-- SIDEBAR -->
+    <aside>
+        {% include sidebar.html %}
+    </aside>
+
+    <section class="book blue">
+        <!-- Commercial for my book -->
+        {% include book.html %}
+    </section>
+    <!-- HTML5 FOOTER -->
 	{% include footer.html %}
 	<script>hljs.initHighlightingOnLoad();</script>
 </body>
