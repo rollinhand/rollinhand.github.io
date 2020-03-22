@@ -29,29 +29,27 @@
         </div>
         {% endif %}    
 
-        <ul class="pager">
+        <!--<ul class="pager">
             <li class="previous">
                 {% if post.previous.url %}
                 <a href="{{ post.previous.url }}"><span><i class="fa fa-arrow-left"></i></span> {{ post.previous.title | truncate: 40}}</a>
                 {% else %}
                 <span>Previous</span>
                 {% endif %}
-                <li>
-                    <li class="next">
-                        {% if post.next.url %}
-                        <a href="{{ post.next.url }}">{{ post.next.title | truncate: 40}} <span><i class="fa fa-arrow-right"></i></span></a>
-                        {% else %}
-                        <span>Next</span>
-                        {% endif %}
-                    </li>
-        </ul>
+            </li>
+            <li class="next">
+                {% if post.next.url %}
+                <a href="{{ post.next.url }}">{{ post.next.title | truncate: 40}} <span><i class="fa fa-arrow-right"></i></span></a>
+                {% else %}
+                <span>Next</span>
+                {% endif %}
+            </li>
+        </ul>-->
     </main>
 
     <aside>
 		{% include sidebar.html %}
 	</aside>
-
-
 
     <!-- HTML5 FOOTER -->
     {% include footer.html %}
