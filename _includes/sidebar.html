@@ -34,7 +34,15 @@
 </section>
 <section>
     <h4>Themen</h4>
-    {% for category in site.categories %}
-        {{ category.name }} {{ category | size }}
+    {% assign category_list = site.categories | sort %}
+    <table>
+    {% for category in category_list %}
+        {% assign name = category | first %}
+        {% assign size = site.categories[name] | size %}
+        <tr>
+            <td><span class="label">{{ size }}</span></td>
+            <td><a href="/category/{{ name }}">{{ name }}</a></td>
+        </tr>
     {% endfor %}
+    </table>
 </section>

@@ -14,6 +14,12 @@ $inner-width: 960px;
     -moz-border-radius: $radius;
 }
 
+@mixin floating-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
 html {
     margin:0;
     padding:0;
@@ -23,9 +29,7 @@ html {
 
 body {
     margin: 0 auto;
-    min-width: 20em;
     max-width: 70em;
-    font-size: 12pt;
     font-family: "Muli", Verdana, Geneva, Tahoma, sans-serif;
     background-color: $white;
 }
@@ -39,20 +43,19 @@ nav {
     overflow: hidden;
 
     > ul {
-        list-style-type: none;
+        @include floating-list;
         background-color: $black;
-        margin: 0;
         padding: 0.5em 0.5em;
         overflow: hidden;
 
         li {
             float: left;
-            padding: 0.5em;
+            padding: 0.50em;
 
             a {
                 display: block;
-                font-size: 1.0em;
-                font-weight: bold;
+                font-size: 1.0rem;
+                //font-weight: bold;
                 text-transform: uppercase;
                 color: $white;
                 &:hover {
@@ -70,10 +73,6 @@ nav {
             }
         }
     }
-}
-
-nav > ul.social-media {
-    float: right;
 }
 
 nav > ul.categories {
@@ -95,7 +94,7 @@ main {
         }
 
         article + article {
-            border-top: 0.5px solid $grey;
+            border-top: 2px dotted $light-grey;
             margin-top: 0.5em;
         }
     }
@@ -114,25 +113,24 @@ footer {
     clear: both;
 
     ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
+        @include floating-list;
         overflow: hidden;
+        margin-left: 0.5em;
 
         li {
             float: left;
-            padding: 0.5em 1.0em;
+            padding: 0.5em 0.5em;
         }
     }
 
     p {
         padding: 0.5em 1.0em;
-        font-size: 0.75em;
+        font-size: 0.75rem;
     }
 }
 
 aside {
-    font-size: 0.8em;
+    font-size: 0.8rem;
     color: #444;
     margin: 0;
     padding: 2.0em;
@@ -153,31 +151,32 @@ aside {
     }
 }
 
+ul {
+    list-style-type: square;
+    line-height: 1.5em;
+}
 
 ul.info-list {
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
+    @include floating-list;
+    display: inline-block;
 
     li {
         float: left;
         padding: 0.25em;
-        font-size: 0.75em;
+        font-size: 0.75rem;
     }
 }
 
 ul.pager {
-    overflow: hidden;
-    padding: 0;
-    margin: 3em 0 2em 0;
-    display: block;
+    @include floating-list;
     text-align: center;
+    width: 20em;
+    margin: 2em auto;
 
     li {
         float: left;
-        font-size: 0.75em;
+        font-size: 0.7r5em;
         padding: 0.75em;
-        min-width: 30%;
     }
 
     .previous, .next {
@@ -197,12 +196,12 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    font-size: 2.0em;
+    font-size: 2.0rem;
     color: $violet;
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
 
     a {
         color: $violet;
@@ -222,7 +221,7 @@ p {
     background-color: $blue;
     color: $white;
     padding: 0.4em;
-    font-size: 0.8em;
+    font-size: 0.8rem;
     font-weight: bold;
     display: block;
     @include rounded-corners(0.1em);
@@ -249,17 +248,18 @@ p {
     clear: both;
 
     img {
-        float: right;
         width: 8.0em;
         min-width: 60px;
-        margin: 0 2.0em;
+        margin: auto; 
+        display: block;
+        padding: 0.5em;
     }
 
     a {
         color: $white;
         border: 2px solid $white;
         font-weight: bold;
-        font-size: 1.2em;
+        font-size: 1.2rem;
         padding: 0.5em;
         margin-top: 2.0em;
         text-align: center;
@@ -289,17 +289,30 @@ p {
     }
 }
 
-@media (min-width: 40em) {
+@media (min-width: 415px) {
     aside {
-        margin-left: 50em;
+        margin-left: 60em;
     }
 
     main {
         float: left;
-        width: 47em;
         margin-right: 2em;
+        width: 45em;
         &:after {
             clear: both;
         }
     }
+
+    .book {
+        img {
+            float: right;
+            margin: 0 2em;
+        }
+    }
 }
+
+@media (max-width: 414px) {
+    html {
+        font-size: 0.6em
+    }
+} 
