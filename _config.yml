@@ -1,9 +1,10 @@
 ---
 name: Kivio - Blog for DevOps
+title: Kivio - Blog for DevOps
 owner: rollinhand
 markdown: kramdown
 permalink: /blog/entry/:year/:month/:day/:title
-gems: 
+plugins:
   - jekyll-paginate
   - jekyll-avatar
   - jekyll-sitemap
