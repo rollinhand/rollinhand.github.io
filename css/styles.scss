@@ -300,6 +300,23 @@ pre {
     padding: 0.25em;
 }
 
+.discussion {
+    margin-top: 3em;
+    border-top:1px solid $violet; 
+    display: block;
+    overflow: hidden;
+    padding: 0.5em;
+
+    .icon {
+        display: block;
+        float: left;
+        font-size: 4em;
+        color: $violet;
+        margin: 0.5em 0.5em;
+    }
+}
+
+
 @media (min-width: 415px) {
     aside {
         margin-left: 60em;
