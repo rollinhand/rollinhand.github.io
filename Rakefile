@@ -7,37 +7,39 @@ require "rubygems"
 require "stringex"
 
 # -------------------------------------------------------------------------
+#   Utilities
+# ------------------------------------------------------------------------- 
+def get_stdin(message)
+  print message
+  STDIN.gets.chomp
+end
+
+# -------------------------------------------------------------------------
 #	Tasks for development process
 # -------------------------------------------------------------------------
 # Usage: rake build
 desc "Build Jekyll site locally"
 task :build do
   puts "* Build Jekyll site"
-  system "jekyll build --profile"	
+  system "jekyll build --profile --drafts"	
 end
 
 # Usage: rake serve
 desc "Start development server locally"
 task :serve do
   puts "* Starting development server"
-  system "jekyll serve --trace --incremental"
+  system "jekyll serve --trace --incremental --drafts"
 end
 
 # -------------------------------------------------------------------------
 #	Tasks for a new posting (thanks to Octopress)
 # -------------------------------------------------------------------------
-# Usage: rake new['My new title']
-desc "Create a new post in _post"
-task :new, [:title] do | t, args |
-  if args.title
-    title = args.title
-  else
-    title = get_stdin("Enter a title for your post:")
-  end
-  filename = "_posts/#{Time.now.strftime('%Y-%m-%d')}-#{title.to_url}.md"
+# Procedure for creating an initial post
+def create_post(filename, title)
   if File.exist?(filename)
     abort("post with title still exists")
   end
+
   puts "* Creating a new post: #{filename}"
   open(filename, 'w') do |post|
     post.puts "---"
@@ -47,7 +49,31 @@ task :new, [:title] do | t, args |
     post.puts "category: "
     post.puts "tags: [,]"
     post.puts "---"
-  end  
+  end
+end
+
+# Usage: rake new['My new title']
+desc "Create a new post in _post"
+task :new, [:title] do | t, args |
+  if args.title
+    title = args.title
+  else
+    title = get_stdin("Enter a title for your post:")
+  end
+  filename = "_posts/#{Time.now.strftime('%Y-%m-%d')}-#{title.to_url}.md"
+  create_post(filename, title)
+end
+
+# Usage: rake draft['My new title']
+desc "Create a new draft in _drafts"
+task :draft, [:title] do | t, args |
+  if args.title
+    title = args.title
+  else
+    title = get_stdin("Enter a title for your post:")
+  end
+  filename = "_drafts/#{title.to_url}.md"
+  create_post(filename, title)
 end
 
 # Usage: rake status
