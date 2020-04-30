@@ -83,7 +83,7 @@ In dem Person-Server können die Mitglieder einer Familie angezeigt, entfernt od
 werden. Unser Beispiel implementiert also einen typischen CRUD-Service. Mit den bekannten JAX-RS
 Annotationen haben wir in Kürze in der Klasse _PersonEndpoint_ einen REST-Service implementiert.
 
-```java
+```
 @RequestScoped
 @Path("/person")
 public class PersonEndpoint {
