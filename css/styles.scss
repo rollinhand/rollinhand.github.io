@@ -105,6 +105,15 @@ main {
     }
 }
 
+code {
+    font-size: 1.0em;
+    font-family: "Courier New";     
+    font-weight: bold;
+    background-color: #f8f8f8;
+    color: #333;
+    padding: 0.15em;
+}
+
 footer {
     background-color: $black;
     overflow: hidden;
@@ -215,6 +224,7 @@ pre {
     code {
         font-size: 1.0em;
         font-family: "Courier New";
+        font-weight: normal;
     }
 }
 
@@ -315,7 +325,6 @@ pre {
         margin: 0.5em 0.5em;
     }
 }
-
 
 @media (min-width: 415px) {
     aside {
