@@ -108,7 +108,6 @@ main {
 code {
     font-size: 1.0em;
     font-family: "Courier New";     
-    font-weight: bold;
     background-color: #f8f8f8;
     color: #333;
     padding: 0.15em;
@@ -215,12 +214,20 @@ h2 {
     }
 }
 
+main * + h2 {
+    padding-top: 1.5rem;
+}
+
 p {
     text-align: justify;
     line-height: 1.5em;
 }
 
 pre {
+    border: 1px solid;
+    border-color: #ddd #ddd #ccc;
+    @include rounded-corners(3px);
+
     code {
         font-size: 1.0em;
         font-family: "Courier New";
