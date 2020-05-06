@@ -37,7 +37,7 @@ worden sind.
 Mit dem Maven-Goal `meecrowave:bundle` lässt sich ein ZIP-Archiv erzeugen, dass alle notwendigen
 Abhängigkeiten und Start-Skripte beinhaltet, sodass ein in sich geschlossener Service ausgeliefert
 oder in einen Docker-Container deployt werden kann. Das Deployment in einen Docker-Container
-beschreibe ich in einem anderen Blog-Beitrag.
+beschreibe ich in einem [anderen Blog-Beitrag][kivio-docker].
 
 Doch zurück zum eigentlichen entwickeln mit Meecrowave. Zur besseren Nachvollziehbarkeit, welche 
 Möglichkeiten in Meecrowave stecken, habe ich auf [GitHub][github] ein Projekt angelegt. Es besteht aus zwei
@@ -192,11 +192,11 @@ die verschiedenen Endpunkte getestet werden sollen.
 Wer mehr Funktionalitäten aus dem Java EE-Kontext benötigt, dem stellt das Meecrowave noch weitere
 [Komponenten][meecrowave-components] zur Verfügung:
 
-* meecrowave-jpa: Hierbei handelt es sich um einen zusätzliches Layer, dass auf JPA aufbaut und
+* **meecrowave-jpa**: Hierbei handelt es sich um einen zusätzliches Layer, dass auf JPA aufbaut und
   ähnlich wie der Server an sich mit einem Builder zur programmatischen Konfiguration der
 Persistenzschicht.
-* meecrowave-jolokia: Komponenten zur Integration von Monitoring auf Basis von Jolokia.
-* meecrowave-oauth2: Experimentelles Modul zur Einbindung einer OAuth2-Implementiierung auf Basis
+* **meecrowave-jolokia**: Komponenten zur Integration von Monitoring auf Basis von Jolokia.
+* **meecrowave-oauth2**: Experimentelles Modul zur Einbindung einer OAuth2-Implementiierung auf Basis
   von Apache CXF.
 * Weiterhin besteht die Möglichkeit, SSL-Verschlüsselung über Let's Encrypt einzubinden.
 
@@ -217,3 +217,4 @@ richtig, denn eine großartige Einarbeitung ist nicht notwendig.
 [openwebbeans]: https://openwebbeans.apache.org
 [cxf]: https://cxf.apache.org
 [johnzon]: https://johnzon.apache.org
+[kivio-docker]: {% post_url 2020-05-06-meecrowave-und-docker-so-einfach-gehts %}
