@@ -4,6 +4,7 @@ title: Meecrowave - Microservices ohne aufwändiges Framework
 date: 2020-04-30
 category: Entwicklung
 tags: [Meecrowave,Microservices]
+cofinpro: https://medium.com/cofinpro/meecrowave-microservices-ohne-aufwändiges-framework-bfbf07f116a6
 ---
 Die Apache Foundation hat mit [Meecrowave][meecrowave] einen Microprofil-Server auf den Weg gebracht, der durch
 seine geringe Größe und niedrigen Speicherverbrauch besticht. Inwiefern er genutzt werden kann, um
