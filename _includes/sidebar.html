@@ -45,7 +45,7 @@
         {% assign size = site.categories[name] | size %}
         <tr>
             <td><span class="label">{{ size }}</span></td>
-            <td><a href="/category/{{ name }}">{{ name }}</a></td>
+            <td><a href="/category/{{ name | slugify }}">{{ name }}</a></td>
         </tr>
     {% endfor %}
     </table>

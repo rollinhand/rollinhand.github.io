@@ -3,7 +3,7 @@
     <ul class="categories">
     {% for category in category_list %}
         {% assign name = category | first %}
-        <li><a href="/category/{{ name }}">{{ name }}</a></li>
+        <li><a href="/category/{{ name | slugify}}">{{ name }}</a></li>
     {% endfor %}
     </ul>
 </nav>
