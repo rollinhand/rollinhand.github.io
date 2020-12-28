@@ -20,6 +20,10 @@ $inner-width: 960px;
     margin: 0;
 }
 
+@mixin block-separator {
+    border-top: 0.5px solid $violet;
+}
+
 html {
     margin:0;
     padding:0;
@@ -55,7 +59,6 @@ nav {
             a {
                 display: block;
                 font-size: 1.0rem;
-                //font-weight: bold;
                 text-transform: uppercase;
                 color: $white;
                 &:hover {
@@ -94,7 +97,7 @@ main {
         }
 
         article + article {
-            border-top: 2px dotted $light-grey;
+            @include block-separator();
             margin-top: 0.5em;
         }
     }
@@ -139,14 +142,23 @@ footer {
 
 aside {
     font-size: 0.8rem;
-    color: #444;
+    color: $grey;
     margin: 0;
     padding: 2.0em;
 
+    section + section {
+        @include block-separator();
+    }
+
+    h4 {
+        margin-top: 1.5em;
+    }
+
     table, td, th {
-        color: #444;
-        padding: 0.2em;
+        color: $grey;
+        padding: 0.2em 0.8em 0 0;
         font-size: 1.0em;
+        margin-bottom: 0.8em;
     }
 
     td:first-child {
@@ -154,8 +166,25 @@ aside {
         text-align: center;
     }
 
-    h4 {
-        margin-top: 3.0em;
+    .third-party {
+        > h5 {
+            margin-top: 1.0em;
+            margin-bottom: 1.0em;
+            font-weight: bold;
+            color: $violet;
+            font-size: 0.8rem;
+        }
+    
+        > ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+    
+            > li {
+                margin: 0;
+                padding: 0.5em 0;
+            }
+        }
     }
 }
 
@@ -258,7 +287,7 @@ pre {
 
 .cofinpro {
     a {
-        color: #FF4500;
+        color: $orange;
         font-weight: bold;
     }
 }
@@ -312,7 +341,7 @@ pre {
 }
 
 .disclaimer-bottom {
-    border: 1px solid #FF4500;
+    border: 1px solid $orange;
     margin-top: 3em;
     padding: 0.25em;
 }
@@ -330,6 +359,13 @@ pre {
         font-size: 4em;
         color: $violet;
         margin: 0.5em 0.5em;
+    }
+}
+
+.publications {
+    .distributor {
+        font-style: italic;
+        color: $sidebar-grey;
     }
 }
 
