@@ -1,0 +1,26 @@
+{
+  "link-list": [
+    {
+      "group": "SQLDeveloper",
+      "items": [
+        {
+          "name": "Jeff Smith's Blog",
+          "link": "http://www.thatjeffsmith.com"
+        },
+        {
+          "name": "Philipp Salvisberg's Blog",
+          "link": "https://www.salvis.com/blog/"
+        }
+      ]
+    },
+    {
+      "group": "Eclipse RCP",
+      "items": [
+        {
+          "name": "Lars Vogels Tutorials",
+          "link": "https://www.vogella.com"
+        }
+      ]
+    }
+  ]
+}
