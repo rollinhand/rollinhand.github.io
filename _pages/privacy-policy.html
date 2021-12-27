@@ -1,0 +1,11 @@
+---
+layout: default
+title: Privacy Policy
+permalink: /privacy-policy/
+---
+<section>
+    <div class="container px-5 py-5">
+        {% capture my_include %}{% include privacy-policy.md %}{% endcapture %}
+        {{ my_include | markdownify }}
+    </div>
+</section>

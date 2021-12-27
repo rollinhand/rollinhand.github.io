@@ -3,26 +3,30 @@ layout: default
 title: Berg Systeme
 permalink: /bergsysteme/
 ---
-<h1>Unternehmenstätigkeit eingestellt</h1>
-<!--<img src="/images/sorry.png" class="bannerImg2 left-align">-->
-<p>Mit Ablauf des 3. Quartals 2015 hat Berg Systeme alle unternehmerischen
+<header class="bg-dark py-5">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center justify-content-center">
+            <div class="col-lg-8 col-xl-7 col-xxl-6">
+                <div class="my-5 text-center text-xl-start">
+                    <h1 class="display-5 fw-bolder text-white mb-2">Unternehmenstätigkeit eingestellt</h1>
+                    <p class="lead fw-normal text-white-50 mb-4">
+                        Mit Ablauf des 3. Quartals 2015 hat Berg Systeme alle unternehmerischen
 	Tätigkeiten eingestellt. Die von mir betreuten Projekte finden Sie als
-	Sourcecode bei <a href="https://github.com/rollinhand">GitHub</a>>.
-	Alle Projekte werden zukünftig unter kivio.org subsumiert.</p>
-
-<h2>Projekte</h2>
-<h3>WIX Toolset Plugin</h3>
-<p>Mit dem WIX Toolset ist es möglich, MSI-Pakete für den Microsoft Windows Installer
-	zu bauen. Das Plugin für Jenkins ermöglicht die Integration des Bauens in einen Buildserver,
-	um den Prozess der kontinuierlichen Integration bis hin zum Setup zu ermöglichen.
-	Für das Ausführen des Plugins in Jenkins oder Hudson ist eine Windows-Instanz notwendig.</p>
-<a href="https://github.com/rollinhand" class="read_more">GitHub</a>
-
-<hr />
-
-<h3>dBASE Converter</h3>
-<p>Das Tool "dbf" ist ein einfach zu benutzendes Kommandozeilenprogramm zum Anzeigen und
-	Konvertieren von dBASE III, IV und 5.0 Datenbanken. Der Inhalt der dBASE-Datenbanken lässt
-	sich am Bildschirm anzeigen oder in komma-separierte Dateien (CSV-Dateien) konvertieren,
-	die in Microsoft Excel oder OpenOffice Calc geöffnet werden können.</p>
-<a href="https://github.com/rollinhand" class="read_more">GitHub</a>
+	Sourcecode bei <a class="text-decoration-none" href="https://github.com/rollinhand" target="blank">GitHub</a>.
+                    </p>
+					<div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                        <a class="btn btn-primary btn-lg px-4 me-sm-3" href="https://github.com/rollinhand" target="blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
+                <img class="img-fluid rounded-3 my-5" src="/images/sorry.png" alt="Sorry" />
+            </div>
+        </div>
+    </div>
+</header>
+<section class="py-5 bg-light" id="projects">
+    {% include projects.html %}
+</section>

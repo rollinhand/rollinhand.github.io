@@ -1,8 +1,3 @@
----
-layout: default
-title: Privacy Policy
-permalink: /privacy-policy/
----
 # Datenschutzerklärung 
 Datenschutz hat für mich einen besonders hohen Stellenwert. Eine Nutzung der 
 Internetseiten ist grundsätzlich ohne jede Angabe personenbezogener Daten 
@@ -313,6 +308,7 @@ Vor einer Bereitstellung personenbezogener Daten durch den Betroffenen muss sich
 ### 11. Bestehen einer automatisierten Entscheidungsfindung
 
 Als verantwortungsbewusste Person verzichte ich auf eine automatische Entscheidungsfindung oder ein Profiling.
+</div>
 
 <hr>
 Diese Datenschutzerklärung wurde durch den Datenschutzerklärungs-Generator der DGD Deutsche Gesellschaft für Datenschutz GmbH, die als <a href="https://dg-datenschutz.de/datenschutz-dienstleistungen/externer-datenschutzbeauftragter/">externer Datenschutzbeauftragter</a> tätig ist, in Kooperation mit der RC GmbH, die <a href="http://remarketing.company/">gebrauchte Computer</a> wiederverwertet und der Kanzlei <a href="https://www.wbs-law.de/">WILDE BEUGER SOLMECKE | Rechtsanwälte</a> erstellt.

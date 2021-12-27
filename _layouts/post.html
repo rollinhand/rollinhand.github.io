@@ -1,59 +1,71 @@
-<html>
+<!DOCTYPE html>
+<html lang="de">
 <head>
 	<!-- Header information like meta information and script resources -->
     {% include head.html %}
 	{% assign post = page %}
 	<title>{{ post.title }} - {{ site.name }}</title>
 </head>
-<body>
-    <!-- HTML 5 HEADER -->
-    {% include header.html %}
+<body class="d-flex flex-column h-100">
+    <main class="flex-shrink-0">
+        <!-- HTML 5 NAVIGATION -->
+        {% include navigation.html %}
 
-    <!-- HTML 5 NAVIGATION -->
-    {% include navigation.html %}
-
-    <!-- MAIN CONTENT -->
-    <main class="content light">
-        <h2>{{ post.title }}</h2>
-        {% include infolist.html %}
-        {{ post.summary }}
-
-		<!-- Der Inhalt des Postings -->
-		{{ post.content }}
-
-        <!-- Hinweis auf fremden Blog-Artikel -->
-        {% if post.cofinpro %}
-        <div class="disclaimer-bottom">
-            <i class="fab fa-medium medium-logo"></i>
-            <p>Dieser Artikel ist auch im <span class="cofinpro"><a href="{{ post.cofinpro }}">Cofinpro-Blog auf Medium</a> erschienen.<span> <span class="cofinpro"><a href="http://www.cofinpro.de">Cofinpro</a></span> ist ein Beratungsunternehmen mit Fokus auf die Finanzindustrie.</p>
-        </div>
-        {% endif %}    
-
-        <!--<ul class="pager">
-            <li class="previous">
-                {% if post.previous.url %}
-                <a href="{{ post.previous.url }}"><span><i class="fa fa-arrow-left"></i></span> {{ post.previous.title | truncate: 40}}</a>
-                {% else %}
-                <span>Previous</span>
-                {% endif %}
-            </li>
-            <li class="next">
-                {% if post.next.url %}
-                <a href="{{ post.next.url }}">{{ post.next.title | truncate: 40}} <span><i class="fa fa-arrow-right"></i></span></a>
-                {% else %}
-                <span>Next</span>
-                {% endif %}
-            </li>
-        </ul>-->
-        {% include discussion.html %}
+        <!-- Page Content-->
+        <section class="py-5">
+            <div class="container px-5 my-5">
+                <div class="row gx-5">
+                    <div class="col-lg-3">
+                        <div class="d-flex align-items-center mt-lg-5 mb-4">
+                            {% avatar rollinhand %}
+                            <div class="small ms-3">
+                                <div class="fw-bold">Björn Berg</div>
+                            </div>
+                        </div>
+                        <!-- Hinweis auf fremden Blog-Artikel -->
+                        {% if post.cofinpro %}
+                        <div class="mt-lg-5 mb-4">
+                            <div><i class="fab fa-medium text-warning"></i> Cofinpro Blog-Beitrag</div>
+                            <p class="small text-muted">Dieser Artikel ist auch im <span class="cofinpro"><a href="{{ post.cofinpro }}">Cofinpro-Blog auf Medium</a> erschienen.<span> <span class="cofinpro"><a href="http://www.cofinpro.de">Cofinpro</a></span> ist ein Beratungsunternehmen mit Fokus auf die Finanzindustrie.</p>
+                        </div>
+                        {% endif %} 
+                    </div>
+                    <div class="col-lg-9">
+                        <!-- Post content-->
+                        <article>
+                            <!-- Post header-->
+                            <header class="mb-4">
+                                <!-- Post title-->
+                                <h1 class="fw-bolder mb-1">{{ post.title }}</h1>
+                                <!-- Post meta content-->
+                                <div class="text-muted fst-italic mb-2">{{ post.date | date: "%d.%m.%Y" }}</div>
+                                <!-- Post categories-->
+                                <a class="badge bg-primary text-decoration-none link-light" href="/category/{{post.category | slugify }}">{{ post.category }}</a>
+                                <!-- Post tags -->
+                                {% for tag in post.tags %}
+                                <span class="badge bg-secondary text-decoration-none link-light">{{tag}}</span>
+                                {% endfor %}
+                            </header>
+                            <!-- Post content-->
+                            <section class="mb-5">
+                                {{ post.summary }}
+		                        <!-- Der Inhalt des Postings -->
+		                        {{ post.content }}
+                            </section>
+                        </article>   
+                        {% include discussion.html %}
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-
-    <aside>
-		{% include sidebar.html %}
-	</aside>
 
     <!-- HTML5 FOOTER -->
     {% include footer.html %}
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 </body>
-</html>
