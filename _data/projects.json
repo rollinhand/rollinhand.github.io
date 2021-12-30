@@ -3,12 +3,17 @@
         {
             "name": "WIX Toolset Plugin for Jenkins",
             "description": "Mit dem WIX Toolset ist es möglich, MSI-Pakete für den Microsoft Windows Installer zu bauen. Das Plugin für Jenkins ermöglicht die Integration des Bauens in einen Buildserver, um den Prozess der kontinuierlichen Integration bis hin zum Setup zu ermöglichen. Für das Ausführen des Plugins in Jenkins oder Hudson ist eine Windows-Instanz notwendig.",
-            "url": "https://github.com/rollinhand"
+            "url": "https://github.com/jenkinsci/wix-plugin"
         },
         {
             "name": "dBASE Converter",
             "description": "Das Tool 'dbf' ist ein einfach zu benutzendes Kommandozeilenprogramm zum Anzeigen und Konvertieren von dBASE III, IV und 5.0 Datenbanken. Der Inhalt der dBASE-Datenbanken lässt sich am Bildschirm anzeigen oder in komma-separierte Dateien (CSV-Dateien) konvertieren, die in Microsoft Excel oder OpenOffice Calc geöffnet werden können.",
-            "url": "https://github.com/rollinhand"
+            "url": "https://github.com/rollinhand/dbf-core"
+        },
+        {
+            "name": "C3Faces",
+            "description": "C3Faces is a JSF library using C3.js for the underlying rendering technology for every interactive chart. In opposite to Highfaces works C3Faces together with Apache MyFaces and Oracles Mojarra.",
+            "url": "https://github.com/rollinhand/c3faces"
         }
     ]
 }
