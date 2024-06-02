@@ -7,3 +7,5 @@ gem 'github-pages', group: :jekyll_plugins
 gem 'stringex', '2.6.1'
 # Gem for SASS compilation
 gem 'sass', '3.4.22'
+
+gem "webrick", "~> 1.8"
