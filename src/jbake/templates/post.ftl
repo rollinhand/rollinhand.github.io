@@ -15,7 +15,7 @@
 						</div>
 					</div>
 					<!-- Hinweis auf fremden Blog-Artikel -->
-					<#if content.cofinpr??>
+					<#if content.cofinpro??>
 						<div class="mt-lg-5 mb-4">
 							<div><i class="fab fa-medium text-warning"></i> Cofinpro Blog-Beitrag</div>
 							<p class="small text-muted">Dieser Artikel ist auch im <span class="cofinpro"><a href="${content.cofinpro}">Cofinpro-Blog auf Medium</a> erschienen.</span> <span class="cofinpro"><a href="http://www.cofinpro.de">Cofinpro</a></span> ist ein Beratungsunternehmen mit Fokus auf die Finanzindustrie.</p>

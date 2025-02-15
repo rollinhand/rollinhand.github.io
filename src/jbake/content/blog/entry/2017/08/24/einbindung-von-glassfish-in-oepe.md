@@ -2,7 +2,7 @@ type=post
 title=Einbindung von Glassfish in OEPE
 date=2017-08-24
 category=Entwicklung
-tags=["ADF", "Oracle", "Java"]
+tags=ADF, Oracle, Java
 ~~~~~~
 In Eclipse gibt es in der Perspektive Java EE den View Servers über den verschiedene Java EE Server gemanagt werden könne. Auch der Glassfish 3 und Glassfish 4 können darüber lokal und remote verwaltet werden.
 
@@ -48,8 +48,8 @@ Lediglich die Credentials werden um den Admin-Port erweitert. Über Test Connect
 - Auf [GitHub](https://github.com/rollinhand/lgmj-server) existiert ein Projekt von mir, dass einen
 [initialen Entwicklungsserver für OEPE](https://github.com/rollinhand/lgmj-server) aufsetzt.
 
-[glassfish01]={{site.baseurl}}/images/posts/glassfish01.png
-[glassfish02]={{site.baseurl}}/images/posts/glassfish02.png
-[glassfish03]={{site.baseurl}}/images/posts/glassfish03.png
-[glassfish04]={{site.baseurl}}/images/posts/glassfish04.png
+[glassfish01]=${content.rootPath}images/posts/glassfish01.png
+[glassfish02]=${content.rootPath}images/posts/glassfish02.png
+[glassfish03]=${content.rootPath}images/posts/glassfish03.png
+[glassfish04]=${content.rootPath}images/posts/glassfish04.png
 

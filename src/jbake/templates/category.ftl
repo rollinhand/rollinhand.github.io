@@ -46,7 +46,7 @@
                                     </div>
                                     <div class="col-md-9">
                                         <div class="card-body">
-                                            <a class="text-decoration-none link-dark stretched-link" href="${post.uri}">
+                                            <a class="text-decoration-none link-dark stretched-link" href="${content.rootpath}${post.uri}">
                                                 <h5 class="card-title mb-3">${post.title}</h5>
                                             </a>
                                             <p class="card-text mb-0">${excerpt(post.body)}</p>
