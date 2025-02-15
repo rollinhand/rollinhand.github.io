@@ -1,10 +1,10 @@
----
-layout: post
-title: "WiX Plugin 1.4 for Jenkins released"
-creator: rollinhand
-date: 2014-06-20
-category: Allgemein
----
+~~~~~~
+type=post
+title=WiX Plugin 1.4 for Jenkins released
+creator=rollinhand
+date=2014-06-20
+category=Allgemein
+~~~~~~
 Today I released a new version of the WiX plugin for Jenkins. This announcement describes the changes between the current and the former 1.3 release. The new version will be available on Jenkins update manager in a few hours.
 <!--more-->
 ### Changes

@@ -1,10 +1,10 @@
----
-layout: post
-title: "OEPE: Projekte mit Maven erstellen"
-date: 2017-08-24
-category: Entwicklung
-tags: ["ADF", "Oracle", "Java"]
----
+~~~~~~
+type=post
+title=OEPE=Projekte mit Maven erstellen
+date=2017-08-24
+category=Entwicklung
+tags=["ADF", "Oracle", "Java"]
+~~~~~~
 ADF-Projekte werden nach den Oracle-Tutorials nicht unbedingt mit einem allgemeinen Build-Tool
 wie Maven erstellt. In Oracles Enterprise Pack for Eclipse (OEPE) verstecken sich allerdings auch
 Maven-Archetypen, um ein typisches ADF-Projekt zu erstellen.

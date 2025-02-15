@@ -1,10 +1,10 @@
----
-layout: post
-title: Maven Surefire und Probleme mit dem Classpath
-date: 2020-05-29
-category: Entwicklung
-tags: [Maven,Eclipse]
----
+~~~~~~
+type=post
+title=Maven Surefire und Probleme mit dem Classpath
+date=2020-05-29
+category=Entwicklung
+tags=[Maven,Eclipse]
+~~~~~~
 In meinem letzten Projekt beim Kunden bin ich auf ein interessantes Problem im Maven Surefire Plugin
 gestoßen. Während meine Unit-Tests in der Eclipse-Umgebung problemlos liefen, warf Maven auf der
 Kommandozeile beim Aufruf von `Class.forName()` eine ClassNotFoundException. Was war da los?
@@ -33,7 +33,7 @@ Hierbei wird ein temporäres JAR erzeugt, dass nur den Inhalt `META-INF/MANIFEST
 MANIFEST sind über das Attribut *Class_Path* alle notwendigen Abhängigkeiten für die Testausführung
 mit ihren absoluten Pfaden gesetzt.
 
-Und hier kommen wir zum eigentlichen Problem: System Class Loader, Thread Context Class Loader und
+Und hier kommen wir zum eigentlichen Problem=System Class Loader, Thread Context Class Loader und
 der Default Class Loader sind identisch und verweisen auf das Maven Surefire Booter JAR, das
 wiederum Einträge zu den JAR-Dateien mit Klassen enthält, die in einem anderen Kontext geladen
 worden sind.
@@ -69,7 +69,7 @@ Test wiederverwenden soll. Durch die Unterbindung wird für jeden Testfall ein n
 gestartet und der Classpath korrekt gesetzt.
 
 Allerdings hat dieses Vorgehen auch einen gravierenden Nachteil, der nicht verschwiegen werden
-sollte: Bei vielen durchzuführenden Tests kommt die Garbage Collection ggf. nicht nach und es kommt
+sollte=Bei vielen durchzuführenden Tests kommt die Garbage Collection ggf. nicht nach und es kommt
 zu einem Überschreiten des GC Overhead Limits.
 
 Die Option sollte also mit Vorsicht gesetzt werden. 

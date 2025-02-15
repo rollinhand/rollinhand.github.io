@@ -1,10 +1,10 @@
----
-layout: post
-title: Hibernate&#58; Hilfe, mein Class-Mapping funktioniert nicht mehr
-date: 2020-06-04
-category: Entwicklung 
-tags: [Hibernate]
----
+~~~~~~
+type=post
+title=Hibernate&#58; Hilfe, mein Class-Mapping funktioniert nicht mehr
+date=2020-06-04
+category=Entwicklung 
+tags=[Hibernate]
+~~~~~~
 Zuletzt war ich in einem Projekt beschäftigt, dass für seine Persistenz noch auf Hibernate 3.2.0 und
 Mapping-Dateien (hbm-Dateien) im XML-Format gesetzt hat aus dem sich auch persistente Klassen
 generieren lassen. Mit dem zunächst sanften Upgrade auf Hibernate 3.6.10 konnten persistente Klassen

@@ -1,10 +1,10 @@
----
-layout: post
-title: Meecrowave und Docker - so einfach gehts
-date: 2020-05-06
-category: DevOps 
-tags: [Meecrowave,Microservices,Docker]
----
+~~~~~~
+type=post
+title=Meecrowave und Docker - so einfach gehts
+date=2020-05-06
+category=DevOps 
+tags=[Meecrowave,Microservices,Docker]
+~~~~~~
 In einem meiner [letzten Blogbeiträge][kivio] habe ich darüber berichtet, wie einfach mit
 [Meecrowave][meecrowave] ein Microservice erstellt werden kann. Heute geht es darum, den
 Microservice in ein Docker-Image zu bündeln und als Container zu starten.
@@ -17,11 +17,11 @@ Source-Code auf [GitHub][repository].
 
 Für das Docker-Experiment benötige ich die folgenden Plugins:
 
-* **[Meecrowave Maven Plugin][meecrowave-maven]**: Mit diesem Plugin lässt sich nicht nur ein
+* **[Meecrowave Maven Plugin][meecrowave-maven]**=Mit diesem Plugin lässt sich nicht nur ein
   Meecrowave-Projekt mittels Maven starten, sondern über den Befehl `mvn meecrowave:bundle` eine
 Distribution von Meecrowave erstellen, die alle notwendigen Bibliotheken sowie Skripte zum Starten
 und Stoppen des Servers mitliefert.
-* **[Docker Maven Plugin][docker-maven]**: Das von Fabric8 bereitgestellte Plugin kann aus einem
+* **[Docker Maven Plugin][docker-maven]**=Das von Fabric8 bereitgestellte Plugin kann aus einem
   Dockerfile und ein wenig Konfiguration in Maven ein Docker-Image erzeugen. Dabei kann die
 Konfiguration des Docker-Images komplett über Maven oder ein natives Dockerfile vorgenommen werden.
 
@@ -142,10 +142,10 @@ Build-Prozesses ein fertiges Docker-Image für das Deployment auf einer Kubernet
 
 Der Aufwand für die Erweiterung eines bereits bestehenden Projekts hält sich dabei in Grenzen.
 
-[kivio]: {% post_url 2020-04-30-meecrowave-microservices-ohne-aufwandiges-framework %}
-[meecrowave]: https://openwebbeans.apache.org/meecrowave/
-[repository]: https://github.com/rollinhand/meecrowave-example
-[meecrowave-maven]: https://openwebbeans.apache.org/meecrowave/meecrowave-maven/index.html
-[docker-maven]: https://github.com/fabric8io/docker-maven-plugin
-[helidon]: https://helidon.io/#/
-[kivio-mesos]: {% post_url 2018-06-23-container-verwalten-mit-dc-slash-os %}
+[kivio]={% post_url 2020-04-30-meecrowave-microservices-ohne-aufwandiges-framework %}
+[meecrowave]=https://openwebbeans.apache.org/meecrowave/
+[repository]=https://github.com/rollinhand/meecrowave-example
+[meecrowave-maven]=https://openwebbeans.apache.org/meecrowave/meecrowave-maven/index.html
+[docker-maven]=https://github.com/fabric8io/docker-maven-plugin
+[helidon]=https://helidon.io/#/
+[kivio-mesos]={% post_url 2018-06-23-container-verwalten-mit-dc-slash-os %}

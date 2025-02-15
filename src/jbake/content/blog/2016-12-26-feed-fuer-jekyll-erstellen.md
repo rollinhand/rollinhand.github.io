@@ -1,17 +1,17 @@
----
-layout: post
-date: 2016-12-26
-title: "Feed für Jekyll-basierten Blog erstellen"
-creator: rollinhand
-category: Entwicklung
----
+~~~~~~
+type=post
+date=2016-12-26
+title=Feed für Jekyll-basierten Blog erstellen
+creator=rollinhand
+category=Entwicklung
+~~~~~~
 Ein Blog mit redaktionellen Inhalten benötigt einen Feed. Leser können so bequem die
 Inhalte über einen Feed-/News-Reader abonnieren. Wie es mit Jekyll funktioniert, verrät
 dieser Beitrag.
 
 <!--more-->
 
-Seit 2005 haben sich zwei Formate für News-Feeds etabliert: RSS 2.0 und Atom. Um alle 
+Seit 2005 haben sich zwei Formate für News-Feeds etabliert=RSS 2.0 und Atom. Um alle 
 Leser eines Blogs oder Nachrichtenportals abzuholen, bietet es sich an, beide Formate
 zum Abonnement auf der Webseite anzubieten. Beide Formate sind unterschiedlich und haben
 ihre Stärken und Schwächen.
@@ -62,9 +62,9 @@ anbieten, lassen sich diese über link-Referenzen im Header bekannt machen:
     [...]
     <!-- Feeds -->
     <link rel="alternate" type="application/rss+xml" 
-          title="RSS" href="/blog/feed/rss.xml" />
+          title=RSS" href="/blog/feed/rss.xml />
     <link rel="alternate" type="application/atom+xml" 
-          title="Atom" href="/blog/feed/atom.xml" />
+          title=Atom" href="/blog/feed/atom.xml />
   </head>
   <body>
     [...]

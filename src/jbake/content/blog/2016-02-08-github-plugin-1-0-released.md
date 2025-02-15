@@ -1,10 +1,10 @@
----
-layout: post
-title: "GitHub plugin 1.0 for Apache Roller 5 released"
-creator: rollinhand
-date: 2016-02-08
-category: Entwicklung
----
+~~~~~~
+type=post
+title=GitHub plugin 1.0 for Apache Roller 5 released
+creator=rollinhand
+date=2016-02-08
+category=Entwicklung
+~~~~~~
 The first official version of the GitHub plugin for [Apache Roller 5](http://roller.apache.org/) was released today. 
 This short announcement describes the implemented functionality.
 <!--more-->

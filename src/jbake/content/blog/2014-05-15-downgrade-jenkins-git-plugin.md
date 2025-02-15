@@ -1,10 +1,10 @@
----
-layout: post
-title: "Downgrade Jenkins Git Plugin"
-creator: rollinhand
-date: 2014-05-15
-category: DevOps
----
+~~~~~~
+type=post
+title=Downgrade Jenkins Git Plugin
+creator=rollinhand
+date=2014-05-15
+category=DevOps
+~~~~~~
 If you also encounter problems with Jenkins' Git plugin I tell you in this post how you 
 can manually downgrade the plugin to a prior version.&nbsp;
 
@@ -19,7 +19,7 @@ Here is the guide how to do it.
 To avoid side effects while downgrading the needed plugins, stop your standalone Jenkins 
 server or the web container Jenkins is running in. Follow these steps:
 
-* Change to the plugins directory of Jenkins and remove the following files and directories: 
+* Change to the plugins directory of Jenkins and remove the following files and directories=
 __git-client.jpi, git-client, git.jpi, git__.
 * Download git-client 1.9.0 and git 1.5.0 directly from Jenkins Update server and copy 
 the files __git-client.hpi__ and __git.hpi__ into the plugins directory or use the upload 

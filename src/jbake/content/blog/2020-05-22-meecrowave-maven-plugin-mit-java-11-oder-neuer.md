@@ -1,10 +1,10 @@
----
-layout: post
-title: Meecrowave Maven Plugin mit Java 11 oder neuer
-date: 2020-05-22
-category: Entwicklung
-tags: [Meecrowave,Java11]
----
+~~~~~~
+type=post
+title=Meecrowave Maven Plugin mit Java 11 oder neuer
+date=2020-05-22
+category=Entwicklung
+tags=[Meecrowave,Java11]
+~~~~~~
 Das Meecrowave Maven Plugin sorgt nicht nur für die korrekte Bündelung der eigenen Anwendung in den
 Meecrowave Container sondern kann auch während der Entwicklung genutzt werden, um den Server zu
 starten und Debugging-Aktionen durchzuführen. Mit Java 11 und neuer kann das schief laufen. In dem
@@ -16,7 +16,7 @@ Wer das Meecrowave Maven Plugin in einer älteren Version zusammen mit Java 11 o
 Kommandos `mvn meecrowave:run` schnell auf die Fehlermeldung:
 
 ```bash
-Caused by: java.lang.ClassNotFoundException: javax.xml.bind.JAXBException
+Caused by=java.lang.ClassNotFoundException=javax.xml.bind.JAXBException
 ```
 
 Seit Java 11 sind die _javax_-Pakete aus der Java VM entfernt worden, sodass auch der Schalter

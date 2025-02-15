@@ -1,10 +1,10 @@
----
-layout: post
-title: "Tipps für den Einsatz des JDeveloper 12c"
-creator: rollinhand
-date: 2014-07-08
-category: Entwicklung
----
+~~~~~~
+type=post
+title=Tipps für den Einsatz des JDeveloper 12c
+creator=rollinhand
+date=2014-07-08
+category=Entwicklung
+~~~~~~
 Die Maven-Unterstützung im JDeveloper 12.1.2 ist wenig gelungen. Wer auf die Version 
 festgelegt ist, findet in diesem Post Wege, um die Maven-Unterstützung trotzdem in 
 vollem Umfang nutzen zu können.

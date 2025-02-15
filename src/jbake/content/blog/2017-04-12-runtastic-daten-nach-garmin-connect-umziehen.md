@@ -1,10 +1,10 @@
----
-layout: post
-title: Runtastic Daten nach Garmin Connect umziehen
-date: 2017-04-12
-category: Allgemein
-tags: Garmin Runtastic 
----
+~~~~~~
+type=post
+title=Runtastic Daten nach Garmin Connect umziehen
+date=2017-04-12
+category=Allgemein
+tags=Garmin Runtastic 
+~~~~~~
 Aktivitätsdaten von Runtastic zu einem anderen Anbieter umzuziehen ist nicht leicht. Welche Fallstricke
 bei einem Umzug nach [Garmin Connect](http://connect.garmin.com) zu erwarten sind, zeige ich in diesem Beitrag.
 

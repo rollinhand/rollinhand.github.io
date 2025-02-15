@@ -1,10 +1,10 @@
----
-layout: post
-title: "Oracle 12.2 veröffentlicht"
-date: 2017-09-12
-category: Technologie
-tags: ["Oracle", "Datenbank"]
----
+~~~~~~
+type=post
+title=Oracle 12.2 veröffentlicht
+date=2017-09-12
+category=Technologie
+tags=["Oracle", "Datenbank"]
+~~~~~~
 Nachdem die Oracle-Datenbank in der Version 12.2 bis vor Kurzem nur in Oracles Cloud Services verfügbar war, ist die aktuelle Version der Datenbank nun für alle zum [Download](http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index.html) verfügbar. Der Artikel beschreibt in Kürze die neuen Features.
 
 <!--more-->

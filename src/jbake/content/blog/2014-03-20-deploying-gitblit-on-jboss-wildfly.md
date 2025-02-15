@@ -1,10 +1,10 @@
----
-layout: post
-title: "Deploying GitBlit on JBoss/Wildfly"
-creator: rollinhand
-date: 2014-03-20
-category: DevOps
----
+~~~~~~
+type=post
+title=Deploying GitBlit on JBoss/Wildfly
+creator=rollinhand
+date=2014-03-20
+category=DevOps
+~~~~~~
 If you want to use GitBlit on a JBoss/Wildfly-based Java EE application server, 
 deployment is a little bit tricky. This guide describes how you can deploy GitBlit 
 with ease on JBoss/Wildfly.
@@ -38,8 +38,8 @@ For further reading, I define GitBlit's **baseFolder** as */opt/gitblit/cfg*.
 
 Therefore Wildfly does not allow or has a mechanism to reset environment entries with 
 runtime settings, the solution to deploy GitBlit or any other web application with 
-environment entries, is to define a [deployment overlay](https://docs.jboss.org/author/display/WFLY8/Deployment+Overlays?_sscc=t "JBoss documentation: Deployment Overlays"). 
-The Wildfly documentation states: "Deployment overlays are our way of 'overlaying' 
+environment entries, is to define a [deployment overlay](https://docs.jboss.org/author/display/WFLY8/Deployment+Overlays?_sscc=t "JBoss documentation=Deployment Overlays"). 
+The Wildfly documentation states="Deployment overlays are our way of 'overlaying' 
 content into an existing deployment, without physically modifying the contents of 
 the deployment archive. Possible use cases include swapping out deployment descriptors, 
 modifying static web resources to change the branding of an application, or even 

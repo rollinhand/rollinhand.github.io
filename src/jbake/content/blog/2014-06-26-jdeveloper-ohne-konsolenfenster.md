@@ -1,10 +1,10 @@
----
-layout: post
-title: "JDeveloper ohne Konsolenfenster starten"
-creator: rollinhand
-date: 2014-06-26
-category: Entwicklung
----
+~~~~~~
+type=post
+title=JDeveloper ohne Konsolenfenster starten
+creator=rollinhand
+date=2014-06-26
+category=Entwicklung
+~~~~~~
 Nichts ist störender als neben der eigentlichen Anwendung noch ein Konsolenfenster 
 geöffnet zu haben, das außer einer Ausgabe keine weitere Funktion hat. Dieser Post bringt Abhilfe.
 

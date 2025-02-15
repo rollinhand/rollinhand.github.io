@@ -1,15 +1,15 @@
----
-layout: post
-title: Let's Encrypt mit Nginx Proxy im Docker Container
-date: 2018-05-26
-category: DevOps
-tags: [SSL, Nginx, Docker, Zertifikat]
----
+~~~~~~
+type=post
+title=Let's Encrypt mit Nginx Proxy im Docker Container
+date=2018-05-26
+category=DevOps
+tags=[SSL, Nginx, Docker, Zertifikat]
+~~~~~~
 In diesem Tutorial beschreibe ich, wie man in einem 1&1 Cloud-Server in einem Nginx Reverse Proxy in einem Docker Container ein Let's Encrypt-Zertifikat für die SSL-verschlüsselte Verbindung einbindet.
 
 <!--more-->
 
-Eine Anmerkung möchte ich vorweg zu diesem Tutorial geben: Die Zertifikatseinbindung findet auf dem _nackten_ Host statt und nicht über den Let's Encrypt Docker container. Hierzu gibt es einen sehr ausführlichen Blog-Beitrag bei [Manas Tech](https://manas.tech/blog/2016/01/25/letsencrypt-certificate-auto-renewal-in-docker-powered-nginx-reverse-proxy.html), den ich ebenfalls sehr empfehlen kann.
+Eine Anmerkung möchte ich vorweg zu diesem Tutorial geben=Die Zertifikatseinbindung findet auf dem _nackten_ Host statt und nicht über den Let's Encrypt Docker container. Hierzu gibt es einen sehr ausführlichen Blog-Beitrag bei [Manas Tech](https://manas.tech/blog/2016/01/25/letsencrypt-certificate-auto-renewal-in-docker-powered-nginx-reverse-proxy.html), den ich ebenfalls sehr empfehlen kann.
 
 Dieses Tutorial basiert auf der sehr rudimentären [Anleitung von 1&1](https://www.1and1.com/cloud-community/learn/networking/ssl-certificates/install-a-lets-encrypt-ssl-certificate-on-a-11-cloud-server-with-linux/) zur Installation eines Let's Encrypt Zertifikats in den standardmäßig auf einem Cloud-Server installierten Apache-Server. Ich persönlich habe Nginx dem Apache aufgrund des schonenderen Umgangs mit den Hardware-Ressourcen und der einfacheren Konfiguration vorgezogen. Die Konfiguration für den Nginx reverse proxy liegt bei [GitHub](https://github.com/rollinhand/kivio-proxy). Ich werde in diesem Post auf besondere Details der Konfiguration eingehen.
 
@@ -52,13 +52,13 @@ bzw. unter dem Namen der primären Domäne die bei der Registrierung angegeben w
 
 Zeit für einen kleinen Exkurs zu den abgelegten Dateien.
 
-### Exkurs: Zertifikatsdateien von Let`s Encrypt
+### Exkurs=Zertifikatsdateien von Let`s Encrypt
 War die Installation erfolgreich, dann liegen in dem Zertifikatsordner vier Dateien. Auf deren Bedeutung möchte ich im Folgenden etwas genauer eingehen, denn ein tiefergehendes Verständnis für die Dateien, hilft bei der Konfiguration von Nginx.
 
-* __cert.pem__: Server-Zertifikat, welches für die sichere Kommunikation zwischen Browser und Server notwendig ist. Dieses kann auch selbst ausgestellt werden und gilt dann meist als nicht vertrauenswürdig.
-* __chain.pem__: Intermediate Zertifikat, welches die Vertrauenswürdigkeit des Server-Zertifikats sicherstellt. Ist das Intermediate-Zertifikat nicht vorhanden, wird das Zertifikat nicht als vertrauenswürdig eingestuft. Eine entsprechende Warnung des Browsers wird aufgerufen. Die CA - in diesem Falle Let's Encrypt stellt sicher, dass der Server vertrauenswürdig ist. Aus diesem Grund muss die Validierung durch das Auto-Tool ausgeführt werden.
-* __fullchain.pem__: Zusammengefügtes Zertifikat aus Server-Zertifikat und Intermediate-Zertifikat. Dieses Zertifikat wird später auch für die Konfiguration von Nginx benötigt.
-* __privkey.pem__: Privater Schlüssel
+* __cert.pem__=Server-Zertifikat, welches für die sichere Kommunikation zwischen Browser und Server notwendig ist. Dieses kann auch selbst ausgestellt werden und gilt dann meist als nicht vertrauenswürdig.
+* __chain.pem__=Intermediate Zertifikat, welches die Vertrauenswürdigkeit des Server-Zertifikats sicherstellt. Ist das Intermediate-Zertifikat nicht vorhanden, wird das Zertifikat nicht als vertrauenswürdig eingestuft. Eine entsprechende Warnung des Browsers wird aufgerufen. Die CA - in diesem Falle Let's Encrypt stellt sicher, dass der Server vertrauenswürdig ist. Aus diesem Grund muss die Validierung durch das Auto-Tool ausgeführt werden.
+* __fullchain.pem__=Zusammengefügtes Zertifikat aus Server-Zertifikat und Intermediate-Zertifikat. Dieses Zertifikat wird später auch für die Konfiguration von Nginx benötigt.
+* __privkey.pem__=Privater Schlüssel
 
 ### Nginx konfigurieren
 Hinter der Domäne _depot.kivio.org_ läuft aktuell ein TomEE-Server, der eine kleine JSF-Anwendung hostet. Bisher war dieser Server ausschließlich über den Nginx Proxy unverschlüsselt über den Port 80 zu erreichen.

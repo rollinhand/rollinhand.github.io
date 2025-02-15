@@ -1,10 +1,10 @@
----
-layout: post
-title: Redirect auf Favicon vermeiden
-date: 2018-05-01
-category: Entwicklung
-tags: [JSF, Java] 
----
+~~~~~~
+type=post
+title=Redirect auf Favicon vermeiden
+date=2018-05-01
+category=Entwicklung
+tags=[JSF, Java] 
+~~~~~~
 Bei einer mit Apache Shiro (oder ein anderem Framework) abgesicherten JSF-Seite wird
 der Anwender nach dem Login zunächst immer auf die Datei _favicon.ico_ weitergeleitet.
 Ursachen und deren Behebung habe ich in diesem Blog-Beitrag zusammengetragen.

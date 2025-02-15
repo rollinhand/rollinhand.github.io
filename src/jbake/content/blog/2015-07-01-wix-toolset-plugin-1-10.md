@@ -1,10 +1,10 @@
----
-layout: post
-title: "Wix Toolset plugin 1.10 for Jenkins released"
-creator: rollinhand
-date: 2015-07-01
-category: Allgemein
----
+~~~~~~
+type=post
+title=Wix Toolset plugin 1.10 for Jenkins released
+creator=rollinhand
+date=2015-07-01
+category=Allgemein
+~~~~~~
 A new version of Wix Toolset plugin was released on June 1st. The new version is automatically 
 available via Jenkins update manager. This announcement describes the latest changes.
 
@@ -17,7 +17,7 @@ available via Jenkins update manager. This announcement describes the latest cha
 * Some refactoring and code cleanup
 
 ### Bugfixes
-* Environment variables which contain a path which ends on a backslash are now escaped. This will avoid errors like *CNDL0103 : The system cannot find the file 'XXX' with type 'Source'*.
+* Environment variables which contain a path which ends on a backslash are now escaped. This will avoid errors like *CNDL0103 =The system cannot find the file 'XXX' with type 'Source'*.
 * **github #5:** The commands calling candle.exe and light.exe are now using relative paths instead of absolute paths. That should avoid a leading slash before the command if Jenkins master is running on Linux.
 
 ***

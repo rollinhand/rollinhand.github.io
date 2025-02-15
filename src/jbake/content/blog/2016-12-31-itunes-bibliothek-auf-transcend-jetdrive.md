@@ -1,10 +1,10 @@
----
-layout: post
-title: iTunes Bibliothek auf Transcend JetDrive Lite
-date: 2016-12-31
-category: Technologie
-tags: ["iTunes", "JetDrive"]
----
+~~~~~~
+type=post
+title=iTunes Bibliothek auf Transcend JetDrive Lite
+date=2016-12-31
+category=Technologie
+tags=["iTunes", "JetDrive"]
+~~~~~~
 Gerade die mobilen Macs der neuen Generation mit SSD haben meist zu wenig Speicherplatz, um
 eine große Musikbibliothek aufzunehmen. Die Verlagerung der iTunes-Bibliothek auf eine SD-Karte
 oder externe Platte liegt dabei nahe und kann mitunter Fallstricke bieten.
@@ -26,7 +26,7 @@ und Linux genutzt werden zu können. Die Abbildung zeigt, wie die korrekte Forma
 macOS auszusehen hat.
 
 ![Korrekte Formatierung einer SD-Karte](/src/jbake/assets/images/hdd-transcend.png "Korrekte Formatierung einer SD-Karte")
-_Abb. 1: Korrekte Formatierung einer SD-Karte_
+_Abb. 1=Korrekte Formatierung einer SD-Karte_
 
 
 Scheinbar läuft iTunes auf einem Dateisystem mit Journaling performanter. Bei länger

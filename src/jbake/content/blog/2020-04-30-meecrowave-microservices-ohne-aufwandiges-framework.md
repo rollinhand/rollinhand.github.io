@@ -1,11 +1,11 @@
----
-layout: post
-title: Meecrowave - Microservices ohne aufwändiges Framework
-date: 2020-04-30
-category: Entwicklung
-tags: [Meecrowave,Microservices]
-cofinpro: https://medium.com/cofinpro/meecrowave-microservices-ohne-aufwändiges-framework-bfbf07f116a6
----
+~~~~~~
+type=post
+title=Meecrowave - Microservices ohne aufwändiges Framework
+date=2020-04-30
+category=Entwicklung
+tags=[Meecrowave,Microservices]
+cofinpro=https://medium.com/cofinpro/meecrowave-microservices-ohne-aufwändiges-framework-bfbf07f116a6
+~~~~~~
 Die Apache Foundation hat mit [Meecrowave][meecrowave] einen Microprofil-Server auf den Weg gebracht, der durch
 seine geringe Größe und niedrigen Speicherverbrauch besticht. Inwiefern er genutzt werden kann, um
 einfach Microservices zu schreiben, habe ich mir genauer angesehen.
@@ -44,8 +44,8 @@ Doch zurück zum eigentlichen entwickeln mit Meecrowave. Zur besseren Nachvollzi
 Möglichkeiten in Meecrowave stecken, habe ich auf [GitHub][github] ein Projekt angelegt. Es besteht aus zwei
 Modulen und soll ein etwas komplexeres Beispiel statt dem üblichen Hello World darstellen:
 
-* person-model: Enthält unsere Modellklassen, die von der Verarbeitungslogik separiert sind.
-* person-server: Enthält unseren Microservice auf Basis von Meecrowave.
+* person-model=Enthält unsere Modellklassen, die von der Verarbeitungslogik separiert sind.
+* person-server=Enthält unseren Microservice auf Basis von Meecrowave.
 
 Für diesen Blog-Beitrag relevant ist nur das Modul _person-server_. Und das schauen wir uns nun
 genauer an.
@@ -193,11 +193,11 @@ die verschiedenen Endpunkte getestet werden sollen.
 Wer mehr Funktionalitäten aus dem Java EE-Kontext benötigt, dem stellt das Meecrowave noch weitere
 [Komponenten][meecrowave-components] zur Verfügung:
 
-* **meecrowave-jpa**: Hierbei handelt es sich um einen zusätzliches Layer, dass auf JPA aufbaut und
+* **meecrowave-jpa**=Hierbei handelt es sich um einen zusätzliches Layer, dass auf JPA aufbaut und
   ähnlich wie der Server an sich mit einem Builder zur programmatischen Konfiguration der
 Persistenzschicht.
-* **meecrowave-jolokia**: Komponenten zur Integration von Monitoring auf Basis von Jolokia.
-* **meecrowave-oauth2**: Experimentelles Modul zur Einbindung einer OAuth2-Implementiierung auf Basis
+* **meecrowave-jolokia**=Komponenten zur Integration von Monitoring auf Basis von Jolokia.
+* **meecrowave-oauth2**=Experimentelles Modul zur Einbindung einer OAuth2-Implementiierung auf Basis
   von Apache CXF.
 * Weiterhin besteht die Möglichkeit, SSL-Verschlüsselung über Let's Encrypt einzubinden.
 
@@ -211,11 +211,11 @@ Wer keine großen Frameworks für einen einfachen Microservice benötigt, der is
 richtig, denn eine großartige Einarbeitung ist nicht notwendig. 
 
 
-[meecrowave]: https://openwebbeans.apache.org/meecrowave/
-[github]: https://github.com/rollinhand/meecrowave-example/
-[arquillian]: http://arquillian.org
-[meecrowave-components]: https://openwebbeans.apache.org/meecrowave/components.html
-[openwebbeans]: https://openwebbeans.apache.org
-[cxf]: https://cxf.apache.org
-[johnzon]: https://johnzon.apache.org
-[kivio-docker]: {% post_url 2020-05-06-meecrowave-und-docker-so-einfach-gehts %}
+[meecrowave]=https://openwebbeans.apache.org/meecrowave/
+[github]=https://github.com/rollinhand/meecrowave-example/
+[arquillian]=http://arquillian.org
+[meecrowave-components]=https://openwebbeans.apache.org/meecrowave/components.html
+[openwebbeans]=https://openwebbeans.apache.org
+[cxf]=https://cxf.apache.org
+[johnzon]=https://johnzon.apache.org
+[kivio-docker]={% post_url 2020-05-06-meecrowave-und-docker-so-einfach-gehts %}

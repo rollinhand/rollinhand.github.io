@@ -1,10 +1,10 @@
----
-layout: post
-title: "Windows mit VirtualBox unter OS X Mavericks virtualisieren"
-creator: rollinhand
-date: 2014-04-21
-category: Technologie
----
+~~~~~~
+type=post
+title=Windows mit VirtualBox unter OS X Mavericks virtualisieren
+creator=rollinhand
+date=2014-04-21
+category=Technologie
+~~~~~~
 Tests unter OS X Mavericks haben gezeigt, dass sich Windows-Systeme unter dem neuen 
 Betriebssystem von Apple nicht mit VirtualBox virtualisieren lassen. Details zu meinem 
 Test finden sich in diesem Posting.

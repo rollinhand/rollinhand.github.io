@@ -1,11 +1,11 @@
----
-layout: post
-title: Container verwalten mit DC/OS
-date: 2018-06-23
-category: DevOps
-tags: [DC/OS, Container, Docker, Mesos]
-cofinpro: https://medium.com/cofinpro/das-eigene-datacenter-in-eine-cloud-verwandeln-7d1e98940889
----
+~~~~~~
+type=post
+title=Container verwalten mit DC/OS
+date=2018-06-23
+category=DevOps
+tags=[DC/OS, Container, Docker, Mesos]
+cofinpro=https://medium.com/cofinpro/das-eigene-datacenter-in-eine-cloud-verwandeln-7d1e98940889
+~~~~~~
 Die Themen Cloud und Container stammen nicht aus Wolkenkuckucksheim,
 sondern beschäftigen in der Realität die IT-Abteilungen großer und
 kleiner Unternehmen. Hinter diesen Ideen steckt der Wunsch,
@@ -31,7 +31,7 @@ einziges Mal entladen werden zu müssen.
 
 Übertragen auf die IT sind Container ein Deploymentformat für
 Anwendungen. Ähnlich wie in der Logistik gibt es auch hier Bemühungen,
-ein einheitliches Format zu schaffen: den OCI-Container. Führende
+ein einheitliches Format zu schaffen=den OCI-Container. Führende
 Unternehmen und Cloud-Betreiber wie Google, Amazon und RedHat haben sich
 zur [Open Container
 Initiative](https://www.opencontainers.org/) zusamengeschlossen und treiben das Format voran, das
@@ -68,7 +68,7 @@ eigenes Rechenzentrum.
 ([Quelle](https://docs.mesosphere.com/1.11/overview/architecture/))](https://cdn-images-1.medium.com/max/800/1*kUZ08-I1nEITGfCihng6Pw.png)
 
 Der Unterbau für DC/OS ist [Apache
-Mesos](http://mesos.apache.org/): ein
+Mesos](http://mesos.apache.org/)=ein
 verteilter System-Kernel, der sich ähnlich wie der Linux-Kernel um die
 Verwaltung von CPUs, Speicher und Prozessen kümmert --- nur eben nicht
 auf einer Maschine, sondern verteilt. Mesos kann von Haus aus mit
@@ -133,6 +133,6 @@ lässt.
 Lagerplätze für Container sind nur noch Koordinaten auf einem
 überdimensionalen Schachbrett. Der Disponent entscheidet, wann, wie
 viele und in welcher Reihenfolge Container abgelegt werden. Diese Rolle
-übernimmt im Rechenzentrum DC/OS: es kümmert um eine bestmögliche
+übernimmt im Rechenzentrum DC/OS=es kümmert um eine bestmögliche
 Nutzung aller Ressourcen der Systeme.
 

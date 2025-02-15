@@ -1,9 +1,9 @@
 --- 
-layout: post 
-title: "Fehlerbehebung im Glassfish-Server" 
-creator: rollinhand
-date: 2016-03-31 
-category: Entwicklung  
+type=post 
+title=Fehlerbehebung im Glassfish-Server 
+creator=rollinhand
+date=2016-03-31 
+category=Entwicklung  
 --- 
 Kryptische Fehlermeldungen bei der Entwicklung von Webanwendungen auf dem Glassfish-Server
 sind nicht immer einfach zu entschlüsseln und deren Ursache zu beheben. Dieser
@@ -36,8 +36,8 @@ Mit einer einfachen Korrektur und dem erneuten Deployment ist es anschließend n
 Der Glassfish-Server verhindert das Deployment mit einer Exception:
 
 ``
-com.sun.enterprise.container.common.spi.util.InjectionException: Fehler beim Erstellen des 
-verwalteten Objekts für Klasse: class org.jboss.weld.servlet.WeldListener
+com.sun.enterprise.container.common.spi.util.InjectionException=Fehler beim Erstellen des 
+verwalteten Objekts für Klasse=class org.jboss.weld.servlet.WeldListener
 ``
 
 Abhilfe kann hier geschaffen werden, indem der Glassfish-Server gestoppt und das 
@@ -73,8 +73,8 @@ untergekommen ist, ist die CommandException. Während des ersten oder eines erne
 Deployment erscheint die Meldung:
 
 ``
-org.glassfish.tools.ide.admin.CommandException: Can not read
-  HTTP response, caught IOException Schwerwiegend: EJB-Modul kann nicht geladen
+org.glassfish.tools.ide.admin.CommandException=Can not read
+  HTTP response, caught IOException Schwerwiegend=EJB-Modul kann nicht geladen
   werden. DeploymentContext enthält kein EJB.
 ``
   

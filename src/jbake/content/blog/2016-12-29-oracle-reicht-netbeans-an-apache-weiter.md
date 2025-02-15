@@ -1,9 +1,9 @@
----
-layout: post
-title: Oracle reicht NetBeans an Apache weiter
-date: 2016-12-29
-category: Entwicklung
----
+~~~~~~
+type=post
+title=Oracle reicht NetBeans an Apache weiter
+date=2016-12-29
+category=Entwicklung
+~~~~~~
 Bereits im September hat Oracle beschlossen, sich von [NetBeans](http://www.netbeans.org) 
 zu trennen. Die IDE soll zur
 Weiterentwicklung an die Apache Software Foundation wechseln. Der Transfer von OpenOffice
@@ -33,7 +33,7 @@ nicht kompatibel mit der Apache-Lizenz ist.
 Parallelen zur Übergabe von OpenOffice an die ASF wecken hierbei ein ungutes Gefühl. Mit
 dem Unterschied zu OpenOffice könnte Oracle allerdings ein echtes Interesse am Fortbestand
 der IDE haben. NetBeans ist die Basis für einige Produkte, die Oracle seinen Anwendern zur
-Verfügung stellt: Hierzu gehören der JDeveloper und der 
+Verfügung stellt=Hierzu gehören der JDeveloper und der 
 [SQLDeveloper](http://www.oracle.com/technetwork/developer-tools/sql-developer/overview/index.html).
 
 Laut dem Proposal will Oracle ein Team von namhaften Entwicklern zur Verfügung stellen. Die

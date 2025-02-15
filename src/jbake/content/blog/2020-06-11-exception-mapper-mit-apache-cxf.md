@@ -1,10 +1,10 @@
----
-layout: post
-title: Exception Mapper mit Apache CXF
-date: 2020-06-11
-category: Entwicklung 
-tags: [Meecrowave,Apache CXF,REST]
----
+~~~~~~
+type=post
+title=Exception Mapper mit Apache CXF
+date=2020-06-11
+category=Entwicklung 
+tags=[Meecrowave,Apache CXF,REST]
+~~~~~~
 Exception Mapper in Verbindung mit REST-Services vereinfachen nicht nur den Code, sondern sorgen
 auch dafür, dass Exceptions identisch behandelt und den gleichen Fehlercode an den Aufrufer
 zurückliefern. In diesem Blog-Beitrag zeige ich, wie das mit [Apache CXF][cxf] und 
@@ -163,14 +163,14 @@ Und erhalten als Ausgabe einen sauberen HTTP-Response und keinen Stack-Trace.
 
 ```
 > DELETE /person/2020 HTTP/1.1
-> Host: localhost:8080
-> User-Agent: curl/7.64.1
-> Accept: */*
+> Host=localhost:8080
+> User-Agent=curl/7.64.1
+> Accept=*/*
 > 
 < HTTP/1.1 406 
-< Date: Thu, 11 Jun 2020 14:14:42 GMT
-< Content-Type: application/octet-stream
-< Content-Length: 31
+< Date=Thu, 11 Jun 2020 14:14:42 GMT
+< Content-Type=application/octet-stream
+< Content-Length=31
 < 
 * Connection #0 to host localhost left intact
 Person with UUID 2020 not found* Closing connection 0
@@ -187,6 +187,6 @@ nach außen einheitlich behandelt. Die Idee hinter Exceptions, den Fehler an den
 delegieren wird direkt unterstützt. Auch wenn zusätzliche Konfiguration in der _beans.xml_ notwendig
 ist, bleibt die Anwendung dennoch portabel.
 
-[github]: https://github.com/rollinhand/meecrowave-example
-[meecrowave]: {% post_url 2020-04-30-meecrowave-microservices-ohne-aufwandiges-framework %} 
-[cxf]: http://cxf.apache.org
+[github]=https://github.com/rollinhand/meecrowave-example
+[meecrowave]={% post_url 2020-04-30-meecrowave-microservices-ohne-aufwandiges-framework %} 
+[cxf]=http://cxf.apache.org

@@ -1,10 +1,10 @@
----
-layout: post
-title: Technische Schulden und wie sie getilgt werden
-date: 2020-04-04
-category: Entwicklung 
-tags: [Softwareentwicklung,Management]
----
+~~~~~~
+type=post
+title=Technische Schulden und wie sie getilgt werden
+date=2020-04-04
+category=Entwicklung 
+tags=[Softwareentwicklung,Management]
+~~~~~~
 Im Buch ["Hybride Softwareentwicklung"][amazon] gehe ich mit meinen Co-Autoren Philip Knott und
 Gregor Sandhaus in Kapitel 4 auf das Thema technische Schulden ein. Es zeigt sich anhand
 aktueller Fachartikel und auch in Gesprächen mit Kunden, dass das Thema in der Digitalisierungswelle
@@ -58,9 +58,9 @@ Software. Dazu gehören unter anderem:
   bzw. passt nicht mehr zu den sich ändernden Einsatzszenarien.
 * Copy & Paste statt Zusammenfassung und Modularisierung. 
 
-Die Liste ließe sich beliebig lang fortsetzen. Kurz gefasst: Der Verfall der Code- und
+Die Liste ließe sich beliebig lang fortsetzen. Kurz gefasst=Der Verfall der Code- und
 Architektur-Qualität führt mittel- bis langfristig zu technischen Schulden. 
-Nach [Chris Sterling][amazon2] lassen sich diese Ursachen auf zwei Begriffe zusammenfassen: 
+Nach [Chris Sterling][amazon2] lassen sich diese Ursachen auf zwei Begriffe zusammenfassen=
 _Unvollständigkeit_ und _Schlampigkeit_. 
 Aber scheinbar nehmen Kunden, Anwender und Product-Owner die Verschlechterung der Codebasis billigend in Kauf wenn 
 dadurch Release-Termine eingehalten werden.
@@ -92,7 +92,7 @@ Architekturentscheidungen (Cloud-native, Monolith, Microservices).
 Dabei werden wir Menschen durch den _Bandwagon Effect_ beeinflusst. Der _Mitläufer-Effekt_ oder auch
 _Herdentrieb_ ist in der Mikroökonomie bekannt und besagt, dass die Steigerung eines Konsumguts
 aufgrund der Tatsache, dass andere Konsumenten dieses Gut gekauft haben, zurückzuführen ist. In der
-IT lässt sich dieses Phänomen ebenfalls beobachten: "Je häufiger ein Thema in Fachzeitschriften und
+IT lässt sich dieses Phänomen ebenfalls beobachten="Je häufiger ein Thema in Fachzeitschriften und
 [auf] Konferenzen besprochen wird, [desto] stärker scheint der Druck zu wachsen, es auch im eigenen
 Unternehmen einsetzen zu müssen." ([Wirdemann, Lueckow; OBJEKTspektrum 06/2019, S.
 20][objektspektrum])
@@ -118,7 +118,7 @@ Refaktorisierung einer Software häufig ab, da der Nutzen nicht ersichtlich und 
 Sicht keine Wertsteigerung der Software zu erwarten ist.
 
 Kommen wir an dieser Stelle zurück zur Realwirtschaft und den finanziellen Schulden. Ein Begriff aus
-der Kreditwirtschaft wurde bislang noch nicht erwähnt: der Zins. Schuldner zahlen dem Gläubiger
+der Kreditwirtschaft wurde bislang noch nicht erwähnt=der Zins. Schuldner zahlen dem Gläubiger
 Zinsen und sind somit Aufwand. Weiterhin stellt der Zins eine Risikoprämie für die Unsicherheit der
 Rückzahlung des Kapitals dar. Je mehr Risiko der Gläubiger eingeht, desto höher fällt der Zins aus,
 um einen Anreiz zu schaffen, auf das Kreditgeschäft einzugehen.
@@ -137,12 +137,12 @@ System nicht kontinuierlich angepasst, gibt es am Ende seiner Lebenszeit fünf W
 
 Alle diese Wege sind ebenfalls mit Aufwand versehen. Dieser Aufwand lässt sich über die Laufzeit
 eines Systems "abzinsen". Die Frage, die sich Stakeholder bei dem Betrieb eines Systems immer
-stellen müssen ist: Wie hoch ist der Aufwand für einen dieser fünf Wege im Gegensatz zur
+stellen müssen ist=Wie hoch ist der Aufwand für einen dieser fünf Wege im Gegensatz zur
 kontinuierlichen Pflege und technischen Optimierung meines bestehenden Systems.
 
 Das kontinuierliche Refaktorisieren kann dazu dienen die Risikoprämie zu senken. 
 Verallgemeinert ist das Risiko die Zukunftssicherheit des Systems und seine mögliche Nutzensteigerung
-im Verhältnis zu einer Modernisierung "from scratch". Demnach gilt ebenfalls: Je komplexer das
+im Verhältnis zu einer Modernisierung "from scratch". Demnach gilt ebenfalls=Je komplexer das
 System mit der Zeit wird, desto höher fällt auch die Risikoprämie aus und somit der Aufwand, der
 in das System gesteckt werden muss.
 
@@ -169,7 +169,7 @@ die Quadranten auf die Aussagen von Chris Sterling, so kann das Modell von Marti
 ersten Abbildung gezeigt erweitert werden. 
 
 ![Quadrant technische Schulden][img-technical-debt01]
-_Abb. 1: Quadrant technische Schulden_
+_Abb. 1=Quadrant technische Schulden_
 
 Folglich sind alle rücksichtslosen bzw. schlampigen Entscheidungen -- ob bewusst oder
 versehentlich -- keine technischen Schulden im eigentlichen Sinne, sondern fallen unter
@@ -204,7 +204,7 @@ Die Abbildung 2 zeigt zusammenfassend, welche Partei die Beseitigung von technis
 finanzieren hat.
 
 ![Wer die technischen Schulden bezahlt][img-technical-debt02]
-_Abb. 2: Wer die technischen Schulden bezahlt_
+_Abb. 2=Wer die technischen Schulden bezahlt_
 
 ## Fazit
 
@@ -229,16 +229,16 @@ Optimierungen, die keinen fachlichen Nutzen bringen, sichern die Stakeholder die
 des Systems und reduzieren die Risikoprämie, die sich aus den abgezinsten Kosten einer Modernisierung des kompletten
 Systems in der Zukunft ergeben würde. 
 
-[amazon]: https://amzn.to/39oKRQE
-[amazon2]: https://amzn.to/3atDSqH
-[wikipedia]: https://de.wikipedia.org/wiki/Schulden
-[latein]: https://www.latein.me/formen/debere
-[latein2]: https://www.latein.me/latein/credit
-[faz]: https://www.faz.net/aktuell/finanzen/meine-finanzen/finanzieren/wirtschaftswunder-schulden-machen-lohnt-sich-15813983.html
-[cunningham]: http://wiki.c2.com/?WardExplainsDebtMetaphor
-[sonarqube]: https://www.sonarqube.org
-[objektspektrum]: https://webreader.objektspektrum.de/de/profiles/7d30f3fc5f62-objektspektrum/editions/objektspektrum-06-2019
-[bias]: https://karrierebibel.de/bias/
-[fowler]: https://martinfowler.com/bliki/TechnicalDebtQuadrant.html
-[img-technical-debt01]: /src/jbake/assets/images/quadrant_technical_debt01.png
-[img-technical-debt02]: /src/jbake/assets/images/quadrant_technical_debt02.png
+[amazon]=https://amzn.to/39oKRQE
+[amazon2]=https://amzn.to/3atDSqH
+[wikipedia]=https://de.wikipedia.org/wiki/Schulden
+[latein]=https://www.latein.me/formen/debere
+[latein2]=https://www.latein.me/latein/credit
+[faz]=https://www.faz.net/aktuell/finanzen/meine-finanzen/finanzieren/wirtschaftswunder-schulden-machen-lohnt-sich-15813983.html
+[cunningham]=http://wiki.c2.com/?WardExplainsDebtMetaphor
+[sonarqube]=https://www.sonarqube.org
+[objektspektrum]=https://webreader.objektspektrum.de/de/profiles/7d30f3fc5f62-objektspektrum/editions/objektspektrum-06-2019
+[bias]=https://karrierebibel.de/bias/
+[fowler]=https://martinfowler.com/bliki/TechnicalDebtQuadrant.html
+[img-technical-debt01]=/src/jbake/assets/images/quadrant_technical_debt01.png
+[img-technical-debt02]=/src/jbake/assets/images/quadrant_technical_debt02.png

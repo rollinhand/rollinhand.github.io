@@ -1,10 +1,10 @@
----
-layout: post
-title: Apache NetBeans 10.0 veröffentlicht 
-date: 2018-12-30
-category: Entwicklung
-tags: [Java, Apache, NetBeans]
----
+~~~~~~
+type=post
+title=Apache NetBeans 10.0 veröffentlicht 
+date=2018-12-30
+category=Entwicklung
+tags=[Java, Apache, NetBeans]
+~~~~~~
 Apache hat NetBeans in der Version 10.0 Ende Dezember veröffentlicht.
 Die aktuelle Version unterstützt neue Funktionalitäten aus dem JDK 11, vermisst aber immer
 noch einige wichtige bzw. aktualisierte Plugins - unter anderem das Plugin zur Java EE-Entwicklung.

@@ -1,10 +1,10 @@
----
-layout: post
-title: "Blog zu GitHub pages umgezogen"
-date: 2016-12-23
-creator: rollinhand
-category: Allgemein
----
+~~~~~~
+type=post
+title=Blog zu GitHub pages umgezogen
+date=2016-12-23
+creator=rollinhand
+category=Allgemein
+~~~~~~
 Meinen Blog [Kivio](http://kivio.org) habe ich zum Ende des Jahres zu [GitHub pages](http://github.com) 
 umgezogen. Die Gründe finden sich in diesem Post.
 
@@ -22,13 +22,13 @@ Sourcen bei GitHub in einem Repository abzulegen oder aber nur die kompilierte s
 
 Ich habe mich für die erste Variante entschieden, denn somit kann ich auch meine Sourcen
 versionieren und Jekyll übernimmt die Übersetzung der Seite auf Seiten von GitHub. Allerdings
-bringt diese Variante auch Einschränkungen mit sich: Es können nur durch GitHub ausgewählte
+bringt diese Variante auch Einschränkungen mit sich=Es können nur durch GitHub ausgewählte
 Plugins mit Jekyll verwendet werden. Damit keine bösen Überraschungen beim Veröffentlichen
 auftreten und es zu Fehlern bei der Bereitstellung kommt, bietet es sich an, ein
 _Gemfile_ anzulegen und dort, das _github-pages_ gem einzubinden:
 
 	source "https://rubygems.org"
-	gem 'github-pages', '109', group: :jekyll_plugins
+	gem 'github-pages', '109', group=:jekyll_plugins
 
 Das Repository zu [github-pages](https://github.com/github/pages-gem) enthält eine ausführliche
 README und Verweise, welche Plugins unterstützt werden.

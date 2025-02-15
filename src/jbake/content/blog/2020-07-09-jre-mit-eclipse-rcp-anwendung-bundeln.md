@@ -1,10 +1,10 @@
----
-layout: post
-title: JRE mit Eclipse RCP-Anwendung bündeln
-date: 2020-07-09
-category: Entwicklung
-tags: [Eclipse RCP,Tycho]
----
+~~~~~~
+type=post
+title=JRE mit Eclipse RCP-Anwendung bündeln
+date=2020-07-09
+category=Entwicklung
+tags=[Eclipse RCP,Tycho]
+~~~~~~
 Die Auslieferung der eigenen Eclipse RCP-Anwendung ist mit [Tycho fast ein Kinderspiel][kivio1]. Ebenso
 einfach lässt sich die Anwendung auch mit ihrer eigenen Java Laufzeitumgebung (JRE) bündeln. In
 diesem Beitrag zeige ich wie das funktioniert und stelle alternative Wege vor.
@@ -86,7 +86,7 @@ Verzeichnis  mit dem Namen _jre_ passend zur exportierten Plattform erstellt.
 
 ## Mehr Dynamik mit dem Maven-Universum
 
-Die vorangegangenen Ausführungen haben einen Schwachpunkt: Wenn das Projekt versioniert ist (was es
+Die vorangegangenen Ausführungen haben einen Schwachpunkt=Wenn das Projekt versioniert ist (was es
 in einem professionellen Kontext hoffentlich ist), so werden Binärdateien zusammen mit dem
 Source-Code eingecheckt. Das ist nicht schön und sehr statisch.
 
@@ -101,7 +101,7 @@ _wget_ zum Laden von Dateien aus HTTP-Quellen ohne die Nutzung von zusätzlichen
 Weiterhin unterstützt es Caching und kann bei der Angabe eines MD5-Hashes die Signatur eines
 heruntergeladenen Artefakts prüfen.
 
-Ein weiteres Goodie: Mit der Option _unpack_ können komprimierte Artefakte direkt im Zielverzeichnis
+Ein weiteres Goodie=Mit der Option _unpack_ können komprimierte Artefakte direkt im Zielverzeichnis
 entpackt werden. Es ist nicht notwendig, das Maven Assembly-Plugin separat zu starten.
 
 In unserem vorangegangenem Beispiel wird nun die POM überarbeitet. Für alle unterstützten
@@ -114,8 +114,8 @@ Anschließend wird das Verzeichnis noch in _jre_ mithilfe des Antrun-Plugins umb
 Das vollständige Beispiel inkl. kompilierfähiger und ausführbarer Anwendung findet sich auf
 [Github][github] in den RCP Examples als rcp01 klassifiziert.
 
-[kivio1]: {% post_url 2020-06-28-eclipse-rcp-tipps-und-tricks %}
-[eclipseo]: http://eclipseo.blogspot.com/2014/11/bundle-jre-along-with-your-product.html
-[dlplugin]: https://github.com/maven-download-plugin/maven-download-plugin
-[rootfiles]: https://help.eclipse.org/2019-12/index.jsp?topic=%2Forg.eclipse.pde.doc.user%2Ftasks%2Fpde_rootfiles.htm
-[github]: https://github.com/rollinhand/eclipse-rcp-examples
+[kivio1]={% post_url 2020-06-28-eclipse-rcp-tipps-und-tricks %}
+[eclipseo]=http://eclipseo.blogspot.com/2014/11/bundle-jre-along-with-your-product.html
+[dlplugin]=https://github.com/maven-download-plugin/maven-download-plugin
+[rootfiles]=https://help.eclipse.org/2019-12/index.jsp?topic=%2Forg.eclipse.pde.doc.user%2Ftasks%2Fpde_rootfiles.htm
+[github]=https://github.com/rollinhand/eclipse-rcp-examples

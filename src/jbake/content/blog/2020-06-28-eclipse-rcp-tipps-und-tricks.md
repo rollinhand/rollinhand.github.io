@@ -1,10 +1,10 @@
----
-layout: post
-title: Eclipse RCP - Tipps und Tricks
-date: 2020-06-28
-category: Entwicklung 
-tags: [Eclipse,RCP,Maven,Tycho,Apache Felix]
----
+~~~~~~
+type=post
+title=Eclipse RCP - Tipps und Tricks
+date=2020-06-28
+category=Entwicklung 
+tags=[Eclipse,RCP,Maven,Tycho,Apache Felix]
+~~~~~~
 [Lars Vogel][vogella] hat mit seinen [Tutorials zu Eclipse RCP][vogella] eine solide Basis
 geschaffen, um mit Eclipse RCP Anwendungen zu entwickeln. Es gibt allerdings trotz der umfangreichen
 Beispiele immer wieder Fallstricke, die das Arbeiten mit RCP zu keinem Genuss machen. In diesem
@@ -36,11 +36,11 @@ Build gestartet, so kommt es bei der Produkt-Materialisierung zu einer [Exceptio
 nicht sonderlich aussagekräftig ist.
 
 ```bash
-[DEBUG] No solution found because the problem is unsatisfiable.: [Unable to satisfy dependency from org.kivio.depot.product 1.0.0.qualifier to org.eclipse.equinox.executable.feature.group 0.0.0.; No solution found because the problem is unsatisfiable.]
+[DEBUG] No solution found because the problem is unsatisfiable.=[Unable to satisfy dependency from org.kivio.depot.product 1.0.0.qualifier to org.eclipse.equinox.executable.feature.group 0.0.0.; No solution found because the problem is unsatisfiable.]
 [INFO] {osgi.os=win32, osgi.ws=win32, org.eclipse.update.install.features=true, osgi.arch=x86_64}
 [ERROR] Cannot resolve project dependencies:
-[ERROR] Software being installed: org.kivio.depot.product 1.0.0.qualifier
-[ERROR] Missing requirement: org.kivio.depot.product 1.0.0.qualifier requires 'org.eclipse.equinox.executable.feature.group 0.0.0' but it could not be found
+[ERROR] Software being installed=org.kivio.depot.product 1.0.0.qualifier
+[ERROR] Missing requirement=org.kivio.depot.product 1.0.0.qualifier requires 'org.eclipse.equinox.executable.feature.group 0.0.0' but it could not be found
 ```
 
 Hinter dem fehlenden Feature "org.eclipse.equinox.executable.feature.group" verbergen sich die
@@ -121,10 +121,10 @@ Es kann problemlos eine ältere Version des Connectors ohne Einschränkung über
 dem M2E-Store) installiert werden. Es ist allerdings darauf zu achten, dass über den Update-Site
 Mechanismus zunächst die neuere Version des Connectors deinstalliert wird.
 
-[vogella]: https://www.vogella.com
-[eclipse1]: https://www.eclipse.org/forums/index.php/t/1082939/
-[tycho]: https://www.eclipse.org/tycho/
-[stackoverflow1]: https://stackoverflow.com/questions/20235184/building-an-eclipse-plugin-using-maven
-[bundle]: https://felix.apache.org/components/bundle-plugin/
-[m2e-bundle]: https://github.com/takari/m2e-discovery-catalog
-[m2e-tycho]: https://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-tycho/0.9.0/
+[vogella]=https://www.vogella.com
+[eclipse1]=https://www.eclipse.org/forums/index.php/t/1082939/
+[tycho]=https://www.eclipse.org/tycho/
+[stackoverflow1]=https://stackoverflow.com/questions/20235184/building-an-eclipse-plugin-using-maven
+[bundle]=https://felix.apache.org/components/bundle-plugin/
+[m2e-bundle]=https://github.com/takari/m2e-discovery-catalog
+[m2e-tycho]=https://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-tycho/0.9.0/

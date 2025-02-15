@@ -1,10 +1,10 @@
----
-layout: post
-title: "Inhalte aus Evernote nach OneNote umziehen"
-creator: rollinhand
-date: 2016-03-17
-category: Allgemein
----
+~~~~~~
+type=post
+title=Inhalte aus Evernote nach OneNote umziehen
+creator=rollinhand
+date=2016-03-17
+category=Allgemein
+~~~~~~
 Kein direktes Thema für DevOps, aber interessant für alle, die einen einfachen Weg suchen, 
 ihre Notizen von Evernote nach OneNote umzuziehen.
 <!--more-->
