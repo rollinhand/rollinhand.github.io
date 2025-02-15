@@ -210,11 +210,11 @@ Wer keine großen Frameworks für einen einfachen Microservice benötigt, der is
 richtig, denn eine großartige Einarbeitung ist nicht notwendig. 
 
 
-[meecrowave]=https://openwebbeans.apache.org/meecrowave/
-[github]=https://github.com/rollinhand/meecrowave-example/
-[arquillian]=http://arquillian.org
-[meecrowave-components]=https://openwebbeans.apache.org/meecrowave/components.html
-[openwebbeans]=https://openwebbeans.apache.org
-[cxf]=https://cxf.apache.org
-[johnzon]=https://johnzon.apache.org
-[kivio-docker]={% post_url 2020-05-06-meecrowave-und-docker-so-einfach-gehts %}
+[meecrowave]:https://openwebbeans.apache.org/meecrowave/
+[github]:https://github.com/rollinhand/meecrowave-example/
+[arquillian]:http://arquillian.org
+[meecrowave-components]:https://openwebbeans.apache.org/meecrowave/components.html
+[openwebbeans]:https://openwebbeans.apache.org
+[cxf]:https://cxf.apache.org
+[johnzon]:https://johnzon.apache.org
+[kivio-docker]:../../../2020/05/06/meecrowave-und-docker-so-einfach-gehts.html

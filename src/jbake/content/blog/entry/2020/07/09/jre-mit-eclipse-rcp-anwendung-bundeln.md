@@ -110,8 +110,8 @@ Anschließend wird das Verzeichnis noch in _jre_ mithilfe des Antrun-Plugins umb
 Das vollständige Beispiel inkl. kompilierfähiger und ausführbarer Anwendung findet sich auf
 [Github][github] in den RCP Examples als rcp01 klassifiziert.
 
-[kivio1]={% post_url 2020-06-28-eclipse-rcp-tipps-und-tricks %}
-[eclipseo]=http://eclipseo.blogspot.com/2014/11/bundle-jre-along-with-your-product.html
-[dlplugin]=https://github.com/maven-download-plugin/maven-download-plugin
-[rootfiles]=https://help.eclipse.org/2019-12/index.jsp?topic=%2Forg.eclipse.pde.doc.user%2Ftasks%2Fpde_rootfiles.htm
-[github]=https://github.com/rollinhand/eclipse-rcp-examples
+[kivio1]:../../../2020/06/28/eclipse-rcp-tipps-und-tricks.html
+[eclipseo]:http://eclipseo.blogspot.com/2014/11/bundle-jre-along-with-your-product.html
+[dlplugin]:https://github.com/maven-download-plugin/maven-download-plugin
+[rootfiles]:https://help.eclipse.org/2019-12/index.jsp?topic=%2Forg.eclipse.pde.doc.user%2Ftasks%2Fpde_rootfiles.htm
+[github]:https://github.com/rollinhand/eclipse-rcp-examples

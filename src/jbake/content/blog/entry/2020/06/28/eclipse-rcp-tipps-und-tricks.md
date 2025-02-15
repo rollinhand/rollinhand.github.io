@@ -120,10 +120,10 @@ Es kann problemlos eine ältere Version des Connectors ohne Einschränkung über
 dem M2E-Store) installiert werden. Es ist allerdings darauf zu achten, dass über den Update-Site
 Mechanismus zunächst die neuere Version des Connectors deinstalliert wird.
 
-[vogella]=https://www.vogella.com
-[eclipse1]=https://www.eclipse.org/forums/index.php/t/1082939/
-[tycho]=https://www.eclipse.org/tycho/
-[stackoverflow1]=https://stackoverflow.com/questions/20235184/building-an-eclipse-plugin-using-maven
-[bundle]=https://felix.apache.org/components/bundle-plugin/
-[m2e-bundle]=https://github.com/takari/m2e-discovery-catalog
-[m2e-tycho]=https://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-tycho/0.9.0/
+[vogella]:https://www.vogella.com
+[eclipse1]:https://www.eclipse.org/forums/index.php/t/1082939/
+[tycho]:https://www.eclipse.org/tycho/
+[stackoverflow1]:https://stackoverflow.com/questions/20235184/building-an-eclipse-plugin-using-maven
+[bundle]:https://felix.apache.org/components/bundle-plugin/
+[m2e-bundle]:https://github.com/takari/m2e-discovery-catalog
+[m2e-tycho]:https://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-tycho/0.9.0/

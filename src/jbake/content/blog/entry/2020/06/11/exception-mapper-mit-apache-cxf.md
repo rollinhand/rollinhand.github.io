@@ -186,6 +186,6 @@ nach außen einheitlich behandelt. Die Idee hinter Exceptions, den Fehler an den
 delegieren wird direkt unterstützt. Auch wenn zusätzliche Konfiguration in der _beans.xml_ notwendig
 ist, bleibt die Anwendung dennoch portabel.
 
-[github]=https://github.com/rollinhand/meecrowave-example
-[meecrowave]={% post_url 2020-04-30-meecrowave-microservices-ohne-aufwandiges-framework %} 
-[cxf]=http://cxf.apache.org
+[github]:https://github.com/rollinhand/meecrowave-example
+[meecrowave]:../../../2020/04/30/meecrowave-microservices-ohne-aufwandiges-framework.html
+[cxf]:http://cxf.apache.org

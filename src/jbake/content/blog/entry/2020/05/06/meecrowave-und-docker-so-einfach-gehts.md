@@ -141,10 +141,10 @@ Build-Prozesses ein fertiges Docker-Image für das Deployment auf einer Kubernet
 
 Der Aufwand für die Erweiterung eines bereits bestehenden Projekts hält sich dabei in Grenzen.
 
-[kivio]={% post_url 2020-04-30-meecrowave-microservices-ohne-aufwandiges-framework %}
-[meecrowave]=https://openwebbeans.apache.org/meecrowave/
-[repository]=https://github.com/rollinhand/meecrowave-example
-[meecrowave-maven]=https://openwebbeans.apache.org/meecrowave/meecrowave-maven/index.html
-[docker-maven]=https://github.com/fabric8io/docker-maven-plugin
-[helidon]=https://helidon.io/#/
-[kivio-mesos]={% post_url 2018-06-23-container-verwalten-mit-dc-slash-os %}
+[kivio]:../../../2020/04/30/meecrowave-microservices-ohne-aufwandiges-framework.html
+[meecrowave]:https://openwebbeans.apache.org/meecrowave/
+[repository]:https://github.com/rollinhand/meecrowave-example
+[meecrowave-maven]:https://openwebbeans.apache.org/meecrowave/meecrowave-maven/index.html
+[docker-maven]:https://github.com/fabric8io/docker-maven-plugin
+[helidon]:https://helidon.io/#/
+[kivio-mesos]:../../../2018/06/23/container-verwalten-mit-dc-slash-os.html

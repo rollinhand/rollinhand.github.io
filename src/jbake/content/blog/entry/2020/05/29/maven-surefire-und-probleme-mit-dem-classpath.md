@@ -24,7 +24,7 @@ An dieser Stelle zunächst nichts besonderes. Die Klasse `Isin` befindet sich al
 Dependency deklarierten Jar-File, dass für den Test benötigt wird.
 
 ## Die Besonderheit von Maven Surefire
-Seit [Maven Surefire 2.8.2][surefire] ist die Behandlung des Classpath und somit auch die
+Seit [Maven Surefire 2.8.2](surefire) ist die Behandlung des Classpath und somit auch die
 Testausführung geändert worden. Standardmäßig ist der System Class Loader aktiv und Maven Surefire
 startet alle Tests mit einem Manifest-Only JAR.
 
@@ -71,6 +71,4 @@ Allerdings hat dieses Vorgehen auch einen gravierenden Nachteil, der nicht versc
 sollte=Bei vielen durchzuführenden Tests kommt die Garbage Collection ggf. nicht nach und es kommt
 zu einem Überschreiten des GC Overhead Limits.
 
-Die Option sollte also mit Vorsicht gesetzt werden. 
-
-[surefire]:http://maven.apache.org/surefire/maven-surefire-plugin/examples/class-loading.html
+Die Option sollte also mit Vorsicht gesetzt werden.
