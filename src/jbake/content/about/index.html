@@ -1,0 +1,159 @@
+title=Über mich
+type=page
+status=published
+~~~~~~
+<header class="py-5 bg-purple-50">
+    <div class="container px-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-xxl-6">
+                <div class="text-center my-5">
+                    <h1 class="fw-bolder mb-3">Softwareentwicklung aus Passion</h1>
+                    <p class="lead fw-normal text-muted mb-4">Hier blogge ich über verschiedene Themen aus meiner Praxis als Softwareentwickler
+                        in der Energie- und Finanzwirtschaft. Aktuell beschäftige ich mich mit den Themen DevOps,
+                         der nächsten Evolution im Java EE-Umfeld und Machine Learning mit Python und Java.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="py-5">
+    <div class="container px-5 my-5">
+        <div class="row gx-5">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <h2 class="fw-bolder mb-4">Publikationen</h2>
+                <p class="lead fw-normal text-muted">Neben einem Buch habe ich auch verschiedene Fachartikel publiziert</p>
+            </div>
+            <div class="col-lg-6">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <span class="badge bg-primary">2015</span>
+                        <div class="ms-2 me-auto">
+                          <div class="fw-bold">Hybride Softwareentwicklung</div>
+                          <div class="text-muted">Informatik-Spektrum</div>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <span class="badge bg-primary">2015</span>
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Festpreisprojekte mit kombinierten Verfahren</div>
+                            <div class="text-muted">iX kompakt Agiles Projektmanagement 2015</div>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <span class="badge bg-primary">2014</span>
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Hybride Sofwareentwicklung</div>
+                            <div class="text-muted">Springer-Vieweg</div>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <span class="badge bg-primary">2011</span>
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Cloud Metering ist wirklich smart</div>
+                            <div class="text-muted">BWK</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-5 bg-light">
+    <div class="container px-5 my-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-8 col-xl-6">
+                <div class="text-center">
+                    <h2 class="fw-bolder mb-5">Impressum und Projekte</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row gx-5">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="card h-100 shadow border-0">
+                    <div class="card-body">
+                        <h5>Impressum</h5>
+                        <address>
+                        <p>Björn Berg <br>
+                            Bargmannstr. 40<br>
+                            45127 Essen</p>
+                            <p><span><i class="fa fa-phone"></i> +49 (0151) 15010803</span></p>
+                            <p><span><i class="fa fa-envelope"></i> rollin.hand@gmx.de</span></p>
+                            </p>
+                        </address>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="card h-100 shadow border-0">
+                    <div class="card-body">
+                        <h5>Projekte</h5>
+                        <p>Aktuelle Projekte an denen ich arbeite, veröffentliche ich direkt auf 
+                            <a class="text-decoration-none" href="https://github.com/rollinhand?tab=repositories">GitHub</a>.
+                        <p class="samll text-muted">In den README-Dateien der Projekte finden sich alle notwendigen
+                            Informationen. Zu einem Großteil der Projekte finden sich auch
+                            Blog-Artikel.</p>
+                        <div>
+                            <a class="btn btn-primary btn-lg px-4 me-sm-3" href="https://github.com/rollinhand" target="blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--<section class="py-5">
+    <div class="container px-5 my-5">
+        <div class="row gx-5">
+            <div class="col-lg-8 mb-5 mb-lg-0">
+                <h2 class="fw-bolder mb-4">Themenverteilung</h2>
+                <p class="lead fw-normal text-muted">Meinen Blog habe ich in vier verschiedene Kategorien gegliedert</p>
+            </div>
+            <div class="col-lg-4">
+                {% assign category_list = site.categories | sort %}
+                <ul class="list-group list-group-flush">
+                {% for category in category_list %}
+                    {% assign name = category | first %}
+                    {% assign size = site.categories[name] | size %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <a class="text-decoration-none" href="/category/{{ name | slugify }}">{{ name }}</a>
+                        <span class="badge bg-primary rounded-pill">{{size}}</span>
+                      </li>
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>-->
+<section class="py-5">
+    <div class="container px-5 my-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-8 col-xl-6">
+                <div class="text-center">
+                    <h2 class="fw-bolder mb-5">Weitere Blogs</h2>
+                    <p class="lead fw-normal text-muted mb-5">Blogs anderer Autoren zu spannenden Themen</p>
+                </div>
+            </div>
+        </div>
+        <div class="row gx-5">
+            <div class="col-lg-4 mb-5">
+                <div class="card h-100 shadow border-0">
+                    <div class="card-body p-4">
+                        <h5 class="card-title mb-3">SQLDeveloper</h5>
+				        <p class="card-text mb-0"><a class="text-decoration-none" href="http://www.thatjeffsmith.com" target="_blank">Jeff Smith's Blog</a></p>
+				        <p class="card-text mb-0"><a class="text-decoration-none" href="https://www.salvis.com/blog/" target="_blank">Philipp Salvisberg's Blog</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-5">
+                <div class="card h-100 shadow border-0">
+                    <div class="card-body p-4">
+                        <h5 class="card-title mb-3">Eclipse RCP</h5>
+                        <p class="card-text mb-0"><a class="text-decoration-none" href="https://www.vogella.com" target="_blank">Lars Vogels Tutorials</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

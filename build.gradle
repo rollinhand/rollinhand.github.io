@@ -1,0 +1,27 @@
+plugins {
+    id 'org.jbake.site' version '5.5.0'             // JBake Plugin
+}
+
+repositories {
+    mavenCentral()
+}
+
+def jbakeInputDir = file('src/jbake')
+def jbakeOutputDir = file('build/jbake')
+
+// Replace failing version of OrientDB on Apple Silicon
+configurations.configureEach {
+    resolutionStrategy {
+        force "com.orientechnologies:orientdb-core:3.1.16"
+    }
+}
+
+// JBake Task
+jbake {
+    version='2.6.7'
+    srcDirName = "${jbakeInputDir}"
+    destDirName = "${jbakeOutputDir}"
+    clearCache = true
+}
+
+build.dependsOn bake
