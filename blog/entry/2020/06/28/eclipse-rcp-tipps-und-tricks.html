@@ -1,0 +1,193 @@
+<!-- HTML5 HEADER WITH NAVIGATION -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- HTML metadata and includes -->
+  <!-- Header information like meta information and script resources -->
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, maximum-scale=1">
+
+  <link rel="icon" href="../../../../../images/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="../../../../../images/favicon.png" type="image/png">
+
+  <!-- Stylesheets -->
+  <link href="../../../../../css/styles.css" rel="stylesheet" type="text/css">
+  <link href="../../../../../css/github.css" rel="stylesheet" type="text/css">
+  <!-- Bootstrap icons-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Feeds -->
+  <link rel="alternate" type="application/atom+xml" title="Atom" href="../../../../../feed.xml" />
+
+  <!-- Load Highlight.js -->
+  <script src="../../../../../js/highlight.pack.js"></script>
+  <title>Eclipse RCP - Tipps und Tricks</title>
+</head>
+<body class="d-flex flex-column h-100">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container px-5">
+      <a class="navbar-brand" href="../../../../../index.html"><img class="logo" src="../../../../../images/kivio-white.png" alt="Logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 mx-1 mb-lg-0">
+            <li class="nav-item mx-1 ">
+              <a class="nav-link " href="../../../../../category/allgemein/index.html">Allgemein</a>
+            </li>
+            <li class="nav-item mx-1 ">
+              <a class="nav-link " href="../../../../../category/devops/index.html">DevOps</a>
+            </li>
+            <li class="nav-item mx-1 ">
+              <a class="nav-link " href="../../../../../category/entwicklung/index.html">Entwicklung</a>
+            </li>
+            <li class="nav-item mx-1 ">
+              <a class="nav-link " href="../../../../../category/technologie/index.html">Technologie</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+<a href="../../../../../about/index.html">
+    <img class="avatar avatar-small" alt="rollinhand" width="40" height="40" data-proofer-ignore="true"
+         src="https://avatars2.githubusercontent.com/rollinhand?v=3&s=40"
+         srcset="https://avatars2.githubusercontent.com/rollinhand?v=3&s=40 1x, https://avatars2.githubusercontent.com/rollinhand?v=3&s=80 2x, https://avatars2.githubusercontent.com/rollinhand?v=3&s=120 3x, https://avatars2.githubusercontent.com/rollinhand?v=3&s=160 4x"/></a>        </ul>
+      </div>
+    </div>
+  </nav>
+<main class="flex-shrink-0">
+	<!-- Page Content-->
+	<section class="py-5">
+		<div class="container px-5 my-5">
+			<div class="row gx-5">
+				<div class="col-lg-3">
+					<div class="d-flex align-items-center mt-lg-5 mb-4">
+<a href="../../../../../about/index.html">
+    <img class="avatar avatar-small" alt="rollinhand" width="40" height="40" data-proofer-ignore="true"
+         src="https://avatars2.githubusercontent.com/rollinhand?v=3&s=40"
+         srcset="https://avatars2.githubusercontent.com/rollinhand?v=3&s=40 1x, https://avatars2.githubusercontent.com/rollinhand?v=3&s=80 2x, https://avatars2.githubusercontent.com/rollinhand?v=3&s=120 3x, https://avatars2.githubusercontent.com/rollinhand?v=3&s=160 4x"/></a>						<div class="small ms-3">
+							<div class="fw-bold">Björn Berg</div>
+						</div>
+					</div>
+					<!-- Hinweis auf fremden Blog-Artikel -->
+				</div>
+				<div class="col-lg-9">
+					<!-- Post content-->
+					<article>
+						<!-- Post header-->
+						<header class="mb-4">
+							<!-- Post title-->
+							<h1 class="fw-bolder mb-1">Eclipse RCP - Tipps und Tricks</h1>
+							<!-- Post meta content-->
+							<div class="text-muted fst-italic mb-2">28.06.2020</div>
+							<!-- Post categories-->
+								<a class="badge bg-primary text-decoration-none link-light" href="/category/entwicklung">Entwicklung</a>
+							<!-- Post tags -->
+									<span class="badge bg-secondary text-decoration-none link-light">Eclipse</span>
+									<span class="badge bg-secondary text-decoration-none link-light">RCP</span>
+									<span class="badge bg-secondary text-decoration-none link-light">Maven</span>
+									<span class="badge bg-secondary text-decoration-none link-light">Tycho</span>
+									<span class="badge bg-secondary text-decoration-none link-light">Apache Felix</span>
+						</header>
+						<!-- Post content-->
+						<section class="mb-5">
+							<p><a href="https://www.vogella.com">Lars Vogel</a> hat mit seinen <a href="https://www.vogella.com">Tutorials zu Eclipse RCP</a> eine solide Basis geschaffen, um mit Eclipse RCP Anwendungen zu entwickeln. Es gibt allerdings trotz der umfangreichen Beispiele immer wieder Fallstricke, die das Arbeiten mit RCP zu keinem Genuss machen. In diesem Beitrag zeige ich ein paar immer wieder auftretende Probleme und wie diese gelöst werden können.</p>
+<!--more-->
+<h2>RCP-Projekte mit Maven und Tycho bauen</h2>
+<p>Auf Eclipse RCP basierende Projekte lassen sich seit einigen Jahren fast problemlos mit <a href="https://www.eclipse.org/tycho/">Tycho</a> bauen. Von der Eclipse Foundation wird der Ansatz mit Maven und Tycho weiter gefördert und gilt inzwischen als der präferierte Weg, eine RCP-Anwendung zu bauen und zu einem Produkt zu bündeln. Der Weg über die Plugin Development Environment (PDE) gilt inzwischen als <em>deprecated</em> und sollte bei neuen Projekten nicht mehr genutzt werden. Die Abkehr von der PDE zeigt sich auch in der Projekthistorie: so finden Bugfixes und Backports keinen Eingang mehr in die PDE.</p>
+<p>Allerdings ist Tycho und insbesondere die Auflösung von Abhängigkeiten noch nicht perfekt und Fehlermeldungen sind beizeiten kryptisch.</p>
+<p>Beispiel gefällig?</p>
+<h3>Equinox-Launcher Artefakte für Produkt-Materialisierung einbinden</h3>
+<p>In der Produkt-Definition für eine RCP-Anwendung kann festgelegt werden, dass beim Build native Launcher-Artefakte erstellt werden. Das sind die Executables und Windows oder die paketierten App-Bundles unter Mac OS, die eine Java Laufzeitumgebung mit den notwendigen Artefakten und die Eclipse Runtime und weitere Plugins starten.</p>
+<p>Leider gehören die Artefakte weder zum &ldquo;E4 RCP Feature&rdquo; noch zum normalen &ldquo;RCP Feature&rdquo;. Wird der Build gestartet, so kommt es bei der Produkt-Materialisierung zu einer <a href="https://www.eclipse.org/forums/index.php/t/1082939/">Exception</a>, die nicht sonderlich aussagekräftig ist.</p>
+<pre><code class="language-bash">[DEBUG] No solution found because the problem is unsatisfiable.=[Unable to satisfy dependency from org.kivio.depot.product 1.0.0.qualifier to org.eclipse.equinox.executable.feature.group 0.0.0.; No solution found because the problem is unsatisfiable.]
+[INFO] {osgi.os=win32, osgi.ws=win32, org.eclipse.update.install.features=true, osgi.arch=x86_64}
+[ERROR] Cannot resolve project dependencies:
+[ERROR] Software being installed=org.kivio.depot.product 1.0.0.qualifier
+[ERROR] Missing requirement=org.kivio.depot.product 1.0.0.qualifier requires 'org.eclipse.equinox.executable.feature.group 0.0.0' but it could not be found
+</code></pre>
+<p>Hinter dem fehlenden Feature &ldquo;org.eclipse.equinox.executable.feature.group&rdquo; verbergen sich die <a href="https://stackoverflow.com/questions/20235184/building-an-eclipse-plugin-using-maven">&ldquo;Eclipse Platform Launcher Executables&rdquo;</a>. Jeder RCP-Entwickler sollte dieses Feature also auch in seine Target Platform integrieren, wenn bei der Produkterstellung native Launcher erstellt werden sollen. Eine andere Lösung ist, den Haken für native Launcher in der <a href="https://stackoverflow.com/questions/20235184/building-an-eclipse-plugin-using-maven">Produktdefinition zu entfernen</a>.</p>
+<h2>OSGi-Bundles mit Apache Felix</h2>
+<p>Mit dem <a href="https://felix.apache.org/components/bundle-plugin/">Apache Maven Bundle</a> lassen sich aus eigenem Code oder bestehenden Drittbibliotheken OSGi-Bundles erstellen, die zusätzliche Informationen zu den nach außen exponierten Packages sowie der internen Benennung und noch viel mehr enthalten. Entweder kann in der POM-Datei im Detail angegeben werden, wie die MANIFEST.MF erzeugt werden soll oder es kann eine feste MANIFEST.MF hinterlegt werden.</p>
+<h3>Dynamische MANIFEST.MF in Eclipse korrekt verwenden</h3>
+<p>Die dynamisch aus der POM erzeugte MANIFEST.MF sollte nach Möglichkeit nicht im <em>/target</em>-Ordner erzeugt werden, da die Plugin-Entwicklung in Eclipse eigenen Gesetzen unterliegt, die historisch durch die PDE bedingt sind. Normalerweise haben Eclipse-Plugins die folgende Verzeichnisstruktur</p>
+<pre><code class="language-bash">+ my.plugin
++- bin
++- src
++- META-INF
++-- MANIFEST.MF
++- plugin.xml
++- build.properties
+</code></pre>
+<p>In der POM sollte über das Attribut <code>manifestLocation</code> das Verzeichnis <em>META-INF</em> direkt unterhalb des Root-Verzeichnisses des Projekts erzeugt werden. Für den Build-Prozess über Maven ist das irrelevant, für den <a href="https://github.com/takari/m2e-discovery-catalog">M2E-Connector für das Maven Bundle (Tycho)</a> nicht. Er interpretiert die Location in der POM-Datei und erzeugt über Alt+F5 das entsprechende Verzeichnis inkl. der zu generierenden MANIFEST.MF.</p>
+<p>So lässt sich nicht nur die MANIFEST.MF in einem grafischen Editor analysieren, sondern es ist auch möglich zwischen Eclipse-Plugins und OSGi-Bundles in Eclipse zu navigieren, indem die Dependencies angeklickt werden. Bei Projekten mit vielen Plugins und Abhängigkeiten, ein nicht zu unterschätzendes Feature.</p>
+<h3>Neu verpackte Bibliotheken</h3>
+<p>Code von Dritten, der keine OSGi-Informationen besitzt, kann mit dem Maven Bundle-Plugin neu verpackt werden, sodass dieser als Plugin bzw. Bundle in einer RCP-Anwendung genutzt werden kann.</p>
+<p>Es besteht die Option, den Code <em>inline</em> zu übernehmen. Dabei wird das Original-JAR entpackt und die enthaltenen Code-Fragmente in ihre Original-Struktur in das neue Paket übernommen. dadurch kann als Classpath-Angabe in der MANIFEST.MF der Punkt (.) genutzt werden.</p>
+<p>Mit dieser Möglichkeit leidet allerdings der Komfort bei der Entwicklung in der Eclipse-Umgebung, wenn ausschließlich Drittbibliotheken neu paketiert und als Abhängigkeit verwendet werden sollen.</p>
+<p>Solange wie die Projekte als Abhängigkeit in der Eclipse geöffnet sind, versucht die IDE zunächst die Abhängigkeit in den eigenen Projekten aufzulösen. Das wird auch funktionieren. Dabei werden allerdings keine Sourcen gefunden, da <em>inline</em> durch M2E Tycho nicht interpretiert wird. Abhängige Projekte zeigen dadurch Kompilierfehler an und werden in der IDE mit einem roten X markiert.</p>
+<p>Dieses Vorgehen ist mehr als verwirrend, da das fertig gebaute und transformierte Bundle natürlich die richtigen Sourcen enthält. Folgende beiden Best Practices bieten sich daher an:</p>
+<ul>
+<li>Soll <em>inline</em> genutzt werden, ist das Projekt zu bauen und in das lokale Maven Repository zu installieren. Es sollte nicht zusammen mit dem abhängigen Projekt in der Eclipse IDE geöffnet sein.</li>
+<li>Alternativ können auch die Original JAR-Dateien erhalten und der Classpath in der MANIFEST.MF auf die JAR-Datei erweitert werden. Dadurch kann das Projekt neben der Abhängigkeit in der Eclipse-Umgebung geöffnet bleiben, da Eclipse die Original JAR-Datei in die Abhängigkeiten zieht.</li>
+</ul>
+<h3>M2Eclipse-Tycho - Achtung beim Einsatz von Felix Bundle Plugin</h3>
+<p>Bei dem Einsatz von Tycho zusammen mit Maven übernimmt in der Eclipse IDE der <a href="https://github.com/takari/m2e-discovery-catalog">M2E-Tycho Connector</a> die Übersetzung der verschiedenen Maven Goals sowohl für Tycho als auch das Maven Bundle Plugin. So werden Code und MANIFEST-Dateien im Hintergrund erstellt.</p>
+<p>Aus einem nicht dokumentierten Grund hat die LATEST-Version aus dem 0.9.0-Zweig des M2E-Connectors eine Einschränkung auf die Maven Bundle Version bis 3.2.0. Höhere Versionen (aktuell ist 4.2.1) werden mit dem 0.9.0-Zweig nicht länger unterstützt. Kompiliert die Eclipse IDE im Hintergrund keinen Code mehr oder erzeugt keine MANIFEST-Datei, so ist der Fehler in der aktuellen Version des M2E-Connectors zu suchen.</p>
+<p>Es kann problemlos eine ältere Version des Connectors ohne Einschränkung über die Update site (statt dem M2E-Store) installiert werden. Es ist allerdings darauf zu achten, dass über den Update-Site Mechanismus zunächst die neuere Version des Connectors deinstalliert wird.</p>
+
+						</section>
+					</article>
+					<section>
+						<div class="card bg-light">
+							<div class="card-body">
+								<h5><i class="fa fa-comment"></i> Kommentar</h5>
+
+								<div class="mt-3">
+									<p>Du möchtest diskutieren oder einen Kommentar zu dem Beitrag hinterlassen?</p>
+									<small class="text-muted">Dieser Blog hat keine öffentliche Kommentarfunktion, aber ich freue mich jederzeit über eine
+										<a href="mailto:rollin.hand@gmx.de">Mail</a> mit kritischen Anmerkungen, Feedback oder auch einfach nur
+										Lob an meine Mail-Adresse <a href="mailto:rollin.hand@gmx.de">rollin.hand[@]gmx.de</a>.</small>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+<!-- HTML5 FOOTER -->
+<footer class="bg-dark py-4 mt-auto">
+    <div class="container px-5">
+        <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+            <div class="col-auto">
+                <div class="small m-0 text-white">Copyright &copy; 2017 - 2025 by Björn Berg</div>
+            </div>
+            <div class="col-auto">
+                <a class="link-light small" href="../../../../../blog/meecrowave.html">Apache Meecrowave</a>
+                <span class="text-white mx-1">&middot;</span>
+                <a class="link-light small" href="../../../../../privacy-policy/index.html">Privacy</a>
+                <span class="text-white mx-1">&middot;</span>
+                <a class="link-light small" href="../../../../../about/index.html">Imprint</a>
+                <span class="text-white mx-1">&middot;</span>
+                <a class="link-light small" href="mailto:rollin.hand@gmx.de">Contact</a>
+            </div>
+            <div class="col-auto">
+                <a class="link-light text-decoration-none mx-1 small" href="https://www.xing.com/profile/Bjoern_Berg2" target="_blank" rel="me">
+                    <span class="button xing" aria-details="Xing"><i class="fab fa-xing"></i></span>
+                </a>
+                <a class="link-light text-decoration-none mx-1 small" href="https://www.linkedin.com/in/bjoernberg82" target="_blank" rel="me">
+                    <span class="button linkedin" aria-details="LinkedIn"><i class="fab fa-linkedin"></i></span>
+                </a>
+                <a class="link-light text-decoration-none mx-1 small" href="../../../../../feed.xml">
+                    <span class="button atom" aria-details="Atom/RSS"><i class="fas fa-rss subscribe"></i></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

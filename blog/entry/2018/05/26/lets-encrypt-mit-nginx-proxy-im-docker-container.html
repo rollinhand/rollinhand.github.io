@@ -1,0 +1,250 @@
+<!-- HTML5 HEADER WITH NAVIGATION -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- HTML metadata and includes -->
+  <!-- Header information like meta information and script resources -->
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, maximum-scale=1">
+
+  <link rel="icon" href="../../../../../images/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="../../../../../images/favicon.png" type="image/png">
+
+  <!-- Stylesheets -->
+  <link href="../../../../../css/styles.css" rel="stylesheet" type="text/css">
+  <link href="../../../../../css/github.css" rel="stylesheet" type="text/css">
+  <!-- Bootstrap icons-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Feeds -->
+  <link rel="alternate" type="application/atom+xml" title="Atom" href="../../../../../feed.xml" />
+
+  <!-- Load Highlight.js -->
+  <script src="../../../../../js/highlight.pack.js"></script>
+  <title>Let's Encrypt mit Nginx Proxy im Docker Container</title>
+</head>
+<body class="d-flex flex-column h-100">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container px-5">
+      <a class="navbar-brand" href="../../../../../index.html"><img class="logo" src="../../../../../images/kivio-white.png" alt="Logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 mx-1 mb-lg-0">
+            <li class="nav-item mx-1 ">
+              <a class="nav-link " href="../../../../../category/allgemein/index.html">Allgemein</a>
+            </li>
+            <li class="nav-item mx-1 ">
+              <a class="nav-link " href="../../../../../category/devops/index.html">DevOps</a>
+            </li>
+            <li class="nav-item mx-1 ">
+              <a class="nav-link " href="../../../../../category/entwicklung/index.html">Entwicklung</a>
+            </li>
+            <li class="nav-item mx-1 ">
+              <a class="nav-link " href="../../../../../category/technologie/index.html">Technologie</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+<a href="../../../../../about/index.html">
+    <img class="avatar avatar-small" alt="rollinhand" width="40" height="40" data-proofer-ignore="true"
+         src="https://avatars2.githubusercontent.com/rollinhand?v=3&s=40"
+         srcset="https://avatars2.githubusercontent.com/rollinhand?v=3&s=40 1x, https://avatars2.githubusercontent.com/rollinhand?v=3&s=80 2x, https://avatars2.githubusercontent.com/rollinhand?v=3&s=120 3x, https://avatars2.githubusercontent.com/rollinhand?v=3&s=160 4x"/></a>        </ul>
+      </div>
+    </div>
+  </nav>
+<main class="flex-shrink-0">
+	<!-- Page Content-->
+	<section class="py-5">
+		<div class="container px-5 my-5">
+			<div class="row gx-5">
+				<div class="col-lg-3">
+					<div class="d-flex align-items-center mt-lg-5 mb-4">
+<a href="../../../../../about/index.html">
+    <img class="avatar avatar-small" alt="rollinhand" width="40" height="40" data-proofer-ignore="true"
+         src="https://avatars2.githubusercontent.com/rollinhand?v=3&s=40"
+         srcset="https://avatars2.githubusercontent.com/rollinhand?v=3&s=40 1x, https://avatars2.githubusercontent.com/rollinhand?v=3&s=80 2x, https://avatars2.githubusercontent.com/rollinhand?v=3&s=120 3x, https://avatars2.githubusercontent.com/rollinhand?v=3&s=160 4x"/></a>						<div class="small ms-3">
+							<div class="fw-bold">Björn Berg</div>
+						</div>
+					</div>
+					<!-- Hinweis auf fremden Blog-Artikel -->
+				</div>
+				<div class="col-lg-9">
+					<!-- Post content-->
+					<article>
+						<!-- Post header-->
+						<header class="mb-4">
+							<!-- Post title-->
+							<h1 class="fw-bolder mb-1">Let's Encrypt mit Nginx Proxy im Docker Container</h1>
+							<!-- Post meta content-->
+							<div class="text-muted fst-italic mb-2">26.05.2018</div>
+							<!-- Post categories-->
+								<a class="badge bg-primary text-decoration-none link-light" href="/category/devops">DevOps</a>
+							<!-- Post tags -->
+									<span class="badge bg-secondary text-decoration-none link-light">SSL</span>
+									<span class="badge bg-secondary text-decoration-none link-light">Nginx</span>
+									<span class="badge bg-secondary text-decoration-none link-light">Docker</span>
+									<span class="badge bg-secondary text-decoration-none link-light">Zertifikat</span>
+						</header>
+						<!-- Post content-->
+						<section class="mb-5">
+							<p>In diesem Tutorial beschreibe ich, wie man in einem 1&amp;1 Cloud-Server in einem Nginx Reverse Proxy in einem Docker Container ein Let&rsquo;s Encrypt-Zertifikat für die SSL-verschlüsselte Verbindung einbindet.</p>
+<!--more-->
+<p>Eine Anmerkung möchte ich vorweg zu diesem Tutorial geben=Die Zertifikatseinbindung findet auf dem <em>nackten</em> Host statt und nicht über den Let&rsquo;s Encrypt Docker container. Hierzu gibt es einen sehr ausführlichen Blog-Beitrag bei <a href="https://manas.tech/blog/2016/01/25/letsencrypt-certificate-auto-renewal-in-docker-powered-nginx-reverse-proxy.html">Manas Tech</a>, den ich ebenfalls sehr empfehlen kann.</p>
+<p>Dieses Tutorial basiert auf der sehr rudimentären <a href="https://www.1and1.com/cloud-community/learn/networking/ssl-certificates/install-a-lets-encrypt-ssl-certificate-on-a-11-cloud-server-with-linux/">Anleitung von 1&amp;1</a> zur Installation eines Let&rsquo;s Encrypt Zertifikats in den standardmäßig auf einem Cloud-Server installierten Apache-Server. Ich persönlich habe Nginx dem Apache aufgrund des schonenderen Umgangs mit den Hardware-Ressourcen und der einfacheren Konfiguration vorgezogen. Die Konfiguration für den Nginx reverse proxy liegt bei <a href="https://github.com/rollinhand/kivio-proxy">GitHub</a>. Ich werde in diesem Post auf besondere Details der Konfiguration eingehen.</p>
+<h3>Let&rsquo;s Encrypt auf dem Cloud Server installieren</h3>
+<p>Let&rsquo;s Encrypt ist eine freie SSL Certificate Authority - auch Root Authority genannt, die freie und kostenlose Zertifikate verteilt. Die Zertifikate sind in der Regel 90 Tage gültig und müssen spätestens dann aktualisiert werden. Am Ende des Tutorials zeige ich ebenfalls einen Weg, wie das Zertifikat regelmäßig aktualisiert werden kann.</p>
+<p>Für die Installation des Zertifikats setze ich auf den hauseigenen Client von Let&rsquo;s Encrypt. Über diesen lassen sich neue Zertifikate ausstellen und bereits vorhandene jederzeit aktualisieren. Damit der Client genutzt werden kann, ist die Installation von Git auf dem Cloud-Server notwendig. Hierzu werden <em>root</em>-Rechte benötigt.</p>
+<pre><code>sudo apt-get install git
+cd /opt
+sudo git clone https://github.com/letsencrypt/letsencrypt
+</code></pre>
+<p>Im Verzeichnis <code>/opt/letsencrypt</code> liegen mehrere Scripte mit denen sich automatisiert signierte Zertifikate erstellen lassen. Für uns interessant ist hier <code>letsencrypt-auto</code>. Mit dem Parameter <code>--help</code> lassen sich die möglichen Parameter anzeigen.</p>
+<p>Damit bei der automatischen Installation des Zertifikats auch eine Validierung durchgeführt werden kann, sollte der Nginx Proxy kurzfristig gestoppt werden, da die Ports 80 und 443 für die Validierung frei sein sollten.</p>
+<pre><code>docker stop kivio-proxy
+</code></pre>
+<p>Das Zertifikat soll für die Domäne depot.kivio.org erzeugt werden. Es ist zu beachten, dass bei der Ausführung des Scripts Let&rsquo;s Encrypt hingeht und noch einige zusätzliche Pakete unter Linux installiert. Zu diesen Paketen gehört bspw. auch Python 3.</p>
+<pre><code>./letsencrypt-auto certonly --standalone -d depot.kivio.org 
+</code></pre>
+<p>Dabei gibt <em>certonly</em> an, dass kein Webserver konfiguriert werden und nur das Zertifikat installiert werden soll. Über den Parameter <em>&ndash;standalone</em> wird temporär ein Webserver gestartet, mit dem die Domain validiert wird. Mit <em>-d</em> werden die Domänen angegeben, für die das Zertifikat gültig ist. Jede weitere wird dabei zu den alternativen Namen aufgenommen, wenn die Validierung erfolgreich ist.</p>
+<p>Beim Aufruf des Clients muss eine E-Mail-Adresse hinterlegt und die Nutzungsbedingungen akzeptiert werden. Die hinterlegte E-Mail-Adresse dient zur Kontaktaufnahme bei Sicherheitsproblemen oder einer anstehenden Zertifikatsverlängerung.</p>
+<p>Sollte die Validierung der Domäne fehlschlagen, so kann über eine erneute Ausführung von <code>letsencrypt-auto</code> ein erneuter Versuch gestartet werden. Der Installer ist entsprechend fehlertolerant.</p>
+<p>Die fertigen Zertifikatsdateien liegen anschließend unter</p>
+<p><code>/etc/letsencrypt/live/depot.kivio.org</code></p>
+<p>bzw. unter dem Namen der primären Domäne die bei der Registrierung angegeben worden ist.</p>
+<p>Zeit für einen kleinen Exkurs zu den abgelegten Dateien.</p>
+<h3>Exkurs=Zertifikatsdateien von Let`s Encrypt</h3>
+<p>War die Installation erfolgreich, dann liegen in dem Zertifikatsordner vier Dateien. Auf deren Bedeutung möchte ich im Folgenden etwas genauer eingehen, denn ein tiefergehendes Verständnis für die Dateien, hilft bei der Konfiguration von Nginx.</p>
+<ul>
+<li><strong>cert.pem</strong>=Server-Zertifikat, welches für die sichere Kommunikation zwischen Browser und Server notwendig ist. Dieses kann auch selbst ausgestellt werden und gilt dann meist als nicht vertrauenswürdig.</li>
+<li><strong>chain.pem</strong>=Intermediate Zertifikat, welches die Vertrauenswürdigkeit des Server-Zertifikats sicherstellt. Ist das Intermediate-Zertifikat nicht vorhanden, wird das Zertifikat nicht als vertrauenswürdig eingestuft. Eine entsprechende Warnung des Browsers wird aufgerufen. Die CA - in diesem Falle Let&rsquo;s Encrypt stellt sicher, dass der Server vertrauenswürdig ist. Aus diesem Grund muss die Validierung durch das Auto-Tool ausgeführt werden.</li>
+<li><strong>fullchain.pem</strong>=Zusammengefügtes Zertifikat aus Server-Zertifikat und Intermediate-Zertifikat. Dieses Zertifikat wird später auch für die Konfiguration von Nginx benötigt.</li>
+<li><strong>privkey.pem</strong>=Privater Schlüssel</li>
+</ul>
+<h3>Nginx konfigurieren</h3>
+<p>Hinter der Domäne <em>depot.kivio.org</em> läuft aktuell ein TomEE-Server, der eine kleine JSF-Anwendung hostet. Bisher war dieser Server ausschließlich über den Nginx Proxy unverschlüsselt über den Port 80 zu erreichen.</p>
+<p>Die Konfiguration sieht bisher wie folgt aus (es handelt sich hierbei nur um einen Auszug):</p>
+<pre><code>...
+upstream depot-ee {
+    server depot:8080;
+}
+...
+server {
+    listen       80;
+    server_name  depot.kivio.org;
+
+    location / {
+         proxy_pass         http://depot-ee;
+         proxy_redirect     off;
+         proxy_set_header   Host $host;
+         proxy_set_header   X-Real-IP $remote_addr;
+         proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+         proxy_set_header   X-Forwarded-Host $server_name;
+}
+</code></pre>
+<p>Ich nutze alle meine JEE Applikationsserver als Upstream-Server. Das hat den Vorteil, dass die SSL-Kommunikation nur bis zum jeweiligen Nginx-Server aufgebaut werden muss. Dies vereinfacht die Konfiguration der SSL-Kommunikation erheblich.</p>
+<p>Die oben gezeigte Konfiguration muss dahingehend angepasst werden, dass die Proxy-Konfiguration in den Server-Block für die Kommunikation über Port 443 verschoben bzw. die Portkonfiguration für den Block geändert werden muss. Zusätzlich muss Nginx mitgeteilt werden, wo das Zertifikat und der private Schlüssel zu finden sind.</p>
+<pre><code>server {
+    listen 443;
+    listen [::]:443;
+    server_name depot.kivio.org;
+
+    ssl on;
+    ssl_certificate /etc/letsencrypt/live/depot.kivio.org/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/depot.kivio.org/privkey.pem;
+         
+    location / {
+        proxy_pass         http://depot-ee;
+        ...
+    }
+} 
+</code></pre>
+<p>Ab sofort wäre die Webseite nur noch über <a href="https://depot.kivio.org">https://depot.kivio.org</a> zu erreichen. Damit die Webseite auch ohne Angabe des Protokolls erreicht werden kann, kann im Nginx noch etwas Feintuning vorgenommen werden und ein temporärer Redirect (HTTP Code 301) eingerichtet werden.</p>
+<pre><code>server {
+    listen 80;
+    listen [::]:80;
+    server_name depot.kivio.org;
+    return 301 https://depot.kivio.org$request_uri;
+}
+</code></pre>
+<p>Dieser Eintrag sorgt dafür, dass auch eine Eingabe von <code>depot.kivio.org</code> in einem modernen Browser dafür sorgt, dass die Webseite korrekt über SSL aufgerufen wird. Der Besucher muss sich nicht merken, ob die Webseite über HTTP oder HTTPS aufgerufen wird.</p>
+<p>Die komplette <a href="https://github.com/rollinhand/kivio-proxy/blob/master/src/main/docker/nginx.conf">Konfiguration</a> befindet sich auf GitHub.</p>
+<h3>SSL-Zertifikat verlängern</h3>
+<p>Bei den signierten Zertifikaten ist zu beachten, dass diese nur 90 Tage gültig sind. Verlängern lässt sich das Zertifikat ebenfalls über das bereits bekannte Script. So will Let&rsquo;s Encrypt Unmut über die kurzen Laufzeiten der Zertifikate vermeiden.</p>
+<p>Allerdings ist zu berücksichtigen, dass für die Erneuerung des Zertifikats der Webserver gestoppt werden muss, da ansonsten das Zertifikat nicht verifiziert werden kann.</p>
+<pre><code>/opt/letsencrypt/letsencrypt-auto certonly --renew-by-default --standalone -d depot.kivio.org
+</code></pre>
+<p>Die regelmäßige Verlängerung kann auch über einen Cronjob automatisiert werden. Dabei muss allerdings sichergestellt sein, dass bei der Verlängerung keine Interaktion notwendig ist.</p>
+<p>Zu diesem Zweck habe ich mir ein Script mit dem Namen <a href="https://github.com/rollinhand/kivio-proxy/blob/master/update-certs.sh">update-certs.sh</a> geschrieben, dass über einen Cronjob sonntags nachts gestartet wird und für die Aktualisierung zuständig ist.</p>
+<p>Die <em>cron</em> table wird mittels <code>sudo crontab -e</code> aufgerufen und bspw. die folgende Zeile hinzugefügt:</p>
+<pre><code>* 2 * * 7 /opt/update-certs.sh &gt;&gt; /var/log/update-certs.log
+</code></pre>
+<h3>SSL Zertifikat widerrufen</h3>
+<p>Ein ausgestelltes Zertifikat kann auch widerrufen werden. Dies kann notwendig werden, wenn das Zertifikat nicht mehr benötigt wird.</p>
+<pre><code>/opt/letsencrypt/letsencrypt-auto revoke --cert-path /etc/letsencrypt/live/depot.kivio.org/fullchain.pem
+</code></pre>
+<h3>Docker-Container öffnen</h3>
+<p>Die Nginx-Konfiguration wird in dem Standard Docker-Container verwendet. Damit auf dem Cloud-Server der Nginx auch über den Port 443 zu erreichen ist, muss er seinen Port noch nach außen freigeben.</p>
+<p>Das passiert beim Starten des Containers. Ebenfalls wird beim Start auch das Zertifikatsverzeichnis eingebunden, sodass Nginx auch die Let&rsquo;s Encrypt SSL-Zertifikate findet.</p>
+<pre><code>docker run -d -p80:80 -p443:443 --restart unless-stopped --name kivio-proxy --network=kivio -v /etc/letsencrypt:/etc/letsencrypt kivio-proxy
+</code></pre>
+<p>Mit diesem Kommando wird der Container mit dem Docker-Netzwerk <em>kivio</em> verbunden. In diesem Netzwerk befinden sich die JEE-Applikationsserver, die über ihren Container-Namen in der Nginx-Konfiguration referenziert werden.</p>
+<p>Zusätzlich werden die Ports 80 und 443 nach außen exponiert, sodass der Nginx-Server auch von der Aussenwelt erreichbar ist.</p>
+
+						</section>
+					</article>
+					<section>
+						<div class="card bg-light">
+							<div class="card-body">
+								<h5><i class="fa fa-comment"></i> Kommentar</h5>
+
+								<div class="mt-3">
+									<p>Du möchtest diskutieren oder einen Kommentar zu dem Beitrag hinterlassen?</p>
+									<small class="text-muted">Dieser Blog hat keine öffentliche Kommentarfunktion, aber ich freue mich jederzeit über eine
+										<a href="mailto:rollin.hand@gmx.de">Mail</a> mit kritischen Anmerkungen, Feedback oder auch einfach nur
+										Lob an meine Mail-Adresse <a href="mailto:rollin.hand@gmx.de">rollin.hand[@]gmx.de</a>.</small>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+<!-- HTML5 FOOTER -->
+<footer class="bg-dark py-4 mt-auto">
+    <div class="container px-5">
+        <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+            <div class="col-auto">
+                <div class="small m-0 text-white">Copyright &copy; 2017 - 2025 by Björn Berg</div>
+            </div>
+            <div class="col-auto">
+                <a class="link-light small" href="../../../../../blog/meecrowave.html">Apache Meecrowave</a>
+                <span class="text-white mx-1">&middot;</span>
+                <a class="link-light small" href="../../../../../privacy-policy/index.html">Privacy</a>
+                <span class="text-white mx-1">&middot;</span>
+                <a class="link-light small" href="../../../../../about/index.html">Imprint</a>
+                <span class="text-white mx-1">&middot;</span>
+                <a class="link-light small" href="mailto:rollin.hand@gmx.de">Contact</a>
+            </div>
+            <div class="col-auto">
+                <a class="link-light text-decoration-none mx-1 small" href="https://www.xing.com/profile/Bjoern_Berg2" target="_blank" rel="me">
+                    <span class="button xing" aria-details="Xing"><i class="fab fa-xing"></i></span>
+                </a>
+                <a class="link-light text-decoration-none mx-1 small" href="https://www.linkedin.com/in/bjoernberg82" target="_blank" rel="me">
+                    <span class="button linkedin" aria-details="LinkedIn"><i class="fab fa-linkedin"></i></span>
+                </a>
+                <a class="link-light text-decoration-none mx-1 small" href="../../../../../feed.xml">
+                    <span class="button atom" aria-details="Atom/RSS"><i class="fas fa-rss subscribe"></i></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!-- HTML5 HEADER WITH NAVIGATION -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- HTML metadata and includes -->
+  <!-- Header information like meta information and script resources -->
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, maximum-scale=1">
+
+  <link rel="icon" href="../../../../../images/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="../../../../../images/favicon.png" type="image/png">
+
+  <!-- Stylesheets -->
+  <link href="../../../../../css/styles.css" rel="stylesheet" type="text/css">
+  <link href="../../../../../css/github.css" rel="stylesheet" type="text/css">
+  <!-- Bootstrap icons-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Feeds -->
+  <link rel="alternate" type="application/atom+xml" title="Atom" href="../../../../../feed.xml" />
+
+  <!-- Load Highlight.js -->
+  <script src="../../../../../js/highlight.pack.js"></script>
+  <title>Meecrowave und Docker - so einfach gehts</title>
+</head>
+<body class="d-flex flex-column h-100">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container px-5">
+      <a class="navbar-brand" href="../../../../../index.html"><img class="logo" src="../../../../../images/kivio-white.png" alt="Logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 mx-1 mb-lg-0">
+            <li class="nav-item mx-1 ">
+              <a class="nav-link " href="../../../../../category/allgemein/index.html">Allgemein</a>
+            </li>
+            <li class="nav-item mx-1 ">
+              <a class="nav-link " href="../../../../../category/devops/index.html">DevOps</a>
+            </li>
+            <li class="nav-item mx-1 ">
+              <a class="nav-link " href="../../../../../category/entwicklung/index.html">Entwicklung</a>
+            </li>
+            <li class="nav-item mx-1 ">
+              <a class="nav-link " href="../../../../../category/technologie/index.html">Technologie</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+<a href="../../../../../about/index.html">
+    <img class="avatar avatar-small" alt="rollinhand" width="40" height="40" data-proofer-ignore="true"
+         src="https://avatars2.githubusercontent.com/rollinhand?v=3&s=40"
+         srcset="https://avatars2.githubusercontent.com/rollinhand?v=3&s=40 1x, https://avatars2.githubusercontent.com/rollinhand?v=3&s=80 2x, https://avatars2.githubusercontent.com/rollinhand?v=3&s=120 3x, https://avatars2.githubusercontent.com/rollinhand?v=3&s=160 4x"/></a>        </ul>
+      </div>
+    </div>
+  </nav>
+<main class="flex-shrink-0">
+	<!-- Page Content-->
+	<section class="py-5">
+		<div class="container px-5 my-5">
+			<div class="row gx-5">
+				<div class="col-lg-3">
+					<div class="d-flex align-items-center mt-lg-5 mb-4">
+<a href="../../../../../about/index.html">
+    <img class="avatar avatar-small" alt="rollinhand" width="40" height="40" data-proofer-ignore="true"
+         src="https://avatars2.githubusercontent.com/rollinhand?v=3&s=40"
+         srcset="https://avatars2.githubusercontent.com/rollinhand?v=3&s=40 1x, https://avatars2.githubusercontent.com/rollinhand?v=3&s=80 2x, https://avatars2.githubusercontent.com/rollinhand?v=3&s=120 3x, https://avatars2.githubusercontent.com/rollinhand?v=3&s=160 4x"/></a>						<div class="small ms-3">
+							<div class="fw-bold">Björn Berg</div>
+						</div>
+					</div>
+					<!-- Hinweis auf fremden Blog-Artikel -->
+				</div>
+				<div class="col-lg-9">
+					<!-- Post content-->
+					<article>
+						<!-- Post header-->
+						<header class="mb-4">
+							<!-- Post title-->
+							<h1 class="fw-bolder mb-1">Meecrowave und Docker - so einfach gehts</h1>
+							<!-- Post meta content-->
+							<div class="text-muted fst-italic mb-2">06.05.2020</div>
+							<!-- Post categories-->
+								<a class="badge bg-primary text-decoration-none link-light" href="/category/devops">DevOps</a>
+							<!-- Post tags -->
+									<span class="badge bg-secondary text-decoration-none link-light">Meecrowave</span>
+									<span class="badge bg-secondary text-decoration-none link-light">Microservices</span>
+									<span class="badge bg-secondary text-decoration-none link-light">Docker</span>
+						</header>
+						<!-- Post content-->
+						<section class="mb-5">
+							<p>In einem meiner <a href="../../../2020/04/30/meecrowave-microservices-ohne-aufwandiges-framework.html">letzten Blogbeiträge</a> habe ich darüber berichtet, wie einfach mit <a href="https://openwebbeans.apache.org/meecrowave/">Meecrowave</a> ein Microservice erstellt werden kann. Heute geht es darum, den Microservice in ein Docker-Image zu bündeln und als Container zu starten.</p>
+<!--more-->
+<p>Für das Beispiel mit Docker greife ich wieder auf mein Beispiel-Projekt aus dem <a href="../../../2020/04/30/meecrowave-microservices-ohne-aufwandiges-framework.html">initialen Blogbeitrag</a> zu Meecrowave zurück. Zur besseren Nachvollziehbarkeit findet sich der Source-Code auf <a href="https://github.com/rollinhand/meecrowave-example">GitHub</a>.</p>
+<p>Für das Docker-Experiment benötige ich die folgenden Plugins:</p>
+<ul>
+<li><strong><a href="https://openwebbeans.apache.org/meecrowave/meecrowave-maven/index.html">Meecrowave Maven Plugin</a></strong>=Mit diesem Plugin lässt sich nicht nur ein Meecrowave-Projekt mittels Maven starten, sondern über den Befehl <code>mvn meecrowave:bundle</code> eine Distribution von Meecrowave erstellen, die alle notwendigen Bibliotheken sowie Skripte zum Starten und Stoppen des Servers mitliefert.</li>
+<li><strong><a href="https://github.com/fabric8io/docker-maven-plugin">Docker Maven Plugin</a></strong>=Das von Fabric8 bereitgestellte Plugin kann aus einem Dockerfile und ein wenig Konfiguration in Maven ein Docker-Image erzeugen. Dabei kann die Konfiguration des Docker-Images komplett über Maven oder ein natives Dockerfile vorgenommen werden.</li>
+</ul>
+<p>Mit diesen zusätzlichen Plugins wird das Modul <em>person-server</em> ausgestattet. Ich werde weiter unten im Blogbeitrag auf die Details eingehen.</p>
+<h2>Dockerfile bereitstellen</h2>
+<p>Ich habe mich dazu entschieden, nicht alle Funktionen des Docker Maven Plugins auszureizen, sondern auf ein natives <em>Dockerfile</em> zurückzugreifen. Somit besteht nicht nur die Möglichkeit, das Image mit Maven zu bauen, sondern auch mittels <code>docker build</code>.</p>
+<p>Vergleichbar mit dem <a href="https://helidon.io/#/">Helidon-Projekt</a> liegt das <em>Dockerfile</em> im Root-Verzeichnis des Maven-Moduls <em>person-server</em>.</p>
+<p>{% gist c2f0f2fb2b6c74cb1a24b937e88e7423 %}</p>
+<p>Das <em>Dockerfile</em> basiert auf Adopt OpenJDK 8 und enthält zwei Besonderheiten in den Zeilen 8 und 13.</p>
+<p>Mit dem Meecrowave Maven Plugin lässt sich eine Distribution erzeugen, die in verschiedenen Unterverzeichnissen alle notwendigen Dateien enthält, um Meecrowave auf einem Unix- oder Windows-System zu starten.</p>
+<p>Damit die Distribution automatisch durch den Befehl <strong>ADD</strong> entpackt wird, muss diese im Format <em>tar.gz</em> vorliegen. Das ebenfalls produzierbare ZIP-Format wird durch Docker nicht als komprimiertes Archiv erkannt. In unserem Arbeitsverzeichnis <em>/opt</em> wird das gepackte Verzeichnis in den Ordner <em>person-server</em> extrahiert.</p>
+<p>Meecrowave bietet bei den Start-Skripten die Möglichkeit, verschiedene Parameter mitzugeben, sodass der Server entweder im Vorder- oder Hintergrund gestartet wird. Der Parameter <strong>run</strong> sorgt für den Start im Vordergrund und dafür, dass der Docker-Container nach dem Start nicht wieder beendet wird.</p>
+<p>Nachteilig ist bei der gewählten Variante, dass ein <code>docker stop</code> den Server nicht sauber terminiert, sondern nach dem Timeout ein SIGKILL sendet und der laufende Prozess brutal abgebrochen wird.</p>
+<p>Mit diesem <em>Dockerfile</em> sind wir bereits soweit, mittels</p>
+<pre><code class="language-bash">mvn clean package meecrowave:build
+</code></pre>
+<p>und einem anschließenden <code>docker build .</code> ein Image zu erzeugen, welches einen Meecrowave-Server startet.</p>
+<p>Das reicht mir aber noch nicht. Das Modul <em>person-server</em> soll mittels <code>mvn clean package</code> vollständig inklusive Docker-Image gebaut werden.</p>
+<h2>Maven anpassen und Paketierung automatisieren</h2>
+<p>Für den optimierten Bau wird über das Meecrowave Maven Plugin die Erzeugung der Distribution beeinflusst. Standardmäßig erzeugt das Plugin eine Distribution im Format ZIP und den unintuitiven Verzeichnisnamen <em>person-server-distribution</em>. Dabei setzt sich der Verzeichnisname für das zu entpackende Archiv per Definition immer aus <em>${project.artifactId}-distribution</em> zusammen.</p>
+<p>{% gist 0252ff141f1fc15ab1eba75efba62d01 %}</p>
+<p>Durch die Definition der Formate (Zeile 6-9) wird jeweils eine Distribution als ZIP-Archiv und als Tarball Gnu-Zip erzeugt. Letzteres wird verwendet, um das Docker-Image zu erzeugen. Das ZIP-Archiv kann bspw. verwendet werden, um die Anwendung für ein Windows-System bereitzustellen.</p>
+<p>Mit <em>rootName</em> (Zeile 10) wird der Name des gepackten Verzeichnisses beeinflusst. Statt <em>person-server-distribution</em> heißt das gepackte Verzeichnis nun nur noch wie unser Modul <em>person-server</em>.</p>
+<p>Durch die Konfiguration der <em>executions</em>-Passage koppeln wir den Prozess der Distributionserstellung automatisch an den Maven-Lebenszyklus <strong>package</strong>.</p>
+<p>Fehlt noch der automatische Bau des Docker-Images - darum kümmern wir uns jetzt.</p>
+<h2>Docker-Image mit Maven automatisieren</h2>
+<p>Damit das Docker-Image reproduzierbar und automatisch über den Build-Prozess erzeugt werden kann, gibt es das Docker Maven-Plugin. Wenn man so wie ich ein natives <em>Dockerfile</em> verwendet, ist das Plugin einfach konfiguriert. Damit sich das Docker-Image sowohl mit Maven als auch mit <code>docker build</code> erstellen lässt, sind einige Dinge zu beachten.</p>
+<p>{% gist 8988d7176d771a103f690d31cb785c1c %}</p>
+<p>Das Plugin ist ziemlich mächtig und seine Funktionalitäten mache ich mir zunutze, den Build-Prozess zu automatisieren. Auf die allgemeine Konfiguration des Plugins gehe ich in diesem Beitrag nicht ein. Die <a href="https://github.com/fabric8io/docker-maven-plugin">Dokumentation</a> des Projekts ist ziemlich ausführlich, sodass ich mich hier auf die Besonderheiten beschränken will:</p>
+<ul>
+<li><strong>name</strong> und <strong>alias</strong> (Zeile 7/8) sorgen dafür, dass das erzeugte Image sich eindeutig in den lokalen Docker-Images wiederfinden lässt.</li>
+<li><strong>contextDir</strong> gibt an, wo das native Dockerfile gespeichert ist. In diesem Fall im Root-Verzeichnis des Moduls.</li>
+<li><strong>name</strong> (Zeile 12) ist eine Besonderheit, um die Kompatibilität zu <code>docker build</code> aufrecht zu erhalten. Standardmäßig legt das Plugin alle für das Image notwendigen Dateien unter <em>build/maven</em> relativ zu seinem eigenen Arbeitsverzeichnis ab. Durch das Überschreiben des Namens werden fortan die Dateien relativ unter <em>build/target</em> abgelegt und sowohl <code>docker build</code> als auch das Maven Plugin können mit dem gleichen nativen Dockerfile arbeiten.</li>
+<li><strong>fileSet</strong> (Zeile 14-20) sorgt dafür, dass Maven Assembly genutzt wird und nur unsere Distribution in das Docker-Image übertragen wird. Das Plugin unterstützt zwar auch die Assembly-Befehle wie <em>project</em> oder <em>artifact</em>, diese wären an dieser Stelle allerdings ungeeignet.</li>
+</ul>
+<p>Die Abbildung zeigt das Ergebnis der Verwendung von <strong>name</strong> und <strong>fileSet</strong>. Das Unterverzeichnis unterhalb von <em>build</em> lautet auf <em>target</em> und es wird ausschließlich die erzeugte Tarball-Distribution in das Arbeitsverzeichnis kopiert.</p>
+<p><img style="width:70%;margin:auto" src="meecrowave-docker-target.png" width="750px" alt="Docker Maven Plugin" /></p>
+<p>Mit der Konfiguration unter <em>executions</em> wird wieder dafür gesorgt, dass das Docker-Image bereits in der Phase <strong>package</strong> erstellt wird.</p>
+<p>Nun sind wir in der Lage mittels <code>mvn clean package</code> die Anwendung inkl. Docker-Image zu erstellen und anschließend einen Container zu starten:</p>
+<pre><code class="language-bash">docker run -d -p 8080:8080 person-server
+</code></pre>
+<p>Über <code>curl http://localhost:8080/person</code> lässt sich prüfen, oder der Microservice korrekt arbeitet.</p>
+<h2>Zusammenfassung</h2>
+<p>Mit dem Meecrowave Maven Plugin und dem Docker Maven Plugin lässt sich die Erstellung eines Microservices auf Basis von Apache Meecrowave soweit automatisieren, dass am Ende des Build-Prozesses ein fertiges Docker-Image für das Deployment auf einer Kubernetes- oder <a href="../../../2018/06/23/container-verwalten-mit-dc-slash-os.html">Mesos-Umgebung</a> zur Verfügung steht.</p>
+<p>Der Aufwand für die Erweiterung eines bereits bestehenden Projekts hält sich dabei in Grenzen.</p>
+
+						</section>
+					</article>
+					<section>
+						<div class="card bg-light">
+							<div class="card-body">
+								<h5><i class="fa fa-comment"></i> Kommentar</h5>
+
+								<div class="mt-3">
+									<p>Du möchtest diskutieren oder einen Kommentar zu dem Beitrag hinterlassen?</p>
+									<small class="text-muted">Dieser Blog hat keine öffentliche Kommentarfunktion, aber ich freue mich jederzeit über eine
+										<a href="mailto:rollin.hand@gmx.de">Mail</a> mit kritischen Anmerkungen, Feedback oder auch einfach nur
+										Lob an meine Mail-Adresse <a href="mailto:rollin.hand@gmx.de">rollin.hand[@]gmx.de</a>.</small>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+<!-- HTML5 FOOTER -->
+<footer class="bg-dark py-4 mt-auto">
+    <div class="container px-5">
+        <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+            <div class="col-auto">
+                <div class="small m-0 text-white">Copyright &copy; 2017 - 2025 by Björn Berg</div>
+            </div>
+            <div class="col-auto">
+                <a class="link-light small" href="../../../../../blog/meecrowave.html">Apache Meecrowave</a>
+                <span class="text-white mx-1">&middot;</span>
+                <a class="link-light small" href="../../../../../privacy-policy/index.html">Privacy</a>
+                <span class="text-white mx-1">&middot;</span>
+                <a class="link-light small" href="../../../../../about/index.html">Imprint</a>
+                <span class="text-white mx-1">&middot;</span>
+                <a class="link-light small" href="mailto:rollin.hand@gmx.de">Contact</a>
+            </div>
+            <div class="col-auto">
+                <a class="link-light text-decoration-none mx-1 small" href="https://www.xing.com/profile/Bjoern_Berg2" target="_blank" rel="me">
+                    <span class="button xing" aria-details="Xing"><i class="fab fa-xing"></i></span>
+                </a>
+                <a class="link-light text-decoration-none mx-1 small" href="https://www.linkedin.com/in/bjoernberg82" target="_blank" rel="me">
+                    <span class="button linkedin" aria-details="LinkedIn"><i class="fab fa-linkedin"></i></span>
+                </a>
+                <a class="link-light text-decoration-none mx-1 small" href="../../../../../feed.xml">
+                    <span class="button atom" aria-details="Atom/RSS"><i class="fas fa-rss subscribe"></i></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

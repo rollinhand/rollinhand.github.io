@@ -1,0 +1,226 @@
+<!-- HTML5 HEADER WITH NAVIGATION -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- HTML metadata and includes -->
+  <!-- Header information like meta information and script resources -->
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, maximum-scale=1">
+
+  <link rel="icon" href="../../../../../images/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="../../../../../images/favicon.png" type="image/png">
+
+  <!-- Stylesheets -->
+  <link href="../../../../../css/styles.css" rel="stylesheet" type="text/css">
+  <link href="../../../../../css/github.css" rel="stylesheet" type="text/css">
+  <!-- Bootstrap icons-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Feeds -->
+  <link rel="alternate" type="application/atom+xml" title="Atom" href="../../../../../feed.xml" />
+
+  <!-- Load Highlight.js -->
+  <script src="../../../../../js/highlight.pack.js"></script>
+  <title>Tipps für den Einsatz des JDeveloper 12c</title>
+</head>
+<body class="d-flex flex-column h-100">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container px-5">
+      <a class="navbar-brand" href="../../../../../index.html"><img class="logo" src="../../../../../images/kivio-white.png" alt="Logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 mx-1 mb-lg-0">
+            <li class="nav-item mx-1 ">
+              <a class="nav-link " href="../../../../../category/allgemein/index.html">Allgemein</a>
+            </li>
+            <li class="nav-item mx-1 ">
+              <a class="nav-link " href="../../../../../category/devops/index.html">DevOps</a>
+            </li>
+            <li class="nav-item mx-1 ">
+              <a class="nav-link " href="../../../../../category/entwicklung/index.html">Entwicklung</a>
+            </li>
+            <li class="nav-item mx-1 ">
+              <a class="nav-link " href="../../../../../category/technologie/index.html">Technologie</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+<a href="../../../../../about/index.html">
+    <img class="avatar avatar-small" alt="rollinhand" width="40" height="40" data-proofer-ignore="true"
+         src="https://avatars2.githubusercontent.com/rollinhand?v=3&s=40"
+         srcset="https://avatars2.githubusercontent.com/rollinhand?v=3&s=40 1x, https://avatars2.githubusercontent.com/rollinhand?v=3&s=80 2x, https://avatars2.githubusercontent.com/rollinhand?v=3&s=120 3x, https://avatars2.githubusercontent.com/rollinhand?v=3&s=160 4x"/></a>        </ul>
+      </div>
+    </div>
+  </nav>
+<main class="flex-shrink-0">
+	<!-- Page Content-->
+	<section class="py-5">
+		<div class="container px-5 my-5">
+			<div class="row gx-5">
+				<div class="col-lg-3">
+					<div class="d-flex align-items-center mt-lg-5 mb-4">
+<a href="../../../../../about/index.html">
+    <img class="avatar avatar-small" alt="rollinhand" width="40" height="40" data-proofer-ignore="true"
+         src="https://avatars2.githubusercontent.com/rollinhand?v=3&s=40"
+         srcset="https://avatars2.githubusercontent.com/rollinhand?v=3&s=40 1x, https://avatars2.githubusercontent.com/rollinhand?v=3&s=80 2x, https://avatars2.githubusercontent.com/rollinhand?v=3&s=120 3x, https://avatars2.githubusercontent.com/rollinhand?v=3&s=160 4x"/></a>						<div class="small ms-3">
+							<div class="fw-bold">Björn Berg</div>
+						</div>
+					</div>
+					<!-- Hinweis auf fremden Blog-Artikel -->
+				</div>
+				<div class="col-lg-9">
+					<!-- Post content-->
+					<article>
+						<!-- Post header-->
+						<header class="mb-4">
+							<!-- Post title-->
+							<h1 class="fw-bolder mb-1">Tipps für den Einsatz des JDeveloper 12c</h1>
+							<!-- Post meta content-->
+							<div class="text-muted fst-italic mb-2">08.07.2014</div>
+							<!-- Post categories-->
+								<a class="badge bg-primary text-decoration-none link-light" href="/category/entwicklung">Entwicklung</a>
+							<!-- Post tags -->
+						</header>
+						<!-- Post content-->
+						<section class="mb-5">
+							<p>Die Maven-Unterstützung im JDeveloper 12.1.2 ist wenig gelungen. Wer auf die Version festgelegt ist, findet in diesem Post Wege, um die Maven-Unterstützung trotzdem in vollem Umfang nutzen zu können.</p>
+<!--more-->
+<p>Mit dem JDeveloper 12c hat Oracle die lang ersehnte Maven-Unterstützung integriert. In der Version 12.1.2 ist die Unterstützung allerdings fehleranfällig und es bedarf einiger manueller Eingriffe, um Maven plattformübergreifend und auf verschiedenen Entwicklungssystemen nutzen zu können. In diesem kleinen Beitrag werden die notwendigen Maßnahmen aufgezeigt, die für einen erfolgreichen und problemlosen Einsatz notwendig sind.</p>
+<h2>Oracle Synchronisation durchführen</h2>
+<p>Damit Maven als Build-Tool genutzt werden kann, müssen die Build-Werkzeuge <code>ojmake</code> und <code>ojdeploy</code>, sowie die für eine ADF-Anwendung notwendigen Bibliotheken im lokalen Maven-Repository oder einem Repository-Proxy (wie Archiva, Artifactory oder Nexus) bekannt gemacht werden.</p>
+<p>In [1] beschreibt Oracle sehr ausführlich, wie die Synchronisation der Tools und Plugins mit einem Maven-Repository durchgeführt werden kann. Allerdings ist die Anleitung für die Version 12.1.2 des JDevloper fehlerhaft. Die korrekten Befehle sind im folgenden dargestellt:</p>
+<p>JDeveloper ist unter Windows in den Standard-Pfad installiert worden. Das Synchronisations-Plugin befindet sich im Pfad <em>oracle_common\plugins\maven\com\oracle\maven\oracle-maven-sync\12.1.2</em></p>
+<pre><code>mvn install:install-file -DpomFile=oracle-maven-sync.12.1.2.pom -Dfile=oracle-maven-sync.12.1.2.jar
+</code></pre>
+<p>Mit diesem Befehl wird das Maven Synchronisationsplugin von Oracle in das lokale Repository geladen und kann mit dem Befehl ausgeführt werden:</p>
+<pre><code>mvn com.oracle.maven:oracle-maven-sync:push -Doracle-maven-sync.oracleHome=C:\Oracle\Middleware\Oracle_Home
+</code></pre>
+<p>Hierbei ist darauf zu achten, dass die Umgebungsvariable entgegen der Anleitung <strong>oracle-maven-sync.oracleHome</strong> lauten muss. Mit dem JDeveloper in der im Juni 2014 erschienen Version 12.1.3 ist dieser Fehler behoben. Eine Anleitung zur korrekten Synchronisation der Tools befindet sich unter [2]. Edwin Biemond beschreibt in seinem Blog auch die Synchronisation der Plugins mit dem Artefakt Repository Nexus.</p>
+<h2>Relative Pfade einführen</h2>
+<p>In der Version 12.1.2 werden in den POM für Maven grundsätzlich absolute Pfade genutzt. Für unterschiedlich installierte Entwicklermaschinen oder eine plattformübergreifende Entwicklung ist dieser Ansatz nicht zielführend. Aus diesem Grund müssen bestimmte Pfade in den POM-Dateien relativiert werden. [3] beschreibt diese Problematik ausführlich. Eine erzeugte POM sieht beispielsweise wie folgt aus:</p>
+<pre><code>&lt;plugin&gt;
+  &lt;groupId&gt;com.oracle.adf.plugin&lt;/groupId&gt;
+  &lt;artifactId&gt;ojmake&lt;/artifactId&gt;
+  &lt;version&gt;12.1.2-0-0&lt;/version&gt;
+  &lt;configuration&gt;
+    &lt;ojmake&gt;
+      C:\Oracle\Middleware\Oracle_Home\jdeveloper\jdev\bin\ojmake.exe
+    &lt;/ojmake&gt;
+    &lt;files&gt;
+      C:\build\FogDash\FogDash.jws
+    &lt;/files&gt;
+    &lt;usemaven&gt;
+      true
+    &lt;/usemaven&gt;
+  &lt;/configuration&gt;
+  &lt;executions&gt;
+    &lt;execution&gt;
+      &lt;phase&gt;compile&lt;/phase&gt;
+      &lt;goals&gt;
+        &lt;goal&gt;compile&lt;/goal&gt;
+      &lt;/goals&gt;
+    &lt;/execution&gt;
+  &lt;/executions&gt;
+&lt;/plugin&gt;
+</code></pre>
+<p>Es ist aus dem Auszug der POM ersichtlich, dass die absoluten Pfade zu Komplikationen führen werden. Maven unterstützt für diesen Fall Variablen, sodass die Pfade in der POM relativ gesetzt werden können. Dabei können Umgebungsvariablen oder auch spezifische Maven-Variablen genutzt werden. Letztere lassen sich über die globalen Maven-Settings oder User-Settings (settings.xml) vordefinieren.</p>
+<p>Variablen in Maven folgen einem bestimmten Schema:</p>
+<pre><code>${variable_name}
+</code></pre>
+<p>Maven kennt bereits einige vordefinierte Variablen wie <em>${basedir}</em>. Diese Variable verweist auf das Verzeichnis in der sich die gerade verwendete POM befindet. Zusätzlich zu den vordefinierten Variablen kann Maven auf Umgebungsvariablen des Systems zugreifen. Dies erfolgt über die Synatx:</p>
+<pre><code>${env.variable_name}
+</code></pre>
+<p>Mit diesen Mechanismen besteht also die Möglichkeit, die Pfade für den Maven-Build zu relativieren.</p>
+<p>Für die Build-Tools von Oracle kann vergleichbar bei Oracle-Datenbanken unter Linux (ORACLEHOME) eine Umgebungsvariable namens <strong>OJ_HOME</strong> erstellt werden, die auf den Pfad <em>C:\Oracle\Middleware\Oracle_Home\jdeveloper\jdev\bin</em> verweist. Auf diese Variable kann in der pom.xml über* ${env.OJ_HOME}* zugegriffen werden. Damit die Projektdatei FogDash.jws ebenfalls relativ zu den anderen Pfaden steht, wird die Variable <em>${basedir}</em> genutzt.</p>
+<p>Es besteht die Möglichkeit auch <strong>OJ_HOME</strong> als Maven-Variable zu definieren, sodass diese dynamisch bei einem Build gesetzt werden kann. Über die settings.xml eines Benutzers könnten sich die Einstellungen somit auch versionieren lassen.</p>
+<p>Die angepasste pom.xml (Auszug) sieht nach den Änderungen wie folgt aus:</p>
+<pre><code>&lt;plugin&gt;
+  &lt;groupId&gt;com.oracle.adf.plugin&lt;/groupId&gt;
+  &lt;artifactId&gt;ojmake&lt;/artifactId&gt;
+  &lt;version&gt;12.1.2-0-0&lt;/version&gt;
+  &lt;configuration&gt;
+    &lt;ojmake&gt;
+      ${env.OJ_HOME}\ojmake.exe
+    &lt;/ojmake&gt;
+    &lt;files&gt;
+      ${basedir}\FogDash.jws
+    &lt;/files&gt;
+    &lt;usemaven&gt;
+      true
+    &lt;/usemaven&gt;
+  &lt;/configuration&gt;
+  &lt;executions&gt;
+    &lt;execution&gt;
+      &lt;phase&gt;compile&lt;/phase&gt;
+      &lt;goals&gt;
+        &lt;goal&gt;compile&lt;/goal&gt;
+      &lt;/goals&gt;
+    &lt;/execution&gt;
+  &lt;/executions&gt;
+&lt;/plugin&gt;
+</code></pre>
+<p>Mit dem JDeveloper 12.1.3 ist dieser Fehler ebenfalls gelöst [4]. Allerdings werden POM von einem mit JDeveloper 12.1.2 erstellen Projekt beim Speichern nicht automatisch angepasst, so dass manuelle Korrekturen unumgänglich sind.</p>
+<h3>Quellen:</h3>
+<p>[1] <a href="http://docs.oracle.com/middleware/1212/core/MAVEN/config_maven.htm#MAVEN8853">http://docs.oracle.com/middleware/1212/core/MAVEN/config_maven.htm#MAVEN8853</a></p>
+<p>[2] <a href="http://biemond.blogspot.de/2014/06/maven-support-for-1213-service-bus-soa.html">http://biemond.blogspot.de/2014/06/maven-support-for-1213-service-bus-soa.html</a></p>
+<p>[3] <a href="https://blogs.oracle.com/blueberry/entry/jdeveloper_12c_using_relative_paths">https://blogs.oracle.com/blueberry/entry/jdeveloper_12c_using_relative_paths</a></p>
+<p>[4] <a href="http://www.oracle.com/technetwork/developer-tools/jdev/documentation/1213nf-2222743.html">http://www.oracle.com/technetwork/developer-tools/jdev/documentation/1213nf-2222743.html</a></p>
+
+						</section>
+					</article>
+					<section>
+						<div class="card bg-light">
+							<div class="card-body">
+								<h5><i class="fa fa-comment"></i> Kommentar</h5>
+
+								<div class="mt-3">
+									<p>Du möchtest diskutieren oder einen Kommentar zu dem Beitrag hinterlassen?</p>
+									<small class="text-muted">Dieser Blog hat keine öffentliche Kommentarfunktion, aber ich freue mich jederzeit über eine
+										<a href="mailto:rollin.hand@gmx.de">Mail</a> mit kritischen Anmerkungen, Feedback oder auch einfach nur
+										Lob an meine Mail-Adresse <a href="mailto:rollin.hand@gmx.de">rollin.hand[@]gmx.de</a>.</small>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+<!-- HTML5 FOOTER -->
+<footer class="bg-dark py-4 mt-auto">
+    <div class="container px-5">
+        <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+            <div class="col-auto">
+                <div class="small m-0 text-white">Copyright &copy; 2017 - 2025 by Björn Berg</div>
+            </div>
+            <div class="col-auto">
+                <a class="link-light small" href="../../../../../blog/meecrowave.html">Apache Meecrowave</a>
+                <span class="text-white mx-1">&middot;</span>
+                <a class="link-light small" href="../../../../../privacy-policy/index.html">Privacy</a>
+                <span class="text-white mx-1">&middot;</span>
+                <a class="link-light small" href="../../../../../about/index.html">Imprint</a>
+                <span class="text-white mx-1">&middot;</span>
+                <a class="link-light small" href="mailto:rollin.hand@gmx.de">Contact</a>
+            </div>
+            <div class="col-auto">
+                <a class="link-light text-decoration-none mx-1 small" href="https://www.xing.com/profile/Bjoern_Berg2" target="_blank" rel="me">
+                    <span class="button xing" aria-details="Xing"><i class="fab fa-xing"></i></span>
+                </a>
+                <a class="link-light text-decoration-none mx-1 small" href="https://www.linkedin.com/in/bjoernberg82" target="_blank" rel="me">
+                    <span class="button linkedin" aria-details="LinkedIn"><i class="fab fa-linkedin"></i></span>
+                </a>
+                <a class="link-light text-decoration-none mx-1 small" href="../../../../../feed.xml">
+                    <span class="button atom" aria-details="Atom/RSS"><i class="fas fa-rss subscribe"></i></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

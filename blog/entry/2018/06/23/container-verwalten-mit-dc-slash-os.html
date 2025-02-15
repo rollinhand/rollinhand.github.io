@@ -1,0 +1,182 @@
+<!-- HTML5 HEADER WITH NAVIGATION -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- HTML metadata and includes -->
+  <!-- Header information like meta information and script resources -->
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, maximum-scale=1">
+
+  <link rel="icon" href="../../../../../images/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="../../../../../images/favicon.png" type="image/png">
+
+  <!-- Stylesheets -->
+  <link href="../../../../../css/styles.css" rel="stylesheet" type="text/css">
+  <link href="../../../../../css/github.css" rel="stylesheet" type="text/css">
+  <!-- Bootstrap icons-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Feeds -->
+  <link rel="alternate" type="application/atom+xml" title="Atom" href="../../../../../feed.xml" />
+
+  <!-- Load Highlight.js -->
+  <script src="../../../../../js/highlight.pack.js"></script>
+  <title>Container verwalten mit DC/OS</title>
+</head>
+<body class="d-flex flex-column h-100">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container px-5">
+      <a class="navbar-brand" href="../../../../../index.html"><img class="logo" src="../../../../../images/kivio-white.png" alt="Logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 mx-1 mb-lg-0">
+            <li class="nav-item mx-1 ">
+              <a class="nav-link " href="../../../../../category/allgemein/index.html">Allgemein</a>
+            </li>
+            <li class="nav-item mx-1 ">
+              <a class="nav-link " href="../../../../../category/devops/index.html">DevOps</a>
+            </li>
+            <li class="nav-item mx-1 ">
+              <a class="nav-link " href="../../../../../category/entwicklung/index.html">Entwicklung</a>
+            </li>
+            <li class="nav-item mx-1 ">
+              <a class="nav-link " href="../../../../../category/technologie/index.html">Technologie</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+<a href="../../../../../about/index.html">
+    <img class="avatar avatar-small" alt="rollinhand" width="40" height="40" data-proofer-ignore="true"
+         src="https://avatars2.githubusercontent.com/rollinhand?v=3&s=40"
+         srcset="https://avatars2.githubusercontent.com/rollinhand?v=3&s=40 1x, https://avatars2.githubusercontent.com/rollinhand?v=3&s=80 2x, https://avatars2.githubusercontent.com/rollinhand?v=3&s=120 3x, https://avatars2.githubusercontent.com/rollinhand?v=3&s=160 4x"/></a>        </ul>
+      </div>
+    </div>
+  </nav>
+<main class="flex-shrink-0">
+	<!-- Page Content-->
+	<section class="py-5">
+		<div class="container px-5 my-5">
+			<div class="row gx-5">
+				<div class="col-lg-3">
+					<div class="d-flex align-items-center mt-lg-5 mb-4">
+<a href="../../../../../about/index.html">
+    <img class="avatar avatar-small" alt="rollinhand" width="40" height="40" data-proofer-ignore="true"
+         src="https://avatars2.githubusercontent.com/rollinhand?v=3&s=40"
+         srcset="https://avatars2.githubusercontent.com/rollinhand?v=3&s=40 1x, https://avatars2.githubusercontent.com/rollinhand?v=3&s=80 2x, https://avatars2.githubusercontent.com/rollinhand?v=3&s=120 3x, https://avatars2.githubusercontent.com/rollinhand?v=3&s=160 4x"/></a>						<div class="small ms-3">
+							<div class="fw-bold">Björn Berg</div>
+						</div>
+					</div>
+					<!-- Hinweis auf fremden Blog-Artikel -->
+						<div class="mt-lg-5 mb-4">
+							<div><i class="fab fa-medium text-warning"></i> Cofinpro Blog-Beitrag</div>
+							<p class="small text-muted">Dieser Artikel ist auch im <span class="cofinpro"><a href="https://medium.com/cofinpro/das-eigene-datacenter-in-eine-cloud-verwandeln-7d1e98940889">Cofinpro-Blog auf Medium</a> erschienen.</span> <span class="cofinpro"><a href="http://www.cofinpro.de">Cofinpro</a></span> ist ein Beratungsunternehmen mit Fokus auf die Finanzindustrie.</p>
+						</div>
+				</div>
+				<div class="col-lg-9">
+					<!-- Post content-->
+					<article>
+						<!-- Post header-->
+						<header class="mb-4">
+							<!-- Post title-->
+							<h1 class="fw-bolder mb-1">Container verwalten mit DC/OS</h1>
+							<!-- Post meta content-->
+							<div class="text-muted fst-italic mb-2">23.06.2018</div>
+							<!-- Post categories-->
+								<a class="badge bg-primary text-decoration-none link-light" href="/category/devops">DevOps</a>
+							<!-- Post tags -->
+									<span class="badge bg-secondary text-decoration-none link-light">DC/OS</span>
+									<span class="badge bg-secondary text-decoration-none link-light">Container</span>
+									<span class="badge bg-secondary text-decoration-none link-light">Docker</span>
+									<span class="badge bg-secondary text-decoration-none link-light">Mesos</span>
+						</header>
+						<!-- Post content-->
+						<section class="mb-5">
+							<p>Die Themen Cloud und Container stammen nicht aus Wolkenkuckucksheim, sondern beschäftigen in der Realität die IT-Abteilungen großer und kleiner Unternehmen. Hinter diesen Ideen steckt der Wunsch, Hardware-Ressourcen effizienter auszulasten, Spitzenlasten abzufangen und Anwendungen bzw. Services beliebig skalieren zu können. Hierbei können Plattformen wie DC/OS helfen.</p>
+<!--more-->
+<!--![Photo by [Erwan Hesry](https://unsplash.com/photos/RJjY5Hpnifk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+on [Unsplash](https://unsplash.com/search/photos/container?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)]
+(https://cdn-images-1.medium.com/max/1000/1*VZf19QtcEYsMaA912V0pkQ.jpeg)-->
+<h3>Container &mdash; die Logistikbranche macht es vor</h3>
+<p>Bereits 1956 wurden die ersten Frachtcontainer entwickelt. Das typische Umladen einzelner Gebinde in den Frachthäfen sollte durch die Container optimiert werden. Die <a href="https://de.wikipedia.org/wiki/ISO-Container">ISO-Container</a> wie wir sie heute kennen, haben sich allerdings erst ab 1966 durchgesetzt. Ihr großer Vorteil ist, dass sie dank der Normierung über Land und Wasser transportiert werden können, ohne ein einziges Mal entladen werden zu müssen.</p>
+<p>Übertragen auf die IT sind Container ein Deploymentformat für Anwendungen. Ähnlich wie in der Logistik gibt es auch hier Bemühungen, ein einheitliches Format zu schaffen=den OCI-Container. Führende Unternehmen und Cloud-Betreiber wie Google, Amazon und RedHat haben sich zur <a href="https://www.opencontainers.org/">Open Container Initiative</a> zusamengeschlossen und treiben das Format voran, das aus Docker hervorgegangen ist.</p>
+<h3>Container brauchen Infrastruktur</h3>
+<p>Was würde der Logistikbranche ein Frachtcontainer bringen, wenn die Frachträume der Containerschiffe falsch dimensioniert wären, es keine einheitlichen Kräne gäbe, und die Lastkraftwagen zu kleine Auflieger hätten? Container schaffen eine Abstraktionsschicht, aber die eigentliche Arbeit verrichtet die Infrastruktur.</p>
+<p>Bis zu einer bestimmten Grenze lassen sich auch Docker-Container ohne besondere Werkzeuge betreiben. Was aber, wenn die Systemlandschaft aus Containern nicht klein und überschaubar bleibt? Steigen die Anforderungen an ein verteiltes System, gewinnt auch der Betrieb schnell an Stellenwert. Dann muss die Infrastruktur bzgl. Kapazität, Performance und Verfügbarkeit skaliert werden.</p>
+<p>Sofern die Anwendung nicht in einer Public Cloud wie AWS, Azure, oder OpenShift betrieben wird, wäre ein Cluster-Betriebssystem wünschenswert, das den IT-Betrieb bei dieser Herausforderung unterstützt.</p>
+<h3>DC/OS als Cloud-Betriebssystem</h3>
+<p><a href="https://mesosphere.com/product/">DC/OS</a> ist eine Integrationsplattform für den Betrieb von containerisierten Anwendungen und Services. Das &ldquo;DC&rdquo; für &ldquo;Distributed Computing&rdquo; weist schon auf das Ziel hin, eine verteilte Umgebung über viele Server und Standorte zu schaffen &mdash; egal ob Public-Cloud oder eigenes Rechenzentrum.</p>
+<p><img src="https://cdn-images-1.medium.com/max/800/1*kUZ08-I1nEITGfCihng6Pw.png" alt="DC/OS Architektur
+(Quelle)" /></p>
+<p>Der Unterbau für DC/OS ist <a href="http://mesos.apache.org/">Apache Mesos</a>=ein verteilter System-Kernel, der sich ähnlich wie der Linux-Kernel um die Verwaltung von CPUs, Speicher und Prozessen kümmert &mdash; nur eben nicht auf einer Maschine, sondern verteilt. Mesos kann von Haus aus mit Containerformaten umgehen, und über eine HTTP-API, oder ein (nicht ganz so schickes) Frontend gesteuert werden.</p>
+<h3>DC/OS ist mehr als Apache Mesos</h3>
+<p>Die Entwickler von DC/OS Mesosphere haben das Frontend von Mesos durch eine eigene Weboberfläche ersetzt, die in der aktuellen Version 1.11 keine Wünsche offen lässt. Hiermit lassen sich bereits vorgefertigte Pakete aus einem Repository installieren, was ähnlich einfach funktioniert, wie eine App aus einem App-Store zu installieren. Während der Installation kann der Administrator angeben, auf wie vielen Instanzen der Service installiert werden soll.</p>
+<p>DC/OS entscheidet selbst anhand verschiedener Kriterien auf welchen Knoten der Service in welcher Anzahl deployt wird. Hierfür zeichnet sich die Anwendung <a href="https://mesosphere.github.io/marathon/">Marathon</a> verantwortlich, die neben dem Deployment von Services und Anwendungen auch die Hochverfügbarkeit steuert.</p>
+<p><img src="https://cdn-images-1.medium.com/max/800/1*D__DumFiPARcUKt36hfN2Q.png" alt="Marathon
+in Aktion" /></p>
+<p>Neben Services aus dem Repository kann Marathon auch Docker-Images aus Container-Registries deployen. Hier ist Docker-Hub bereits angebunden, der Betrieb einer eigenen Docker-Registry ist ebenso möglich.</p>
+<h3>DC/OS im eigenen Rechenzentrum oder der Cloud</h3>
+<p><a href="https://en.wikipedia.org/wiki/Apache_Mesos#Users">Einige große Internetplattformen</a> wie <a href="http://mesos.apache.org/documentation/latest/powered-by-mesos/">Twitter, Airbnb, eBay oder Apple</a> nutzen Apache Mesos, um ihre Infrastruktur und Anwendungen zu verwalten. Wem dieser Weg zu aufwändig ist, für den hat Mesosphere mit DC/OS eine Plattform entwickelt, die den Einsatz im eigenen Rechenzentrum, oder der Public Cloud einfach macht. Neben Amazon bieten auch <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/mesosphere.enterprise-dcos?tab=Overview">Microsoft</a> und Oracle Unterstützung für DC/OS in ihren Cloud-Lösungen an.</p>
+<p>Einen schnellen Einstieg bietet z.B. Amazon mit der Möglichkeit, einen <a href="https://aws.amazon.com/de/blogs/apn/announcing-mesosphere-dcos-on-aws/">DC/OS Cluster in AWS aufzusetzen</a>. Das ist chic, hat allerdings auch seinen Preis (€€€). Wer lieber kleiner anfangen möchte, für den gibt es auch Skripte zum Aufsetzen eines <a href="https://github.com/dcos/dcos-vagrant">Clusters</a> mit Vagrant.</p>
+<p>Mesosphere Inc. stellt kommerziellen Support für Apache Mesos und das zugrunde liegende Öko-System bereit. Die freie Variante von DC/OS fast wichtigen Funktionen, lediglich die erweiterte Rechteverwaltung und Multi-Cloud-Unterstützung für noch höhere Verfügbarkeit sind der kommerziellen Enterprise-Version vorbehalten.</p>
+<h3>Fazit</h3>
+<p>Vergleicht man eine Container-basierte Systemlandschaft mit großen Hafenterminals wie Hamburg oder Rotterdam, wird klar, dass sich eine große Menge von Containern nicht mehr ausschließlich manuell steuern lässt.</p>
+<p>Lagerplätze für Container sind nur noch Koordinaten auf einem überdimensionalen Schachbrett. Der Disponent entscheidet, wann, wie viele und in welcher Reihenfolge Container abgelegt werden. Diese Rolle übernimmt im Rechenzentrum DC/OS=es kümmert um eine bestmögliche Nutzung aller Ressourcen der Systeme.</p>
+
+						</section>
+					</article>
+					<section>
+						<div class="card bg-light">
+							<div class="card-body">
+								<h5><i class="fa fa-comment"></i> Kommentar</h5>
+
+								<div class="mt-3">
+									<p>Du möchtest diskutieren oder einen Kommentar zu dem Beitrag hinterlassen?</p>
+									<small class="text-muted">Dieser Blog hat keine öffentliche Kommentarfunktion, aber ich freue mich jederzeit über eine
+										<a href="mailto:rollin.hand@gmx.de">Mail</a> mit kritischen Anmerkungen, Feedback oder auch einfach nur
+										Lob an meine Mail-Adresse <a href="mailto:rollin.hand@gmx.de">rollin.hand[@]gmx.de</a>.</small>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+<!-- HTML5 FOOTER -->
+<footer class="bg-dark py-4 mt-auto">
+    <div class="container px-5">
+        <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+            <div class="col-auto">
+                <div class="small m-0 text-white">Copyright &copy; 2017 - 2025 by Björn Berg</div>
+            </div>
+            <div class="col-auto">
+                <a class="link-light small" href="../../../../../blog/meecrowave.html">Apache Meecrowave</a>
+                <span class="text-white mx-1">&middot;</span>
+                <a class="link-light small" href="../../../../../privacy-policy/index.html">Privacy</a>
+                <span class="text-white mx-1">&middot;</span>
+                <a class="link-light small" href="../../../../../about/index.html">Imprint</a>
+                <span class="text-white mx-1">&middot;</span>
+                <a class="link-light small" href="mailto:rollin.hand@gmx.de">Contact</a>
+            </div>
+            <div class="col-auto">
+                <a class="link-light text-decoration-none mx-1 small" href="https://www.xing.com/profile/Bjoern_Berg2" target="_blank" rel="me">
+                    <span class="button xing" aria-details="Xing"><i class="fab fa-xing"></i></span>
+                </a>
+                <a class="link-light text-decoration-none mx-1 small" href="https://www.linkedin.com/in/bjoernberg82" target="_blank" rel="me">
+                    <span class="button linkedin" aria-details="LinkedIn"><i class="fab fa-linkedin"></i></span>
+                </a>
+                <a class="link-light text-decoration-none mx-1 small" href="../../../../../feed.xml">
+                    <span class="button atom" aria-details="Atom/RSS"><i class="fas fa-rss subscribe"></i></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

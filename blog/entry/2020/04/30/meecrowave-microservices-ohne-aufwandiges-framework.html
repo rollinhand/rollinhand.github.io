@@ -1,0 +1,272 @@
+<!-- HTML5 HEADER WITH NAVIGATION -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- HTML metadata and includes -->
+  <!-- Header information like meta information and script resources -->
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, maximum-scale=1">
+
+  <link rel="icon" href="../../../../../images/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="../../../../../images/favicon.png" type="image/png">
+
+  <!-- Stylesheets -->
+  <link href="../../../../../css/styles.css" rel="stylesheet" type="text/css">
+  <link href="../../../../../css/github.css" rel="stylesheet" type="text/css">
+  <!-- Bootstrap icons-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Feeds -->
+  <link rel="alternate" type="application/atom+xml" title="Atom" href="../../../../../feed.xml" />
+
+  <!-- Load Highlight.js -->
+  <script src="../../../../../js/highlight.pack.js"></script>
+  <title>Meecrowave - Microservices ohne aufwändiges Framework</title>
+</head>
+<body class="d-flex flex-column h-100">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container px-5">
+      <a class="navbar-brand" href="../../../../../index.html"><img class="logo" src="../../../../../images/kivio-white.png" alt="Logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 mx-1 mb-lg-0">
+            <li class="nav-item mx-1 ">
+              <a class="nav-link " href="../../../../../category/allgemein/index.html">Allgemein</a>
+            </li>
+            <li class="nav-item mx-1 ">
+              <a class="nav-link " href="../../../../../category/devops/index.html">DevOps</a>
+            </li>
+            <li class="nav-item mx-1 ">
+              <a class="nav-link " href="../../../../../category/entwicklung/index.html">Entwicklung</a>
+            </li>
+            <li class="nav-item mx-1 ">
+              <a class="nav-link " href="../../../../../category/technologie/index.html">Technologie</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+<a href="../../../../../about/index.html">
+    <img class="avatar avatar-small" alt="rollinhand" width="40" height="40" data-proofer-ignore="true"
+         src="https://avatars2.githubusercontent.com/rollinhand?v=3&s=40"
+         srcset="https://avatars2.githubusercontent.com/rollinhand?v=3&s=40 1x, https://avatars2.githubusercontent.com/rollinhand?v=3&s=80 2x, https://avatars2.githubusercontent.com/rollinhand?v=3&s=120 3x, https://avatars2.githubusercontent.com/rollinhand?v=3&s=160 4x"/></a>        </ul>
+      </div>
+    </div>
+  </nav>
+<main class="flex-shrink-0">
+	<!-- Page Content-->
+	<section class="py-5">
+		<div class="container px-5 my-5">
+			<div class="row gx-5">
+				<div class="col-lg-3">
+					<div class="d-flex align-items-center mt-lg-5 mb-4">
+<a href="../../../../../about/index.html">
+    <img class="avatar avatar-small" alt="rollinhand" width="40" height="40" data-proofer-ignore="true"
+         src="https://avatars2.githubusercontent.com/rollinhand?v=3&s=40"
+         srcset="https://avatars2.githubusercontent.com/rollinhand?v=3&s=40 1x, https://avatars2.githubusercontent.com/rollinhand?v=3&s=80 2x, https://avatars2.githubusercontent.com/rollinhand?v=3&s=120 3x, https://avatars2.githubusercontent.com/rollinhand?v=3&s=160 4x"/></a>						<div class="small ms-3">
+							<div class="fw-bold">Björn Berg</div>
+						</div>
+					</div>
+					<!-- Hinweis auf fremden Blog-Artikel -->
+						<div class="mt-lg-5 mb-4">
+							<div><i class="fab fa-medium text-warning"></i> Cofinpro Blog-Beitrag</div>
+							<p class="small text-muted">Dieser Artikel ist auch im <span class="cofinpro"><a href="https://medium.com/cofinpro/meecrowave-microservices-ohne-aufwändiges-framework-bfbf07f116a6">Cofinpro-Blog auf Medium</a> erschienen.</span> <span class="cofinpro"><a href="http://www.cofinpro.de">Cofinpro</a></span> ist ein Beratungsunternehmen mit Fokus auf die Finanzindustrie.</p>
+						</div>
+				</div>
+				<div class="col-lg-9">
+					<!-- Post content-->
+					<article>
+						<!-- Post header-->
+						<header class="mb-4">
+							<!-- Post title-->
+							<h1 class="fw-bolder mb-1">Meecrowave - Microservices ohne aufwändiges Framework</h1>
+							<!-- Post meta content-->
+							<div class="text-muted fst-italic mb-2">30.04.2020</div>
+							<!-- Post categories-->
+								<a class="badge bg-primary text-decoration-none link-light" href="/category/entwicklung">Entwicklung</a>
+							<!-- Post tags -->
+									<span class="badge bg-secondary text-decoration-none link-light">Meecrowave</span>
+									<span class="badge bg-secondary text-decoration-none link-light">Microservices</span>
+						</header>
+						<!-- Post content-->
+						<section class="mb-5">
+							<p>Die Apache Foundation hat mit <a href="https://openwebbeans.apache.org/meecrowave/">Meecrowave</a> einen Microprofil-Server auf den Weg gebracht, der durch seine geringe Größe und niedrigen Speicherverbrauch besticht. Inwiefern er genutzt werden kann, um einfach Microservices zu schreiben, habe ich mir genauer angesehen.</p>
+<!--more-->
+<p>Apache Meecrowave ist ein Server, der ausschließlich auf Technologien der Apache Foundation basiert und in seiner Basisausstattung überschaubar ist. Im Kern werkelt eine Tomcat-Server als Servlet-Container und zusätzlich sind die folgenden Komponenten enthalten:</p>
+<ul>
+<li>CDI (<a href="https://openwebbeans.apache.org">OpenWebBeans</a>)</li>
+<li>JAX-RS (<a href="https://cxf.apache.org">CXF</a>)</li>
+<li>JSON (<a href="https://johnzon.apache.org">Johnzon</a>)</li>
+</ul>
+<p>Zum Erstellen eines einfachen Microservice ist lediglich eine Maven-Abhängigkeit zu definieren und schon kann mit der Entwicklung des eigenen Microservice begonnen werden.</p>
+<pre><code>&lt;dependency&gt;
+  &lt;groupId&gt;org.apache.meecrowave&lt;/groupId&gt;
+  &lt;artifactId&gt;meecrowave-core&lt;/artifactId&gt;
+  &lt;version&gt;${meecrowave.version}&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+<p>Meecrowave ist derzeit in der Version 1.2.9 verfügbar. Die Version stammt von September 2019. Seitdem hat sich an den EE-Spezifikationen wenig verändert, sodass keine neuen Komponenten veröffentlicht worden sind.</p>
+<p>Mit dem Maven-Goal <code>meecrowave:bundle</code> lässt sich ein ZIP-Archiv erzeugen, dass alle notwendigen Abhängigkeiten und Start-Skripte beinhaltet, sodass ein in sich geschlossener Service ausgeliefert oder in einen Docker-Container deployt werden kann. Das Deployment in einen Docker-Container beschreibe ich in einem <a href="../../../2020/05/06/meecrowave-und-docker-so-einfach-gehts.html">anderen Blog-Beitrag</a>.</p>
+<p>Doch zurück zum eigentlichen entwickeln mit Meecrowave. Zur besseren Nachvollziehbarkeit, welche Möglichkeiten in Meecrowave stecken, habe ich auf <a href="https://github.com/rollinhand/meecrowave-example/">GitHub</a> ein Projekt angelegt. Es besteht aus zwei Modulen und soll ein etwas komplexeres Beispiel statt dem üblichen Hello World darstellen:</p>
+<ul>
+<li>person-model=Enthält unsere Modellklassen, die von der Verarbeitungslogik separiert sind.</li>
+<li>person-server=Enthält unseren Microservice auf Basis von Meecrowave.</li>
+</ul>
+<p>Für diesen Blog-Beitrag relevant ist nur das Modul <em>person-server</em>. Und das schauen wir uns nun genauer an.</p>
+<h2>Eine Starterklasse anlegen</h2>
+<p>Um eine Instanz von Meecrwave starten zu können, wird eine Startklasse benötigt. Der Name der Klasse ist hierbei gleichgültig - ich habe sie <em>Starter</em> genannt - sie muss lediglich eine statische Main-Methode enthalten in der Meecrowave konfiguriert und gestartet wird.</p>
+<pre><code class="language-java">public class Starter {
+  public static void main(String[] args) {
+    Meecrowave.Builder builder = new Meecrowave.Builder();
+    builder.setHttpPort(8080);
+    
+    try(final Meecrowave meecrowave = new Meecrowave(builder)) {
+      meecrowave.bake().await();
+    }
+  }
+}
+</code></pre>
+<p>Eine Meecrowave-Instanz lässt sich programmatisch, per Konfigurationsdatei oder durch Parameter auf der Kommandozeile konfigurieren. In dem gezeigten Beispiel wird der Listener-Port auf 8080 konfiguriert. Weitere Parameter wären über den Builder möglich. Auf den Seiten zum Meecrowave-Projekt findet sich eine lange Liste der Einstellmöglichkeiten.</p>
+<p>Durch <code>bake()</code> wird der Server gestartet und mit <code>await()</code> in den Modus versetzt, auf eingehende Requests zu warten. Mit der laufenden Instanz im Hintergrund kann nun der eigentliche REST-Service implementiert werden.</p>
+<h2>Einen REST-Service implementieren</h2>
+<p>In dem Person-Server können die Mitglieder einer Familie angezeigt, entfernt oder neue hinzugefügt werden. Unser Beispiel implementiert also einen typischen CRUD-Service. Mit den bekannten JAX-RS Annotationen haben wir in Kürze in der Klasse <em>PersonEndpoint</em> einen REST-Service implementiert.</p>
+<pre><code>@RequestScoped
+@Path(&quot;/person&quot;)
+public class PersonEndpoint {
+  @Inject
+  private IPersonService personService;
+	
+  @POST
+  public Response createPerson(Person person) {
+    personService.add(person);
+    return Response.status(Status.CREATED).entity(person).build();
+  }
+	
+  @DELETE
+  public Response removePerson(Person person) throws PersonException {
+    personService.remove(person);
+    return Response.ok(person).build();
+  }
+	
+  @GET
+  public Response listAll() {
+    return Response.ok(personService.listAll()).build();
+  }
+  [...]
+}
+</code></pre>
+<p>Beim Start des Containers wird die Klasse gefunden und der Endpunkt registriert. Mit <em>curl</em> oder <em>Postman</em> kann mit den Endpunkten interagiert werden. Die eigentliche Geschäftslogik für die Bereitstellung der Daten wurde wiederum in einem eigenen Service bzw. einer eigenständigen Bean gekapselt. Die Arbeitsweise des Services dürfte durch die sprechenden Methodennamen selbsterklärend sein. Für die Details zur Arbeitsweise lohnt sich ein Blick in das <a href="https://github.com/rollinhand/meecrowave-example/">Repository</a>.</p>
+<pre><code>curl http://localhost:8080/person
+[{&quot;id&quot;:&quot;e0f6bf13-2deb-4831-a779-5aa34fe7e5e6&quot;,&quot;name&quot;:&quot;Simpson&quot;,&quot;surname&quot;:&quot;Homer&quot;},
+{&quot;id&quot;:&quot;3348f546-4ab3-4af0-97c4-6ce8a2d04ce1&quot;,&quot;name&quot;:&quot;Simpson&quot;,&quot;surname&quot;:&quot;Marge&quot;},
+{&quot;id&quot;:&quot;81a038aa-5dd7-4550-9cff-b2dab4b59c9a&quot;,&quot;name&quot;:&quot;Simpson&quot;,&quot;surname&quot;:&quot;Bart&quot;},
+{&quot;id&quot;:&quot;7e5ee7a1-70d5-4540-b304-36a67bb969f1&quot;,&quot;name&quot;:&quot;Simpson&quot;,&quot;surname&quot;:&quot;Lisa&quot;},
+{&quot;id&quot;:&quot;a6e08d08-f6b2-4e9d-98b8-a80ffd5f04e7&quot;,&quot;name&quot;:&quot;Simpson&quot;,&quot;surname&quot;:&quot;Maggie&quot;}]
+</code></pre>
+<h2>TDD mit Meecrowave</h2>
+<p>Spring wird für seine gute Testbarkeit gelobt. Insbesondere Integrationstests sind in Spring einfacher zu erstellen als in Java EE. Wer im EE-Kontext Integrationstests schreiben will, muss sich erst umständlich in <a href="http://arquillian.org">Arquillian</a> einarbeiten.</p>
+<p>Die Entwickler von Meecrowave haben diesen Umstand berücksichtigt und ein zusätzliches Plugin geschaffen, dass in Maven eingebunden, dafür sorgt, dass Test Driven Development mit Meecrowave komfortabel möglich ist. Und es arbeitet perfekt mit JUnit 4 und JUnit 5 zusammen.</p>
+<pre><code>&lt;dependency&gt;
+  &lt;groupId&gt;org.apache.meecrowave&lt;/groupId&gt;
+  &lt;artifactId&gt;meecrowave-junit&lt;/artifactId&gt;
+  &lt;scope&gt;test&lt;/scope&gt;
+  &lt;version&gt;${meecrowave.version}&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+<p>Es kann mit <em>meecrowave-junit</em> ein oder mehrere Endpunkte getestet werden. Dazu wird zu Beginn der Tests der Container hochgefahren. Da für die Tests ggf. Informationen aus der Konfiguration des Servers notwendig sind, können diese über die Junit 5 Erweitereung <code>@MonoMeecrowaveConfig</code> ausgelesen werden.</p>
+<pre><code>@MonoMeecrowaveConfig
+public class PersonEndpointTest {
+  private WebTarget baseTarget;
+	
+  @ConfigurationInject
+  private Meecrowave.Builder config;
+	
+  @BeforeEach
+  public void setUp() {
+    String baseUrl = String.format(&quot;http://localhost:%d/person&quot;, config.getHttpPort());
+    Client client = ClientBuilder.newClient();
+    baseTarget = client.target(baseUrl);
+  }
+	
+  @Test
+  public void itListsAllExisting() {
+    List&lt;Person&gt; personList = baseTarget.request(MediaType.APPLICATION_JSON)
+         .get(new GenericType&lt;List&lt;Person&gt;&gt;() {});
+    
+    assertNotNull(personList);
+    assertFalse(personList.isEmpty());
+  }
+[...]
+}
+</code></pre>
+<p>In dem Beispiel ist die Verwendung von <code>@MonoMeecrowaveConfig</code> dargestellt. Die Annotation ist vergleichbar mit den aus Junit 4 verwendeten <code>@RunWith</code>-Annotation und sorgt dafür, dass der Container vor der Ausführung der eigentlichen Tests hochgefahren wird.</p>
+<p>Mit <code>@ConfigurationInject</code> haben wir die Möglichkeit auf eine Meecrowave Builder-Instanz zuzugreifen und somit die Parameter des laufenden Containers abzufragen. Wir benutzen dies, um den Port in der <em>setUp</em>-Methode für unsere URL zu erfahren. Diese bildet die Basis für unseren JAX-RS Client mit dem die verschiedenen Endpunkte getestet werden sollen.</p>
+<h2>Weitere Möglichkeiten</h2>
+<p>Wer mehr Funktionalitäten aus dem Java EE-Kontext benötigt, dem stellt das Meecrowave noch weitere <a href="https://openwebbeans.apache.org/meecrowave/components.html">Komponenten</a> zur Verfügung:</p>
+<ul>
+<li><strong>meecrowave-jpa</strong>=Hierbei handelt es sich um einen zusätzliches Layer, dass auf JPA aufbaut und ähnlich wie der Server an sich mit einem Builder zur programmatischen Konfiguration der Persistenzschicht.</li>
+<li><strong>meecrowave-jolokia</strong>=Komponenten zur Integration von Monitoring auf Basis von Jolokia.</li>
+<li><strong>meecrowave-oauth2</strong>=Experimentelles Modul zur Einbindung einer OAuth2-Implementiierung auf Basis von Apache CXF.</li>
+<li>Weiterhin besteht die Möglichkeit, SSL-Verschlüsselung über Let&rsquo;s Encrypt einzubinden.</li>
+</ul>
+<h2>Zusammenfassung</h2>
+<p>Mit dem Meecrowave-Projekt hat die Apache Foundation unter der Schirmherrschaft des <a href="https://openwebbeans.apache.org">OpenWebBeans</a>-Projekts einen kleinen, schlanken Microprofil-Server geschaffen, der auf dem Besten aus dem Java EE-Stack aufsetzt.</p>
+<p>Wer keine großen Frameworks für einen einfachen Microservice benötigt, der ist bei Meecrowave genau richtig, denn eine großartige Einarbeitung ist nicht notwendig.</p>
+
+						</section>
+					</article>
+					<section>
+						<div class="card bg-light">
+							<div class="card-body">
+								<h5><i class="fa fa-comment"></i> Kommentar</h5>
+
+								<div class="mt-3">
+									<p>Du möchtest diskutieren oder einen Kommentar zu dem Beitrag hinterlassen?</p>
+									<small class="text-muted">Dieser Blog hat keine öffentliche Kommentarfunktion, aber ich freue mich jederzeit über eine
+										<a href="mailto:rollin.hand@gmx.de">Mail</a> mit kritischen Anmerkungen, Feedback oder auch einfach nur
+										Lob an meine Mail-Adresse <a href="mailto:rollin.hand@gmx.de">rollin.hand[@]gmx.de</a>.</small>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+<!-- HTML5 FOOTER -->
+<footer class="bg-dark py-4 mt-auto">
+    <div class="container px-5">
+        <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+            <div class="col-auto">
+                <div class="small m-0 text-white">Copyright &copy; 2017 - 2025 by Björn Berg</div>
+            </div>
+            <div class="col-auto">
+                <a class="link-light small" href="../../../../../blog/meecrowave.html">Apache Meecrowave</a>
+                <span class="text-white mx-1">&middot;</span>
+                <a class="link-light small" href="../../../../../privacy-policy/index.html">Privacy</a>
+                <span class="text-white mx-1">&middot;</span>
+                <a class="link-light small" href="../../../../../about/index.html">Imprint</a>
+                <span class="text-white mx-1">&middot;</span>
+                <a class="link-light small" href="mailto:rollin.hand@gmx.de">Contact</a>
+            </div>
+            <div class="col-auto">
+                <a class="link-light text-decoration-none mx-1 small" href="https://www.xing.com/profile/Bjoern_Berg2" target="_blank" rel="me">
+                    <span class="button xing" aria-details="Xing"><i class="fab fa-xing"></i></span>
+                </a>
+                <a class="link-light text-decoration-none mx-1 small" href="https://www.linkedin.com/in/bjoernberg82" target="_blank" rel="me">
+                    <span class="button linkedin" aria-details="LinkedIn"><i class="fab fa-linkedin"></i></span>
+                </a>
+                <a class="link-light text-decoration-none mx-1 small" href="../../../../../feed.xml">
+                    <span class="button atom" aria-details="Atom/RSS"><i class="fas fa-rss subscribe"></i></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
