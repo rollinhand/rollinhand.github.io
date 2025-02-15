@@ -17,7 +17,7 @@
             <h3>Alle Blog-Beiträge</h3>
             <div class="row my-5 gx-5">
                 <#if published_posts?has_content>
-                <#list published_posts?reverse as post>
+                <#list published_posts as post>
                     <div class="col-lg-12 mb-5">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="row g-0">
