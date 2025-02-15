@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=Meecrowave Maven Plugin mit Java 11 oder neuer
 date=2020-05-22

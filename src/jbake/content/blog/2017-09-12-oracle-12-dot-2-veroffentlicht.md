@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=Oracle 12.2 veröffentlicht
 date=2017-09-12

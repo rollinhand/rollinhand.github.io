@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=Virtuelle Maschinen in VirtualBox umziehen
 creator=rollinhand

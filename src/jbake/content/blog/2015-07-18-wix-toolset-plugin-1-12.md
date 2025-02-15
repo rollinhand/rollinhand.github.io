@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=Wix Toolset plugin 1.12 for Jenkins released
 creator=rollinhand

@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=Deploying GitBlit on JBoss/Wildfly
 creator=rollinhand

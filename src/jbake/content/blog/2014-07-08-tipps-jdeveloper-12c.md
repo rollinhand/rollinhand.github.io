@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=Tipps für den Einsatz des JDeveloper 12c
 creator=rollinhand

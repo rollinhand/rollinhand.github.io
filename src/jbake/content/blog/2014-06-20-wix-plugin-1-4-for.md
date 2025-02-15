@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=WiX Plugin 1.4 for Jenkins released
 creator=rollinhand

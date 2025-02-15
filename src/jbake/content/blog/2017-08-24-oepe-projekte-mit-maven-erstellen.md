@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=OEPE=Projekte mit Maven erstellen
 date=2017-08-24

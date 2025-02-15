@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=Meecrowave - Microservices ohne aufwändiges Framework
 date=2020-04-30

@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=JDeveloper ohne Konsolenfenster starten
 creator=rollinhand

@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=Apache NetBeans 10.0 veröffentlicht 
 date=2018-12-30

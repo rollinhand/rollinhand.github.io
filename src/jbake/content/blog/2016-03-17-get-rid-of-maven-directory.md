@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=Get rid of Maven directory in your WAR
 creator=rollinhand

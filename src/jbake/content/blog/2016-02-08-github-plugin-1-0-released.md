@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=GitHub plugin 1.0 for Apache Roller 5 released
 creator=rollinhand

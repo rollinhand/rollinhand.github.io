@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=C3Faces 1.0 officially released
 date=2018-01-22

@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=Exception Mapper mit Apache CXF
 date=2020-06-11

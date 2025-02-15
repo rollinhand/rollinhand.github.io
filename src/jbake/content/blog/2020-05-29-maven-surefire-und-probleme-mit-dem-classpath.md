@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=Maven Surefire und Probleme mit dem Classpath
 date=2020-05-29

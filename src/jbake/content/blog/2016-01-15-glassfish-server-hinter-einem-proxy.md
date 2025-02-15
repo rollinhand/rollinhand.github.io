@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=Glassfish-Server hinter einem Proxy betreiben
 creator=rollinhand

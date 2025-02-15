@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=NetBeans 9 vermisst
 date=2017-12-31

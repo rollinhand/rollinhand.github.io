@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=iTunes Bibliothek auf Transcend JetDrive Lite
 date=2016-12-31

@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=JRE mit Eclipse RCP-Anwendung bündeln
 date=2020-07-09

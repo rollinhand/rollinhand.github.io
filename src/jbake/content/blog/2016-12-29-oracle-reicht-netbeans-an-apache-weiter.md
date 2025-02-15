@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=Oracle reicht NetBeans an Apache weiter
 date=2016-12-29

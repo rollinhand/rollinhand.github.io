@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=Wenn der JDeveloper 12c richtig klemmt...
 creator=rollinhand

@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=SD-Karten verhindern MacBook Standby
 date=2018-05-31

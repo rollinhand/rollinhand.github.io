@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=Einbindung von Glassfish in OEPE
 date=2017-08-24

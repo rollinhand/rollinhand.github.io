@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=Blog zu GitHub pages umgezogen
 date=2016-12-23

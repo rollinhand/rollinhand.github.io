@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=Meecrowave und Docker - so einfach gehts
 date=2020-05-06

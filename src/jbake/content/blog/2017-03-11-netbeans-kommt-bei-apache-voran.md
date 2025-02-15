@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=NetBeans kommt bei Apache voran
 date=2017-03-11

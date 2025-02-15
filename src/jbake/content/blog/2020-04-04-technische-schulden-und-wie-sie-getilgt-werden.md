@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=Technische Schulden und wie sie getilgt werden
 date=2020-04-04

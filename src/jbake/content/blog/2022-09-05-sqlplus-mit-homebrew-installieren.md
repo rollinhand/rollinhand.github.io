@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=SQLPlus mit Homebrew installieren
 date=2022-09-05

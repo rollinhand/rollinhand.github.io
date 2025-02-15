@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=Container verwalten mit DC/OS
 date=2018-06-23

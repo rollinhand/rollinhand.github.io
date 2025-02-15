@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=Nicht unterbuttern lassen...
 creator=rollinhand

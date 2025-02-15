@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=Runtastic Daten nach Garmin Connect umziehen
 date=2017-04-12

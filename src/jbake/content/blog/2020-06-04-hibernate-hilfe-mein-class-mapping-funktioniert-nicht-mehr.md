@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=Hibernate&#58; Hilfe, mein Class-Mapping funktioniert nicht mehr
 date=2020-06-04

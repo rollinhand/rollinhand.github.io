@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=Internal Server Error durch fehlerhafte EL Expression
 date=2017-02-13

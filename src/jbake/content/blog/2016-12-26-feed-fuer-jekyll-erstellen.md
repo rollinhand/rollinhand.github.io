@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 date=2016-12-26
 title=Feed für Jekyll-basierten Blog erstellen

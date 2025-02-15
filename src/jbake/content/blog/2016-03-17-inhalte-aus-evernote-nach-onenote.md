@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=Inhalte aus Evernote nach OneNote umziehen
 creator=rollinhand

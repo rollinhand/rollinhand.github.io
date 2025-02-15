@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=Let's Encrypt mit Nginx Proxy im Docker Container
 date=2018-05-26

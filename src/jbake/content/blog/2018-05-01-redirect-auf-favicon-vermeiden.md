@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=Redirect auf Favicon vermeiden
 date=2018-05-01

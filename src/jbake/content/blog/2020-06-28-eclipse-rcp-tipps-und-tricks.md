@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=Eclipse RCP - Tipps und Tricks
 date=2020-06-28

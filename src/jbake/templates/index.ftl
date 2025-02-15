@@ -72,7 +72,7 @@
 		</div>
 		<!-- Die letzten 3 Blog-Einträge anzeigen -->
 		<div class="row gx-5">
-			<#list published_posts?reverse as post>
+			<#list published_posts?reverse[1..3] as post>
 				<div class="col-lg-4 mb-5">
 					<div class="card h-100 shadow border-0">
 						<div class="card-body p-4">
@@ -97,7 +97,7 @@
 				</div>
 			</#list>
 			<div class="text-end mb-5 mb-xl-0">
-				<a class="text-decoration-none" href="/blog/index.html">
+				<a class="text-decoration-none" href="blog/archive.html">
 					Mehr Beiträge
 					<i class="bi bi-arrow-right"></i>
 				</a>

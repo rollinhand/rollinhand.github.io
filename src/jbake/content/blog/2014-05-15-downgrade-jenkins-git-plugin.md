@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=Downgrade Jenkins Git Plugin
 creator=rollinhand

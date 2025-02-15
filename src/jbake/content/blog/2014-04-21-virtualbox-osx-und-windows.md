@@ -1,4 +1,3 @@
-~~~~~~
 type=post
 title=Windows mit VirtualBox unter OS X Mavericks virtualisieren
 creator=rollinhand
