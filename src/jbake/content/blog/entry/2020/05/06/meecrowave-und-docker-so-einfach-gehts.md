@@ -2,7 +2,7 @@ type=post
 title=Meecrowave und Docker - so einfach gehts
 date=2020-05-06
 category=DevOps 
-tags=[Meecrowave,Microservices,Docker]
+tags=Meecrowave,Microservices,Docker
 ~~~~~~
 In einem meiner [letzten Blogbeiträge][kivio] habe ich darüber berichtet, wie einfach mit
 [Meecrowave][meecrowave] ein Microservice erstellt werden kann. Heute geht es darum, den
@@ -118,7 +118,7 @@ Die Abbildung zeigt das Ergebnis der Verwendung von **name** und **fileSet**. Da
 unterhalb von _build_ lautet auf _target_ und es wird ausschließlich die erzeugte
 Tarball-Distribution in das Arbeitsverzeichnis kopiert.
 
-<img style="width:70%;margin:auto" src="/src/jbake/assets/images/posts/meecrowave-docker-target.png" width="750px" alt="Docker Maven Plugin" />
+<img style="width:70%;margin:auto" src="meecrowave-docker-target.png" width="750px" alt="Docker Maven Plugin" />
 
 Mit der Konfiguration unter _executions_ wird wieder dafür gesorgt, dass das Docker-Image bereits in
 der Phase **package** erstellt wird.

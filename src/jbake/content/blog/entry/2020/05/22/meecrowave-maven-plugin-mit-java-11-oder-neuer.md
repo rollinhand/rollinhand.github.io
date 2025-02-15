@@ -2,7 +2,7 @@ type=post
 title=Meecrowave Maven Plugin mit Java 11 oder neuer
 date=2020-05-22
 category=Entwicklung
-tags=[Meecrowave,Java11]
+tags=Meecrowave,Java11
 ~~~~~~
 Das Meecrowave Maven Plugin sorgt nicht nur für die korrekte Bündelung der eigenen Anwendung in den
 Meecrowave Container sondern kann auch während der Entwicklung genutzt werden, um den Server zu

@@ -2,7 +2,7 @@ type=post
 title=Let's Encrypt mit Nginx Proxy im Docker Container
 date=2018-05-26
 category=DevOps
-tags=[SSL, Nginx, Docker, Zertifikat]
+tags=SSL, Nginx, Docker, Zertifikat
 ~~~~~~
 In diesem Tutorial beschreibe ich, wie man in einem 1&1 Cloud-Server in einem Nginx Reverse Proxy in einem Docker Container ein Let's Encrypt-Zertifikat für die SSL-verschlüsselte Verbindung einbindet.
 

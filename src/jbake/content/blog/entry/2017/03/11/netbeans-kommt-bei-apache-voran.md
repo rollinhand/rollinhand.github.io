@@ -2,7 +2,7 @@ type=post
 title=NetBeans kommt bei Apache voran
 date=2017-03-11
 category=Entwicklung
-tags=Java Oracle NetBeans
+tags=Java, Oracle, NetBeans
 ~~~~~~
 Geertjan Wielenga als Principal Product Manager bei Oracle verantwortlich für die
 Entwickler-Tools hat in seinem [Blog](https://blogs.oracle.com/geertjan/entry/netbeans_and_apache1)

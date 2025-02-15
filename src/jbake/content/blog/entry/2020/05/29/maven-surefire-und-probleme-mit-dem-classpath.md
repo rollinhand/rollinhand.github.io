@@ -2,7 +2,7 @@ type=post
 title=Maven Surefire und Probleme mit dem Classpath
 date=2020-05-29
 category=Entwicklung
-tags=[Maven,Eclipse]
+tags=Maven,Eclipse
 ~~~~~~
 In meinem letzten Projekt beim Kunden bin ich auf ein interessantes Problem im Maven Surefire Plugin
 gestoßen. Während meine Unit-Tests in der Eclipse-Umgebung problemlos liefen, warf Maven auf der

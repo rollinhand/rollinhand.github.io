@@ -2,7 +2,7 @@ type=post
 title=Eclipse RCP - Tipps und Tricks
 date=2020-06-28
 category=Entwicklung 
-tags=[Eclipse,RCP,Maven,Tycho,Apache Felix]
+tags=Eclipse,RCP,Maven,Tycho,Apache Felix
 ~~~~~~
 [Lars Vogel][vogella] hat mit seinen [Tutorials zu Eclipse RCP][vogella] eine solide Basis
 geschaffen, um mit Eclipse RCP Anwendungen zu entwickeln. Es gibt allerdings trotz der umfangreichen

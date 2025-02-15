@@ -2,9 +2,9 @@ type=post
 title=Technische Schulden und wie sie getilgt werden
 date=2020-04-04
 category=Entwicklung 
-tags=[Softwareentwicklung,Management]
+tags=Softwareentwicklung,Management
 ~~~~~~
-Im Buch ["Hybride Softwareentwicklung"][amazon] gehe ich mit meinen Co-Autoren Philip Knott und
+Im Buch ["Hybride Softwareentwicklung"](https://amzn.to/39oKRQE) gehe ich mit meinen Co-Autoren Philip Knott und
 Gregor Sandhaus in Kapitel 4 auf das Thema technische Schulden ein. Es zeigt sich anhand
 aktueller Fachartikel und auch in Gesprächen mit Kunden, dass das Thema in der Digitalisierungswelle
 einen neuen Stellenwert einnimmt. Zeit sich mit dem Thema etwas ausführlicher auseinander zu setzen.
@@ -16,23 +16,23 @@ negativ konnotiert? Schauen wir zunächst auf die Begrifflichkeit der Schulden.
 
 ## Schulden - nur im deutschsprachigen Raum mit negativer Bedeutung
 
-[Wikipedia][wikipedia] beschreibt Schulden als "Verbindlichkeiten, die mit
+[Wikipedia](https://de.wikipedia.org/wiki/Schulden) beschreibt Schulden als "Verbindlichkeiten, die mit
 Rückzahlungsverpflichtungen von natürlichen oder juristischen Personen gegenüber Gläubigern
 verbunden sind". Weiterhin heisst es in dem Artikel, dass die negative Konnotation des Begriffs
 _Schulden_ mit _Schuld_ nur im deutschsprachigen Raum besteht. So wird im angelsächsischen Raum der
 Begriff _debt_ für Schulden und _guilt_ für die Schuld verwendet.
 
-Der Begriff _debt_ ist von dem [lateinischen Verb _debere_][latein] abgeleitet und bedeutet soviel wie
+Der Begriff _debt_ ist von dem [lateinischen Verb _debere_](https://www.latein.me/formen/debere) abgeleitet und bedeutet soviel wie
 _sollen_ aber auch _schulden_ bzw. _verdanken_ und ist damit deutlich positiver besetzt. Aus diesem
 Grund wird auch der Begriff _technical debt_ im englischsprachigen Raum verwendet.
 
 Der Begriff der finanziellen Schuld bedeutet, jemandem Geld zu schulden und damit in der
 Pflicht zu stehen, diese Schulden auch zurückzuzahlen. In der Finanzwelt existiert hierfür der
-Begriff _Kredit_, der wiederum von dem [lateinischen Wort _credere_][latein2] abstammt und soviel
+Begriff _Kredit_, der wiederum von dem [lateinischen Wort _credere_](https://www.latein.me/latein/credit) abstammt und soviel
 wie _glauben_, _anvertrauen_ und _verleihen_ bedeutet. In der 3. Person Singular ergibt sich das
 Wort _credit_, ergo "er verleiht" oder aber auch "er vertraut [mir] an".
 
-[Finanzielle Schuld][faz] in Form eines Kredits und moralische Schuld hängen eng miteinander zusammen. 
+[Finanzielle Schuld](https://www.faz.net/aktuell/finanzen/meine-finanzen/finanzieren/wirtschaftswunder-schulden-machen-lohnt-sich-15813983.html) in Form eines Kredits und moralische Schuld hängen eng miteinander zusammen. 
 Kommt der Schuldner seiner Verpflichtung zur Rückzahlung der Schulden nicht nach, entsteht neben 
 dem rechtlichen Problem auch ein Vertrauensproblem.
 
@@ -41,7 +41,7 @@ technischen Schulden an.
 
 ## Technische Schulden sorgen für den Verfall von Software
 
-[Ward Cunningham][cunningham] hat die Metapher der technischen Schulden (_technical debt_) in der
+[Ward Cunningham](http://wiki.c2.com/?WardExplainsDebtMetaphor) hat die Metapher der technischen Schulden (_technical debt_) in der
 Informatik eingeführt, um die Konsequenzen schlechter technischer Umsetzung von Software mit wenigen
 Worten beschreiben zu können. Es ist gleichzeitig die Metapher für den zu erbringenden Mehraufwand,
 der für die Erweiterung einer bestehden Software notwendig ist.
@@ -59,7 +59,7 @@ Software. Dazu gehören unter anderem:
 
 Die Liste ließe sich beliebig lang fortsetzen. Kurz gefasst=Der Verfall der Code- und
 Architektur-Qualität führt mittel- bis langfristig zu technischen Schulden. 
-Nach [Chris Sterling][amazon2] lassen sich diese Ursachen auf zwei Begriffe zusammenfassen=
+Nach [Chris Sterling](https://amzn.to/3atDSqH) lassen sich diese Ursachen auf zwei Begriffe zusammenfassen=
 _Unvollständigkeit_ und _Schlampigkeit_. 
 Aber scheinbar nehmen Kunden, Anwender und Product-Owner die Verschlechterung der Codebasis billigend in Kauf wenn 
 dadurch Release-Termine eingehalten werden.
@@ -70,7 +70,7 @@ Auswirkungen der getroffenen Entscheidungen zu bewerten?
 
 Ein Großteil der heute für eine Anwendung verantwortlichen Personen besitzt nicht das technische
 Verständnis, um die Auswirkungen von technischen Schulden bewerten zu können. Tools wie
-[Sonarqube][sonarqube] helfen Entwicklern und Verantwortlichen technische Schulden zu identifizieren
+[Sonarqube](https://www.sonarqube.org) helfen Entwicklern und Verantwortlichen technische Schulden zu identifizieren
 und diese in Form eines Schweregrads als auch einer Kennzahl - nämlich dem Aufwand zur Behebung - zu
 visualiseren.  
 
@@ -94,7 +94,7 @@ aufgrund der Tatsache, dass andere Konsumenten dieses Gut gekauft haben, zurück
 IT lässt sich dieses Phänomen ebenfalls beobachten="Je häufiger ein Thema in Fachzeitschriften und
 [auf] Konferenzen besprochen wird, [desto] stärker scheint der Druck zu wachsen, es auch im eigenen
 Unternehmen einsetzen zu müssen." ([Wirdemann, Lueckow; OBJEKTspektrum 06/2019, S.
-20][objektspektrum])
+20](https://webreader.objektspektrum.de/de/profiles/7d30f3fc5f62-objektspektrum/editions/objektspektrum-06-2019))
 
 Entwickler werden folglich extrinsisch beeinflusst und das hat Auswirkungen auf ihre 
 Entscheidungen. Denn wer fragt sich nicht, ob er mit seiner Architektur noch am Puls der Zeit ist
@@ -158,16 +158,16 @@ davon laufen routiniert und unbewusst ab. Diese alltäglichen Entscheidungen wie
 Routine, den Schutz bei Regenwetter oder den Umgang mit anderen Menschen spulen wir wie
 selbstverständlich ab. Dieses Denken in Mustern (Schubladendenken) sorgt dafür, dass wir Menschen wenig Energie für
 wiederkehrende Entscheidungen aufwenden müssen. Zeitgleich sorgt dieses Verhalten auch für
-[Verzerrungen][bias], die unseren Alltag negativ beeinflussen und uns zu vorschnellen Entscheidungen verleiten
+[Verzerrungen](https://karrierebibel.de/bias/), die unseren Alltag negativ beeinflussen und uns zu vorschnellen Entscheidungen verleiten
 können. Hierzu gehört auch der eingangs beschriebene Mitläufer-Effekt, der zwangsläufig zum
 Availability Bias führt.
 
-Aus diesem Grund hat [Martin Fowler][fowler] technische Schulden in Quadranten unterteilt und
+Aus diesem Grund hat [Martin Fowler](https://martinfowler.com/bliki/TechnicalDebtQuadrant.html) technische Schulden in Quadranten unterteilt und
 unterscheidet zwischen Schulden, die bewusst und unwissentlich eingegangen worden sind. Übeträgt man
 die Quadranten auf die Aussagen von Chris Sterling, so kann das Modell von Martin Fowler wie in der
 ersten Abbildung gezeigt erweitert werden. 
 
-![Quadrant technische Schulden][img-technical-debt01]
+![Quadrant technische Schulden](quadrant_technical_debt01.png)
 _Abb. 1=Quadrant technische Schulden_
 
 Folglich sind alle rücksichtslosen bzw. schlampigen Entscheidungen -- ob bewusst oder
@@ -202,7 +202,7 @@ zukünftige zu zahlende Risikoprämie für das System auszahlt.
 Die Abbildung 2 zeigt zusammenfassend, welche Partei die Beseitigung von technischen Schulden zu
 finanzieren hat.
 
-![Wer die technischen Schulden bezahlt][img-technical-debt02]
+![Wer die technischen Schulden bezahlt](quadrant_technical_debt02.png)
 _Abb. 2=Wer die technischen Schulden bezahlt_
 
 ## Fazit
@@ -226,18 +226,4 @@ Als dritter Ansatz zur Reduktion von technischen Schulden als auch zur Reduktion
 kontinuierliche Refactoring eines Systems zu berücksichtigen. Durch kontinuierliche, technische
 Optimierungen, die keinen fachlichen Nutzen bringen, sichern die Stakeholder die Zukunftsfähigkeit
 des Systems und reduzieren die Risikoprämie, die sich aus den abgezinsten Kosten einer Modernisierung des kompletten
-Systems in der Zukunft ergeben würde. 
-
-[amazon]=https://amzn.to/39oKRQE
-[amazon2]=https://amzn.to/3atDSqH
-[wikipedia]=https://de.wikipedia.org/wiki/Schulden
-[latein]=https://www.latein.me/formen/debere
-[latein2]=https://www.latein.me/latein/credit
-[faz]=https://www.faz.net/aktuell/finanzen/meine-finanzen/finanzieren/wirtschaftswunder-schulden-machen-lohnt-sich-15813983.html
-[cunningham]=http://wiki.c2.com/?WardExplainsDebtMetaphor
-[sonarqube]=https://www.sonarqube.org
-[objektspektrum]=https://webreader.objektspektrum.de/de/profiles/7d30f3fc5f62-objektspektrum/editions/objektspektrum-06-2019
-[bias]=https://karrierebibel.de/bias/
-[fowler]=https://martinfowler.com/bliki/TechnicalDebtQuadrant.html
-[img-technical-debt01]=/src/jbake/assets/images/quadrant_technical_debt01.png
-[img-technical-debt02]=/src/jbake/assets/images/quadrant_technical_debt02.png
+Systems in der Zukunft ergeben würde.

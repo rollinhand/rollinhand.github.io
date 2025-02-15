@@ -2,7 +2,7 @@ type=post
 title=C3Faces 1.3 officially released
 date=2018-03-27
 category=Entwicklung 
-tags=Java C3Faces JSF 
+tags=Java, C3Faces, JSF 
 ~~~~~~
 C3Faces is a chart library for JSF based on c3.js. I want to announce the third
 official version of this library released to 

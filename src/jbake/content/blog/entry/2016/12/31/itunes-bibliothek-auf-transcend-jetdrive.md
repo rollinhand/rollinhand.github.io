@@ -2,7 +2,7 @@ type=post
 title=iTunes Bibliothek auf Transcend JetDrive Lite
 date=2016-12-31
 category=Technologie
-tags=["iTunes", "JetDrive"]
+tags=iTunes, JetDrive
 ~~~~~~
 Gerade die mobilen Macs der neuen Generation mit SSD haben meist zu wenig Speicherplatz, um
 eine große Musikbibliothek aufzunehmen. Die Verlagerung der iTunes-Bibliothek auf eine SD-Karte
@@ -24,7 +24,7 @@ Im Auslieferzustand sind die JetDrive-Karten mit exFAT formatiert, um auch unter
 und Linux genutzt werden zu können. Die Abbildung zeigt, wie die korrekte Formatierung unter 
 macOS auszusehen hat.
 
-![Korrekte Formatierung einer SD-Karte](/src/jbake/assets/images/hdd-transcend.png "Korrekte Formatierung einer SD-Karte")
+![Korrekte Formatierung einer SD-Karte](hdd-transcend.png)
 _Abb. 1=Korrekte Formatierung einer SD-Karte_
 
 

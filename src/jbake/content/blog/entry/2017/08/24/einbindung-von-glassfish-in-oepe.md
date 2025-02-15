@@ -28,28 +28,23 @@ Auf dem Mac ist das ZIP-Archiv für den Glassfish-Server in das Verzeichnis `/op
 
 In Eclipse legt man unter den Servern zunächst den lokalen Glassfish-Server an, damit es später keine Probleme beim Einrichten der Domäne gibt.
 
-![Neuen Server anlegen][glassfish01]
+![Neuen Server anlegen](glassfish01.png)
 
 Anschließend können die Credentials für den administrativen Login hinterlegt werden:
 
-![Credentials hinterlegen][glassfish02]
+![Credentials hinterlegen](glassfish02.png)
 
 Die Einstellungen zur Verwaltung eines Remote-Servers unterscheiden sich nicht großartig von denen eines lokalen Glassfish-Servers:
 
-![Remote Server anlegen][glassfish03]
+![Remote Server anlegen](glassfish03.png)
 
 Lediglich die Credentials werden um den Admin-Port erweitert. Über Test Connection kann geprüft werden, ob die Einstellungen korrekt sind und eine Verbindung zum Server hergestellt werden kann.
 
-![Remote Credentials hinterlegen][glassfish04]
+![Remote Credentials hinterlegen](glassfish04.png)
 
 *Tipp:* Über das Kontextmenü eines Servers können auch die ADF Essentials automatisch deployt werden.
 
 ### Weitere Ressourcen
 - Auf [GitHub](https://github.com/rollinhand/lgmj-server) existiert ein Projekt von mir, dass einen
 [initialen Entwicklungsserver für OEPE](https://github.com/rollinhand/lgmj-server) aufsetzt.
-
-[glassfish01]=${content.rootPath}images/posts/glassfish01.png
-[glassfish02]=${content.rootPath}images/posts/glassfish02.png
-[glassfish03]=${content.rootPath}images/posts/glassfish03.png
-[glassfish04]=${content.rootPath}images/posts/glassfish04.png
 

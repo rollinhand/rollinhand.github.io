@@ -2,7 +2,7 @@ type=post
 title=Container verwalten mit DC/OS
 date=2018-06-23
 category=DevOps
-tags=[DC/OS, Container, Docker, Mesos]
+tags=DC/OS, Container, Docker, Mesos
 cofinpro=https://medium.com/cofinpro/das-eigene-datacenter-in-eine-cloud-verwandeln-7d1e98940889
 ~~~~~~
 Die Themen Cloud und Container stammen nicht aus Wolkenkuckucksheim,

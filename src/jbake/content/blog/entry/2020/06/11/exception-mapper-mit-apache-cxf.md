@@ -2,7 +2,7 @@ type=post
 title=Exception Mapper mit Apache CXF
 date=2020-06-11
 category=Entwicklung 
-tags=[Meecrowave,Apache CXF,REST]
+tags=Meecrowave,Apache CXF,REST
 ~~~~~~
 Exception Mapper in Verbindung mit REST-Services vereinfachen nicht nur den Code, sondern sorgen
 auch dafür, dass Exceptions identisch behandelt und den gleichen Fehlercode an den Aufrufer

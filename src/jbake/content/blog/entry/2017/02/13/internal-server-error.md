@@ -2,7 +2,7 @@ type=post
 title=Internal Server Error durch fehlerhafte EL Expression
 date=2017-02-13
 category=Entwicklung
-tags=["ADF", "Oracle", "Java"]
+tags=ADF, Oracle, Java
 ~~~~~~
 Einen internen Serverfehler (Fehler 500) in einer ADF-Anwendung zu finden, ist nicht immer
 trivial. Die Erfahrung hat mich allerdings gelehrt, dass der Fehler in 90 Prozent aller

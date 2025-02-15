@@ -11,6 +11,10 @@ body {
     background-color: #1a1a1a
 }
 
+section img {
+    width:100%;
+}
+
 img.avatar {
     width: 2.5em;
     height: 2.5em;

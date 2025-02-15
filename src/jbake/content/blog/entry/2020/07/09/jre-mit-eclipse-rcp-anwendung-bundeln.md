@@ -2,7 +2,7 @@ type=post
 title=JRE mit Eclipse RCP-Anwendung bündeln
 date=2020-07-09
 category=Entwicklung
-tags=[Eclipse RCP,Tycho]
+tags=Eclipse RCP,Tycho
 ~~~~~~
 Die Auslieferung der eigenen Eclipse RCP-Anwendung ist mit [Tycho fast ein Kinderspiel][kivio1]. Ebenso
 einfach lässt sich die Anwendung auch mit ihrer eigenen Java Laufzeitumgebung (JRE) bündeln. In
@@ -15,7 +15,7 @@ auslieferbare Anwendung zu erstellen. Während in der guten, alten Plugin Develo
 (PDE) beim Produkt-Export eine Execution Environment angegeben werden kann, ist dies bei Tycho nicht
 so offensichtlich.
 
-<img src="/src/jbake/assets/images/posts/rcp01-jre-product-launching.png" style="width:70%;margin:auto"/>
+<img src="rcp01-jre-product-launching.png" style="width:70%;margin:auto"/>
 
 Tycho nutzt das Konzept der [Root files][rootfiles] zur Einbindung von statischen Dateien und somit auch der JRE.
 
@@ -42,8 +42,7 @@ Plattformen genutzt wird.
 Innerhalb des Features werden für die verschiedenen Umgebungen Ordner angelegt in die die JRE
 kopiert wird (siehe Screenshot).
 
-<img src="/images/posts/rcp01-jre-folder-structure.png" 
-style="width:40%;margin:auto"/>
+<img src="rcp01-jre-folder-structure.png" style="width:40%;margin:auto"/>
 
 Dabei spielt die Bezeichnung des Root-Ordners keine Rolle. Wichtig ist der Ordner mit dem Namen
 _jre_ unterhalb. Beim Produktexport wird dieser in den Root-Ordner des Produkts
@@ -65,8 +64,7 @@ root.linux.gtk.x86_64 = lnx64
 
 Final sollte die _build.properties_ wie folgt aussehen:
 
-<img src="/images/posts/rcp01-jre-build-properties.png" 
-style="width:40%;margin:auto"/>
+<img src="rcp01-jre-build-properties.png" style="width:40%;margin:auto"/>
 
 Die Struktur für die Definition der Root files folgt damit den Parametern zur Definition einer Target
 Environment in Tycho.
@@ -74,14 +72,13 @@ Environment in Tycho.
 Anschließend muss das Feature noch in der Produkt-Definition eingefügt werden, sodass es beim
 Materialisieren des Produkts berücksichtigt wird.
 
-<img src="/images/posts/rcp01-jre-product-definition.png" width="894" width="366"
-style="width:70%;margin:auto"/>
+<img src="rcp01-jre-product-definition.png" width="894" width="366" style="width:70%;margin:auto"/>
 
 Beim Bau der Anwendung mittels Maven/Tycho werden die Angaben für die Zielumgebung auf Basis der
 Architektur und des Betriebssystems interpretiert und im erstellten Produktverzeichnis jeweils ein
 Verzeichnis  mit dem Namen _jre_ passend zur exportierten Plattform erstellt.
 
-<img src="/src/jbake/assets/images/posts/rcp01-jre-final-folder.png" style="width:40%;margin:auto" />
+<img src="rcp01-jre-final-folder.png" style="width:40%;margin:auto" />
 
 ## Mehr Dynamik mit dem Maven-Universum
 
