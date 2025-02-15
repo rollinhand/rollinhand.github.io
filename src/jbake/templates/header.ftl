@@ -17,8 +17,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
 
   <!-- Feeds -->
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>blog/feed/rss.xml" />
-  <link rel="alternate" type="application/atom+xml" title="Atom" href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>blog/feed/atom.xml" />
+  <link rel="alternate" type="application/atom+xml" title="Atom" href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>feed.xml" />
 
   <!-- Load Highlight.js -->
   <script src="<#if (content.rootpath)??>${content.rootpath}<#else></#if>js/highlight.pack.js"></script>

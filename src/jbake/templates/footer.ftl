@@ -20,7 +20,7 @@
                 <a class="link-light text-decoration-none mx-1 small" href="https://www.linkedin.com/in/bjoernberg82" target="_blank" rel="me">
                     <span class="button linkedin" aria-details="LinkedIn"><i class="fab fa-linkedin"></i></span>
                 </a>
-                <a class="link-light text-decoration-none mx-1 small" href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>blog/feed/atom.xml">
+                <a class="link-light text-decoration-none mx-1 small" href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>feed.xml">
                     <span class="button atom" aria-details="Atom/RSS"><i class="fas fa-rss subscribe"></i></span>
                 </a>
             </div>
