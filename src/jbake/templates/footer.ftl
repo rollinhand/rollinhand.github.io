@@ -5,11 +5,11 @@
                 <div class="small m-0 text-white">Copyright &copy; 2017 - 2025 by Björn Berg</div>
             </div>
             <div class="col-auto">
-                <!--<a class="link-light small" href="/blog/meecrowave.html">Apache Meecrowave</a>
-                <span class="text-white mx-1">&middot;</span>-->
-                <a class="link-light small" href="/privacy-policy/index.html">Privacy</a>
+                <a class="link-light small" href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>blog/meecrowave.html">Apache Meecrowave</a>
                 <span class="text-white mx-1">&middot;</span>
-                <a class="link-light small" href="/about/index.html">Imprint</a>
+                <a class="link-light small" href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>privacy-policy/index.html">Privacy</a>
+                <span class="text-white mx-1">&middot;</span>
+                <a class="link-light small" href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>about/index.html">Imprint</a>
                 <span class="text-white mx-1">&middot;</span>
                 <a class="link-light small" href="mailto:rollin.hand@gmx.de">Contact</a>
             </div>
@@ -20,7 +20,7 @@
                 <a class="link-light text-decoration-none mx-1 small" href="https://www.linkedin.com/in/bjoernberg82" target="_blank" rel="me">
                     <span class="button linkedin" aria-details="LinkedIn"><i class="fab fa-linkedin"></i></span>
                 </a>
-                <a class="link-light text-decoration-none mx-1 small" href="/blog/feed/atom.xml">
+                <a class="link-light text-decoration-none mx-1 small" href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>blog/feed/atom.xml">
                     <span class="button atom" aria-details="Atom/RSS"><i class="fas fa-rss subscribe"></i></span>
                 </a>
             </div>
