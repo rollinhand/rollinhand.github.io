@@ -1,14 +1,12 @@
 # rollinhand.github.io
-Jekyll-based Blog.
+
+This blog uses JBake as driving engine and is build with Gradle.
 
 ## Usage
-Blog uses a Gemfile and Rakefile for easier writing and viewing new
-articles.
 
-If `rake` fails with an undefined error, this means that the current Ruby installation
-is missing some libraries. These can be installed with Bundler:
+The page can be build locally and the output files may be pushed manually to [GitHub](https://github.com).
+GitHub pages is configured to be served from branch `gh-pages`.
 
-```
-sudo gem install bundler
-sudo bundle install
+```bash
+./gradlew build gitPublishPush
 ```
