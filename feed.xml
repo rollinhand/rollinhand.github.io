@@ -6,13 +6,13 @@
     <atom:link href="https://kivio.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>So., 16 Feb. 2025 00:54:39 +0100</pubDate>
-    <lastBuildDate>So., 16 Feb. 2025 00:54:39 +0100</lastBuildDate>
+    <pubDate>Mon, 17 Feb 2025 10:10:15 +0000</pubDate>
+    <lastBuildDate>Mon, 17 Feb 2025 10:10:15 +0000</lastBuildDate>
 
     <item>
       <title>SQLPlus mit Homebrew installieren</title>
       <link>https://kivio.org/blog/entry/2022/09/05/sqlplus-mit-homebrew-installieren.html</link>
-      <pubDate>Mo., 5 Sept. 2022 00:00:00 +0200</pubDate>
+      <pubDate>Mon, 5 Sep 2022 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2022/09/05/sqlplus-mit-homebrew-installieren.html</guid>
       	<description>
 	&lt;p&gt;Homebrew ist der ultimative Paketmanager für macOS. Auch eher dem kommerziellen Bereich zuzuordnende Software wie bspw. Oracle SQLPlus lässt sich über Homebrew installieren.&lt;/p&gt;
@@ -31,7 +31,7 @@ $ brew install instantclient-sqlplus
     <item>
       <title>JRE mit Eclipse RCP-Anwendung bündeln</title>
       <link>https://kivio.org/blog/entry/2020/07/09/jre-mit-eclipse-rcp-anwendung-bundeln.html</link>
-      <pubDate>Do., 9 Juli 2020 00:00:00 +0200</pubDate>
+      <pubDate>Thu, 9 Jul 2020 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2020/07/09/jre-mit-eclipse-rcp-anwendung-bundeln.html</guid>
       	<description>
 	&lt;p&gt;Die Auslieferung der eigenen Eclipse RCP-Anwendung ist mit &lt;a href=&quot;../../../2020/06/28/eclipse-rcp-tipps-und-tricks.html&quot;&gt;Tycho fast ein Kinderspiel&lt;/a&gt;. Ebenso einfach lässt sich die Anwendung auch mit ihrer eigenen Java Laufzeitumgebung (JRE) bündeln. In diesem Beitrag zeige ich wie das funktioniert und stelle alternative Wege vor.&lt;/p&gt;
@@ -75,7 +75,7 @@ root.linux.gtk.x86_64 = lnx64
     <item>
       <title>Eclipse RCP - Tipps und Tricks</title>
       <link>https://kivio.org/blog/entry/2020/06/28/eclipse-rcp-tipps-und-tricks.html</link>
-      <pubDate>So., 28 Juni 2020 00:00:00 +0200</pubDate>
+      <pubDate>Sun, 28 Jun 2020 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2020/06/28/eclipse-rcp-tipps-und-tricks.html</guid>
       	<description>
 	&lt;p&gt;&lt;a href=&quot;https://www.vogella.com&quot;&gt;Lars Vogel&lt;/a&gt; hat mit seinen &lt;a href=&quot;https://www.vogella.com&quot;&gt;Tutorials zu Eclipse RCP&lt;/a&gt; eine solide Basis geschaffen, um mit Eclipse RCP Anwendungen zu entwickeln. Es gibt allerdings trotz der umfangreichen Beispiele immer wieder Fallstricke, die das Arbeiten mit RCP zu keinem Genuss machen. In diesem Beitrag zeige ich ein paar immer wieder auftretende Probleme und wie diese gelöst werden können.&lt;/p&gt;
@@ -128,7 +128,7 @@ root.linux.gtk.x86_64 = lnx64
     <item>
       <title>Exception Mapper mit Apache CXF</title>
       <link>https://kivio.org/blog/entry/2020/06/11/exception-mapper-mit-apache-cxf.html</link>
-      <pubDate>Do., 11 Juni 2020 00:00:00 +0200</pubDate>
+      <pubDate>Thu, 11 Jun 2020 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2020/06/11/exception-mapper-mit-apache-cxf.html</guid>
       	<description>
 	&lt;p&gt;Exception Mapper in Verbindung mit REST-Services vereinfachen nicht nur den Code, sondern sorgen auch dafür, dass Exceptions identisch behandelt und den gleichen Fehlercode an den Aufrufer zurückliefern. In diesem Blog-Beitrag zeige ich, wie das mit &lt;a href=&quot;http://cxf.apache.org&quot;&gt;Apache CXF&lt;/a&gt; und &lt;a href=&quot;../../../2020/04/30/meecrowave-microservices-ohne-aufwandiges-framework.html&quot;&gt;Meecrowave&lt;/a&gt; funktioniert und die Anwendung auch für andere Servlet-Container oder Java EE-Server portabel bleibt.&lt;/p&gt;
@@ -243,7 +243,7 @@ Person with UUID 2020 not found* Closing connection 0
     <item>
       <title>Hibernate&amp;#58; Hilfe, mein Class-Mapping funktioniert nicht mehr</title>
       <link>https://kivio.org/blog/entry/2020/06/04/hibernate-hilfe-mein-class-mapping-funktioniert-nicht-mehr.html</link>
-      <pubDate>Do., 4 Juni 2020 00:00:00 +0200</pubDate>
+      <pubDate>Thu, 4 Jun 2020 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2020/06/04/hibernate-hilfe-mein-class-mapping-funktioniert-nicht-mehr.html</guid>
       	<description>
 	&lt;p&gt;Zuletzt war ich in einem Projekt beschäftigt, dass für seine Persistenz noch auf Hibernate 3.2.0 und Mapping-Dateien (hbm-Dateien) im XML-Format gesetzt hat aus dem sich auch persistente Klassen generieren lassen. Mit dem zunächst sanften Upgrade auf Hibernate 3.6.10 konnten persistente Klassen nicht mehr über die Klasse &lt;code&gt;Configuration&lt;/code&gt; gefunden werden. Oups! Was war zu tun?&lt;/p&gt;
@@ -271,7 +271,7 @@ Table tbl = cls.getTable();
     <item>
       <title>Maven Surefire und Probleme mit dem Classpath</title>
       <link>https://kivio.org/blog/entry/2020/05/29/maven-surefire-und-probleme-mit-dem-classpath.html</link>
-      <pubDate>Fr., 29 Mai 2020 00:00:00 +0200</pubDate>
+      <pubDate>Fri, 29 May 2020 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2020/05/29/maven-surefire-und-probleme-mit-dem-classpath.html</guid>
       	<description>
 	&lt;p&gt;In meinem letzten Projekt beim Kunden bin ich auf ein interessantes Problem im Maven Surefire Plugin gestoßen. Während meine Unit-Tests in der Eclipse-Umgebung problemlos liefen, warf Maven auf der Kommandozeile beim Aufruf von &lt;code&gt;Class.forName()&lt;/code&gt; eine ClassNotFoundException. Was war da los?&lt;/p&gt;
@@ -307,7 +307,7 @@ Class&amp;lt;?&amp;gt; clazz = (Class&amp;lt;?&amp;gt;)Class.forName(className);
     <item>
       <title>Meecrowave Maven Plugin mit Java 11 oder neuer</title>
       <link>https://kivio.org/blog/entry/2020/05/22/meecrowave-maven-plugin-mit-java-11-oder-neuer.html</link>
-      <pubDate>Fr., 22 Mai 2020 00:00:00 +0200</pubDate>
+      <pubDate>Fri, 22 May 2020 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2020/05/22/meecrowave-maven-plugin-mit-java-11-oder-neuer.html</guid>
       	<description>
 	&lt;p&gt;Das Meecrowave Maven Plugin sorgt nicht nur für die korrekte Bündelung der eigenen Anwendung in den Meecrowave Container sondern kann auch während der Entwicklung genutzt werden, um den Server zu starten und Debugging-Aktionen durchzuführen. Mit Java 11 und neuer kann das schief laufen. In dem Beitrag zeige ich, wie das Plugin weiterhin voll funktionsfähig bleibt.&lt;/p&gt;
@@ -338,7 +338,7 @@ Class&amp;lt;?&amp;gt; clazz = (Class&amp;lt;?&amp;gt;)Class.forName(className);
     <item>
       <title>Meecrowave und Docker - so einfach gehts</title>
       <link>https://kivio.org/blog/entry/2020/05/06/meecrowave-und-docker-so-einfach-gehts.html</link>
-      <pubDate>Mi., 6 Mai 2020 00:00:00 +0200</pubDate>
+      <pubDate>Wed, 6 May 2020 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2020/05/06/meecrowave-und-docker-so-einfach-gehts.html</guid>
       	<description>
 	&lt;p&gt;In einem meiner &lt;a href=&quot;../../../2020/04/30/meecrowave-microservices-ohne-aufwandiges-framework.html&quot;&gt;letzten Blogbeiträge&lt;/a&gt; habe ich darüber berichtet, wie einfach mit &lt;a href=&quot;https://openwebbeans.apache.org/meecrowave/&quot;&gt;Meecrowave&lt;/a&gt; ein Microservice erstellt werden kann. Heute geht es darum, den Microservice in ein Docker-Image zu bündeln und als Container zu starten.&lt;/p&gt;
@@ -397,7 +397,7 @@ Class&amp;lt;?&amp;gt; clazz = (Class&amp;lt;?&amp;gt;)Class.forName(className);
     <item>
       <title>Meecrowave - Microservices ohne aufwändiges Framework</title>
       <link>https://kivio.org/blog/entry/2020/04/30/meecrowave-microservices-ohne-aufwandiges-framework.html</link>
-      <pubDate>Do., 30 Apr. 2020 00:00:00 +0200</pubDate>
+      <pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2020/04/30/meecrowave-microservices-ohne-aufwandiges-framework.html</guid>
       	<description>
 	&lt;p&gt;Die Apache Foundation hat mit &lt;a href=&quot;https://openwebbeans.apache.org/meecrowave/&quot;&gt;Meecrowave&lt;/a&gt; einen Microprofil-Server auf den Weg gebracht, der durch seine geringe Größe und niedrigen Speicherverbrauch besticht. Inwiefern er genutzt werden kann, um einfach Microservices zu schreiben, habe ich mir genauer angesehen.&lt;/p&gt;
@@ -528,7 +528,7 @@ public class PersonEndpointTest {
     <item>
       <title>Technische Schulden und wie sie getilgt werden</title>
       <link>https://kivio.org/blog/entry/2020/04/04/technische-schulden-und-wie-sie-getilgt-werden.html</link>
-      <pubDate>Sa., 4 Apr. 2020 00:00:00 +0200</pubDate>
+      <pubDate>Sat, 4 Apr 2020 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2020/04/04/technische-schulden-und-wie-sie-getilgt-werden.html</guid>
       	<description>
 	&lt;p&gt;Im Buch &lt;a href=&quot;https://amzn.to/39oKRQE&quot;&gt;&amp;ldquo;Hybride Softwareentwicklung&amp;rdquo;&lt;/a&gt; gehe ich mit meinen Co-Autoren Philip Knott und Gregor Sandhaus in Kapitel 4 auf das Thema technische Schulden ein. Es zeigt sich anhand aktueller Fachartikel und auch in Gesprächen mit Kunden, dass das Thema in der Digitalisierungswelle einen neuen Stellenwert einnimmt. Zeit sich mit dem Thema etwas ausführlicher auseinander zu setzen.&lt;/p&gt;
@@ -598,7 +598,7 @@ public class PersonEndpointTest {
     <item>
       <title>Apache NetBeans 10.0 veröffentlicht</title>
       <link>https://kivio.org/blog/entry/2018/12/30/apache-netbeans-10-veroeffentlicht.html</link>
-      <pubDate>So., 30 Dez. 2018 00:00:00 +0100</pubDate>
+      <pubDate>Sun, 30 Dec 2018 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2018/12/30/apache-netbeans-10-veroeffentlicht.html</guid>
       	<description>
 	&lt;p&gt;Apache hat NetBeans in der Version 10.0 Ende Dezember veröffentlicht. Die aktuelle Version unterstützt neue Funktionalitäten aus dem JDK 11, vermisst aber immer noch einige wichtige bzw. aktualisierte Plugins - unter anderem das Plugin zur Java EE-Entwicklung.&lt;/p&gt;
@@ -618,7 +618,7 @@ public class PersonEndpointTest {
     <item>
       <title>C3Faces 1.4 officially released</title>
       <link>https://kivio.org/blog/entry/2018/08/19/c3faces-1-dot-4-officially-released.html</link>
-      <pubDate>So., 19 Aug. 2018 00:00:00 +0200</pubDate>
+      <pubDate>Sun, 19 Aug 2018 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2018/08/19/c3faces-1-dot-4-officially-released.html</guid>
       	<description>
 	&lt;p&gt;C3Faces is a chart library for JSF based on c3.js. I want to announce the fourth official version of this library released to &lt;a href=&quot;https://search.maven.org/#artifactdetails%7Corg.kivio%7Cc3faces%7C1.0%7Cjar&quot;&gt;Maven central&lt;/a&gt; coming with dynamic category-based axes.&lt;/p&gt;
@@ -653,7 +653,7 @@ data.addChild(new XKey(categoriesView.getId()));
     <item>
       <title>Container verwalten mit DC/OS</title>
       <link>https://kivio.org/blog/entry/2018/06/23/container-verwalten-mit-dc-slash-os.html</link>
-      <pubDate>Sa., 23 Juni 2018 00:00:00 +0200</pubDate>
+      <pubDate>Sat, 23 Jun 2018 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2018/06/23/container-verwalten-mit-dc-slash-os.html</guid>
       	<description>
 	&lt;p&gt;Die Themen Cloud und Container stammen nicht aus Wolkenkuckucksheim, sondern beschäftigen in der Realität die IT-Abteilungen großer und kleiner Unternehmen. Hinter diesen Ideen steckt der Wunsch, Hardware-Ressourcen effizienter auszulasten, Spitzenlasten abzufangen und Anwendungen bzw. Services beliebig skalieren zu können. Hierbei können Plattformen wie DC/OS helfen.&lt;/p&gt;
@@ -692,7 +692,7 @@ in Aktion&quot; /&gt;&lt;/p&gt;
     <item>
       <title>SD-Karten verhindern MacBook Standby</title>
       <link>https://kivio.org/blog/entry/2018/05/31/sd-karten-verhindern-macbook-standby.html</link>
-      <pubDate>Do., 31 Mai 2018 00:00:00 +0200</pubDate>
+      <pubDate>Thu, 31 May 2018 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2018/05/31/sd-karten-verhindern-macbook-standby.html</guid>
       	<description>
 	&lt;p&gt;In meinem [Post vom 31.12.2016]({% link _posts/2016-12-31-itunes-bibliothek-auf-transcend-jetdrive.md %}) habe ich gezeigt, dass die iTunes Bibliothek auf eine externe SD-Karte ausgelagert werden kann. Allerdings hat das dauerhafte Mounten einer SD-Karte den Nachteil, dass das MacBook nicht mehr in den Standby-Modus wandert.&lt;/p&gt;
@@ -709,7 +709,7 @@ in Aktion&quot; /&gt;&lt;/p&gt;
     <item>
       <title>Let&apos;s Encrypt mit Nginx Proxy im Docker Container</title>
       <link>https://kivio.org/blog/entry/2018/05/26/lets-encrypt-mit-nginx-proxy-im-docker-container.html</link>
-      <pubDate>Sa., 26 Mai 2018 00:00:00 +0200</pubDate>
+      <pubDate>Sat, 26 May 2018 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2018/05/26/lets-encrypt-mit-nginx-proxy-im-docker-container.html</guid>
       	<description>
 	&lt;p&gt;In diesem Tutorial beschreibe ich, wie man in einem 1&amp;amp;1 Cloud-Server in einem Nginx Reverse Proxy in einem Docker Container ein Let&amp;rsquo;s Encrypt-Zertifikat für die SSL-verschlüsselte Verbindung einbindet.&lt;/p&gt;
@@ -820,7 +820,7 @@ server {
     <item>
       <title>Redirect auf Favicon vermeiden</title>
       <link>https://kivio.org/blog/entry/2018/05/01/redirect-auf-favicon-vermeiden.html</link>
-      <pubDate>Di., 1 Mai 2018 00:00:00 +0200</pubDate>
+      <pubDate>Tue, 1 May 2018 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2018/05/01/redirect-auf-favicon-vermeiden.html</guid>
       	<description>
 	&lt;p&gt;Bei einer mit Apache Shiro (oder ein anderem Framework) abgesicherten JSF-Seite wird der Anwender nach dem Login zunächst immer auf die Datei &lt;em&gt;favicon.ico&lt;/em&gt; weitergeleitet. Ursachen und deren Behebung habe ich in diesem Blog-Beitrag zusammengetragen.&lt;/p&gt;
@@ -851,7 +851,7 @@ server {
     <item>
       <title>C3Faces 1.3 officially released</title>
       <link>https://kivio.org/blog/entry/2018/03/27/c3faces-1-dot-3-officially-released.html</link>
-      <pubDate>Di., 27 März 2018 00:00:00 +0200</pubDate>
+      <pubDate>Tue, 27 Mar 2018 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2018/03/27/c3faces-1-dot-3-officially-released.html</guid>
       	<description>
 	&lt;p&gt;C3Faces is a chart library for JSF based on c3.js. I want to announce the third official version of this library released to &lt;a href=&quot;https://search.maven.org/#artifactdetails%7Corg.kivio%7Cc3faces%7C1.0%7Cjar&quot;&gt;Maven central&lt;/a&gt; coming with a small fix for older versions of JSF and pre-defined colors and themes.&lt;/p&gt;
@@ -869,7 +869,7 @@ server {
     <item>
       <title>C3Faces 1.2 officially released</title>
       <link>https://kivio.org/blog/entry/2018/03/04/c3faces-1-dot-1-officially-released.html</link>
-      <pubDate>So., 4 März 2018 00:00:00 +0100</pubDate>
+      <pubDate>Sun, 4 Mar 2018 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2018/03/04/c3faces-1-dot-1-officially-released.html</guid>
       	<description>
 	&lt;p&gt;C3Faces is a chart library for JSF based on c3.js. I want to announce the second official version of this library released to &lt;a href=&quot;https://search.maven.org/#artifactdetails%7Corg.kivio%7Cc3faces%7C1.0%7Cjar&quot;&gt;Maven central&lt;/a&gt; coming with category-based axes and new elements in the taglib to manipulate axes.&lt;/p&gt;
@@ -900,7 +900,7 @@ server {
     <item>
       <title>C3Faces 1.0 officially released</title>
       <link>https://kivio.org/blog/entry/2018/01/22/c3faces-1-dot-0-officially-released.html</link>
-      <pubDate>Mo., 22 Jan. 2018 00:00:00 +0100</pubDate>
+      <pubDate>Mon, 22 Jan 2018 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2018/01/22/c3faces-1-dot-0-officially-released.html</guid>
       	<description>
 	&lt;p&gt;C3Faces is a chart library for JSF based on c3.js. I want to announce the first official version of this library released to &lt;a href=&quot;https://search.maven.org/#artifactdetails%7Corg.kivio%7Cc3faces%7C1.0%7Cjar&quot;&gt;Maven central&lt;/a&gt;.&lt;/p&gt;
@@ -916,7 +916,7 @@ server {
     <item>
       <title>NetBeans 9 vermisst</title>
       <link>https://kivio.org/blog/entry/2017/12/31/netbeans-9-vermisst.html</link>
-      <pubDate>So., 31 Dez. 2017 00:00:00 +0100</pubDate>
+      <pubDate>Sun, 31 Dec 2017 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2017/12/31/netbeans-9-vermisst.html</guid>
       	<description>
 	&lt;p&gt;Java 9 ist seit geraumer Zeit in der finalen Version verfügbar. NetBeans 9 lässt allerdings nach wie vor noch auf sich warten. Der Umzug zu Apache ist aufwändiger als gedacht.&lt;/p&gt;
@@ -936,7 +936,7 @@ server {
     <item>
       <title>Oracle 12.2 veröffentlicht</title>
       <link>https://kivio.org/blog/entry/2017/09/12/oracle-12-dot-2-veroffentlicht.html</link>
-      <pubDate>Di., 12 Sept. 2017 00:00:00 +0200</pubDate>
+      <pubDate>Tue, 12 Sep 2017 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2017/09/12/oracle-12-dot-2-veroffentlicht.html</guid>
       	<description>
 	&lt;p&gt;Nachdem die Oracle-Datenbank in der Version 12.2 bis vor Kurzem nur in Oracles Cloud Services verfügbar war, ist die aktuelle Version der Datenbank nun für alle zum &lt;a href=&quot;http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index.html&quot;&gt;Download&lt;/a&gt; verfügbar. Der Artikel beschreibt in Kürze die neuen Features.&lt;/p&gt;
@@ -958,7 +958,7 @@ server {
     <item>
       <title>OEPE=Projekte mit Maven erstellen</title>
       <link>https://kivio.org/blog/entry/2017/08/24/oepe-projekte-mit-maven-erstellen.html</link>
-      <pubDate>Do., 24 Aug. 2017 00:00:00 +0200</pubDate>
+      <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2017/08/24/oepe-projekte-mit-maven-erstellen.html</guid>
       	<description>
 	&lt;p&gt;ADF-Projekte werden nach den Oracle-Tutorials nicht unbedingt mit einem allgemeinen Build-Tool wie Maven erstellt. In Oracles Enterprise Pack for Eclipse (OEPE) verstecken sich allerdings auch Maven-Archetypen, um ein typisches ADF-Projekt zu erstellen.&lt;/p&gt;
@@ -984,7 +984,7 @@ mvn archetype:update-local-catalog
     <item>
       <title>Einbindung von Glassfish in OEPE</title>
       <link>https://kivio.org/blog/entry/2017/08/24/einbindung-von-glassfish-in-oepe.html</link>
-      <pubDate>Do., 24 Aug. 2017 00:00:00 +0200</pubDate>
+      <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2017/08/24/einbindung-von-glassfish-in-oepe.html</guid>
       	<description>
 	&lt;p&gt;In Eclipse gibt es in der Perspektive Java EE den View Servers über den verschiedene Java EE Server gemanagt werden könne. Auch der Glassfish 3 und Glassfish 4 können darüber lokal und remote verwaltet werden.&lt;/p&gt;
@@ -1017,7 +1017,7 @@ mvn archetype:update-local-catalog
     <item>
       <title>Runtastic Daten nach Garmin Connect umziehen</title>
       <link>https://kivio.org/blog/entry/2017/04/12/runtastic-daten-nach-garmin-connect-umziehen.html</link>
-      <pubDate>Mi., 12 Apr. 2017 00:00:00 +0200</pubDate>
+      <pubDate>Wed, 12 Apr 2017 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2017/04/12/runtastic-daten-nach-garmin-connect-umziehen.html</guid>
       	<description>
 	&lt;p&gt;Aktivitätsdaten von Runtastic zu einem anderen Anbieter umzuziehen ist nicht leicht. Welche Fallstricke bei einem Umzug nach &lt;a href=&quot;http://connect.garmin.com&quot;&gt;Garmin Connect&lt;/a&gt; zu erwarten sind, zeige ich in diesem Beitrag.&lt;/p&gt;
@@ -1035,7 +1035,7 @@ mvn archetype:update-local-catalog
     <item>
       <title>NetBeans kommt bei Apache voran</title>
       <link>https://kivio.org/blog/entry/2017/03/11/netbeans-kommt-bei-apache-voran.html</link>
-      <pubDate>Sa., 11 März 2017 00:00:00 +0100</pubDate>
+      <pubDate>Sat, 11 Mar 2017 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2017/03/11/netbeans-kommt-bei-apache-voran.html</guid>
       	<description>
 	&lt;p&gt;Geertjan Wielenga als Principal Product Manager bei Oracle verantwortlich für die Entwickler-Tools hat in seinem &lt;a href=&quot;https://blogs.oracle.com/geertjan/entry/netbeans_and_apache1&quot;&gt;Blog&lt;/a&gt; über den Fortschritt des Wechsels von NetBeans zur Apache Foundation berichtet.&lt;/p&gt;
@@ -1051,7 +1051,7 @@ mvn archetype:update-local-catalog
     <item>
       <title>Internal Server Error durch fehlerhafte EL Expression</title>
       <link>https://kivio.org/blog/entry/2017/02/13/internal-server-error.html</link>
-      <pubDate>Mo., 13 Feb. 2017 00:00:00 +0100</pubDate>
+      <pubDate>Mon, 13 Feb 2017 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2017/02/13/internal-server-error.html</guid>
       	<description>
 	&lt;p&gt;Einen internen Serverfehler (Fehler 500) in einer ADF-Anwendung zu finden, ist nicht immer trivial. Die Erfahrung hat mich allerdings gelehrt, dass der Fehler in 90 Prozent aller Fälle auf eine fehlerhafte Interpretation einer EL-Expression oder fehlende Ressourcen zurückzuführen ist.&lt;/p&gt;
@@ -1072,7 +1072,7 @@ mvn archetype:update-local-catalog
     <item>
       <title>iTunes Bibliothek auf Transcend JetDrive Lite</title>
       <link>https://kivio.org/blog/entry/2016/12/31/itunes-bibliothek-auf-transcend-jetdrive.html</link>
-      <pubDate>Sa., 31 Dez. 2016 00:00:00 +0100</pubDate>
+      <pubDate>Sat, 31 Dec 2016 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2016/12/31/itunes-bibliothek-auf-transcend-jetdrive.html</guid>
       	<description>
 	&lt;p&gt;Gerade die mobilen Macs der neuen Generation mit SSD haben meist zu wenig Speicherplatz, um eine große Musikbibliothek aufzunehmen. Die Verlagerung der iTunes-Bibliothek auf eine SD-Karte oder externe Platte liegt dabei nahe und kann mitunter Fallstricke bieten.&lt;/p&gt;
@@ -1089,7 +1089,7 @@ mvn archetype:update-local-catalog
     <item>
       <title>Oracle reicht NetBeans an Apache weiter</title>
       <link>https://kivio.org/blog/entry/2016/12/29/oracle-reicht-netbeans-an-apache-weiter.html</link>
-      <pubDate>Do., 29 Dez. 2016 00:00:00 +0100</pubDate>
+      <pubDate>Thu, 29 Dec 2016 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2016/12/29/oracle-reicht-netbeans-an-apache-weiter.html</guid>
       	<description>
 	&lt;p&gt;Bereits im September hat Oracle beschlossen, sich von &lt;a href=&quot;http://www.netbeans.org&quot;&gt;NetBeans&lt;/a&gt; zu trennen. Die IDE soll zur Weiterentwicklung an die Apache Software Foundation wechseln. Der Transfer von OpenOffice an die ASF hat das Ende der Bürosuite eingeläutet. Welche Zukunft wird NetBeans haben - ein paar Gedanken dazu.&lt;/p&gt;
@@ -1105,7 +1105,7 @@ mvn archetype:update-local-catalog
     <item>
       <title>Feed für Jekyll-basierten Blog erstellen</title>
       <link>https://kivio.org/blog/entry/2016/12/26/feed-fuer-jekyll-erstellen.html</link>
-      <pubDate>Mo., 26 Dez. 2016 00:00:00 +0100</pubDate>
+      <pubDate>Mon, 26 Dec 2016 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2016/12/26/feed-fuer-jekyll-erstellen.html</guid>
       	<description>
 	&lt;p&gt;Ein Blog mit redaktionellen Inhalten benötigt einen Feed. Leser können so bequem die Inhalte über einen Feed-/News-Reader abonnieren. Wie es mit Jekyll funktioniert, verrät dieser Beitrag.&lt;/p&gt;
@@ -1147,7 +1147,7 @@ mvn archetype:update-local-catalog
     <item>
       <title>Blog zu GitHub pages umgezogen</title>
       <link>https://kivio.org/blog/entry/2016/12/23/blog-umgezogen.html</link>
-      <pubDate>Fr., 23 Dez. 2016 00:00:00 +0100</pubDate>
+      <pubDate>Fri, 23 Dec 2016 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2016/12/23/blog-umgezogen.html</guid>
       	<description>
 	&lt;p&gt;Meinen Blog &lt;a href=&quot;http://kivio.org&quot;&gt;Kivio&lt;/a&gt; habe ich zum Ende des Jahres zu &lt;a href=&quot;http://github.com&quot;&gt;GitHub pages&lt;/a&gt; umgezogen. Die Gründe finden sich in diesem Post.&lt;/p&gt;
@@ -1173,7 +1173,7 @@ gem &apos;github-pages&apos;, &apos;109&apos;, group=:jekyll_plugins
     <item>
       <title>Fehlerbehebung im Glassfish-Server</title>
       <link>https://kivio.org/blog/entry/2016/03/31/fehlerbehebung-im-glassfish-server.html</link>
-      <pubDate>Do., 31 März 2016 00:00:00 +0200</pubDate>
+      <pubDate>Thu, 31 Mar 2016 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2016/03/31/fehlerbehebung-im-glassfish-server.html</guid>
       	<description>
 	&lt;p&gt;Kryptische Fehlermeldungen bei der Entwicklung von Webanwendungen auf dem Glassfish-Server sind nicht immer einfach zu entschlüsseln und deren Ursache zu beheben. Dieser Artikel geht auf einige häufige Fehler, deren Ursachen und die Behebung ein.&lt;/p&gt;
@@ -1201,9 +1201,28 @@ gem &apos;github-pages&apos;, &apos;109&apos;, group=:jekyll_plugins
 	</description>
     </item>
     <item>
+      <title>Get rid of Maven directory in your WAR</title>
+      <link>https://kivio.org/blog/entry/2016/03/17/get-rid-of-maven-directory.html</link>
+      <pubDate>Thu, 17 Mar 2016 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">blog/entry/2016/03/17/get-rid-of-maven-directory.html</guid>
+      	<description>
+	&lt;p&gt;While you are packaging your web application with Maven you might have encountered, that your pom.xml and other Maven related files are also packed into your archive. To get rid of this directory adopt your pom.xml and configure the maven-war-plugin:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;plugin&amp;gt;
+  &amp;lt;groupId&amp;lt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt;
+  &amp;lt;artifactId&amp;lt;maven-war-plugin&amp;lt;/artifactId&amp;gt;
+  &amp;lt;version&amp;lt;2.2&amp;lt;/version&amp;gt;
+  &amp;lt;configuration&amp;gt;
+    &amp;lt;archive&amp;gt;
+      &amp;lt;addMavenDescriptor&amp;gt;false&amp;lt;/addMavenDescriptor&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;With adding &lt;code&gt;addMavenDescriptor=false&lt;/code&gt; WAR packaging will dismiss the the pom.xml in your archive.&lt;/p&gt;
+
+	</description>
+    </item>
+    <item>
       <title>Inhalte aus Evernote nach OneNote umziehen</title>
       <link>https://kivio.org/blog/entry/2016/03/17/inhalte-aus-evernote-nach-onenote.html</link>
-      <pubDate>Do., 17 März 2016 00:00:00 +0100</pubDate>
+      <pubDate>Thu, 17 Mar 2016 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2016/03/17/inhalte-aus-evernote-nach-onenote.html</guid>
       	<description>
 	&lt;p&gt;Kein direktes Thema für DevOps, aber interessant für alle, die einen einfachen Weg suchen, ihre Notizen von Evernote nach OneNote umzuziehen.&lt;/p&gt;
@@ -1227,28 +1246,9 @@ allerdings um ein Vielfaches.
 	</description>
     </item>
     <item>
-      <title>Get rid of Maven directory in your WAR</title>
-      <link>https://kivio.org/blog/entry/2016/03/17/get-rid-of-maven-directory.html</link>
-      <pubDate>Do., 17 März 2016 00:00:00 +0100</pubDate>
-      <guid isPermaLink="false">blog/entry/2016/03/17/get-rid-of-maven-directory.html</guid>
-      	<description>
-	&lt;p&gt;While you are packaging your web application with Maven you might have encountered, that your pom.xml and other Maven related files are also packed into your archive. To get rid of this directory adopt your pom.xml and configure the maven-war-plugin:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;plugin&amp;gt;
-  &amp;lt;groupId&amp;lt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt;
-  &amp;lt;artifactId&amp;lt;maven-war-plugin&amp;lt;/artifactId&amp;gt;
-  &amp;lt;version&amp;lt;2.2&amp;lt;/version&amp;gt;
-  &amp;lt;configuration&amp;gt;
-    &amp;lt;archive&amp;gt;
-      &amp;lt;addMavenDescriptor&amp;gt;false&amp;lt;/addMavenDescriptor&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;With adding &lt;code&gt;addMavenDescriptor=false&lt;/code&gt; WAR packaging will dismiss the the pom.xml in your archive.&lt;/p&gt;
-
-	</description>
-    </item>
-    <item>
       <title>Nicht unterbuttern lassen...</title>
       <link>https://kivio.org/blog/entry/2016/03/08/nicht-unterbuttern-lassen.html</link>
-      <pubDate>Di., 8 März 2016 00:00:00 +0100</pubDate>
+      <pubDate>Tue, 8 Mar 2016 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2016/03/08/nicht-unterbuttern-lassen.html</guid>
       	<description>
 	&lt;p&gt;Das JSF-Framework ButterFaces ist neu am Markt und will einiges anders machen als die bereits etablierten.&lt;/p&gt;
@@ -1267,7 +1267,7 @@ allerdings um ein Vielfaches.
     <item>
       <title>GitHub plugin 1.0 for Apache Roller 5 released</title>
       <link>https://kivio.org/blog/entry/2016/02/08/github-plugin-1-0-released.html</link>
-      <pubDate>Mo., 8 Feb. 2016 00:00:00 +0100</pubDate>
+      <pubDate>Mon, 8 Feb 2016 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2016/02/08/github-plugin-1-0-released.html</guid>
       	<description>
 	&lt;p&gt;The first official version of the GitHub plugin for &lt;a href=&quot;http://roller.apache.org/&quot;&gt;Apache Roller 5&lt;/a&gt; was released today. This short announcement describes the implemented functionality.&lt;/p&gt;
@@ -1282,7 +1282,7 @@ allerdings um ein Vielfaches.
     <item>
       <title>Glassfish-Server hinter einem Proxy betreiben</title>
       <link>https://kivio.org/blog/entry/2016/01/15/glassfish-server-hinter-einem-proxy.html</link>
-      <pubDate>Fr., 15 Jan. 2016 00:00:00 +0100</pubDate>
+      <pubDate>Fri, 15 Jan 2016 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2016/01/15/glassfish-server-hinter-einem-proxy.html</guid>
       	<description>
 	&lt;p&gt;Wie nutzt man den NGINX effizient als Proxy für einen Glassfish und wie bekommt man den Port 8080 dauerhaft aus Links seiner Web-Anwendung entfernt? Die Antworten liefert dieser Beitrag.&lt;/p&gt;
@@ -1341,7 +1341,7 @@ abzusichern aber auch statische Inhalte schneller auszuliefern.
     <item>
       <title>Wix Toolset plugin 1.12 for Jenkins released</title>
       <link>https://kivio.org/blog/entry/2015/07/18/wix-toolset-plugin-1-12.html</link>
-      <pubDate>Sa., 18 Juli 2015 00:00:00 +0200</pubDate>
+      <pubDate>Sat, 18 Jul 2015 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2015/07/18/wix-toolset-plugin-1-12.html</guid>
       	<description>
 	&lt;p&gt;A new version of Wix Toolset plugin was released on July 18th. The new version is automatically available via Jenkins update manager. This announcement describes the latest changes.&lt;/p&gt;
@@ -1360,7 +1360,7 @@ handling of directory paths:
     <item>
       <title>Wix Toolset plugin 1.11 for Jenkins released</title>
       <link>https://kivio.org/blog/entry/2015/07/07/wix-toolset-plugin-1-11.html</link>
-      <pubDate>Di., 7 Juli 2015 00:00:00 +0200</pubDate>
+      <pubDate>Tue, 7 Jul 2015 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2015/07/07/wix-toolset-plugin-1-11.html</guid>
       	<description>
 	&lt;p&gt;A new version of Wix Toolset plugin was released on July 8th. The new version is automatically available via Jenkins update manager. This announcement describes the latest changes.&lt;/p&gt;
@@ -1377,7 +1377,7 @@ Release 1.11 is a major bugfix release due to problems with running Wix Toolset 
     <item>
       <title>Wix Toolset plugin 1.10 for Jenkins released</title>
       <link>https://kivio.org/blog/entry/2015/07/01/wix-toolset-plugin-1-10.html</link>
-      <pubDate>Mi., 1 Juli 2015 00:00:00 +0200</pubDate>
+      <pubDate>Wed, 1 Jul 2015 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2015/07/01/wix-toolset-plugin-1-10.html</guid>
       	<description>
 	&lt;p&gt;A new version of Wix Toolset plugin was released on June 1st. The new version is automatically available via Jenkins update manager. This announcement describes the latest changes.&lt;/p&gt;
@@ -1402,7 +1402,7 @@ Release 1.11 is a major bugfix release due to problems with running Wix Toolset 
     <item>
       <title>Wix Toolset plugin 1.9 for Jenkins released</title>
       <link>https://kivio.org/blog/entry/2014/12/29/wix-toolset-plugin-1-9.html</link>
-      <pubDate>Mo., 29 Dez. 2014 00:00:00 +0100</pubDate>
+      <pubDate>Mon, 29 Dec 2014 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2014/12/29/wix-toolset-plugin-1-9.html</guid>
       	<description>
 	&lt;p&gt;A new version of Wix Toolset plugin was released on December 19th. The new version is automatically available via Jenkins update manager. This announcement describes the latest changes.&lt;/p&gt;
@@ -1426,7 +1426,7 @@ Release 1.11 is a major bugfix release due to problems with running Wix Toolset 
     <item>
       <title>Virtuelle Maschinen in VirtualBox umziehen</title>
       <link>https://kivio.org/blog/entry/2014/11/12/virtuelle-maschinen-in-virtualbox.html</link>
-      <pubDate>Mi., 12 Nov. 2014 00:00:00 +0100</pubDate>
+      <pubDate>Wed, 12 Nov 2014 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2014/11/12/virtuelle-maschinen-in-virtualbox.html</guid>
       	<description>
 	&lt;p&gt;Virtuelle Maschinen in VirtuialBox auf einen externen Datenträger zu verlagern ist einfach. Dieses Post zeigt, welche Schritte zu beachten sind, um die Maschinen auf unterschiedlichen Systemen verwenden zu können.&lt;/p&gt;
@@ -1474,7 +1474,7 @@ Release 1.11 is a major bugfix release due to problems with running Wix Toolset 
     <item>
       <title>Wenn der JDeveloper 12c richtig klemmt...</title>
       <link>https://kivio.org/blog/entry/2014/10/08/jdeveloper-12c-klemmt.html</link>
-      <pubDate>Mi., 8 Okt. 2014 00:00:00 +0200</pubDate>
+      <pubDate>Wed, 8 Oct 2014 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2014/10/08/jdeveloper-12c-klemmt.html</guid>
       	<description>
 	&lt;p&gt;Oracles JDeveloper ist kein Performance-Wunder. Neben Performanceengpässen hilft manchmal nur das &amp;ldquo;Abschießen&amp;rdquo; aller zum JDeveloper gehörigen Prozesse, um weiterarbeiten zu können. Abhilfe ist da&amp;hellip;&lt;/p&gt;
@@ -1501,7 +1501,7 @@ Release 1.11 is a major bugfix release due to problems with running Wix Toolset 
     <item>
       <title>Wix Toolset plugin 1.8 for Jenkins released</title>
       <link>https://kivio.org/blog/entry/2014/09/29/wix-toolset-plugin-1-8.html</link>
-      <pubDate>Mo., 29 Sept. 2014 00:00:00 +0200</pubDate>
+      <pubDate>Mon, 29 Sep 2014 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2014/09/29/wix-toolset-plugin-1-8.html</guid>
       	<description>
 	&lt;p&gt;A new version of Wix Toolset plugin was released today. The new version will be automatically available via Jenkins update manager in a few hours. This announcement describes the latest changes.&lt;/p&gt;
@@ -1522,7 +1522,7 @@ Release 1.11 is a major bugfix release due to problems with running Wix Toolset 
     <item>
       <title>Wix Toolset plugin 1.7 for Jenkins released</title>
       <link>https://kivio.org/blog/entry/2014/08/06/wix-toolset-plugin-1-7.html</link>
-      <pubDate>Mi., 6 Aug. 2014 00:00:00 +0200</pubDate>
+      <pubDate>Wed, 6 Aug 2014 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2014/08/06/wix-toolset-plugin-1-7.html</guid>
       	<description>
 	&lt;p&gt;A new version of Wix Toolset plugin was released today. The new version will be automatically available via Jenkins update manager in a few hours. This announcement describes the latest changes.&lt;/p&gt;
@@ -1540,7 +1540,7 @@ Release 1.11 is a major bugfix release due to problems with running Wix Toolset 
     <item>
       <title>Tipps für den Einsatz des JDeveloper 12c</title>
       <link>https://kivio.org/blog/entry/2014/07/08/tipps-jdeveloper-12c.html</link>
-      <pubDate>Di., 8 Juli 2014 00:00:00 +0200</pubDate>
+      <pubDate>Tue, 8 Jul 2014 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2014/07/08/tipps-jdeveloper-12c.html</guid>
       	<description>
 	&lt;p&gt;Die Maven-Unterstützung im JDeveloper 12.1.2 ist wenig gelungen. Wer auf die Version festgelegt ist, findet in diesem Post Wege, um die Maven-Unterstützung trotzdem in vollem Umfang nutzen zu können.&lt;/p&gt;
@@ -1631,7 +1631,7 @@ Release 1.11 is a major bugfix release due to problems with running Wix Toolset 
     <item>
       <title>JDeveloper ohne Konsolenfenster starten</title>
       <link>https://kivio.org/blog/entry/2014/06/26/jdeveloper-ohne-konsolenfenster.html</link>
-      <pubDate>Do., 26 Juni 2014 00:00:00 +0200</pubDate>
+      <pubDate>Thu, 26 Jun 2014 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2014/06/26/jdeveloper-ohne-konsolenfenster.html</guid>
       	<description>
 	&lt;p&gt;Nichts ist störender als neben der eigentlichen Anwendung noch ein Konsolenfenster geöffnet zu haben, das außer einer Ausgabe keine weitere Funktion hat. Dieser Post bringt Abhilfe.&lt;/p&gt;
@@ -1645,7 +1645,7 @@ Release 1.11 is a major bugfix release due to problems with running Wix Toolset 
     <item>
       <title>Wix Toolset plugin 1.5 for Jenkins released</title>
       <link>https://kivio.org/blog/entry/2014/06/25/wix-toolset-plugin-1-5.html</link>
-      <pubDate>Mi., 25 Juni 2014 00:00:00 +0200</pubDate>
+      <pubDate>Wed, 25 Jun 2014 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2014/06/25/wix-toolset-plugin-1-5.html</guid>
       	<description>
 	&lt;p&gt;A new version of Wix Toolset plugin was released today. The new version will be automatically available via Jenkins update manager in a few hours. This announcement describes the latest changes.&lt;/p&gt;
@@ -1668,7 +1668,7 @@ Release 1.11 is a major bugfix release due to problems with running Wix Toolset 
     <item>
       <title>WiX Plugin 1.4 for Jenkins released</title>
       <link>https://kivio.org/blog/entry/2014/06/20/wix-plugin-1-4-for.html</link>
-      <pubDate>Fr., 20 Juni 2014 00:00:00 +0200</pubDate>
+      <pubDate>Fri, 20 Jun 2014 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2014/06/20/wix-plugin-1-4-for.html</guid>
       	<description>
 	&lt;p&gt;Today I released a new version of the WiX plugin for Jenkins. This announcement describes the changes between the current and the former 1.3 release. The new version will be available on Jenkins update manager in a few hours.&lt;/p&gt;
@@ -1685,7 +1685,7 @@ Release 1.11 is a major bugfix release due to problems with running Wix Toolset 
     <item>
       <title>Downgrade Jenkins Git Plugin</title>
       <link>https://kivio.org/blog/entry/2014/05/15/downgrade-jenkins-git-plugin.html</link>
-      <pubDate>Do., 15 Mai 2014 00:00:00 +0200</pubDate>
+      <pubDate>Thu, 15 May 2014 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2014/05/15/downgrade-jenkins-git-plugin.html</guid>
       	<description>
 	&lt;p&gt;If you also encounter problems with Jenkins&amp;rsquo; Git plugin I tell you in this post how you can manually downgrade the plugin to a prior version. &lt;/p&gt;
@@ -1709,7 +1709,7 @@ scm class=&amp;quot;hudson.plugins.git.GitSCM&amp;quot; plugin=&amp;quot;git@1.5
     <item>
       <title>Windows mit VirtualBox unter OS X Mavericks virtualisieren</title>
       <link>https://kivio.org/blog/entry/2014/04/21/virtualbox-osx-und-windows.html</link>
-      <pubDate>Mo., 21 Apr. 2014 00:00:00 +0200</pubDate>
+      <pubDate>Mon, 21 Apr 2014 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2014/04/21/virtualbox-osx-und-windows.html</guid>
       	<description>
 	&lt;p&gt;Tests unter OS X Mavericks haben gezeigt, dass sich Windows-Systeme unter dem neuen Betriebssystem von Apple nicht mit VirtualBox virtualisieren lassen. Details zu meinem Test finden sich in diesem Posting.&lt;/p&gt;
@@ -1733,7 +1733,7 @@ scm class=&amp;quot;hudson.plugins.git.GitSCM&amp;quot; plugin=&amp;quot;git@1.5
     <item>
       <title>Deploying GitBlit on JBoss/Wildfly</title>
       <link>https://kivio.org/blog/entry/2014/03/20/deploying-gitblit-on-jboss-wildfly.html</link>
-      <pubDate>Do., 20 März 2014 00:00:00 +0100</pubDate>
+      <pubDate>Thu, 20 Mar 2014 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2014/03/20/deploying-gitblit-on-jboss-wildfly.html</guid>
       	<description>
 	&lt;p&gt;If you want to use GitBlit on a JBoss/Wildfly-based Java EE application server, deployment is a little bit tricky. This guide describes how you can deploy GitBlit with ease on JBoss/Wildfly.&lt;/p&gt;
@@ -1778,7 +1778,7 @@ C:\wildfly\bin\jboss-cli.bat -c
     <item>
       <title>JNI - Exception-Handling unter Windows</title>
       <link>https://kivio.org/blog/entry/2010/07/13/jni-exception-handling.html</link>
-      <pubDate>Di., 13 Juli 2010 00:00:00 +0200</pubDate>
+      <pubDate>Tue, 13 Jul 2010 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2010/07/13/jni-exception-handling.html</guid>
       	<description>
 	&lt;p&gt;Um Exceptions aus einem JNI-Interface abzufangen und strukturiert behandeln zu können, sind ein paar zusätzliche Handgriffe notwendig. Dieses Post gibt einen kurzen Einblick über die Fallstricke und wie sie umgangen werden können.&lt;/p&gt;
