@@ -92,7 +92,10 @@
 <p>Hat man sich letztendlich doch dazu entschieden, die einzelnen Aktivitäten nach Garmin oder Strava umzuziehen, so sollte nach Möglichkeit als Export-Format <strong>TCX</strong> gewählt werden. In diesem Format lässt sich die Aktivität auch klassifizieren. Dies hilft dabei, dass bei Garmin Connect oder Strava die Aktivität nicht noch manuell klassifiziert werden muss, sondern beim Import automatisch korrekt erkannt wird.</p>
 <p>Allerdings gibt es beim Export von Runtastic noch einen weiteren Pferdfuß über den ich gestolpert bin. Die durch Runtastic vorgenommene Klassifikation in den TCX-Dateien ist nicht mit den bei Garmin hinterlegten Aktivitäten kompatibel.</p>
 <p>Daher ist es notwendig, die Dateien nach dem Export zu bearbeiten. Für die Aktivität Laufen muss dabei die Klassifikation <em>running</em> durch <em>Running</em> und beim Radfahren die Klassifikation <em>cycling</em> durch <em>Biking</em> ersetzt werden. Schnell und einfach geht das unter macOS oder Linux in einem Terminal mit den folgenden zwei Zeilen Code:</p>
-<p>{% highlight Shell%} for file in $( ls ); do sed -i '' &lsquo;s/running/Running/g&rsquo; $file; done for file in $( ls ); do sed -i '' &lsquo;s/Swimming/Other/g&rsquo; $file; done for file in $( ls ); do sed -i '' &lsquo;s/cycling/Biking/g&rsquo; $file; done {% endhighlight %}</p>
+<pre><code class="language-bash">for file in $( ls ); do sed -i '' 's/running/Running/g' $file; done
+for file in $( ls ); do sed -i '' 's/Swimming/Other/g' $file; done
+for file in $( ls ); do sed -i '' 's/cycling/Biking/g' $file; done
+</code></pre>
 <p>Ebenfalls zu beachten ist, das bei einem Export die Zwischenzeiten nicht übernommen werden. Allerdings sollte dies für ältere Aktivitäten verschmerzbar sein.</p>
 
 						</section>

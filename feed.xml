@@ -6,8 +6,8 @@
     <atom:link href="https://kivio.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>Mon, 17 Feb 2025 10:10:15 +0000</pubDate>
-    <lastBuildDate>Mon, 17 Feb 2025 10:10:15 +0000</lastBuildDate>
+    <pubDate>Mon, 17 Feb 2025 10:29:19 +0000</pubDate>
+    <lastBuildDate>Mon, 17 Feb 2025 10:29:19 +0000</lastBuildDate>
 
     <item>
       <title>SQLPlus mit Homebrew installieren</title>
@@ -695,7 +695,7 @@ in Aktion&quot; /&gt;&lt;/p&gt;
       <pubDate>Thu, 31 May 2018 00:00:00 +0000</pubDate>
       <guid isPermaLink="false">blog/entry/2018/05/31/sd-karten-verhindern-macbook-standby.html</guid>
       	<description>
-	&lt;p&gt;In meinem [Post vom 31.12.2016]({% link _posts/2016-12-31-itunes-bibliothek-auf-transcend-jetdrive.md %}) habe ich gezeigt, dass die iTunes Bibliothek auf eine externe SD-Karte ausgelagert werden kann. Allerdings hat das dauerhafte Mounten einer SD-Karte den Nachteil, dass das MacBook nicht mehr in den Standby-Modus wandert.&lt;/p&gt;
+	&lt;p&gt;In meinem &lt;a href=&quot;../../../2016/12/31/itunes-bibliothek-auf-transcend-jetdrive.html&quot;&gt;Post vom 31.12.2016&lt;/a&gt; habe ich gezeigt, dass die iTunes Bibliothek auf eine externe SD-Karte ausgelagert werden kann. Allerdings hat das dauerhafte Mounten einer SD-Karte den Nachteil, dass das MacBook nicht mehr in den Standby-Modus wandert.&lt;/p&gt;
 &lt;!--more--&gt;
 &lt;p&gt;Seit einiger Zeit habe ich mich gewundert, dass nach einem halben Tag das MacBook in der Tasche ca. 25 Prozent an Akku-Leistung verloren hat. Normalerweise verbraucht ein MacBook bei zugeklappten Deckel ca. ein Prozent Akku-Leistung je Stunde.&lt;/p&gt;
 &lt;p&gt;Nach drei Stunden geht das MacBook in den Standard-Einstellungen in den Tiefschlaf und reduziert dabei die CPU-Leistung sofern keine Dienste im Hintergrund laufen, die den Tiefschlaf (nicht mit dem Hibernate-Modus zu verwechseln) verhindern.&lt;/p&gt;
@@ -1027,7 +1027,10 @@ mvn archetype:update-local-catalog
 &lt;p&gt;Hat man sich letztendlich doch dazu entschieden, die einzelnen Aktivitäten nach Garmin oder Strava umzuziehen, so sollte nach Möglichkeit als Export-Format &lt;strong&gt;TCX&lt;/strong&gt; gewählt werden. In diesem Format lässt sich die Aktivität auch klassifizieren. Dies hilft dabei, dass bei Garmin Connect oder Strava die Aktivität nicht noch manuell klassifiziert werden muss, sondern beim Import automatisch korrekt erkannt wird.&lt;/p&gt;
 &lt;p&gt;Allerdings gibt es beim Export von Runtastic noch einen weiteren Pferdfuß über den ich gestolpert bin. Die durch Runtastic vorgenommene Klassifikation in den TCX-Dateien ist nicht mit den bei Garmin hinterlegten Aktivitäten kompatibel.&lt;/p&gt;
 &lt;p&gt;Daher ist es notwendig, die Dateien nach dem Export zu bearbeiten. Für die Aktivität Laufen muss dabei die Klassifikation &lt;em&gt;running&lt;/em&gt; durch &lt;em&gt;Running&lt;/em&gt; und beim Radfahren die Klassifikation &lt;em&gt;cycling&lt;/em&gt; durch &lt;em&gt;Biking&lt;/em&gt; ersetzt werden. Schnell und einfach geht das unter macOS oder Linux in einem Terminal mit den folgenden zwei Zeilen Code:&lt;/p&gt;
-&lt;p&gt;{% highlight Shell%} for file in $( ls ); do sed -i &apos;&apos; &amp;lsquo;s/running/Running/g&amp;rsquo; $file; done for file in $( ls ); do sed -i &apos;&apos; &amp;lsquo;s/Swimming/Other/g&amp;rsquo; $file; done for file in $( ls ); do sed -i &apos;&apos; &amp;lsquo;s/cycling/Biking/g&amp;rsquo; $file; done {% endhighlight %}&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;for file in $( ls ); do sed -i &apos;&apos; &apos;s/running/Running/g&apos; $file; done
+for file in $( ls ); do sed -i &apos;&apos; &apos;s/Swimming/Other/g&apos; $file; done
+for file in $( ls ); do sed -i &apos;&apos; &apos;s/cycling/Biking/g&apos; $file; done
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Ebenfalls zu beachten ist, das bei einem Export die Zwischenzeiten nicht übernommen werden. Allerdings sollte dies für ältere Aktivitäten verschmerzbar sein.&lt;/p&gt;
 
 	</description>
