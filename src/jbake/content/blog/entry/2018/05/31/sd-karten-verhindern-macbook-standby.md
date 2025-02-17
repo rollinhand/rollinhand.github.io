@@ -4,7 +4,7 @@ date=2018-05-31
 category=Allgemein
 tags=Apple, MacBook, JetDrive
 ~~~~~~
-In meinem [Post vom 31.12.2016]({% link _posts/2016-12-31-itunes-bibliothek-auf-transcend-jetdrive.md %}) habe ich gezeigt, dass die iTunes Bibliothek auf eine externe SD-Karte ausgelagert werden kann. Allerdings hat das dauerhafte Mounten einer SD-Karte den Nachteil, dass das MacBook nicht mehr in den Standby-Modus wandert.
+In meinem [Post vom 31.12.2016](../../../2016/12/31/itunes-bibliothek-auf-transcend-jetdrive.html) habe ich gezeigt, dass die iTunes Bibliothek auf eine externe SD-Karte ausgelagert werden kann. Allerdings hat das dauerhafte Mounten einer SD-Karte den Nachteil, dass das MacBook nicht mehr in den Standby-Modus wandert.
 
 <!--more-->
 

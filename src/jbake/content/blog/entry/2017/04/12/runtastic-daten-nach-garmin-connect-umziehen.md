@@ -34,11 +34,11 @@ Klassifikation _running_ durch _Running_ und beim Radfahren die Klassifikation _
 ersetzt werden. Schnell und einfach geht das unter macOS oder Linux in einem Terminal mit den folgenden
 zwei Zeilen Code:
 
-{% highlight Shell%}
+```bash
 for file in $( ls ); do sed -i '' 's/running/Running/g' $file; done
 for file in $( ls ); do sed -i '' 's/Swimming/Other/g' $file; done
 for file in $( ls ); do sed -i '' 's/cycling/Biking/g' $file; done
-{% endhighlight %}
+```
 
 Ebenfalls zu beachten ist, das bei einem Export die Zwischenzeiten nicht übernommen werden. Allerdings sollte
 dies für ältere Aktivitäten verschmerzbar sein.
