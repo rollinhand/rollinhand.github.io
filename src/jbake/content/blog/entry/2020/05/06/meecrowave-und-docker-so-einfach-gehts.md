@@ -35,7 +35,7 @@ Maven zu bauen, sondern auch mittels `docker build`.
 Vergleichbar mit dem [Helidon-Projekt][helidon] liegt das _Dockerfile_ im
 Root-Verzeichnis des Maven-Moduls _person-server_.
 
-{% gist c2f0f2fb2b6c74cb1a24b937e88e7423 %}
+<script src="https://gist.github.com/rollinhand/c2f0f2fb2b6c74cb1a24b937e88e7423.js"></script>
 
 Das _Dockerfile_ basiert auf Adopt OpenJDK 8 und enthält zwei Besonderheiten in den Zeilen 8 und 13.
 
@@ -73,7 +73,7 @@ Standardmäßig erzeugt das Plugin eine Distribution im Format ZIP und den unint
 Verzeichnisnamen _person-server-distribution_. Dabei setzt sich der Verzeichnisname für das zu
 entpackende Archiv per Definition immer aus _${project.artifactId}-distribution_ zusammen.
 
-{% gist 0252ff141f1fc15ab1eba75efba62d01 %}
+<script src="https://gist.github.com/rollinhand/0252ff141f1fc15ab1eba75efba62d01.js"></script>
 
 Durch die Definition der Formate (Zeile 6-9) wird jeweils eine Distribution als ZIP-Archiv und als
 Tarball Gnu-Zip erzeugt. Letzteres wird verwendet, um das Docker-Image zu erzeugen. Das ZIP-Archiv
@@ -94,7 +94,7 @@ gibt es das Docker Maven-Plugin. Wenn man so wie ich ein natives _Dockerfile_ ve
 Plugin einfach konfiguriert. Damit sich das Docker-Image sowohl mit Maven als auch mit `docker
 build` erstellen lässt, sind einige Dinge zu beachten.
 
-{% gist 8988d7176d771a103f690d31cb785c1c %}
+<script src="https://gist.github.com/rollinhand/8988d7176d771a103f690d31cb785c1c.js"></script>
 
 Das Plugin ist ziemlich mächtig und seine Funktionalitäten mache ich mir zunutze, den Build-Prozess
 zu automatisieren. Auf die allgemeine Konfiguration des Plugins gehe ich in diesem Beitrag nicht

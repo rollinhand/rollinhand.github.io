@@ -105,7 +105,7 @@ Zielarchitekturen laden wir das Adopt OpenJDK und entpacken es in das Zielverzei
 
 Anschließend wird das Verzeichnis noch in _jre_ mithilfe des Antrun-Plugins umbenannt.
 
-{% gist 2db9c15eb483fb9ab5a7f8765ea29599 %}
+<script src="https://gist.github.com/rollinhand/2db9c15eb483fb9ab5a7f8765ea29599.js"></script>
 
 Das vollständige Beispiel inkl. kompilierfähiger und ausführbarer Anwendung findet sich auf
 [Github][github] in den RCP Examples als rcp01 klassifiziert.
