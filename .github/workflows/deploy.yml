@@ -19,8 +19,11 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
+      - name: Install Gradle
+        uses: gradle/gradle-build-action@v2
+
       - name: Verify Gradle Wrapper
-        uses: gradle/wrapper-validation-action@v1
+        uses: gradle/wrapper-validation-action@v3
 
       - name: Build site with JBake
         run: ./gradlew build
