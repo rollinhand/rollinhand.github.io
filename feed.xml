@@ -6,8 +6,8 @@
     <atom:link href="https://kivio.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>Mon, 17 Feb 2025 10:29:19 +0000</pubDate>
-    <lastBuildDate>Mon, 17 Feb 2025 10:29:19 +0000</lastBuildDate>
+    <pubDate>Mon, 17 Feb 2025 12:47:00 +0000</pubDate>
+    <lastBuildDate>Mon, 17 Feb 2025 12:47:00 +0000</lastBuildDate>
 
     <item>
       <title>SQLPlus mit Homebrew installieren</title>
@@ -67,7 +67,7 @@ root.linux.gtk.x86_64 = lnx64
 &lt;p&gt;Ein weiteres Goodie=Mit der Option &lt;em&gt;unpack&lt;/em&gt; können komprimierte Artefakte direkt im Zielverzeichnis entpackt werden. Es ist nicht notwendig, das Maven Assembly-Plugin separat zu starten.&lt;/p&gt;
 &lt;p&gt;In unserem vorangegangenem Beispiel wird nun die POM überarbeitet. Für alle unterstützten Zielarchitekturen laden wir das Adopt OpenJDK und entpacken es in das Zielverzeichnis.&lt;/p&gt;
 &lt;p&gt;Anschließend wird das Verzeichnis noch in &lt;em&gt;jre&lt;/em&gt; mithilfe des Antrun-Plugins umbenannt.&lt;/p&gt;
-&lt;p&gt;{% gist 2db9c15eb483fb9ab5a7f8765ea29599 %}&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/rollinhand/2db9c15eb483fb9ab5a7f8765ea29599.js&quot;&gt;&lt;/script&gt;
 &lt;p&gt;Das vollständige Beispiel inkl. kompilierfähiger und ausführbarer Anwendung findet sich auf &lt;a href=&quot;https://github.com/rollinhand/eclipse-rcp-examples&quot;&gt;Github&lt;/a&gt; in den RCP Examples als rcp01 klassifiziert.&lt;/p&gt;
 
 	</description>
@@ -353,7 +353,7 @@ Class&amp;lt;?&amp;gt; clazz = (Class&amp;lt;?&amp;gt;)Class.forName(className);
 &lt;h2&gt;Dockerfile bereitstellen&lt;/h2&gt;
 &lt;p&gt;Ich habe mich dazu entschieden, nicht alle Funktionen des Docker Maven Plugins auszureizen, sondern auf ein natives &lt;em&gt;Dockerfile&lt;/em&gt; zurückzugreifen. Somit besteht nicht nur die Möglichkeit, das Image mit Maven zu bauen, sondern auch mittels &lt;code&gt;docker build&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Vergleichbar mit dem &lt;a href=&quot;https://helidon.io/#/&quot;&gt;Helidon-Projekt&lt;/a&gt; liegt das &lt;em&gt;Dockerfile&lt;/em&gt; im Root-Verzeichnis des Maven-Moduls &lt;em&gt;person-server&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;{% gist c2f0f2fb2b6c74cb1a24b937e88e7423 %}&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/rollinhand/c2f0f2fb2b6c74cb1a24b937e88e7423.js&quot;&gt;&lt;/script&gt;
 &lt;p&gt;Das &lt;em&gt;Dockerfile&lt;/em&gt; basiert auf Adopt OpenJDK 8 und enthält zwei Besonderheiten in den Zeilen 8 und 13.&lt;/p&gt;
 &lt;p&gt;Mit dem Meecrowave Maven Plugin lässt sich eine Distribution erzeugen, die in verschiedenen Unterverzeichnissen alle notwendigen Dateien enthält, um Meecrowave auf einem Unix- oder Windows-System zu starten.&lt;/p&gt;
 &lt;p&gt;Damit die Distribution automatisch durch den Befehl &lt;strong&gt;ADD&lt;/strong&gt; entpackt wird, muss diese im Format &lt;em&gt;tar.gz&lt;/em&gt; vorliegen. Das ebenfalls produzierbare ZIP-Format wird durch Docker nicht als komprimiertes Archiv erkannt. In unserem Arbeitsverzeichnis &lt;em&gt;/opt&lt;/em&gt; wird das gepackte Verzeichnis in den Ordner &lt;em&gt;person-server&lt;/em&gt; extrahiert.&lt;/p&gt;
@@ -366,14 +366,14 @@ Class&amp;lt;?&amp;gt; clazz = (Class&amp;lt;?&amp;gt;)Class.forName(className);
 &lt;p&gt;Das reicht mir aber noch nicht. Das Modul &lt;em&gt;person-server&lt;/em&gt; soll mittels &lt;code&gt;mvn clean package&lt;/code&gt; vollständig inklusive Docker-Image gebaut werden.&lt;/p&gt;
 &lt;h2&gt;Maven anpassen und Paketierung automatisieren&lt;/h2&gt;
 &lt;p&gt;Für den optimierten Bau wird über das Meecrowave Maven Plugin die Erzeugung der Distribution beeinflusst. Standardmäßig erzeugt das Plugin eine Distribution im Format ZIP und den unintuitiven Verzeichnisnamen &lt;em&gt;person-server-distribution&lt;/em&gt;. Dabei setzt sich der Verzeichnisname für das zu entpackende Archiv per Definition immer aus &lt;em&gt;${project.artifactId}-distribution&lt;/em&gt; zusammen.&lt;/p&gt;
-&lt;p&gt;{% gist 0252ff141f1fc15ab1eba75efba62d01 %}&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/rollinhand/0252ff141f1fc15ab1eba75efba62d01.js&quot;&gt;&lt;/script&gt;
 &lt;p&gt;Durch die Definition der Formate (Zeile 6-9) wird jeweils eine Distribution als ZIP-Archiv und als Tarball Gnu-Zip erzeugt. Letzteres wird verwendet, um das Docker-Image zu erzeugen. Das ZIP-Archiv kann bspw. verwendet werden, um die Anwendung für ein Windows-System bereitzustellen.&lt;/p&gt;
 &lt;p&gt;Mit &lt;em&gt;rootName&lt;/em&gt; (Zeile 10) wird der Name des gepackten Verzeichnisses beeinflusst. Statt &lt;em&gt;person-server-distribution&lt;/em&gt; heißt das gepackte Verzeichnis nun nur noch wie unser Modul &lt;em&gt;person-server&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Durch die Konfiguration der &lt;em&gt;executions&lt;/em&gt;-Passage koppeln wir den Prozess der Distributionserstellung automatisch an den Maven-Lebenszyklus &lt;strong&gt;package&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Fehlt noch der automatische Bau des Docker-Images - darum kümmern wir uns jetzt.&lt;/p&gt;
 &lt;h2&gt;Docker-Image mit Maven automatisieren&lt;/h2&gt;
 &lt;p&gt;Damit das Docker-Image reproduzierbar und automatisch über den Build-Prozess erzeugt werden kann, gibt es das Docker Maven-Plugin. Wenn man so wie ich ein natives &lt;em&gt;Dockerfile&lt;/em&gt; verwendet, ist das Plugin einfach konfiguriert. Damit sich das Docker-Image sowohl mit Maven als auch mit &lt;code&gt;docker build&lt;/code&gt; erstellen lässt, sind einige Dinge zu beachten.&lt;/p&gt;
-&lt;p&gt;{% gist 8988d7176d771a103f690d31cb785c1c %}&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/rollinhand/8988d7176d771a103f690d31cb785c1c.js&quot;&gt;&lt;/script&gt;
 &lt;p&gt;Das Plugin ist ziemlich mächtig und seine Funktionalitäten mache ich mir zunutze, den Build-Prozess zu automatisieren. Auf die allgemeine Konfiguration des Plugins gehe ich in diesem Beitrag nicht ein. Die &lt;a href=&quot;https://github.com/fabric8io/docker-maven-plugin&quot;&gt;Dokumentation&lt;/a&gt; des Projekts ist ziemlich ausführlich, sodass ich mich hier auf die Besonderheiten beschränken will:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;name&lt;/strong&gt; und &lt;strong&gt;alias&lt;/strong&gt; (Zeile 7/8) sorgen dafür, dass das erzeugte Image sich eindeutig in den lokalen Docker-Images wiederfinden lässt.&lt;/li&gt;

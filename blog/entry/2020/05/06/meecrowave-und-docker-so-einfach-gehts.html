@@ -98,7 +98,7 @@
 <h2>Dockerfile bereitstellen</h2>
 <p>Ich habe mich dazu entschieden, nicht alle Funktionen des Docker Maven Plugins auszureizen, sondern auf ein natives <em>Dockerfile</em> zurückzugreifen. Somit besteht nicht nur die Möglichkeit, das Image mit Maven zu bauen, sondern auch mittels <code>docker build</code>.</p>
 <p>Vergleichbar mit dem <a href="https://helidon.io/#/">Helidon-Projekt</a> liegt das <em>Dockerfile</em> im Root-Verzeichnis des Maven-Moduls <em>person-server</em>.</p>
-<p>{% gist c2f0f2fb2b6c74cb1a24b937e88e7423 %}</p>
+<script src="https://gist.github.com/rollinhand/c2f0f2fb2b6c74cb1a24b937e88e7423.js"></script>
 <p>Das <em>Dockerfile</em> basiert auf Adopt OpenJDK 8 und enthält zwei Besonderheiten in den Zeilen 8 und 13.</p>
 <p>Mit dem Meecrowave Maven Plugin lässt sich eine Distribution erzeugen, die in verschiedenen Unterverzeichnissen alle notwendigen Dateien enthält, um Meecrowave auf einem Unix- oder Windows-System zu starten.</p>
 <p>Damit die Distribution automatisch durch den Befehl <strong>ADD</strong> entpackt wird, muss diese im Format <em>tar.gz</em> vorliegen. Das ebenfalls produzierbare ZIP-Format wird durch Docker nicht als komprimiertes Archiv erkannt. In unserem Arbeitsverzeichnis <em>/opt</em> wird das gepackte Verzeichnis in den Ordner <em>person-server</em> extrahiert.</p>
@@ -111,14 +111,14 @@
 <p>Das reicht mir aber noch nicht. Das Modul <em>person-server</em> soll mittels <code>mvn clean package</code> vollständig inklusive Docker-Image gebaut werden.</p>
 <h2>Maven anpassen und Paketierung automatisieren</h2>
 <p>Für den optimierten Bau wird über das Meecrowave Maven Plugin die Erzeugung der Distribution beeinflusst. Standardmäßig erzeugt das Plugin eine Distribution im Format ZIP und den unintuitiven Verzeichnisnamen <em>person-server-distribution</em>. Dabei setzt sich der Verzeichnisname für das zu entpackende Archiv per Definition immer aus <em>${project.artifactId}-distribution</em> zusammen.</p>
-<p>{% gist 0252ff141f1fc15ab1eba75efba62d01 %}</p>
+<script src="https://gist.github.com/rollinhand/0252ff141f1fc15ab1eba75efba62d01.js"></script>
 <p>Durch die Definition der Formate (Zeile 6-9) wird jeweils eine Distribution als ZIP-Archiv und als Tarball Gnu-Zip erzeugt. Letzteres wird verwendet, um das Docker-Image zu erzeugen. Das ZIP-Archiv kann bspw. verwendet werden, um die Anwendung für ein Windows-System bereitzustellen.</p>
 <p>Mit <em>rootName</em> (Zeile 10) wird der Name des gepackten Verzeichnisses beeinflusst. Statt <em>person-server-distribution</em> heißt das gepackte Verzeichnis nun nur noch wie unser Modul <em>person-server</em>.</p>
 <p>Durch die Konfiguration der <em>executions</em>-Passage koppeln wir den Prozess der Distributionserstellung automatisch an den Maven-Lebenszyklus <strong>package</strong>.</p>
 <p>Fehlt noch der automatische Bau des Docker-Images - darum kümmern wir uns jetzt.</p>
 <h2>Docker-Image mit Maven automatisieren</h2>
 <p>Damit das Docker-Image reproduzierbar und automatisch über den Build-Prozess erzeugt werden kann, gibt es das Docker Maven-Plugin. Wenn man so wie ich ein natives <em>Dockerfile</em> verwendet, ist das Plugin einfach konfiguriert. Damit sich das Docker-Image sowohl mit Maven als auch mit <code>docker build</code> erstellen lässt, sind einige Dinge zu beachten.</p>
-<p>{% gist 8988d7176d771a103f690d31cb785c1c %}</p>
+<script src="https://gist.github.com/rollinhand/8988d7176d771a103f690d31cb785c1c.js"></script>
 <p>Das Plugin ist ziemlich mächtig und seine Funktionalitäten mache ich mir zunutze, den Build-Prozess zu automatisieren. Auf die allgemeine Konfiguration des Plugins gehe ich in diesem Beitrag nicht ein. Die <a href="https://github.com/fabric8io/docker-maven-plugin">Dokumentation</a> des Projekts ist ziemlich ausführlich, sodass ich mich hier auf die Besonderheiten beschränken will:</p>
 <ul>
 <li><strong>name</strong> und <strong>alias</strong> (Zeile 7/8) sorgen dafür, dass das erzeugte Image sich eindeutig in den lokalen Docker-Images wiederfinden lässt.</li>
@@ -163,7 +163,7 @@
     <div class="container px-5">
         <div class="row align-items-center justify-content-between flex-column flex-sm-row">
             <div class="col-auto">
-                <div class="small m-0 text-white">Copyright &copy; 2017 - 2025 by Björn Berg</div>
+                <div class="small m-0 text-white">Copyright &copy; 2017 - 2025 by Björn Berg (Last update: 2025-02-17)</div>
             </div>
             <div class="col-auto">
                 <a class="link-light small" href="../../../../../blog/meecrowave.html">Apache Meecrowave</a>
