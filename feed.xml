@@ -6,9 +6,75 @@
     <atom:link href="https://kivio.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>JBake Bootstrap Template</description>
     <language>en-gb</language>
-    <pubDate>Mon, 17 Feb 2025 12:47:00 +0000</pubDate>
-    <lastBuildDate>Mon, 17 Feb 2025 12:47:00 +0000</lastBuildDate>
+    <pubDate>Fri, 28 Feb 2025 11:45:48 +0000</pubDate>
+    <lastBuildDate>Fri, 28 Feb 2025 11:45:48 +0000</lastBuildDate>
 
+    <item>
+      <title>VPN-Zugang mit DS-Lite und älterer Fritz!Box 6490 über OpenVPN</title>
+      <link>https://kivio.org/blog/entry/2024/02/28/vpn-zugang-mit-ds-lite.html</link>
+      <pubDate>Wed, 28 Feb 2024 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">blog/entry/2024/02/28/vpn-zugang-mit-ds-lite.html</guid>
+      	<description>
+	&lt;p&gt;In vielen Haushalten wird der Kabelanschluss über Dual-Stack Lite (DS-Lite) bereitgestellt, was bedeutet, dass der Internetzugang über IPv6 erfolgt, während IPv4-Verbindungen über einen Carrier-Grade NAT (CGN) umgeleitet werden. Dies kann bei der Einrichtung von VPN-Verbindungen zu Problemen führen, da viele VPN-Lösungen traditionell auf IPv4 basieren. Bei älteren Routern wie der Fritz!Box 6490, die möglicherweise nicht die neuesten VPN-Protokolle wie WireGuard unterstützen, bietet OpenVPN eine praktikable Alternative, um auch über IPv6 eine sichere VPN-Verbindung herzustellen.&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;h2&gt;Schnellanleitung&lt;/h2&gt;
+&lt;p&gt;Hier sind die wichtigsten Schritte, um OpenVPN mit deiner Fritz!Box 6490 und DS-Lite zu nutzen:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;IPv6 aktivieren: Stelle sicher, dass die IPv6-Unterstützung in deiner Fritz!Box eingeschaltet ist.&lt;/li&gt;
+&lt;li&gt;OpenVPN auf einem NAS installieren: Nutze z.B. eine Synology DiskStation als VPN-Server. Alternativ funktioniert auch ein Raspberry PI hervorragend.&lt;/li&gt;
+&lt;li&gt;DHCPv6-PD aktivieren: Lasse die DiskStation IPv6-Subnetze von der Fritz!Box beziehen.&lt;/li&gt;
+&lt;li&gt;Portfreigabe für OpenVPN: Freigeben des UDP-Port 1194 auf der Fritz!Box.&lt;/li&gt;
+&lt;li&gt;MyFritz einrichten: Nutze MyFritz für eine dynamische DNS-Adresse.&lt;/li&gt;
+&lt;li&gt;IPv6-Servermodus aktivieren: Konfiguriere OpenVPN für IPv6-Verbindungen.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Das war zu schnell, dann kommt hier die ausführliche Anleitung mit Bildern.&lt;/p&gt;
+&lt;h2&gt;Ausführliche Anleitung&lt;/h2&gt;
+&lt;h3&gt;Schritt 1: IPv6-Konfiguration auf der Fritz!Box&lt;/h3&gt;
+&lt;p&gt;Um OpenVPN über IPv6 nutzen zu können, musst du sicherstellen, dass die IPv6-Unterstützung in deiner Fritz!Box aktiviert ist. Hier sind die Schritte:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Zugang zur Fritz!Box-Web-Oberfläche: Öffne einen Webbrowser und gehe zu &lt;code&gt;http://fritz.box&lt;/code&gt; oder der IP-Adresse deiner Fritz!Box.&lt;/li&gt;
+&lt;li&gt;IPv6-Einstellungen: Navigiere zu Internet &amp;gt; Online-Monitor und stelle sicher, dass IPv6 aktiviert ist.&lt;/li&gt;
+&lt;li&gt;IPv6-Subnetze vergeben: Gehe zu Heimnetz &amp;gt; Netzwerk &amp;gt; Netzwerkeinstellungen &amp;gt; IPv6-Einstellungen und stelle sicher, dass die Fritz!Box IPv6-Subnetze an nachgelagerte Geräte verteilt.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;online-monitor.png&quot; alt=&quot;Online-Monitor&quot; /&gt; &lt;em&gt;Im Online-Monitor kann auf einen Blick erfasst werden, ob IPv4 und IPv6 aktiv sind.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;dhcpv6-server.png&quot; alt=&quot;DNS-Server und IPv6-Präfix&quot; /&gt; &lt;em&gt;IPv6 Subnetze und Präfixe werden an nachgelagerte Geräte weitergegeben.&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;Schritt 2: OpenVPN auf einem nachgelagerten Server einrichten&lt;/h3&gt;
+&lt;p&gt;Installiere OpenVPN auf einem nachgelagerten Server wie einer Synology DiskStation oder einem Raspberry PI. Ich gehe in diesem Beitrag nur auf die Synology DiskStation ein.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;OpenVPN-Paket installieren: Öffne die Paketverwaltung auf deiner Synology DiskStation und installiere das VPN-Server-Paket.&lt;/li&gt;
+&lt;li&gt;DHCPv6-PD aktivieren: Stelle sicher, dass die DiskStation DHCPv6-PD nutzt, um IPv6-Subnetze von der Fritz!Box zu beziehen. Dies kannst du in den Netzwerkeinstellungen der DiskStation konfigurieren.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;synology-netzwerk.png&quot; alt=&quot;Synology Netzwerkeinstellungen&quot; /&gt; &lt;em&gt;DHCPv6-PD-Einstellungen der Synology DiskStation&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;Schritt 3: OpenVPN-Konfiguration abschließen&lt;/h3&gt;
+&lt;p&gt;Aktiviere im OpenVPN-Setup auf der DiskStation den IPv6-Servermodus:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IPv6-Servermodus aktivieren: Öffne die OpenVPN-Konfiguration auf deiner DiskStation und aktiviere den IPv6-Servermodus, um IPv6-Verbindungen im VPN-Tunnel zu ermöglichen.&lt;/li&gt;
+&lt;li&gt;Client-Konfiguration erstellen: Die Konfigurationsdatei für OpenVPN kann exportiert werden und muss anschließend angepasst werden. Die Variable für den Server in der Konfiguration ersetzen wir durch den MyFritz!Account den wir im nächsten Schritt erstellen werden.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;synology-openvpn.png&quot; alt=&quot;Synology OpenVPN-Einstellungen&quot; /&gt; &lt;em&gt;Exemplarische Einstellungen für OpenVPN&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;Schritt 4: Ports freigeben und MyFritz einrichten&lt;/h3&gt;
+&lt;p&gt;Um OpenVPN-Verbindungen zuzulassen, musst du den UDP-Port 1194 auf der Fritz!Box freigeben:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MyFritz einrichten: Nutze den MyFritz-Dienst, um eine dynamische DNS-Adresse für deine DiskStation zu erhalten. Dies erleichtert den Zugriff auf den VPN-Server von außerhalb des Heimnetzes.&lt;/li&gt;
+&lt;li&gt;Portfreigabe: Gehe in der Fritz!Box-Oberfläche zu Internet &amp;gt; Freigaben und erstelle eine neue Portfreigabe für den UDP-Port 1194 und 5001 (Synology Frontend) und nutze die MyFritz!Freigabe.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;portfreigabe-uebersicht.png&quot; alt=&quot;Portfreigabe Übersicht&quot; /&gt; &lt;em&gt;Übersicht der notwendigen Ports in der Portfreigabe&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;portfreigabe-detail.png&quot; alt=&quot;Portfreigabe Detail&quot; /&gt; &lt;em&gt;Portfreigaben für IPv4/IPv6 für das Synology Frontend, OpenVPN nur über IPv6&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;Auszug OpenVPN-Konfiguration&lt;/h3&gt;
+&lt;p&gt;In der OpenVPN-Konfiguration muss das Protokoll auf udp6 gesetzt werden und der Server auf den Servernamen der MyFritz!Freigabe gesetzt werden.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;remote gerät.randomString.myfritz.net 1194
+
+redirect-gateway def1
+
+proto udp6
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Fazit&lt;/h2&gt;
+&lt;p&gt;Trotz der Einschränkungen von DS-Lite und älteren Routern wie der Fritz!Box 6490 kann OpenVPN eine zuverlässige Lösung für den VPN-Zugang bieten. Durch die Nutzung von IPv6 und die Einrichtung eines nachgelagerten VPN-Servers kannst du sicherstellen, dass deine Verbindungen auch in Umgebungen mit DS-Lite stabil und sicher bleiben. Mit dieser Anleitung kannst du deine Synology DiskStation als VPN-Server nutzen und von überall auf deine Heimnetz-Dienste zugreifen.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Quellen:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.thomas--schaefer.de/openvpn%20synology%20nas%20myfritz.html&quot;&gt;Thomas Schäfer: OpenVPN aus Synology NAS mit MyFritz-Freigabe von Fritzbox&lt;/a&gt;&lt;/p&gt;
+
+	</description>
+    </item>
     <item>
       <title>SQLPlus mit Homebrew installieren</title>
       <link>https://kivio.org/blog/entry/2022/09/05/sqlplus-mit-homebrew-installieren.html</link>

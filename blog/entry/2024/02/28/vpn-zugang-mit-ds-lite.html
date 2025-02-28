@@ -22,7 +22,7 @@
 
   <!-- Load Highlight.js -->
   <script src="../../../../../js/highlight.pack.js"></script>
-  <title>C3Faces 1.2 officially released</title>
+  <title>VPN-Zugang mit DS-Lite und älterer Fritz!Box 6490 über OpenVPN</title>
 </head>
 <body class="d-flex flex-column h-100">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -74,40 +74,75 @@
 						<!-- Post header-->
 						<header class="mb-4">
 							<!-- Post title-->
-							<h1 class="fw-bolder mb-1">C3Faces 1.2 officially released</h1>
+							<h1 class="fw-bolder mb-1">VPN-Zugang mit DS-Lite und älterer Fritz!Box 6490 über OpenVPN</h1>
 							<!-- Post meta content-->
-							<div class="text-muted fst-italic mb-2">04.03.2018</div>
+							<div class="text-muted fst-italic mb-2">28.02.2024</div>
 							<!-- Post categories-->
-								<a class="badge bg-primary text-decoration-none link-light" href="/category/entwicklung">Entwicklung</a>
+								<a class="badge bg-primary text-decoration-none link-light" href="/category/technologie">Technologie</a>
 							<!-- Post tags -->
-									<span class="badge bg-secondary text-decoration-none link-light">Java</span>
-									<span class="badge bg-secondary text-decoration-none link-light">C3Faces</span>
-									<span class="badge bg-secondary text-decoration-none link-light">JSF</span>
+									<span class="badge bg-secondary text-decoration-none link-light">OpenVPN</span>
+									<span class="badge bg-secondary text-decoration-none link-light">DS-Lite</span>
+									<span class="badge bg-secondary text-decoration-none link-light">Fritz!Box</span>
 						</header>
 						<!-- Post content-->
 						<section class="mb-5">
-							<p>C3Faces is a chart library for JSF based on c3.js. I want to announce the second official version of this library released to <a href="https://search.maven.org/#artifactdetails%7Corg.kivio%7Cc3faces%7C1.0%7Cjar">Maven central</a> coming with category-based axes and new elements in the taglib to manipulate axes.</p>
+							<p>In vielen Haushalten wird der Kabelanschluss über Dual-Stack Lite (DS-Lite) bereitgestellt, was bedeutet, dass der Internetzugang über IPv6 erfolgt, während IPv4-Verbindungen über einen Carrier-Grade NAT (CGN) umgeleitet werden. Dies kann bei der Einrichtung von VPN-Verbindungen zu Problemen führen, da viele VPN-Lösungen traditionell auf IPv4 basieren. Bei älteren Routern wie der Fritz!Box 6490, die möglicherweise nicht die neuesten VPN-Protokolle wie WireGuard unterstützen, bietet OpenVPN eine praktikable Alternative, um auch über IPv6 eine sichere VPN-Verbindung herzustellen.</p>
 <!--more-->
-<h2>Version 1.2 now supports category-based axes.</h2>
-<p>Now you can choose between indexed and category-based axes. Therefore I introduced new elements in the taglib=axes, axisX and axisY.</p>
-<p>As with the elements of gridX and gridY, axisX and axisY enables you to adjust the type, height and visibility of your axes. The outer element axes supports rotation of the axes.</p>
-<p>Using a category based axis you might write something like this:</p>
-<pre><code>&lt;c3:bar data=&quot;#{chartTypesBean.data}&quot;&gt;
-    &lt;c3:axes&gt;
-        &lt;c3:axisX type=&quot;category&quot; categories=&quot;{'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'}&quot; /&gt;
-        &lt;c3:axisY show=&quot;false&quot; /&gt;
-    &lt;/c3:axes&gt;
-&lt;/c3:bar&gt;
+<h2>Schnellanleitung</h2>
+<p>Hier sind die wichtigsten Schritte, um OpenVPN mit deiner Fritz!Box 6490 und DS-Lite zu nutzen:</p>
+<ol>
+<li>IPv6 aktivieren: Stelle sicher, dass die IPv6-Unterstützung in deiner Fritz!Box eingeschaltet ist.</li>
+<li>OpenVPN auf einem NAS installieren: Nutze z.B. eine Synology DiskStation als VPN-Server. Alternativ funktioniert auch ein Raspberry PI hervorragend.</li>
+<li>DHCPv6-PD aktivieren: Lasse die DiskStation IPv6-Subnetze von der Fritz!Box beziehen.</li>
+<li>Portfreigabe für OpenVPN: Freigeben des UDP-Port 1194 auf der Fritz!Box.</li>
+<li>MyFritz einrichten: Nutze MyFritz für eine dynamische DNS-Adresse.</li>
+<li>IPv6-Servermodus aktivieren: Konfiguriere OpenVPN für IPv6-Verbindungen.</li>
+</ol>
+<p>Das war zu schnell, dann kommt hier die ausführliche Anleitung mit Bildern.</p>
+<h2>Ausführliche Anleitung</h2>
+<h3>Schritt 1: IPv6-Konfiguration auf der Fritz!Box</h3>
+<p>Um OpenVPN über IPv6 nutzen zu können, musst du sicherstellen, dass die IPv6-Unterstützung in deiner Fritz!Box aktiviert ist. Hier sind die Schritte:</p>
+<ul>
+<li>Zugang zur Fritz!Box-Web-Oberfläche: Öffne einen Webbrowser und gehe zu <code>http://fritz.box</code> oder der IP-Adresse deiner Fritz!Box.</li>
+<li>IPv6-Einstellungen: Navigiere zu Internet &gt; Online-Monitor und stelle sicher, dass IPv6 aktiviert ist.</li>
+<li>IPv6-Subnetze vergeben: Gehe zu Heimnetz &gt; Netzwerk &gt; Netzwerkeinstellungen &gt; IPv6-Einstellungen und stelle sicher, dass die Fritz!Box IPv6-Subnetze an nachgelagerte Geräte verteilt.</li>
+</ul>
+<p><img src="online-monitor.png" alt="Online-Monitor" /> <em>Im Online-Monitor kann auf einen Blick erfasst werden, ob IPv4 und IPv6 aktiv sind.</em></p>
+<p><img src="dhcpv6-server.png" alt="DNS-Server und IPv6-Präfix" /> <em>IPv6 Subnetze und Präfixe werden an nachgelagerte Geräte weitergegeben.</em></p>
+<h3>Schritt 2: OpenVPN auf einem nachgelagerten Server einrichten</h3>
+<p>Installiere OpenVPN auf einem nachgelagerten Server wie einer Synology DiskStation oder einem Raspberry PI. Ich gehe in diesem Beitrag nur auf die Synology DiskStation ein.</p>
+<ul>
+<li>OpenVPN-Paket installieren: Öffne die Paketverwaltung auf deiner Synology DiskStation und installiere das VPN-Server-Paket.</li>
+<li>DHCPv6-PD aktivieren: Stelle sicher, dass die DiskStation DHCPv6-PD nutzt, um IPv6-Subnetze von der Fritz!Box zu beziehen. Dies kannst du in den Netzwerkeinstellungen der DiskStation konfigurieren.</li>
+</ul>
+<p><img src="synology-netzwerk.png" alt="Synology Netzwerkeinstellungen" /> <em>DHCPv6-PD-Einstellungen der Synology DiskStation</em></p>
+<h3>Schritt 3: OpenVPN-Konfiguration abschließen</h3>
+<p>Aktiviere im OpenVPN-Setup auf der DiskStation den IPv6-Servermodus:</p>
+<ul>
+<li>IPv6-Servermodus aktivieren: Öffne die OpenVPN-Konfiguration auf deiner DiskStation und aktiviere den IPv6-Servermodus, um IPv6-Verbindungen im VPN-Tunnel zu ermöglichen.</li>
+<li>Client-Konfiguration erstellen: Die Konfigurationsdatei für OpenVPN kann exportiert werden und muss anschließend angepasst werden. Die Variable für den Server in der Konfiguration ersetzen wir durch den MyFritz!Account den wir im nächsten Schritt erstellen werden.</li>
+</ul>
+<p><img src="synology-openvpn.png" alt="Synology OpenVPN-Einstellungen" /> <em>Exemplarische Einstellungen für OpenVPN</em></p>
+<h3>Schritt 4: Ports freigeben und MyFritz einrichten</h3>
+<p>Um OpenVPN-Verbindungen zuzulassen, musst du den UDP-Port 1194 auf der Fritz!Box freigeben:</p>
+<ul>
+<li>MyFritz einrichten: Nutze den MyFritz-Dienst, um eine dynamische DNS-Adresse für deine DiskStation zu erhalten. Dies erleichtert den Zugriff auf den VPN-Server von außerhalb des Heimnetzes.</li>
+<li>Portfreigabe: Gehe in der Fritz!Box-Oberfläche zu Internet &gt; Freigaben und erstelle eine neue Portfreigabe für den UDP-Port 1194 und 5001 (Synology Frontend) und nutze die MyFritz!Freigabe.</li>
+</ul>
+<p><img src="portfreigabe-uebersicht.png" alt="Portfreigabe Übersicht" /> <em>Übersicht der notwendigen Ports in der Portfreigabe</em></p>
+<p><img src="portfreigabe-detail.png" alt="Portfreigabe Detail" /> <em>Portfreigaben für IPv4/IPv6 für das Synology Frontend, OpenVPN nur über IPv6</em></p>
+<h3>Auszug OpenVPN-Konfiguration</h3>
+<p>In der OpenVPN-Konfiguration muss das Protokoll auf udp6 gesetzt werden und der Server auf den Servernamen der MyFritz!Freigabe gesetzt werden.</p>
+<pre><code>remote gerät.randomString.myfritz.net 1194
+
+redirect-gateway def1
+
+proto udp6
 </code></pre>
-<p>The X-axis will be no longer labeled with numbers from 1 to 7, but with labels from Mon to Sun in the order of the array&rsquo;s elements.</p>
-<p>If you use categories programmatically there is a new class called <em>C3Category</em> which takes a list or an array of Strings as constructor parameter. <strong>But note:</strong> The returning value inside is always a Set of strings. Duplicates are not taken into account because categories should be always unique. Additional details can be found in the <a href="http://c3js.org/reference.html#axis-x-categories">official documentation of C3.js</a>.</p>
-<p>In the above example Y-axis is not visible in the diagram.</p>
-<h2>Showcase update</h2>
-<p>If you want to see version 1.2 with axis configuration in action, please visit the <a href="http://c3faces.kivio.org">official showcase</a>.</p>
-<h2>Further information</h2>
-<p>Changelog about further changes between previous version and the present one can be found in the official <a href="https://github.com/rollinhand/c3faces/blob/master/CHANGELOG">Changelog</a> in the GitHub repository.</p>
-<p>This post was updated to version 1.2 because prior version contained a bug which lead to non working axis configuration.</p>
-<p>Have fun while playing around with C3Faces and if you find any issues or have suggestions for new features please <a href="https://github.com/rollinhand/c3faces/issues">leave a comment</a>.</p>
+<h2>Fazit</h2>
+<p>Trotz der Einschränkungen von DS-Lite und älteren Routern wie der Fritz!Box 6490 kann OpenVPN eine zuverlässige Lösung für den VPN-Zugang bieten. Durch die Nutzung von IPv6 und die Einrichtung eines nachgelagerten VPN-Servers kannst du sicherstellen, dass deine Verbindungen auch in Umgebungen mit DS-Lite stabil und sicher bleiben. Mit dieser Anleitung kannst du deine Synology DiskStation als VPN-Server nutzen und von überall auf deine Heimnetz-Dienste zugreifen.</p>
+<p><strong>Quellen:</strong></p>
+<p><a href="https://www.thomas--schaefer.de/openvpn%20synology%20nas%20myfritz.html">Thomas Schäfer: OpenVPN aus Synology NAS mit MyFritz-Freigabe von Fritzbox</a></p>
 
 						</section>
 					</article>
