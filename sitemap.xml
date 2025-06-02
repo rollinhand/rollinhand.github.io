@@ -2,15 +2,15 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://kivio.org/privacy-policy/index.html</loc>
-        <lastmod>2025-02-16</lastmod>
+        <lastmod>2025-06-02</lastmod>
     </url>
     <url>
         <loc>https://kivio.org/bergsysteme/index.html</loc>
-        <lastmod>2025-02-16</lastmod>
+        <lastmod>2025-06-02</lastmod>
     </url>
     <url>
         <loc>https://kivio.org/about/index.html</loc>
-        <lastmod>2025-02-16</lastmod>
+        <lastmod>2025-06-02</lastmod>
     </url>
     <url>
         <loc>https://kivio.org/blog/entry/2025/06/02/digitale-souveraenitaet-im-alltag.html</loc>
@@ -145,11 +145,11 @@
         <lastmod>2016-03-31</lastmod>
     </url>
     <url>
-        <loc>https://kivio.org/blog/entry/2016/03/17/inhalte-aus-evernote-nach-onenote.html</loc>
+        <loc>https://kivio.org/blog/entry/2016/03/17/get-rid-of-maven-directory.html</loc>
         <lastmod>2016-03-17</lastmod>
     </url>
     <url>
-        <loc>https://kivio.org/blog/entry/2016/03/17/get-rid-of-maven-directory.html</loc>
+        <loc>https://kivio.org/blog/entry/2016/03/17/inhalte-aus-evernote-nach-onenote.html</loc>
         <lastmod>2016-03-17</lastmod>
     </url>
     <url>
@@ -230,22 +230,22 @@
     </url>
     <url>
         <loc>https://kivio.org/category/technologie/index.html</loc>
-        <lastmod>2025-02-16</lastmod>
+        <lastmod>2025-06-02</lastmod>
     </url>
     <url>
         <loc>https://kivio.org/category/entwicklung/index.html</loc>
-        <lastmod>2025-02-16</lastmod>
+        <lastmod>2025-06-02</lastmod>
     </url>
     <url>
         <loc>https://kivio.org/category/devops/index.html</loc>
-        <lastmod>2025-02-16</lastmod>
+        <lastmod>2025-06-02</lastmod>
     </url>
     <url>
         <loc>https://kivio.org/category/allgemein/index.html</loc>
-        <lastmod>2025-02-16</lastmod>
+        <lastmod>2025-06-02</lastmod>
     </url>
     <url>
         <loc>https://kivio.org/blog/meecrowave.html</loc>
-        <lastmod>2025-02-16</lastmod>
+        <lastmod>2025-06-02</lastmod>
     </url>
 </urlset>
