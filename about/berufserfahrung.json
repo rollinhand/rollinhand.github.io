@@ -1,0 +1,111 @@
+[
+    {
+        "titel": "Auszubildender",
+        "unternehmen": "GeneSys GmbH",
+        "ort": "Essen",
+        "von": "2001-08-01",
+        "bis": "2003-10-30",
+        "beschreibung": "Ausbildung zum Fachinformatiker Systemintegration mit den Schwerpunkten auf Netzwerktechnik und Einsatz von Unix-artigen Betriebssystemen."
+    },
+    {
+        "titel": "Systembetreuer",
+        "unternehmen": "Landesamt für Natur, Umwelt und Verbraucherschutz",
+        "ort": "Essen, Düsseldorf",
+        "von": "2003-11-01",
+        "bis": "2004-09-31",
+        "beschreibung": "Befristete Anstellung im Fachbereich DV-Infrastruktur und Bürokommunikation."
+    },
+    {
+        "titel": "Netzwerkadministrator, System-Engineer",
+        "unternehmen": "Chemisches- und Veterinäruntersuchungsamt Rhein-Ruhr-Wupper",
+        "ort": "Krefeld",
+        "von": "2004-10-01",
+        "bis": "2007-05-30",
+        "beschreibung": "Anstellung im Dezernat Informationstechnik beim Staatlichen Veterinäruntersuchungsamt (heute Chemisches- und Veterinäruntersuchungsamt) in Krefeld.",
+        "aufgaben": [
+            "Aufbau und Verwaltung eines Netzwerks mit 150 Client-PCs",
+            "Automatisierung von manuellen Handlungsprozessen auf Basis von Shell- und Ingres-Scripten",
+            "Entwicklung von Softwareinstallationspaketen für LiveState Delivery (automatische Softwareverteilung)",
+            "Entwicklung eines Datenbanksystems zur Erfassung von Wildvogeluntersuchungen",
+            "Konsolidierung physikalischer Server mit Hilfe von VMWare-Server (heute ESXi) zu einer teilweise virtuellen Serverfarm"
+        ]
+    },
+    {
+        "titel": "System- und Projektbetreuer",
+        "unternehmen": "Landesamt für Personaleinsatzmanagement (LPEM)",
+        "ort": "Düsseldorf",
+        "von": "2007-06-01",
+        "bis": "2009-03-31",
+        "beschreibung": "Als Regierungsangestellter war ich für die Nutzerbetreuung, Systemverwaltung und die Anwendungsbetreuung und -weiterentwicklung insbesondere der landesinternen Jobbörse zuständig."
+    },
+    {
+        "titel": "Anwendungsentwickler",
+        "unternehmen": "numetris GmbH",
+        "ort": "Essen",
+        "von": "2009-04-01",
+        "bis": "2011-06-30",
+        "beschreibung": "Die numetris GmbH hat ein Energeidatenmanagementsystem für die Großgasmessung entwickelt.",
+        "aufgaben": [
+            "Weiterentwicklung des Energiedatenmanagementsystems en|damo für die Gastransportbranche (C++, Java SE, VISUAL BASIC 6, PL/SQL, Oracle)",
+            "Aufbau des internen Continuous-Integration/-Deployment-Systems einschließlich automatisierter Software-/Datenbank-Installationen und Testdurchführung als Nachfolger des vorhandenen Daily-Build-Systems auf Basis von Jenkins, Git, Maven und JUnit"
+        ]
+    },
+    {
+        "titel": "Vorstandsmitglied",
+        "unternehmen": "numetris AG",
+        "ort": "Essen",
+        "von": "2011-07-01",
+        "bis": "2015-11-30",
+        "beschreibung": "Bestellung zum Vorstand der numetris AG.",
+        "aufgaben": [
+            "Verantwortlich für die strategische Ausrichtung der Software en|damo energy sowie die erfolgreiche Umsetzung von Kundenprojekten.",
+            "Zuständig für die Geschäftsbereiche Softwareentwicklung, Marketing, Öffentlichkeitsarbeit, Messdienstleistung und Cloud Metering.",
+            "Personalverantwortung für ein siebenköpfiges Team."
+        ]
+    },
+    {
+        "titel": "Anwendungsentwickler",
+        "unternehmen": "numetris AG",
+        "ort": "Essen",
+        "von": "2015-12-01",
+        "bis": "2016-03-30",
+        "beschreibung": "Avisierter Branchenwechsel und Rücktritt vom Vorstandsposten."
+    },
+    {
+        "titel": "Senior Consultant",
+        "unternehmen": "Cofinpro AG",
+        "ort": "Köln",
+        "von": "2016-04-01",
+        "bis": "2017-12-31",
+        "aufgaben": [
+            "Kaufmännische Verantwortung und Umsetzungsverantwortung im direkten Kundenumfeld",
+            "Führungsverantwortung für Teams mit 2 bis 4 Mitarbeitenden"
+        ]
+    },
+    {
+        "titel": "Manager",
+        "unternehmen": "Cofinpro AG",
+        "ort": "Köln",
+        "von": "2018-01-01",
+        "bis": "2020-12-31",
+        "aufgaben": [
+            "Gesamtverantwortung für Ergebnis und Qualität der Projekt- und Beratungsleistungen im Kundenumfeld",
+            "Führungsverantwortung für bis zu 12 Personen",
+            "Umsatzverantwortung im Kundenumfeld bei ca. 1,5 Mio. EUR"
+        ]
+    },
+    {
+        "titel": "Senior Manager",
+        "unternehmen": "Cofinpro AG",
+        "ort": "Köln",
+        "von": "2021-01-01",
+        "bis": "heute",
+        "beschreibung": "Anwendungsarchitekt und Business Requirements Engineer mit dem Schwerpunkt Regulatorik in der Finanzindustrie.",
+        "aufgaben": [
+            "Mitglied des Management Boards der Cofinpro AG und mitverantwortlich für die Steuerung des Unternehmens",
+            "Gesamtverantwortung für Ergebnis und Qualität der Projekt- und Beratungsleistungen im Kundenumfeld",
+            "Führungsverantwortung für bis zu 12 Personen",
+            "Umsatzverantwortung im Kundenumfeld bei ca. 3,5 Mio. EUR"
+        ]
+    }
+]
