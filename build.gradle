@@ -32,6 +32,7 @@ configurations.configureEach {
 }
 
 tasks.register('generateCareerHtml') {
+    dependsOn bake
     doLast {
         // Configure Freemarker and set template
         def cfg = new Configuration(Configuration.VERSION_2_3_31)
@@ -39,7 +40,7 @@ tasks.register('generateCareerHtml') {
         cfg.setDefaultEncoding("UTF-8")
 
         def jsonFile = file('src/jbake/content/about/berufserfahrung.json')
-        def aboutFile = file('src/jbake/content/about/index.html')
+        def aboutFile = file('build/jbake/about/index.html')
         def template = cfg.getTemplate("career.ftl")
 
         // prepare data model
@@ -60,7 +61,6 @@ tasks.register('generateCareerHtml') {
 
 // JBake Task
 jbake {
-    dependsOn generateCareerHtml
     version='2.6.7'
     srcDirName = "${jbakeInputDir}"
     destDirName = "${jbakeOutputDir}"
@@ -76,4 +76,4 @@ gitPublish {
     }
 }
 
-build.dependsOn bake
+build.dependsOn generateCareerHtml
