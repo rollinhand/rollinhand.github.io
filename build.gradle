@@ -1,3 +1,16 @@
+import groovy.json.JsonSlurper
+import freemarker.template.Configuration
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.freemarker:freemarker:2.3.31'          // Freemarker for preprocessing
+        classpath 'org.codehaus.groovy:groovy-all:3.0.9'      // Groovy for scripts
+    }
+}
+
 plugins {
     id 'org.jbake.site' version '5.5.0'             // JBake Plugin
     id 'org.ajoberstar.git-publish' version '3.0.0' // Git Publish
@@ -9,6 +22,7 @@ repositories {
 
 def jbakeInputDir = file('src/jbake')
 def jbakeOutputDir = file('build/jbake')
+def templateDir = file('src/jbake/templates')
 
 // Replace failing version of OrientDB on Apple Silicon
 configurations.configureEach {
@@ -17,8 +31,36 @@ configurations.configureEach {
     }
 }
 
+tasks.register('generateCareerHtml') {
+    doLast {
+        // Configure Freemarker and set template
+        def cfg = new Configuration(Configuration.VERSION_2_3_31)
+        cfg.setDirectoryForTemplateLoading(file("${templateDir}")) // Template-Ordner
+        cfg.setDefaultEncoding("UTF-8")
+
+        def jsonFile = file('src/jbake/content/about/berufserfahrung.json')
+        def aboutFile = file('src/jbake/content/about/index.html')
+        def template = cfg.getTemplate("career.ftl")
+
+        // prepare data model
+        def json = new JsonSlurper().parse(jsonFile)
+        def dataModel = [items: json]
+
+        // generate file in memory
+        def writer = new StringWriter()
+        template.process(dataModel, writer)
+        def careerHtml = writer.toString()
+
+        // Platzhalter in About-Seite ersetzen
+        def rawContent = aboutFile.text
+        def replaced = rawContent.replace("<!--#career-->", careerHtml)
+        aboutFile.text = replaced
+    }
+}
+
 // JBake Task
 jbake {
+    dependsOn generateCareerHtml
     version='2.6.7'
     srcDirName = "${jbakeInputDir}"
     destDirName = "${jbakeOutputDir}"
