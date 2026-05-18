@@ -34,7 +34,7 @@ jobs:
         run: jbake -b
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v7
         with:
           path: output
 
