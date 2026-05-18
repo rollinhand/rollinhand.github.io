@@ -31,34 +31,6 @@ configurations.configureEach {
     }
 }
 
-tasks.register('generateCareerHtml') {
-    dependsOn bake
-    doLast {
-        // Configure Freemarker and set template
-        def cfg = new Configuration(Configuration.VERSION_2_3_31)
-        cfg.setDirectoryForTemplateLoading(file("${templateDir}")) // Template-Ordner
-        cfg.setDefaultEncoding("UTF-8")
-
-        def jsonFile = file('src/jbake/content/about/berufserfahrung.json')
-        def aboutFile = file('build/jbake/about/index.html')
-        def template = cfg.getTemplate("career.ftl")
-
-        // prepare data model
-        def json = new JsonSlurper().parse(jsonFile)
-        def dataModel = [items: json]
-
-        // generate file in memory
-        def writer = new StringWriter()
-        template.process(dataModel, writer)
-        def careerHtml = writer.toString()
-
-        // Platzhalter in About-Seite ersetzen
-        def rawContent = aboutFile.text
-        def replaced = rawContent.replace("<!--#career-->", careerHtml)
-        aboutFile.text = replaced
-    }
-}
-
 // JBake Task
 jbake {
     version='2.7.0'
@@ -76,4 +48,4 @@ gitPublish {
     }
 }
 
-build.dependsOn generateCareerHtml
+build.dependsOn
