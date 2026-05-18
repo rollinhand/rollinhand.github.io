@@ -1,35 +1,49 @@
-name: Deploy to GitHub Pages
+name: Build and Deploy JBake Site
 
 on:
   push:
-    branches:
-      - master
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Set up Java
-        uses: actions/setup-java@v3
+      - name: Set up Java 21
+        uses: actions/setup-java@v4
         with:
-          java-version: '17'
+          java-version: '21'
           distribution: 'temurin'
 
-      - name: Install Gradle
-        uses: gradle/gradle-build-action@v2
+      - name: Install JBake
+        run: |
+          curl -L https://github.com/jbake-org/jbake/releases/download/v2.7.0-rc.7/jbake-2.7.0-rc.7-bin.zip -o jbake.zip
+          unzip jbake.zip -d $HOME/jbake
+          echo "$HOME/jbake/jbake-2.7.0-rc.7/bin" >> $GITHUB_PATH
 
-      - name: Build site with JBake
-        run: ./gradlew build
+      - name: Build with JBake
+        run: jbake -b
 
-      - name: Push
-        uses: s0/git-publish-subdir-action@develop
-        env:
-          REPO: self
-          BRANCH: gh-pages # The branch name where you want to push the assets
-          FOLDER: build/jbake # The directory where your assets are generated
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
-          MESSAGE: "Build: ({sha}) {msg}" # The commit message
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: output   # JBake Standard-Ausgabeverzeichnis
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
