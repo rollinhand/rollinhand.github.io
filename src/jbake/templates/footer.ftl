@@ -5,6 +5,9 @@
                 <div class="small m-0 text-white">Copyright &copy; 2017 - 2026 by Björn Berg (Last update: ${published_date?string("yyyy-MM-dd")})</div>
             </div>
             <div class="col-auto">
+                <span class="text-light"><i class="fas fa-bullhorn"></i></span>
+                <a class="link-light small" href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>category/ankuendigung/index.html">Ankündigungen</a>
+                <span class="text-white mx-1">&middot;</span>
                 <a class="link-light small" href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>blog/meecrowave.html">Apache Meecrowave</a>
                 <span class="text-white mx-1">&middot;</span>
                 <a class="link-light small" href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>privacy-policy/index.html">Privacy</a>

@@ -1,7 +1,7 @@
 type=post
 title=SQLPlus mit Homebrew installieren
 date=2022-09-05
-category=DevOps
+category=Technologie
 tags=SQLPlus,Homebrew,Mac
 ~~~~~~
 Homebrew ist der ultimative Paketmanager für macOS.

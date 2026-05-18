@@ -1,7 +1,7 @@
 type=post
 title=Meecrowave und Docker - so einfach gehts
 date=2020-05-06
-category=DevOps 
+category=Technologie 
 tags=Meecrowave,Microservices,Docker
 ~~~~~~
 In einem meiner [letzten Blogbeiträge][kivio] habe ich darüber berichtet, wie einfach mit

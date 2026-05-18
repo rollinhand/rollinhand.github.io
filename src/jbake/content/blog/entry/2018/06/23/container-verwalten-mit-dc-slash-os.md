@@ -1,7 +1,7 @@
 type=post
 title=Container verwalten mit DC/OS
 date=2018-06-23
-category=DevOps
+category=Technologie
 tags=DC/OS, Container, Docker, Mesos
 cofinpro=https://medium.com/cofinpro/das-eigene-datacenter-in-eine-cloud-verwandeln-7d1e98940889
 ~~~~~~
@@ -134,4 +134,3 @@ Lagerplätze für Container sind nur noch Koordinaten auf einem
 viele und in welcher Reihenfolge Container abgelegt werden. Diese Rolle
 übernimmt im Rechenzentrum DC/OS=es kümmert um eine bestmögliche
 Nutzung aller Ressourcen der Systeme.
-

@@ -5,15 +5,16 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mb-2 mx-1 mb-lg-0">
-          <#list published_categorys?sort_by("title") as category>
-            <#assign downcasedTitle = category.title?lower_case>
-            <#assign activeFlag = ''>
-            <#if (currentPage?contains(downcasedTitle))>
-              <#assign activeFlag = 'active'>
-            </#if>
-            <li class="nav-item mx-1 ${activeFlag}">
-              <a class="nav-link ${activeFlag}" href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>${category.uri}">${category.title}</a>
-            </li>
+            <#assign sorted_categories = published_categorys?sort_by("title")>
+            <#list sorted_categories?filter(c -> c.title != "Ankündigung") as category>
+                <#assign downcasedTitle = category.title?lower_case>
+                <#assign activeFlag = ''>
+                <#if (currentPage?contains(downcasedTitle))>
+                    <#assign activeFlag = 'active'>
+                </#if>
+                <li class="nav-item mx-1 ${activeFlag}">
+                <a class="nav-link ${activeFlag}" href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>${category.uri}">${category.title}</a>
+                </li>
           </#list>
         </ul>
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">

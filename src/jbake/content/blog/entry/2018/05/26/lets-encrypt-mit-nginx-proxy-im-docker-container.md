@@ -1,7 +1,7 @@
 type=post
 title=Let's Encrypt mit Nginx Proxy im Docker Container
 date=2018-05-26
-category=DevOps
+category=Technologie
 tags=SSL, Nginx, Docker, Zertifikat
 ~~~~~~
 In diesem Tutorial beschreibe ich, wie man in einem 1&1 Cloud-Server in einem Nginx Reverse Proxy in einem Docker Container ein Let's Encrypt-Zertifikat für die SSL-verschlüsselte Verbindung einbindet.
@@ -158,4 +158,3 @@ docker run -d -p80:80 -p443:443 --restart unless-stopped --name kivio-proxy --ne
 Mit diesem Kommando wird der Container mit dem Docker-Netzwerk _kivio_ verbunden. In diesem Netzwerk befinden sich die JEE-Applikationsserver, die über ihren Container-Namen in der Nginx-Konfiguration referenziert werden.
 
 Zusätzlich werden die Ports 80 und 443 nach außen exponiert, sodass der Nginx-Server auch von der Aussenwelt erreichbar ist.
-
