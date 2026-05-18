@@ -23,11 +23,12 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
 
-      - name: Install JBake
+      - name: Install JBake via SDKMAN
         run: |
-          curl -L https://github.com/jbake-org/jbake/releases/download/v2.7.0-rc.7/jbake-2.7.0-rc.7-bin.zip -o jbake.zip
-          unzip jbake.zip -d $HOME/jbake
-          echo "$HOME/jbake/jbake-2.7.0-rc.7/bin" >> $GITHUB_PATH
+          curl -s "https://get.sdkman.io" | bash
+          source "$HOME/.sdkman/bin/sdkman-init.sh"
+          sdk install jbake
+          echo "$HOME/.sdkman/candidates/jbake/current/bin" >> $GITHUB_PATH
 
       - name: Build with JBake
         run: jbake -b
