@@ -61,7 +61,7 @@ tasks.register('generateCareerHtml') {
 
 // JBake Task
 jbake {
-    version='2.6.7'
+    version='2.7.0'
     srcDirName = "${jbakeInputDir}"
     destDirName = "${jbakeOutputDir}"
     clearCache = true
