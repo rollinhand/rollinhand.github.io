@@ -15,10 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v5   # ← Von v4 auf v5 aktualisiert
+        uses: actions/checkout@v5
 
       - name: Set up Java 21
-        uses: actions/setup-java@v4  # ← v4 ist aktuell noch OK, aber v5 verfügbar
+        uses: actions/setup-java@v5
         with:
           java-version: '21'
           distribution: 'temurin'
