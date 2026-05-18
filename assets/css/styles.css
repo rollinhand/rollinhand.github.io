@@ -63,3 +63,12 @@ img.cover {
     background-color: #0d4b4d;
     color: #fff
 }
+
+/* Über Custom Properties (überall nutzbar) */
+hint-box {
+  --hint-box-bg: #fff8e1;
+  --hint-box-border: 0px;
+  --hint-box-radius: 1rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
