@@ -2,7 +2,7 @@
     <div class="container px-5">
         <div class="row align-items-center justify-content-between flex-column flex-sm-row">
             <div class="col-auto">
-                <div class="small m-0 text-white">Copyright &copy; 2017 - 2026 by Björn Berg (Last update: ${published_date?string("yyyy-MM-dd")})</div>
+                <div class="small m-0 text-white">Copyright &copy; 2017 - ${published_date?string("yyyy")} by Björn Berg (Last update: ${published_date?string("yyyy-MM-dd")})</div>
             </div>
             <div class="col-auto">
                 <span class="text-light"><i class="fas fa-bullhorn"></i></span>
@@ -17,9 +17,6 @@
                 <a class="link-light small" href="mailto:rollin.hand@gmx.de">Contact</a>
             </div>
             <div class="col-auto">
-                <a class="link-light text-decoration-none mx-1 small" href="https://www.xing.com/profile/Bjoern_Berg2" target="_blank" rel="me">
-                    <span class="button xing" aria-details="Xing"><i class="fab fa-xing"></i></span>
-                </a>
                 <a class="link-light text-decoration-none mx-1 small" href="https://www.linkedin.com/in/bjoernberg82" target="_blank" rel="me">
                     <span class="button linkedin" aria-details="LinkedIn"><i class="fab fa-linkedin"></i></span>
                 </a>
