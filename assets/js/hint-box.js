@@ -1,24 +1,24 @@
 class HintBox extends HTMLElement {
   static get observedAttributes() {
-    return ['title', 'message'];
+    return ["title", "message"];
   }
 
   constructor() {
     super();
-    this.attachShadow({ mode: 'open' });
+    this.attachShadow({ mode: "open" });
   }
 
   connectedCallback() {
     this.render();
   }
 
-  attributeChangedCallback() {
+  attributeChangedCallback(attributeName, oldValue, newValue) {
     this.render();
   }
 
   render() {
-    const title = this.getAttribute('title') ?? '';
-    const message = this.getAttribute('message') ?? this.textContent.trim();
+    const title = this.getAttribute("title") ?? "";
+    const message = this.getAttribute("message") ?? this.textContent.trim();
 
     this.shadowRoot.innerHTML = `
       <style>
@@ -64,11 +64,17 @@ class HintBox extends HTMLElement {
       </style>
 
       <div class="hint-box" part="box">
-        <p class="hint-box__title" part="title">${title}</p>
-        <p class="hint-box__message" part="message">${message}</p>
+        <p class="hint-box__title" part="title"></p>
+        <p class="hint-box__message" part="message"></p>
       </div>
     `;
+
+    // avoid XSS
+    this.shadowRoot.querySelector(".hint-box__title").textContent = title;
+    this.shadowRoot.querySelector(".hint-box__message").textContent = message;
   }
+
+  disconnectedCallback() {}
 }
 
-customElements.define('hint-box', HintBox);
+customElements.define("hint-box", HintBox);
